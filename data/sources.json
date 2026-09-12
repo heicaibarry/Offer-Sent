@@ -1,0 +1,25 @@
+{
+  "comment": "监控源配置。renderer: fetch=直接 HTTP 抓取（静态页）；browser=需无头浏览器渲染（SPA 定价页，未安装 playwright 时自动降级为 fetch）。everyHours: 最小抓取间隔，控制对官方站点的请求频率。",
+  "sources": [
+    { "id": "trae-pricing", "product": "trae", "url": "https://www.trae.cn/pricing", "renderer": "browser", "everyHours": 6, "enabled": true },
+    { "id": "workbuddy-pricing", "product": "workbuddy", "url": "https://www.workbuddy.cn/pricing", "renderer": "browser", "everyHours": 6, "enabled": true },
+    { "id": "minimax-token-plan", "product": "minimax-token-plan", "url": "https://platform.minimaxi.com/subscribe/token-plan", "renderer": "browser", "everyHours": 6, "enabled": true },
+    { "id": "zai-subscribe", "product": "glm-coding-plan", "url": "https://z.ai/subscribe", "renderer": "browser", "everyHours": 6, "enabled": true },
+    { "id": "kimi-coding", "product": "kimi-code", "url": "https://www.kimi.com/coding", "renderer": "browser", "everyHours": 6, "enabled": true },
+    { "id": "dumate-home", "product": "dumate", "url": "https://www.dumate.cn/", "renderer": "browser", "everyHours": 6, "enabled": true },
+    { "id": "codebuddy-pricing", "product": "codebuddy", "url": "https://www.codebuddy.cn/pricing", "renderer": "browser", "everyHours": 12, "enabled": true },
+    { "id": "qoder-pricing", "product": "qoder", "url": "https://qoder.com/pricing", "renderer": "browser", "everyHours": 12, "enabled": true },
+    { "id": "lingma-home", "product": "tongyi-lingma", "url": "https://tongyi.aliyun.com/lingma", "renderer": "fetch", "everyHours": 24, "enabled": true },
+    { "id": "qwen-code-docs", "product": "qwen-code", "url": "https://qwenlm.github.io/qwen-code-docs/", "renderer": "fetch", "everyHours": 24, "enabled": true },
+    { "id": "comate-home", "product": "comate", "url": "https://comate.baidu.com", "renderer": "fetch", "everyHours": 24, "enabled": true },
+    { "id": "deepseek-pricing", "product": "deepseek", "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing", "renderer": "fetch", "everyHours": 24, "enabled": true },
+    { "id": "coze-home", "product": "coze-space", "url": "https://www.coze.cn", "renderer": "fetch", "everyHours": 24, "enabled": true },
+    { "id": "manus-pricing", "product": "manus", "url": "https://manus.im/pricing", "renderer": "browser", "everyHours": 24, "enabled": true },
+    { "id": "skywork-home", "product": "skywork", "url": "https://www.skywork.ai", "renderer": "fetch", "everyHours": 24, "enabled": true },
+    { "id": "flowith-home", "product": "flowith", "url": "https://www.flowith.io", "renderer": "fetch", "everyHours": 24, "enabled": true },
+    { "id": "lovart-home", "product": "lovart", "url": "https://www.lovart.ai", "renderer": "fetch", "everyHours": 24, "enabled": true },
+    { "id": "youware-home", "product": "youware", "url": "https://www.youware.com", "renderer": "fetch", "everyHours": 24, "enabled": true },
+    { "id": "siliconflow-pricing", "product": "siliconflow", "url": "https://siliconflow.cn/pricing", "renderer": "browser", "everyHours": 24, "enabled": true },
+    { "id": "modelscope-home", "product": "modelscope", "url": "https://modelscope.cn", "renderer": "fetch", "everyHours": 24, "enabled": true }
+  ]
+}

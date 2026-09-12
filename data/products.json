@@ -1,0 +1,480 @@
+{
+  "updatedAt": "2026-09-13",
+  "products": [
+    {
+      "slug": "glm-coding-plan",
+      "name": "GLM Coding Plan（ZCode）",
+      "vendor": "智谱 Z.ai",
+      "category": "coding",
+      "type": "Coding Plan 订阅 + CLI（ZCode）",
+      "status": "active",
+      "site": "https://z.ai",
+      "pricingUrl": "https://z.ai/subscribe",
+      "priceStatus": "pending",
+      "verifiedAt": "2026-09-13",
+      "models": ["GLM-5.3", "GLM-5.3-Flash", "GLM-5.2", "GLM-5-Turbo"],
+      "summary": "国产 Coding Plan 代表，订阅后可在 ZCode 及 Claude Code、Codex、OpenCode、Cline、Kilo Code、OpenClaw 等客户端调用 GLM 系列模型。",
+      "plans": [
+        { "name": "Lite", "price": null, "unit": "元/月", "quota": null, "note": "档位与价格待爬虫核实（历史常态价约 ¥20/月起，常有首月折扣）" },
+        { "name": "Pro", "price": null, "unit": "元/月", "quota": null, "note": "待核实" },
+        { "name": "Max", "price": null, "unit": "元/月", "quota": null, "note": "待核实" }
+      ],
+      "promos": [],
+      "notes": "促销大户：历史上常见首月特价、年付折扣，公众号会发限时活动。订阅入口 z.ai/subscribe 或 bigmodel.cn。"
+    },
+    {
+      "slug": "kimi-code",
+      "name": "Kimi Code（Kimi for Coding）",
+      "vendor": "月之暗面",
+      "category": "coding",
+      "type": "Coding Plan 订阅 + CLI",
+      "status": "active",
+      "site": "https://www.kimi.com/coding",
+      "pricingUrl": "https://www.kimi.com/coding",
+      "priceStatus": "pending",
+      "verifiedAt": "2026-09-13",
+      "models": ["Kimi K3（1M 上下文）"],
+      "summary": "月之暗面编程订阅，K3 已上线，主打长上下文与 agent 编程。",
+      "plans": [
+        { "name": "订阅月卡", "price": null, "unit": "元/月", "quota": null, "note": "历史促销价 ¥49/月，现价与档位待核实" }
+      ],
+      "promos": [],
+      "notes": "K2/K3 发布期常有赠送额度与首月折扣活动。"
+    },
+    {
+      "slug": "minimax-token-plan",
+      "name": "MiniMax Token Plan",
+      "vendor": "MiniMax",
+      "category": "coding",
+      "type": "Token Plan 订阅（全模态）",
+      "status": "active",
+      "site": "https://platform.minimaxi.com/subscribe/token-plan",
+      "pricingUrl": "https://platform.minimaxi.com/subscribe/token-plan",
+      "priceStatus": "verified",
+      "verifiedAt": "2026-09-13",
+      "models": ["MiniMax M2.5 / M2.7 等"],
+      "summary": "原 Coding Plan 已升级为全模态 Token Plan，订阅后调用 M 系列模型。",
+      "plans": [
+        { "name": "Plus", "price": 49, "unit": "元/月", "quota": null, "note": "适合个人" },
+        { "name": "Max", "price": 119, "unit": "元/月", "quota": null, "note": "" },
+        { "name": "Ultra", "price": 469, "unit": "元/月", "quota": null, "note": "" }
+      ],
+      "promos": [],
+      "notes": "历史活动：Coding Plan 时期首月 ¥9.9（已结束）。M 系列新模型发布期常有赠送额度。"
+    },
+    {
+      "slug": "trae",
+      "name": "Trae（TraeCode + TraeWork）",
+      "vendor": "字节跳动",
+      "category": "coding",
+      "type": "AI IDE + CLI + 办公 Agent",
+      "status": "active",
+      "site": "https://www.trae.cn",
+      "pricingUrl": "https://www.trae.cn/pricing",
+      "priceStatus": "verified",
+      "verifiedAt": "2026-09-13",
+      "summary": "字节 AI IDE，积分制付费；新推 TraeWork 办公 Agent。",
+      "plans": [
+        { "name": "Free", "price": 0, "unit": "元/月", "quota": "500 积分/月", "note": "全功能体验" },
+        { "name": "Lite", "price": 49, "unit": "元/月", "intro": 9.9, "quota": "2000 积分/月（TraeWork 专属）", "note": "首月 ¥9.9" },
+        { "name": "Pro", "price": 99, "unit": "元/月", "intro": 59, "quota": "4000 积分/月", "note": "首月 ¥59" },
+        { "name": "Pro+", "price": 239, "unit": "元/月", "intro": 219, "quota": "12000 积分/月", "note": "" },
+        { "name": "Ultra", "price": 699, "unit": "元/月", "intro": 629, "quota": "40000 积分/月", "note": "" }
+      ],
+      "promos": [
+        {
+          "title": "邀请好友体验 TraeWork，双方各得 500 积分",
+          "detail": "最高得 3500 积分 + 2 杯星巴克咖啡",
+          "endsAt": null,
+          "source": "https://www.trae.cn/pricing",
+          "firstSeen": "2026-09-13"
+        },
+        {
+          "title": "Lite / Pro 首月特惠",
+          "detail": "Lite 首月 ¥9.9（原价 ¥49）；Pro 首月 ¥59（原价 ¥99）",
+          "endsAt": null,
+          "source": "https://www.trae.cn/pricing",
+          "firstSeen": "2026-09-13"
+        }
+      ],
+      "notes": "国内运营主体为北京引力弹弓科技有限公司（字节系）。"
+    },
+    {
+      "slug": "workbuddy",
+      "name": "WorkBuddy",
+      "vendor": "腾讯（CodeBuddy 团队）",
+      "category": "office",
+      "type": "办公 Agent（桌面/IM/小程序）",
+      "status": "active",
+      "site": "https://www.workbuddy.cn",
+      "pricingUrl": "https://www.workbuddy.cn/pricing",
+      "priceStatus": "verified",
+      "verifiedAt": "2026-09-13",
+      "summary": "腾讯云代码助手团队推出的 AI Agent 办公工具，多 Agent 并行执行复杂任务。",
+      "plans": [
+        { "name": "试用版", "price": 0, "unit": "元/月", "quota": "500 积分/月", "note": "限时免费" },
+        { "name": "标准版", "price": 99, "unit": "元/月", "intro": 70, "quota": "约 4000 积分", "note": "连续包月 ¥70（7 折）；年付 ¥840、连续包年 ¥672" },
+        { "name": "高级版", "price": 199, "unit": "元/月", "intro": 140, "quota": null, "note": "连续包月 ¥140" },
+        { "name": "旗舰版", "price": 999, "unit": "元/月", "intro": 700, "quota": null, "note": "连续包月 ¥700" }
+      ],
+      "promos": [
+        {
+          "title": "连续包月 7 折 / 连续包年再享 8 折",
+          "detail": "标准版 ¥70/月、高级版 ¥140/月、旗舰版 ¥700/月；标准版连续包年 ¥672/年",
+          "endsAt": null,
+          "source": "https://www.workbuddy.cn/pricing",
+          "firstSeen": "2026-09-13"
+        },
+        {
+          "title": "Nova 大使计划",
+          "detail": "官网活动页设有推广激励计划，详情以官网为准",
+          "endsAt": null,
+          "source": "https://www.workbuddy.cn",
+          "firstSeen": "2026-09-13"
+        }
+      ],
+      "notes": "2026 年调价：标准版（原专业版）¥58 → ¥99，新增高级版与旗舰版。企业版约 ¥2000/账号/月。"
+    },
+    {
+      "slug": "dumate",
+      "name": "百度搭子 DuMate",
+      "vendor": "百度",
+      "category": "office",
+      "type": "桌面 Agent（跨应用/跨文件/定时任务）",
+      "status": "active",
+      "site": "https://www.dumate.cn/",
+      "pricingUrl": "https://www.dumate.cn/",
+      "priceStatus": "partial",
+      "verifiedAt": "2026-09-13",
+      "summary": "百度桌面级 AI 办公智能体，看得见屏幕、能操作软件和处理文件；企业版走百度智能云。",
+      "plans": [
+        { "name": "免费版", "price": 0, "unit": "元/月", "quota": null, "note": "高峰时段限流" },
+        { "name": "Pro", "price": null, "unit": "元/月", "quota": null, "note": "价格以官网购买页为准（价格图为图片，待核实）" },
+        { "name": "Max", "price": null, "unit": "元/月", "quota": null, "note": "待核实" },
+        { "name": "加量包", "price": null, "unit": "元", "quota": null, "note": "仅 Pro/Max 用户可购，购买后 1 个月内有效" }
+      ],
+      "promos": [
+        {
+          "title": "新客限时：免费体验 Turbo/Ultra 高级模式",
+          "detail": "同时有限时每日签到领积分活动",
+          "endsAt": null,
+          "source": "https://www.dumate.cn/",
+          "firstSeen": "2026-09-13"
+        }
+      ],
+      "notes": "企业版：cloud.baidu.com/product/dumate.html（身份/权限/配额/审计管控）。2026 百度 Create 大会重点产品，媒体称“国产版 Codex”。"
+    },
+    {
+      "slug": "codebuddy",
+      "name": "CodeBuddy",
+      "vendor": "腾讯云",
+      "category": "coding",
+      "type": "AI IDE + CLI",
+      "status": "active",
+      "site": "https://www.codebuddy.cn",
+      "pricingUrl": "https://www.codebuddy.cn/pricing",
+      "priceStatus": "pending",
+      "verifiedAt": "2026-09-13",
+      "summary": "腾讯云 AI 代码助手，IDE 与 CLI 双形态，WorkBuddy 同门兄弟产品。",
+      "plans": [
+        { "name": "免费版", "price": 0, "unit": "元/月", "quota": null, "note": "国内版含免费额度" },
+        { "name": "付费版", "price": null, "unit": "元/月", "quota": null, "note": "档位与价格待核实（国际版为 Credit 订阅制）" }
+      ],
+      "promos": [],
+      "notes": ""
+    },
+    {
+      "slug": "qoder",
+      "name": "Qoder",
+      "vendor": "阿里巴巴",
+      "category": "coding",
+      "type": "Agentic IDE + CLI",
+      "status": "active",
+      "site": "https://qoder.com",
+      "pricingUrl": "https://qoder.com/pricing",
+      "priceStatus": "pending",
+      "verifiedAt": "2026-09-13",
+      "summary": "阿里 agentic coding 平台，Quest 模式；iFlow CLI 关停后的官方指定迁移目标。",
+      "plans": [
+        { "name": "Free", "price": 0, "unit": "元/月", "quota": null, "note": "" },
+        { "name": "Pro", "price": null, "unit": "元/月", "quota": null, "note": "待核实" }
+      ],
+      "promos": [],
+      "notes": ""
+    },
+    {
+      "slug": "tongyi-lingma",
+      "name": "通义灵码",
+      "vendor": "阿里云",
+      "category": "coding",
+      "type": "IDE 插件 / AI 编程助手",
+      "status": "active",
+      "site": "https://tongyi.aliyun.com/lingma",
+      "pricingUrl": "https://tongyi.aliyun.com/lingma",
+      "priceStatus": "pending",
+      "verifiedAt": "2026-09-13",
+      "summary": "阿里云老牌 AI 编程助手，个人版免费，支持 Qwen3-Coder。",
+      "plans": [
+        { "name": "个人免费版", "price": 0, "unit": "元/月", "quota": null, "note": "" },
+        { "name": "个人专业版", "price": null, "unit": "元/月", "quota": null, "note": "待核实（历史约 ¥10/月，常有试用活动）" },
+        { "name": "企业版", "price": null, "unit": "元/席位", "quota": null, "note": "联系商务" }
+      ],
+      "promos": [],
+      "notes": ""
+    },
+    {
+      "slug": "qwen-code",
+      "name": "Qwen Code",
+      "vendor": "阿里巴巴",
+      "category": "coding",
+      "type": "CLI（开源）",
+      "status": "active",
+      "site": "https://qwenlm.github.io/qwen-code-docs/",
+      "pricingUrl": "https://qwenlm.github.io/qwen-code-docs/",
+      "priceStatus": "partial",
+      "verifiedAt": "2026-09-13",
+      "summary": "阿里开源命令行编程智能体，Qwen OAuth 登录有免费额度。",
+      "plans": [
+        { "name": "CLI 免费额度", "price": 0, "unit": "元", "quota": "约 2000 次请求/天（Qwen OAuth）", "note": "" },
+        { "name": "百炼 API", "price": null, "unit": "按量", "quota": null, "note": "按 token 计费" }
+      ],
+      "promos": [],
+      "notes": ""
+    },
+    {
+      "slug": "comate",
+      "name": "文心快码 Baidu Comate",
+      "vendor": "百度",
+      "category": "coding",
+      "type": "IDE 插件 / AI 编程助手",
+      "status": "active",
+      "site": "https://comate.baidu.com",
+      "pricingUrl": "https://comate.baidu.com",
+      "priceStatus": "pending",
+      "verifiedAt": "2026-09-13",
+      "summary": "百度 AI 编程助手，个人免费版 + 付费档。",
+      "plans": [
+        { "name": "个人免费版", "price": 0, "unit": "元/月", "quota": null, "note": "" },
+        { "name": "付费档", "price": null, "unit": "元/月", "quota": null, "note": "待核实" }
+      ],
+      "promos": [],
+      "notes": ""
+    },
+    {
+      "slug": "deepseek",
+      "name": "DeepSeek",
+      "vendor": "深度求索",
+      "category": "api",
+      "type": "API 按量（无订阅制）",
+      "status": "active",
+      "site": "https://www.deepseek.com",
+      "pricingUrl": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing",
+      "priceStatus": "partial",
+      "verifiedAt": "2026-09-13",
+      "summary": "无订阅套餐，纯 API 按量计费，价格极低；大量第三方客户端可接入。",
+      "plans": [],
+      "promos": [
+        {
+          "title": "错峰时段半价（常态）",
+          "detail": "北京时间 00:30–08:30 API 调用五折",
+          "endsAt": null,
+          "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing",
+          "firstSeen": "2026-09-13"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "slug": "fitten-code",
+      "name": "Fitten Code",
+      "vendor": "非十科技",
+      "category": "coding",
+      "type": "IDE 插件",
+      "status": "active",
+      "site": "https://code.fittentech.com",
+      "pricingUrl": "https://code.fittentech.com",
+      "priceStatus": "pending",
+      "verifiedAt": "2026-09-13",
+      "summary": "免费为主的国产 AI 编程助手。",
+      "plans": [{ "name": "免费版", "price": 0, "unit": "元/月", "quota": null, "note": "" }],
+      "promos": [],
+      "notes": ""
+    },
+    {
+      "slug": "codearts-snap",
+      "name": "华为云 CodeArts Snap",
+      "vendor": "华为云",
+      "category": "coding",
+      "type": "IDE 插件 / 企业研发平台",
+      "status": "active",
+      "site": "https://www.huaweicloud.com/product/codeartside.html",
+      "pricingUrl": "https://www.huaweicloud.com/product/codeartside.html",
+      "priceStatus": "pending",
+      "verifiedAt": "2026-09-13",
+      "summary": "华为云 AI 编程助手，企业向，常有华为云新用户代金券活动。",
+      "plans": [],
+      "promos": [],
+      "notes": ""
+    },
+    {
+      "slug": "code-raccoon",
+      "name": "代码小浣熊",
+      "vendor": "商汤科技",
+      "category": "coding",
+      "type": "IDE 插件 / CLI",
+      "status": "active",
+      "site": "https://raccoon.sensesoftime.com",
+      "pricingUrl": "https://raccoon.sensesoftime.com",
+      "priceStatus": "pending",
+      "verifiedAt": "2026-09-13",
+      "summary": "商汤推出的 AI 编程助手。",
+      "plans": [],
+      "promos": [],
+      "notes": ""
+    },
+    {
+      "slug": "iflow-cli",
+      "name": "iFlow CLI（心流）",
+      "vendor": "阿里（心流）",
+      "category": "coding",
+      "type": "CLI（免费聚合模型）",
+      "status": "closed",
+      "site": "https://iflow.cn",
+      "pricingUrl": "https://vibex.iflow.cn/t/topic/4819",
+      "priceStatus": "verified",
+      "verifiedAt": "2026-09-13",
+      "summary": "免费终端 AI 智能体，曾聚合 Qwen/Kimi/GLM/DeepSeek 等模型免费调用。",
+      "plans": [],
+      "promos": [],
+      "notes": "⚠️ 2026-03-20 起停止维护，2026-04-17 正式关停（API 与模型库同步关停），官方建议迁移至 Qoder。保留本条目作为归档警示。"
+    },
+    {
+      "slug": "coze-space",
+      "name": "扣子空间（Coze Space）",
+      "vendor": "字节跳动",
+      "category": "general",
+      "type": "通用 Agent 平台",
+      "status": "active",
+      "site": "https://www.coze.cn",
+      "pricingUrl": "https://www.coze.cn",
+      "priceStatus": "pending",
+      "verifiedAt": "2026-09-13",
+      "summary": "字节通用 Agent 平台，任务型执行 + 插件生态。",
+      "plans": [],
+      "promos": [],
+      "notes": ""
+    },
+    {
+      "slug": "manus",
+      "name": "Manus",
+      "vendor": "蝴蝶效应（中国团队）",
+      "category": "general",
+      "type": "通用 Agent",
+      "status": "active",
+      "site": "https://manus.im",
+      "pricingUrl": "https://manus.im/pricing",
+      "priceStatus": "pending",
+      "verifiedAt": "2026-09-13",
+      "summary": "通用任务执行 Agent，订阅积分制。",
+      "plans": [],
+      "promos": [],
+      "notes": ""
+    },
+    {
+      "slug": "skywork",
+      "name": "Skywork（天工）",
+      "vendor": "昆仑万维",
+      "category": "general",
+      "type": "通用/办公 Agent",
+      "status": "active",
+      "site": "https://www.skywork.ai",
+      "pricingUrl": "https://www.skywork.ai",
+      "priceStatus": "pending",
+      "verifiedAt": "2026-09-13",
+      "summary": "昆仑万维旗下 Agent，文档/PPT/表格产出见长。",
+      "plans": [],
+      "promos": [],
+      "notes": ""
+    },
+    {
+      "slug": "flowith",
+      "name": "Flowith",
+      "vendor": "国内团队",
+      "category": "general",
+      "type": "画布式 Agent",
+      "status": "active",
+      "site": "https://www.flowith.io",
+      "pricingUrl": "https://www.flowith.io",
+      "priceStatus": "pending",
+      "verifiedAt": "2026-09-13",
+      "summary": "多线程画布式 AI Agent。",
+      "plans": [],
+      "promos": [],
+      "notes": ""
+    },
+    {
+      "slug": "lovart",
+      "name": "Lovart",
+      "vendor": "国内团队",
+      "category": "general",
+      "type": "设计 Agent",
+      "status": "active",
+      "site": "https://www.lovart.ai",
+      "pricingUrl": "https://www.lovart.ai",
+      "priceStatus": "pending",
+      "verifiedAt": "2026-09-13",
+      "summary": "AI 设计 Agent，海报/品牌全流程。",
+      "plans": [],
+      "promos": [],
+      "notes": ""
+    },
+    {
+      "slug": "youware",
+      "name": "Youware",
+      "vendor": "国内团队",
+      "category": "general",
+      "type": "Vibe Coding 建站 Agent",
+      "status": "active",
+      "site": "https://www.youware.com",
+      "pricingUrl": "https://www.youware.com",
+      "priceStatus": "pending",
+      "verifiedAt": "2026-09-13",
+      "summary": "自然语言生成网站/应用的建站 Agent。",
+      "plans": [],
+      "promos": [],
+      "notes": ""
+    },
+    {
+      "slug": "siliconflow",
+      "name": "硅基流动 SiliconFlow",
+      "vendor": "硅基流动",
+      "category": "api",
+      "type": "模型聚合 API 平台",
+      "status": "active",
+      "site": "https://siliconflow.cn",
+      "pricingUrl": "https://siliconflow.cn/pricing",
+      "priceStatus": "pending",
+      "verifiedAt": "2026-09-13",
+      "summary": "聚合各开源模型的 API 平台，注册送赠金，部分模型免费。",
+      "plans": [],
+      "promos": [],
+      "notes": ""
+    },
+    {
+      "slug": "modelscope",
+      "name": "魔搭 ModelScope",
+      "vendor": "阿里（达摩院）",
+      "category": "api",
+      "type": "模型社区 + 免费推理额度",
+      "status": "active",
+      "site": "https://modelscope.cn",
+      "pricingUrl": "https://modelscope.cn",
+      "priceStatus": "pending",
+      "verifiedAt": "2026-09-13",
+      "summary": "模型社区，提供免费 API 推理额度。",
+      "plans": [],
+      "promos": [],
+      "notes": ""
+    }
+  ]
+}

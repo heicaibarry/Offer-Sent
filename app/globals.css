@@ -1,0 +1,160 @@
+:root {
+  --bg: #f5f7fa;
+  --card: #ffffff;
+  --ink: #182234;
+  --muted: #667085;
+  --brand: #2456f0;
+  --brand-soft: #eef3ff;
+  --line: #e4e8f0;
+  --green: #0a8a4a;
+  --green-soft: #e6f6ee;
+  --red: #c2373c;
+  --red-soft: #fdeeee;
+  --amber: #9a6700;
+  --amber-soft: #fff4d6;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+a { color: var(--brand); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+/* 顶栏 */
+.topbar {
+  position: sticky; top: 0; z-index: 10;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.topbar-inner { display: flex; align-items: center; justify-content: space-between; height: 56px; }
+.logo { font-weight: 700; font-size: 17px; color: var(--ink); }
+.logo:hover { text-decoration: none; }
+.nav { display: flex; gap: 18px; }
+.nav a { color: var(--muted); font-size: 14px; }
+.nav a:hover { color: var(--brand); text-decoration: none; }
+
+/* Hero */
+.hero {
+  margin: 28px 0 8px;
+  padding: 26px 24px;
+  background: linear-gradient(160deg, #eaf0ff 0%, #ffffff 70%);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+.hero h1 { margin: 0 0 6px; font-size: 24px; }
+.hero p { margin: 0; color: var(--muted); }
+.hero .stats { display: flex; gap: 18px; margin-top: 14px; flex-wrap: wrap; }
+.hero .stat { font-size: 13px; color: var(--muted); background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 3px 12px; }
+.hero .stat b { color: var(--ink); }
+
+/* 区块 */
+.section { margin: 26px 0; }
+.section-title { font-size: 18px; font-weight: 700; margin: 0 0 12px; }
+.section-sub { color: var(--muted); font-size: 13px; margin: -8px 0 12px; }
+
+/* 筛选 */
+.toolbar { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 14px; }
+.tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+.tab {
+  border: 1px solid var(--line); background: #fff; color: var(--muted);
+  border-radius: 999px; padding: 4px 14px; font-size: 13px; cursor: pointer;
+}
+.tab:hover { border-color: var(--brand); color: var(--brand); }
+.tab.active { background: var(--brand); border-color: var(--brand); color: #fff; }
+.search {
+  flex: 1; min-width: 180px; max-width: 280px;
+  border: 1px solid var(--line); border-radius: 8px; padding: 6px 12px; font-size: 14px;
+  background: #fff; color: var(--ink); outline: none;
+}
+.search:focus { border-color: var(--brand); }
+
+/* 优惠卡片 */
+.deal-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 14px; }
+.deal-card {
+  background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--brand);
+  border-radius: 12px; padding: 14px 16px;
+}
+.deal-card .head { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+.deal-card .prod { font-weight: 700; }
+.deal-card .promo-title { font-size: 14px; margin: 4px 0; }
+.deal-card .promo-detail { color: var(--muted); font-size: 13px; margin: 2px 0 8px; }
+.deal-card .meta { font-size: 12px; color: var(--muted); display: flex; gap: 10px; flex-wrap: wrap; }
+
+/* 徽章 */
+.badge {
+  display: inline-block; font-size: 11px; line-height: 1; padding: 4px 8px;
+  border-radius: 999px; border: 1px solid transparent; white-space: nowrap;
+}
+.b-gray { background: #f1f3f7; color: var(--muted); }
+.b-blue { background: var(--brand-soft); color: var(--brand); }
+.b-green { background: var(--green-soft); color: var(--green); }
+.b-red { background: var(--red-soft); color: var(--red); }
+.b-amber { background: var(--amber-soft); color: var(--amber); }
+
+/* 表格 */
+.table-wrap { overflow-x: auto; background: var(--card); border: 1px solid var(--line); border-radius: 12px; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th {
+  text-align: left; font-size: 12px; color: var(--muted); font-weight: 600;
+  padding: 10px 14px; border-bottom: 1px solid var(--line); white-space: nowrap;
+}
+td { padding: 12px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: #fafbfe; }
+tr.dim td { opacity: 0.55; }
+.cell-prod { min-width: 200px; }
+.cell-prod .name { font-weight: 600; }
+.cell-prod .sub { font-size: 12px; color: var(--muted); }
+.price-now { font-weight: 600; }
+.price-promo { font-size: 12px; color: var(--red); }
+
+/* 产品详情 */
+.detail-head { margin: 26px 0 16px; }
+.back { font-size: 13px; }
+.detail-head h1 { margin: 8px 0; font-size: 26px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.detail-head .summary { color: var(--muted); max-width: 760px; }
+.chips { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+.chip { font-size: 12px; background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 3px 10px; color: var(--muted); }
+.panel { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; margin-bottom: 18px; }
+.panel h2 { font-size: 16px; margin: 0 0 12px; }
+.kv { display: flex; gap: 10px; font-size: 13px; margin: 4px 0; }
+.kv .k { color: var(--muted); min-width: 90px; }
+
+.promo-list { list-style: none; margin: 0; padding: 0; }
+.promo-list li { padding: 10px 0; border-bottom: 1px dashed var(--line); }
+.promo-list li:last-child { border-bottom: none; }
+.promo-list .t { font-weight: 600; font-size: 14px; }
+.promo-list .d { color: var(--muted); font-size: 13px; }
+
+/* 时间线 */
+.timeline { position: relative; margin: 20px 0; padding-left: 22px; border-left: 2px solid var(--line); }
+.tl-item { position: relative; padding-bottom: 18px; }
+.tl-item::before {
+  content: ""; position: absolute; left: -29px; top: 6px;
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--brand); border: 2px solid #fff; box-shadow: 0 0 0 1px var(--line);
+}
+.tl-date { font-size: 12px; color: var(--muted); }
+.tl-title { font-weight: 600; font-size: 14px; }
+
+.footer { margin-top: 48px; padding: 22px 0 34px; border-top: 1px solid var(--line); }
+.footer p { color: var(--muted); font-size: 12.5px; margin: 4px 0; }
+
+.empty { color: var(--muted); font-size: 14px; background: var(--card); border: 1px dashed var(--line); border-radius: 12px; padding: 22px; text-align: center; }
+
+@media (max-width: 640px) {
+  .hero { padding: 20px 16px; }
+  td, th { padding: 10px; }
+}

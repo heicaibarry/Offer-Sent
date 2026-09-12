@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel>
+<title>国内 Agent 优惠雷达</title>
+<link>https://example.github.io/agent-deals</link>
+<description>国内主流 AI Agent / Coding Plan / Token Plan 优惠活动汇总</description>
+<lastBuildDate>Sat, 12 Sep 2026 18:14:11 GMT</lastBuildDate>
+<item>
+<title>DeepSeek：错峰时段半价（常态）</title>
+<link>https://example.github.io/agent-deals/product/deepseek/</link>
+<description>北京时间 00:30–08:30 API 调用五折</description>
+<pubDate>Sun, 13 Sep 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/deepseek/#2026-09-13</guid>
+</item>
+<item>
+<title>百度搭子 DuMate：新客限时：免费体验 Turbo/Ultra 高级模式</title>
+<link>https://example.github.io/agent-deals/product/dumate/</link>
+<description>同时有限时每日签到领积分活动</description>
+<pubDate>Sun, 13 Sep 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/dumate/#2026-09-13</guid>
+</item>
+<item>
+<title>WorkBuddy：Nova 大使计划</title>
+<link>https://example.github.io/agent-deals/product/workbuddy/</link>
+<description>官网活动页设有推广激励计划，详情以官网为准</description>
+<pubDate>Sun, 13 Sep 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/workbuddy/#2026-09-13</guid>
+</item>
+<item>
+<title>WorkBuddy：连续包月 7 折 / 连续包年再享 8 折</title>
+<link>https://example.github.io/agent-deals/product/workbuddy/</link>
+<description>标准版 ¥70/月、高级版 ¥140/月、旗舰版 ¥700/月；标准版连续包年 ¥672/年</description>
+<pubDate>Sun, 13 Sep 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/workbuddy/#2026-09-13</guid>
+</item>
+<item>
+<title>Trae（TraeCode + TraeWork）：Lite / Pro 首月特惠</title>
+<link>https://example.github.io/agent-deals/product/trae/</link>
+<description>Lite 首月 ¥9.9（原价 ¥49）；Pro 首月 ¥59（原价 ¥99）</description>
+<pubDate>Sun, 13 Sep 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/trae/#2026-09-13</guid>
+</item>
+<item>
+<title>Trae（TraeCode + TraeWork）：邀请好友体验 TraeWork，双方各得 500 积分</title>
+<link>https://example.github.io/agent-deals/product/trae/</link>
+<description>最高得 3500 积分 + 2 杯星巴克咖啡</description>
+<pubDate>Sun, 13 Sep 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/trae/#2026-09-13</guid>
+</item>
+</channel></rss>

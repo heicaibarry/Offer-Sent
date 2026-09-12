@@ -1,0 +1,118 @@
+{
+  "trae-pricing": {
+    "hash": "677240fa738b9ecc2bf8c0b8323c301378bc673b",
+    "lastChecked": "2026-09-12T18:14:51.499Z",
+    "lastChanged": "2026-09-12T18:14:51.500Z",
+    "how": "fetch"
+  },
+  "workbuddy-pricing": {
+    "hash": "6dee50ad510146e787163c0befbe5d719dde72f7",
+    "lastChecked": "2026-09-12T18:14:53.625Z",
+    "lastChanged": "2026-09-12T18:14:53.625Z",
+    "how": "fetch"
+  },
+  "minimax-token-plan": {
+    "hash": "a8801a45fcca2a52a3856fbb7aca8f0cc148d897",
+    "lastChecked": "2026-09-12T18:14:57.478Z",
+    "lastChanged": "2026-09-12T18:14:57.478Z",
+    "how": "fetch"
+  },
+  "zai-subscribe": {
+    "hash": "6e8f6944f3bcc82c675500d750d15ff386405315",
+    "lastChecked": "2026-09-12T18:15:00.500Z",
+    "lastChanged": "2026-09-12T18:15:00.500Z",
+    "how": "fetch"
+  },
+  "kimi-coding": {
+    "hash": "734346dda7a193d0ffd88c818b39e58211151af4",
+    "lastChecked": "2026-09-12T18:15:03.281Z",
+    "lastChanged": "2026-09-12T18:15:03.281Z",
+    "how": "fetch"
+  },
+  "dumate-home": {
+    "hash": "fad67381c01a83bd51b8c62c938b8036ca31ff3b",
+    "lastChecked": "2026-09-12T18:15:05.256Z",
+    "lastChanged": "2026-09-12T18:15:05.256Z",
+    "how": "fetch"
+  },
+  "codebuddy-pricing": {
+    "hash": "322f605c92c3c60cc9c182212b9895b58bb2d4f3",
+    "lastChecked": "2026-09-12T18:15:08.192Z",
+    "lastChanged": "2026-09-12T18:15:08.192Z",
+    "how": "fetch"
+  },
+  "qoder-pricing": {
+    "hash": "90eb5e3f8d349bcc67f935404ef9fda6316fff06",
+    "lastChecked": "2026-09-12T18:15:10.503Z",
+    "lastChanged": "2026-09-12T18:15:10.503Z",
+    "how": "fetch"
+  },
+  "lingma-home": {
+    "hash": "847e161811be3cc4c1ab99a048b66af8db5c700e",
+    "lastChecked": "2026-09-12T18:15:14.145Z",
+    "lastChanged": "2026-09-12T18:15:14.145Z",
+    "how": "fetch"
+  },
+  "qwen-code-docs": {
+    "hash": "a3b2573683f1135c4f0e64d96f04bdb3099b0958",
+    "lastChecked": "2026-09-12T18:15:17.557Z",
+    "lastChanged": "2026-09-12T18:15:17.557Z",
+    "how": "fetch"
+  },
+  "comate-home": {
+    "hash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+    "lastChecked": "2026-09-12T18:15:20.883Z",
+    "lastChanged": "2026-09-12T18:15:20.883Z",
+    "how": "fetch"
+  },
+  "deepseek-pricing": {
+    "hash": "8c0b91dfc8a041193e54c9ed2353c9e487f04dcc",
+    "lastChecked": "2026-09-12T18:15:24.106Z",
+    "lastChanged": "2026-09-12T18:15:24.106Z",
+    "how": "fetch"
+  },
+  "coze-home": {
+    "hash": "b4889c981d67b2f768bbf540dee08364e95c74b9",
+    "lastChecked": "2026-09-12T18:15:27.182Z",
+    "lastChanged": "2026-09-12T18:15:27.182Z",
+    "how": "fetch"
+  },
+  "manus-pricing": {
+    "hash": "e72a9f7ee3b42622dd0310218ad185a21c8afd7b",
+    "lastChecked": "2026-09-12T18:15:32.027Z",
+    "lastChanged": "2026-09-12T18:15:32.027Z",
+    "how": "fetch"
+  },
+  "skywork-home": {
+    "hash": "f2a0e9e3908267d2650b11fef6549595ff180936",
+    "lastChecked": "2026-09-12T18:15:39.392Z",
+    "lastChanged": "2026-09-12T18:15:39.392Z",
+    "how": "fetch"
+  },
+  "flowith-home": {
+    "lastChecked": "2026-09-12T18:15:51.905Z",
+    "lastError": "fetch failed"
+  },
+  "lovart-home": {
+    "lastChecked": "2026-09-12T18:16:03.735Z",
+    "lastError": "fetch failed"
+  },
+  "youware-home": {
+    "hash": "5ffa9751f584e54b6120ceaa5c4f473c7f29f547",
+    "lastChecked": "2026-09-12T18:16:06.123Z",
+    "lastChanged": "2026-09-12T18:16:06.123Z",
+    "how": "fetch"
+  },
+  "siliconflow-pricing": {
+    "hash": "265d6f43033fe6b5b9beb9bfcfc106d6284c3707",
+    "lastChecked": "2026-09-12T18:16:09.742Z",
+    "lastChanged": "2026-09-12T18:16:09.742Z",
+    "how": "fetch"
+  },
+  "modelscope-home": {
+    "hash": "8117a9d3af64f088fd27afd4eaf0346a39d11ac5",
+    "lastChecked": "2026-09-12T18:16:12.294Z",
+    "lastChanged": "2026-09-12T18:16:12.294Z",
+    "how": "fetch"
+  }
+}

@@ -1,0 +1,42 @@
+# 定时核对各官方定价页；发现变更 → 推送提醒 + 提交数据 → 触发站点重新部署
+# cron 为 UTC 时间，对应北京时间 09:30 / 15:30 / 21:30，一天三查
+name: crawl
+
+on:
+  schedule:
+    - cron: "30 1,7,13 * * *"
+  workflow_dispatch:
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: 安装依赖
+        run: npm install
+
+      # SPA 定价页需要无头浏览器；安装失败不影响后续（自动降级为 HTTP 抓取）
+      - name: 安装无头浏览器（可选）
+        run: npm i -D playwright && npx playwright install --with-deps chromium
+        continue-on-error: true
+
+      - name: 核对官方页面
+        env:
+          WECHAT_WEBHOOK: ${{ secrets.WECHAT_WEBHOOK }}
+          PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
+        run: node scripts/crawl.mjs
+
+      - name: 提交数据变更
+        run: |
+          git config user.name "crawl-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "chore(data): 定时核对更新"
+          git push
