@@ -101,6 +101,7 @@ export default function DealBoard({ products }) {
                         ) : (
                           <span className="badge b-gray">{CATEGORY_LABEL[p.category] || p.category}</span>
                         )}
+                        {p.market === "intl" ? <span className="badge b-amber">海外计费</span> : null}
                       </div>
                       <div className="sub">
                         {p.vendor} · {p.type}

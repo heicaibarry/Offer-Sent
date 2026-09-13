@@ -29,6 +29,7 @@ export default function ProductPage({ params }) {
           {product.name}
           {closed ? <span className="badge b-red">已关停</span> : <span className="badge b-green">运营中</span>}
           <span className={`badge ${ps.cls}`}>{ps.label}</span>
+          {product.market === "intl" ? <span className="badge b-amber">海外计费（美元）</span> : null}
         </h1>
         <p className="summary">{product.summary}</p>
         <div className="chips">
