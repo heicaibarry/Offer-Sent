@@ -7,18 +7,19 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const bp = process.env.NEXT_PUBLIC_BASE_PATH || "";
   return (
     <html lang="zh-CN">
       <body>
         <header className="topbar">
           <div className="container topbar-inner">
-            <a className="logo" href="/">
+            <a className="logo" href={`${bp}/`}>
               🛰️ Agent优惠雷达
             </a>
             <nav className="nav">
-              <a href="/">对比</a>
-              <a href="/timeline/">时间线</a>
-              <a href="/rss.xml">RSS</a>
+              <a href={`${bp}/`}>对比</a>
+              <a href={`${bp}/timeline/`}>时间线</a>
+              <a href={`${bp}/rss.xml`}>RSS</a>
             </nav>
           </div>
         </header>
