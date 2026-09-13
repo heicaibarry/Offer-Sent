@@ -114,5 +114,11 @@
     "lastChecked": "2026-09-12T18:16:12.294Z",
     "lastChanged": "2026-09-12T18:16:12.294Z",
     "how": "fetch"
+  },
+  "bigmodel-coding-plan": {
+    "hash": "9181de8f9cd6946e79b8d2ce36f92e4315d056dc",
+    "lastChecked": "2026-09-13T18:14:17.155Z",
+    "lastChanged": "2026-09-13T18:14:17.155Z",
+    "how": "browser"
   }
 }
