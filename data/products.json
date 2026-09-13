@@ -64,15 +64,26 @@
       "market": "cn",
       "site": "https://www.kimi.com/coding",
       "pricingUrl": "https://www.kimi.com/coding",
-      "priceStatus": "pending",
-      "verifiedAt": "2026-09-13",
-      "models": ["Kimi K3（1M 上下文）"],
-      "summary": "月之暗面编程订阅，K3 已上线，主打长上下文与 agent 编程；kimi.com 为官方主站，人民币计费。",
+      "priceStatus": "verified",
+      "verifiedAt": "2026-09-14",
+      "models": ["Kimi K3（1M 上下文，Moderato 及以上可用）", "K2.7 Code"],
+      "summary": "月之暗面编程订阅，四档以音乐速度命名（Andante/Moderato/Allegretto/Allegro），一次订阅全端畅写（Terminal/IDE/CLI）。",
       "plans": [
-        { "name": "订阅月卡", "price": null, "unit": "元/月", "quota": null, "note": "历史促销价 ¥49/月，现价与档位待核实" }
+        { "name": "Andante（日常使用）", "price": 49, "unit": "元/月", "intro": 39, "quota": "专属 Kimi Code 额度，支持多个编程会话", "note": "按年计费 ¥468" },
+        { "name": "Moderato（效率升级·推荐）", "price": 99, "unit": "元/月", "intro": 79, "quota": "每周更新额度，多设备登录共享", "note": "按年计费 ¥948；可用 K3 模型" },
+        { "name": "Allegretto（专业优选）", "price": 199, "unit": "元/月", "intro": 159, "quota": "充足每周额度，更高并发上限", "note": "按年计费 ¥1,908" },
+        { "name": "Allegro（全能尊享）", "price": 699, "unit": "元/月", "intro": 559, "quota": "尊享澎湃额度，适配高强度开发", "note": "按年计费 ¥6,708" }
       ],
-      "promos": [],
-      "notes": "K2/K3 发布期常有赠送额度与首月折扣活动。"
+      "promos": [
+        {
+          "title": "连续包年最高立省 ¥1,680",
+          "detail": "四档连续包年对比月付的差价上限（Allegro 档）",
+          "endsAt": null,
+          "source": "https://www.kimi.com/coding",
+          "firstSeen": "2026-09-14"
+        }
+      ],
+      "notes": "当前订购按钮为「预约订阅」状态。历史 K2/K3 发布期常有赠送额度活动。"
     },
     {
       "slug": "minimax-token-plan",
@@ -85,16 +96,31 @@
       "site": "https://platform.minimaxi.com/subscribe/token-plan",
       "pricingUrl": "https://platform.minimaxi.com/subscribe/token-plan",
       "priceStatus": "verified",
-      "verifiedAt": "2026-09-13",
+      "verifiedAt": "2026-09-14",
       "models": ["MiniMax M2.5 / M2.7 等"],
-      "summary": "原 Coding Plan 已升级为全模态 Token Plan，订阅后调用 M 系列模型。platform.minimaxi.com 为国内站（海外版为 minimax.io，不监控）。",
+      "summary": "原 Coding Plan 已升级为全模态 Token Plan，套餐额度受 5 小时窗口 + 周窗口双重控制，用超可由已购积分自动补充。platform.minimaxi.com 为国内站（海外版为 minimax.io，不监控）。",
       "plans": [
-        { "name": "Plus", "price": 49, "unit": "元/月", "quota": null, "note": "适合个人" },
+        { "name": "Plus", "price": 49, "unit": "元/月", "quota": null, "note": "适合个人交互式使用" },
         { "name": "Max", "price": 119, "unit": "元/月", "quota": null, "note": "" },
-        { "name": "Ultra", "price": 469, "unit": "元/月", "quota": null, "note": "" }
+        { "name": "Ultra", "price": 469, "unit": "元/月", "quota": null, "note": "按年计费 ¥4,690（立省 ¥938）" }
       ],
-      "promos": [],
-      "notes": "历史活动：Coding Plan 时期首月 ¥9.9（已结束）。M 系列新模型发布期常有赠送额度。"
+      "promos": [
+        {
+          "title": "积分补充包（用超额度时自动抵扣）",
+          "detail": "¥30=4,489 积分；¥150=22,460 积分；¥500=74,900 积分",
+          "endsAt": null,
+          "source": "https://platform.minimaxi.com/subscribe/token-plan",
+          "firstSeen": "2026-09-14"
+        },
+        {
+          "title": "Ultra 按年计费立省 ¥938",
+          "detail": "年付 ¥4,690（对比月付全年 ¥5,628）",
+          "endsAt": null,
+          "source": "https://platform.minimaxi.com/subscribe/token-plan",
+          "firstSeen": "2026-09-14"
+        }
+      ],
+      "notes": "历史活动：Coding Plan 时期首月 ¥9.9（已结束）。套餐内额度不结转。"
     },
     {
       "slug": "trae",
@@ -107,32 +133,39 @@
       "site": "https://www.trae.cn",
       "pricingUrl": "https://www.trae.cn/pricing",
       "priceStatus": "verified",
-      "verifiedAt": "2026-09-13",
+      "verifiedAt": "2026-09-14",
       "summary": "字节 AI IDE，积分制付费；新推 TraeWork 办公 Agent。trae.cn 为国内版（trae.ai 为国际版，不监控）。",
       "plans": [
-        { "name": "Free", "price": 0, "unit": "元/月", "quota": "500 积分/月", "note": "全功能体验" },
-        { "name": "Lite", "price": 49, "unit": "元/月", "intro": 9.9, "quota": "2000 积分/月（TraeWork 专属）", "note": "首月 ¥9.9" },
-        { "name": "Pro", "price": 99, "unit": "元/月", "intro": 59, "quota": "4000 积分/月", "note": "首月 ¥59" },
-        { "name": "Pro+", "price": 239, "unit": "元/月", "intro": 219, "quota": "12000 积分/月", "note": "" },
-        { "name": "Ultra", "price": 699, "unit": "元/月", "intro": 629, "quota": "40000 积分/月", "note": "" }
+        { "name": "Free", "price": 0, "unit": "元/月", "quota": "500 积分/月，2 个云端任务并发", "note": "所有功能均可免费使用" },
+        { "name": "Lite（仅 TraeWork 可用）", "price": 49, "unit": "元/月", "intro": 29.9, "quota": "2,000 Work 专属积分/月", "note": "首月优惠低至 ¥29.9；签到多得 1550 积分" },
+        { "name": "Pro", "price": 99, "unit": "元/月", "intro": 69, "quota": "4,000 积分/月，10 个云端任务并发", "note": "首月优惠低至 ¥69" },
+        { "name": "Pro+", "price": 239, "unit": "元/月", "intro": 219, "quota": "12,000 积分/月", "note": "低至 ¥219/月" },
+        { "name": "Ultra", "price": 699, "unit": "元/月", "intro": 629, "quota": "40,000 积分/月，20 个云端任务并发", "note": "低至 ¥629/月，新模型优先体验" }
       ],
       "promos": [
         {
-          "title": "邀请好友体验 TraeWork，双方各得 500 积分",
-          "detail": "最高得 3500 积分 + 2 杯星巴克咖啡",
+          "title": "会员模型折扣：GLM 5.2/5.3 五折、Seed 系 2.5 折、DeepSeek-Flash 全时段五折",
+          "detail": "Lite 及以上会员享；DeepSeek-Pro 会员闲时五折",
           "endsAt": null,
           "source": "https://www.trae.cn/pricing",
-          "firstSeen": "2026-09-13"
+          "firstSeen": "2026-09-14"
         },
         {
-          "title": "Lite / Pro 首月特惠",
-          "detail": "Lite 首月 ¥9.9（原价 ¥49）；Pro 首月 ¥59（原价 ¥99）",
+          "title": "会员签到每月多得 1550 积分",
+          "detail": "Lite/Pro/Pro+/Ultra 会员每日签到累积",
+          "endsAt": null,
+          "source": "https://www.trae.cn/pricing",
+          "firstSeen": "2026-09-14"
+        },
+        {
+          "title": "邀请好友体验 TraeWork，双方各得 500 积分",
+          "detail": "最高得 3500 积分 + 2 杯星巴克咖啡（此前官网活动，最新页面未展示，待核实是否仍有效）",
           "endsAt": null,
           "source": "https://www.trae.cn/pricing",
           "firstSeen": "2026-09-13"
         }
       ],
-      "notes": "国内运营主体为北京引力弹弓科技有限公司（字节系）。"
+      "notes": "首月特惠已从 Lite ¥9.9 / Pro ¥59 调整为 Lite ¥29.9 / Pro ¥69（2026-09-14 页面口径）。国内运营主体为北京引力弹弓科技有限公司（字节系）。"
     },
     {
       "slug": "workbuddy",
@@ -145,21 +178,28 @@
       "site": "https://www.workbuddy.cn",
       "pricingUrl": "https://www.workbuddy.cn/pricing",
       "priceStatus": "verified",
-      "verifiedAt": "2026-09-13",
-      "summary": "腾讯云代码助手团队推出的 AI Agent 办公工具，多 Agent 并行执行复杂任务。",
+      "verifiedAt": "2026-09-14",
+      "summary": "腾讯云代码助手团队推出的 AI Agent 办公工具，多 Agent 并行执行复杂任务，与 CodeBuddy 同积分体系。",
       "plans": [
-        { "name": "试用版", "price": 0, "unit": "元/月", "quota": "500 积分/月", "note": "限时免费" },
-        { "name": "标准版", "price": 99, "unit": "元/月", "intro": 70, "quota": "约 4000 积分", "note": "连续包月 ¥70（7 折）；年付 ¥840、连续包年 ¥672" },
-        { "name": "高级版", "price": 199, "unit": "元/月", "intro": 140, "quota": null, "note": "连续包月 ¥140" },
-        { "name": "旗舰版", "price": 999, "unit": "元/月", "intro": 700, "quota": null, "note": "连续包月 ¥700" }
+        { "name": "体验版", "price": 0, "unit": "元/月", "quota": "每月 500 积分，代码实时补全 5000 次/月", "note": "限时免费" },
+        { "name": "标准版", "price": 99, "unit": "元/月", "intro": 70, "quota": "基础 2000 + 赠送 2000 积分/月", "note": "限时折扣价 ¥70/月；代码补全无限次" },
+        { "name": "高级版", "price": 199, "unit": "元/月", "intro": 140, "quota": "基础 4000 + 赠送 5000 积分/月", "note": "限时折扣价 ¥140/月" },
+        { "name": "旗舰版", "price": 999, "unit": "元/月", "intro": 700, "quota": "基础 20000 + 赠送 30000 积分/月", "note": "限时折扣价 ¥700/月" }
       ],
       "promos": [
         {
-          "title": "连续包月 7 折 / 连续包年再享 8 折",
-          "detail": "标准版 ¥70/月、高级版 ¥140/月、旗舰版 ¥700/月；标准版连续包年 ¥672/年",
+          "title": "体验版限时免费",
+          "detail": "500 积分/月 + 代码实时补全限免无限次",
           "endsAt": null,
           "source": "https://www.workbuddy.cn/pricing",
-          "firstSeen": "2026-09-13"
+          "firstSeen": "2026-09-14"
+        },
+        {
+          "title": "全档位限时折扣（约 7 折）",
+          "detail": "标准 ¥70（原 ¥99）、高级 ¥140（原 ¥199）、旗舰 ¥700（原 ¥999）",
+          "endsAt": null,
+          "source": "https://www.workbuddy.cn/pricing",
+          "firstSeen": "2026-09-14"
         },
         {
           "title": "Nova 大使计划",
@@ -169,7 +209,7 @@
           "firstSeen": "2026-09-13"
         }
       ],
-      "notes": "2026 年调价：标准版（原专业版）¥58 → ¥99，新增高级版与旗舰版。企业版约 ¥2000/账号/月。"
+      "notes": "年付口径：标准版年付 ¥840、连续包年 ¥672。企业版约 ¥2000/账号/月。"
     },
     {
       "slug": "dumate",
@@ -181,19 +221,26 @@
       "market": "cn",
       "site": "https://www.dumate.cn/",
       "pricingUrl": "https://www.dumate.cn/",
-      "priceStatus": "partial",
-      "verifiedAt": "2026-09-13",
+      "priceStatus": "verified",
+      "verifiedAt": "2026-09-14",
       "summary": "百度桌面级 AI 办公智能体，看得见屏幕、能操作软件和处理文件；企业版走百度智能云。",
       "plans": [
-        { "name": "免费版", "price": 0, "unit": "元/月", "quota": null, "note": "高峰时段限流" },
-        { "name": "Pro", "price": null, "unit": "元/月", "quota": null, "note": "价格以官网购买页为准（价格图为图片，待核实）" },
-        { "name": "Max", "price": null, "unit": "元/月", "quota": null, "note": "待核实" },
-        { "name": "加量包", "price": null, "unit": "元", "quota": null, "note": "仅 Pro/Max 用户可购，购买后 1 个月内有效" }
+        { "name": "免费版", "price": 0, "unit": "元/月", "quota": null, "note": "限时体验 Turbo、Ultra 模式；限时每日签到领取积分" },
+        { "name": "Pro", "price": 59, "unit": "元/月", "intro": 9.9, "quota": "25,000 积分/月", "note": "首月 ¥9.9，次月起 ¥59/月，可随时取消" },
+        { "name": "Max", "price": 129, "unit": "元/月", "intro": 69, "quota": "100,000 积分/月", "note": "首月 ¥69，次月起 ¥129/月" },
+        { "name": "加量包", "price": 10, "unit": "元 / 5,000 积分", "quota": "5,000 积分起购", "note": "积分共享" }
       ],
       "promos": [
         {
-          "title": "新客限时：免费体验 Turbo/Ultra 高级模式",
-          "detail": "同时有限时每日签到领积分活动",
+          "title": "Pro 首月 ¥9.9 / Max 首月 ¥69",
+          "detail": "次月起 ¥59/¥129 每月，可随时取消",
+          "endsAt": null,
+          "source": "https://www.dumate.cn/",
+          "firstSeen": "2026-09-14"
+        },
+        {
+          "title": "免费版限时体验 Turbo/Ultra 高级模式 + 每日签到领积分",
+          "detail": "免费版用户限时开放高级模式与签到福利",
           "endsAt": null,
           "source": "https://www.dumate.cn/",
           "firstSeen": "2026-09-13"
@@ -211,15 +258,32 @@
       "market": "cn",
       "site": "https://www.codebuddy.cn",
       "pricingUrl": "https://www.codebuddy.cn/pricing",
-      "priceStatus": "pending",
-      "verifiedAt": "2026-09-13",
-      "summary": "腾讯云 AI 代码助手，IDE 与 CLI 双形态，WorkBuddy 同门兄弟产品。codebuddy.cn 为国内版（codebuddy.ai 为国际版，不监控）。",
+      "priceStatus": "verified",
+      "verifiedAt": "2026-09-14",
+      "summary": "腾讯云 AI 代码助手，IDE 与 CLI 双形态，与 WorkBuddy 同积分体系、同档位定价。codebuddy.cn 为国内版（codebuddy.ai 为国际版，不监控）。",
       "plans": [
-        { "name": "免费版", "price": 0, "unit": "元/月", "quota": null, "note": "国内版含免费额度" },
-        { "name": "付费版", "price": null, "unit": "元/月", "quota": null, "note": "档位与价格待核实" }
+        { "name": "体验版", "price": 0, "unit": "元/月", "quota": "每月 500 积分，代码实时补全 5000 次/月", "note": "限时免费" },
+        { "name": "标准版", "price": 99, "unit": "元/月", "intro": 70, "quota": "基础 2000 + 赠送 2000 积分/月", "note": "限时折扣价 ¥70/月；代码补全无限次" },
+        { "name": "高级版", "price": 199, "unit": "元/月", "intro": 140, "quota": "基础 4000 + 赠送 5000 积分/月", "note": "限时折扣价 ¥140/月" },
+        { "name": "旗舰版", "price": 999, "unit": "元/月", "intro": 700, "quota": "基础 20000 + 赠送 30000 积分/月", "note": "限时折扣价 ¥700/月" }
       ],
-      "promos": [],
-      "notes": ""
+      "promos": [
+        {
+          "title": "体验版限时免费",
+          "detail": "500 积分/月 + 代码实时补全限免无限次",
+          "endsAt": null,
+          "source": "https://www.codebuddy.cn/pricing",
+          "firstSeen": "2026-09-14"
+        },
+        {
+          "title": "官方合作享限时折扣（全档位约 7 折）",
+          "detail": "标准 ¥70（原 ¥99）、高级 ¥140（原 ¥199）、旗舰 ¥700（原 ¥999）",
+          "endsAt": null,
+          "source": "https://www.codebuddy.cn/pricing",
+          "firstSeen": "2026-09-14"
+        }
+      ],
+      "notes": "订阅期内可随时升级套餐，按未用基础积分折算退款。"
     },
     {
       "slug": "qoder",
@@ -228,18 +292,20 @@
       "category": "coding",
       "type": "Agentic IDE + CLI",
       "status": "active",
-      "market": "cn",
+      "market": "intl",
       "site": "https://qoder.com",
       "pricingUrl": "https://qoder.com/pricing",
-      "priceStatus": "pending",
+      "priceStatus": "verified",
       "verifiedAt": "2026-09-14",
-      "summary": "阿里 agentic coding 平台，Quest 模式；iFlow CLI 关停后的官方指定迁移目标。qoder.com 为阿里官方站，国内可直接注册使用。",
+      "summary": "阿里 agentic coding 平台（iFlow 关停官方迁移目标）。核实为美元计费（Free $0 / Pro $20 / Pro+ $60 / Ultra $200，Credits 制），标注海外计费、不做国内监控。",
       "plans": [
-        { "name": "Free", "price": 0, "unit": "元/月", "quota": null, "note": "" },
-        { "name": "Pro", "price": null, "unit": "元/月", "quota": null, "note": "计费币种与档位待核实（定价页为动态渲染）" }
+        { "name": "Free", "price": 0, "unit": "USD/月", "quota": "基础模型每日/每月限额", "note": "4,000 Credits 限时活动" },
+        { "name": "Pro", "price": 20, "unit": "USD/月", "quota": "1,500 Credits/月", "note": "资源包 $20/1,500 Credits" },
+        { "name": "Pro+", "price": 60, "unit": "USD/月", "quota": null, "note": "" },
+        { "name": "Ultra", "price": 200, "unit": "USD/月", "quota": null, "note": "" }
       ],
       "promos": [],
-      "notes": "计费币种待确认：若核实为仅美元计费，将改标为海外计费。"
+      "notes": "海外计费（美元），暂不算国内优惠、已停止监控。当期海外活动：9 月 Pro/Pro+ 首月 Credits 翻倍、续费加赠 1,000；「经济」档位 0.3x→0.0x 免费开放；新用户 14 天 Pro 试用（300 Credits）。若推出国内人民币计费将重新纳入监控。"
     },
     {
       "slug": "tongyi-lingma",
@@ -251,16 +317,24 @@
       "market": "cn",
       "site": "https://tongyi.aliyun.com/lingma",
       "pricingUrl": "https://tongyi.aliyun.com/lingma",
-      "priceStatus": "pending",
-      "verifiedAt": "2026-09-13",
-      "summary": "阿里云老牌 AI 编程助手，个人版免费，支持 Qwen3-Coder。",
+      "priceStatus": "partial",
+      "verifiedAt": "2026-09-14",
+      "summary": "阿里云老牌 AI 编程助手，个人免费使用、企业免费开通，支持 Qwen3-Coder。",
       "plans": [
-        { "name": "个人免费版", "price": 0, "unit": "元/月", "quota": null, "note": "" },
-        { "name": "个人专业版", "price": null, "unit": "元/月", "quota": null, "note": "待核实（历史约 ¥10/月，常有试用活动）" },
-        { "name": "企业版", "price": null, "unit": "元/席位", "quota": null, "note": "联系商务" }
+        { "name": "个人免费版", "price": 0, "unit": "元/月", "quota": null, "note": "个人免费使用" },
+        { "name": "个人专业版", "price": null, "unit": "元/月", "quota": null, "note": "限时免费中（官网提示「即将截止」），原价待核实" },
+        { "name": "企业版", "price": 0, "unit": "元", "quota": null, "note": "企业免费开通（基础）；专属版联系商务" }
       ],
-      "promos": [],
-      "notes": ""
+      "promos": [
+        {
+          "title": "专业版限时免费（即将截止）",
+          "detail": "官网横幅提示活动临近结束，抓紧白嫖",
+          "endsAt": null,
+          "source": "https://tongyi.aliyun.com/lingma",
+          "firstSeen": "2026-09-14"
+        }
+      ],
+      "notes": "专业版恢复收费后的原价需要人工跟进核实。"
     },
     {
       "slug": "qwen-code",
@@ -293,11 +367,11 @@
       "site": "https://comate.baidu.com",
       "pricingUrl": "https://comate.baidu.com",
       "priceStatus": "pending",
-      "verifiedAt": "2026-09-13",
+      "verifiedAt": "2026-09-14",
       "summary": "百度 AI 编程助手，个人免费版 + 付费档。",
       "plans": [
         { "name": "个人免费版", "price": 0, "unit": "元/月", "quota": null, "note": "" },
-        { "name": "付费档", "price": null, "unit": "元/月", "quota": null, "note": "待核实" }
+        { "name": "付费档", "price": null, "unit": "元/月", "quota": null, "note": "价格未在官网首页展示，待核实（可能在 /price 子页）" }
       ],
       "promos": [],
       "notes": ""
@@ -337,10 +411,10 @@
       "market": "cn",
       "site": "https://code.fittentech.com",
       "pricingUrl": "https://code.fittentech.com",
-      "priceStatus": "pending",
-      "verifiedAt": "2026-09-13",
-      "summary": "免费为主的国产 AI 编程助手。",
-      "plans": [{ "name": "免费版", "price": 0, "unit": "元/月", "quota": null, "note": "" }],
+      "priceStatus": "partial",
+      "verifiedAt": "2026-09-14",
+      "summary": "免费为主的国产 AI 编程助手，官网标注限时免费。",
+      "plans": [{ "name": "免费版", "price": 0, "unit": "元/月", "quota": null, "note": "官网标注「限时免费」" }],
       "promos": [],
       "notes": ""
     },
@@ -372,11 +446,11 @@
       "site": "https://raccoon.sensesoftime.com",
       "pricingUrl": "https://raccoon.sensesoftime.com",
       "priceStatus": "pending",
-      "verifiedAt": "2026-09-13",
+      "verifiedAt": "2026-09-14",
       "summary": "商汤推出的 AI 编程助手。",
       "plans": [],
       "promos": [],
-      "notes": ""
+      "notes": "官网当前网络不可达（本地与抓取环境均连接失败），待恢复后核实。"
     },
     {
       "slug": "iflow-cli",
@@ -406,11 +480,11 @@
       "site": "https://www.coze.cn",
       "pricingUrl": "https://www.coze.cn",
       "priceStatus": "pending",
-      "verifiedAt": "2026-09-13",
+      "verifiedAt": "2026-09-14",
       "summary": "字节通用 Agent 平台，任务型执行 + 插件生态。coze.cn 为国内版（coze.com 为国际版，不监控）。",
       "plans": [],
       "promos": [],
-      "notes": ""
+      "notes": "空间页面需登录后才能看到套餐信息，待登录态抓取或人工核实。"
     },
     {
       "slug": "manus",
@@ -507,12 +581,12 @@
       "market": "cn",
       "site": "https://siliconflow.cn",
       "pricingUrl": "https://siliconflow.cn/pricing",
-      "priceStatus": "pending",
-      "verifiedAt": "2026-09-13",
-      "summary": "聚合各开源模型的 API 平台，注册送赠金，部分模型免费。siliconflow.cn 为国内站（.com 为海外版，不监控）。",
+      "priceStatus": "partial",
+      "verifiedAt": "2026-09-14",
+      "summary": "聚合各开源模型的 API 平台，按 token 计费（已抓到分档价格），注册送赠金，部分模型免费。siliconflow.cn 为国内站（.com 为海外版，不监控）。",
       "plans": [],
       "promos": [],
-      "notes": ""
+      "notes": "已核实为纯 API 按量计费（输入 ¥0.4–16/百万 token 分档），无订阅套餐类优惠。"
     },
     {
       "slug": "modelscope",
@@ -524,11 +598,19 @@
       "market": "cn",
       "site": "https://modelscope.cn",
       "pricingUrl": "https://modelscope.cn",
-      "priceStatus": "pending",
-      "verifiedAt": "2026-09-13",
-      "summary": "模型社区，提供免费 API 推理额度。",
+      "priceStatus": "partial",
+      "verifiedAt": "2026-09-14",
+      "summary": "模型社区，提供免费 API 推理额度与免费算力。",
       "plans": [],
-      "promos": [],
+      "promos": [
+        {
+          "title": "注册并绑定阿里云账号，立享免费算力",
+          "detail": "CPU 资源长期免费，GPU 算力限额免费；社区贡献还可得通用激励积分",
+          "endsAt": null,
+          "source": "https://modelscope.cn",
+          "firstSeen": "2026-09-14"
+        }
+      ],
       "notes": ""
     }
   ]

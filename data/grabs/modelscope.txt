@@ -1,0 +1,281 @@
+首页 · 魔搭社区
+首页
+模型库
+数据集
+创空间
+开发者实践
+社区
+智能工坊
+实验场
+AIGC 专区
+热门搜索
+MiniMax H3
+qwen3.8
+deepseek
+indextts2
+krea2
+qwen
+qwen3.8-27b
+qwen3.5
+DeepSeek-V4.1-Flash
+api
+登录 / 注册
+共享 · 共创 · 共进，构建持续创新的 AI 开源生态
+加入社区
+模型库
+任务
+DeepSeek-V4.1-Flash
+DeepSeek-V4.1-Flash
+千问3.8-Flash-Next
+Qwen3.8-Flash-Next
+GLM-5.3
+GLM-5.3
+DeepSeek-V4-Flash-Vision-Exp
+DeepSeek-V4-Flash-Vision-Exp
+MiniCPM5-2B
+MiniCPM5-2B
+AuK
+AuK
+千问3.8-27B
+Qwen3.8-27B
+GLM-5.3-Flash
+GLM-5.3-Flash
+计算机视觉
+视觉检测跟踪
+光学字符识别
+人脸人体
+视觉分类
+视觉编辑
+视觉分割
+自然语言处理
+文本分类
+文本生成
+分词
+命名实体识别
+翻译
+文本摘要
+语音
+语音识别
+逆文本正则化
+语音合成
+语音唤醒
+语音降噪
+回声消除
+多模态
+图像描述
+视频描述
+视觉定位
+文本生成图片
+文本生成视频
+多模态表征
+科学计算
+蛋白质结构生成
+蛋白质功能预测
+更多 →
+数据集
+PerceptionBench
+2026.08.02
+ResearchClawBench
+2026.07.30
+MotionDecode
+2026.08.17
+stack-v3-train
+2026.08.18
+Privasis-USA
+2026.07.10
+更多 →
+创空间
+YuE2-3B
+YuE2-3B
+MiniCPM5-2B
+MiniCPM5-2B
+更多 →
+了解我们
+社区动向
+线上体验
+代码开源
+云上算力
+合作伙伴
+登录 / 注册
+了解我们
+快速开始
+了解基础概念，学习环境安装，2分钟解锁模型推理体验。
+ModelScope
+开源模型社区，汇集业界最新最热的模型、数据集以及创空间应用。提供简洁高效的模型服务及算力平台，轻松玩转模型微调部署推理及应用搭建。
+ModelScope Library
+一套支持模型高效推理、训练评估及导出的 Python Library，涵盖自然语言处理、图像、语音、多模态和科学计算5大AI领域。
+ModelHub
+提供模型、数据集等内容托管服务，从学习创建一个模型库开始吧。
+最新动态
+开启技能服务墙，让你的AI能力带来更多合作机会
+ModelScope「 Offering 服务墙」现已上线！如果你拥有 AI 相关的专业技能或实践经验，现在可以在个人主页中开启技能服务墙，清晰展示你能提供的商业服务，让有需求的个人或团队更容易发现并联系你。
+2026.07.28
+AI+∞开发者创作大赛正式启动！第一期：运营人，动手造自己的工具！
+第一期聚焦「AI+运营」——运营人，造自己的工具！那些工作中反复出现、耗时又让人抓狂的问题，都可以成为一个作品的起点。
+2026.07.16
+AI+∞ 开发者创作大赛第二期：用 AI，提前看见未来！
+🕹️第二期聚焦「AI+影视流」——原创AI科幻短片；用AI，提前看见未来！本期特别加入由NVIDIA赞助提供的60台 DGX Spark，突破极限，参赛者可以在本地实现图文视频无限生成。
+2026.08.26
+魔搭社区「魔粒体系」正式上线！
+全站通用激励积分，每一份贡献都有回报
+2026.08.05
+开启技能服务墙，让你的AI能力带来更多合作机会
+ModelScope「 Offering 服务墙」现已上线！如果你拥有 AI 相关的专业技能或实践经验，现在可以在个人主页中开启技能服务墙，清晰展示你能提供的商业服务，让有需求的个人或团队更容易发现并联系你。
+2026.07.28
+AI+∞开发者创作大赛正式启动！第一期：运营人，动手造自己的工具！
+第一期聚焦「AI+运营」——运营人，造自己的工具！那些工作中反复出现、耗时又让人抓狂的问题，都可以成为一个作品的起点。
+2026.07.16
+AI+∞ 开发者创作大赛第二期：用 AI，提前看见未来！
+🕹️第二期聚焦「AI+影视流」——原创AI科幻短片；用AI，提前看见未来！本期特别加入由NVIDIA赞助提供的60台 DGX Spark，突破极限，参赛者可以在本地实现图文视频无限生成。
+2026.08.26
+魔搭社区「魔粒体系」正式上线！
+全站通用激励积分，每一份贡献都有回报
+2026.08.05
+开启技能服务墙，让你的AI能力带来更多合作机会
+ModelScope「 Offering 服务墙」现已上线！如果你拥有 AI 相关的专业技能或实践经验，现在可以在个人主页中开启技能服务墙，清晰展示你能提供的商业服务，让有需求的个人或团队更容易发现并联系你。
+2026.07.28
+AI+∞开发者创作大赛正式启动！第一期：运营人，动手造自己的工具！
+第一期聚焦「AI+运营」——运营人，造自己的工具！那些工作中反复出现、耗时又让人抓狂的问题，都可以成为一个作品的起点。
+2026.07.16
+1
+2
+本周社区动向
+模型库
+DeepSeek-V4.1-Flash
+DeepSeek-V4.1-Flash/2026.09.10 8.2k 152
+千问3.8-Flash-Next
+Qwen3.8-Flash-Next/2026.08.27 48.1k 1.2k
+GLM-5.3
+GLM-5.3/2026.09.04 13.9k 223
+MiniMax-H3
+MiniMax-H3/2026.09.07 7.3k 443
+DeepSeek-V4-Flash-Vision-Exp
+DeepSeek-V4-Flash-Vision-Exp/2026.09.01 12.8k 136
+GLM-5.3-Flash
+GLM-5.3-Flash/2026.09.08 51.9k 153
+更多 →
+创空间
+IndexTTS-2.5
+IndexTTS-2.5/2026.09.07 55.5k 454
+YuE2-3B
+YuE2-3B/2026.09.11 414 8
+Wan-Animate-2
+Wan2.2-Animate/2026.09.11 615.5k 927
+MiniCPM5-2B
+MiniCPM5-2B/2026.09.09 3.0k 16
+AuK
+AuK/2026.09.11 3.3k 12
+Model_API
+Model_API/2026.09.10 3.4k 6
+更多 →
+数据集
+MiniMax-H3_ComfyUI_Sageattn3
+MiniMax-H3_ComfyUI_Sageattn3/2026.08.23 2.4k 16
+PerceptionBench
+PerceptionBench/2026.08.02 79.9k 63
+MotionDecode
+MotionDecode/2026.08.17 931.3k 38
+ResearchClawBench
+ResearchClawBench/2026.07.30 491.2k 26
+stack-v3-train
+stack-v3-train/2026.08.18 165.3k 29
+教程视频相关资料索引
+Tutorial_Video_Related_Materials_Index/2026.09.06 205 1
+更多 →
+热门空间应用
+通义实验室
+666 666
+创空间
+ModelScope的创空间（Studio），为您提供自由灵活的AI应用展示空间。您可以基于ModelScope平台上模型提供的原子能力，自行搭建与展示不同AI应用。
+2026.09.14 更新
+通义实验室
+666 666
+创空间
+ModelScope的创空间（Studio），为您提供自由灵活的AI应用展示空间。您可以基于ModelScope平台上模型提供的原子能力，自行搭建与展示不同AI应用。
+2026.09.14 更新
+通义实验室
+666 666
+创空间
+ModelScope的创空间（Studio），为您提供自由灵活的AI应用展示空间。您可以基于ModelScope平台上模型提供的原子能力，自行搭建与展示不同AI应用。
+2026.09.14 更新
+通义实验室
+666 666
+创空间
+ModelScope的创空间（Studio），为您提供自由灵活的AI应用展示空间。您可以基于ModelScope平台上模型提供的原子能力，自行搭建与展示不同AI应用。
+2026.09.14 更新
+icebergyang
+414 8
+YuE2-3B
+YuE2-3B lyrics-to-song music generator: a style description + structured lyrics -> a full song with vocals (48 kHz stereo), plus melody-conditioned covers. Unofficial ModelScope migration; weights are CC BY-NC 4.0 (non-commercial).
+2026.09.11 更新
+OpenBMB
+3.0k 16
+MiniCPM5-2B
+MiniCPM5-2B 在线对话演示：流式输出、思考模式开关、temperature/top-p 调节、Markdown 与 LaTeX 渲染。模型 OpenBMB/MiniCPM5-2B（标准 LlamaForCausalLM，2.5B，BF16，128K 上下文，Apache-2.0）
+2026.09.09 更新
+腾讯混元
+3.3k 12
+AuK
+2026.09.11 更新
+高德视觉技术
+5.3k 57
+ABot-Recon 在线三维重建
+上传单个 RGB 视频，使用 ABot-Recon 进行长序列流式三维重建，输出彩色点云和相机轨迹；支持可选回环优化。
+2026.09.02 更新
+商汤日日新
+2.7k 79
+SenseNova U1.5
+Unified image generation & editing with SenseNova/SenseNova-U1.5-8B-MoT (official release, NEO-Unify).
+2026.08.24 更新
+高德视觉技术
+8.1k 64
+Abot-World
+2026.08.03 更新
+Index Team
+55.5k 454
+IndexTTS-2.5
+IndexTTS-2.5 多语言零样本语音合成：支持音色克隆、情感控制、语速控制与中英日西阿五语种。
+2026.09.07 更新
+icebergyang
+1.4k 30
+Anima 2.9B-动漫插画生成
+基于 Anima-2.9B 的非商业动漫与插画文生图体验，基于Modelscope xgpu
+2026.08.21 更新
+完善的工程框架和丰富的开源生态
+助力大模型研发
+全部 ModelScope EvalScope Swift ModelScope-Agent
+ModelScope
+让“模型即服务”的理念生动实现！
+Bring the notion of Model-as-a-Service to life.
+Repo →
+EvalScope
+一个用于简化大模型评估和性能基准测试的高效、可定制框架。
+A streamlined and customizable framework for efficient large model evaluation and performance benchmarking.
+Repo →
+Swift
+魔搭大模型训练推理工具箱，支持LLaMA、千问、ChatGLM、BaiChuan等多种模型及LoRA等多种训练方式。
+The LLM training/inference framework of ModelScope community, Support various models like LLaMA, Qwen, ChatGLM, Baichuan and others, and training methods like LoRA, ResTuning, NEFTune, etc.
+Repo →
+ModelScope-Agent
+连接 ModelScope 模型能力与万物的桥梁。
+An agent framework connecting models in ModelScope with the world.
+Repo →
+无需环境安装链接云上澎湃算力
+魔搭平台为您提供零门槛在线开发环境（Notebook）
+无需环境安装 CPU资源 长期免费 GPU算力 限额免费
+注册社区并绑定阿里云账号，立享免费算力资源 →
+合作伙伴
+行业合作伙伴
+工具合作伙伴
+还有更多伙伴火热入驻中，欢迎 合作联系
+关于我们 ModelScope 社区成立于 2022 年 6 月，是一个模型开源社区及创新平台，由阿里巴巴通义实验室（Institutefor Intelligent Computing），联合CCF开源发展委员会，共同作为项目发起方。社区联合国内 AI 领域合作伙伴与高校机构，致力于通过开放的社区合作，构建深度学习相关的模型开源社区，并开放相关模型创新技术，推动基于“模型即服务”（Model-as-a-Service）理念的模型应用生态的繁荣发展。
+关注ModelScope 公众号/小程序
+哔哩哔哩
+小红书
+抖音
+知乎
+GitHub
+开源行为准则 用户协议 隐私政策 人工智能伦理倡议书 内容合规审查
+联系我们 邮箱 钉钉群
+© 2022-2026 ModelScope.cn 版权所有
+浙公网安备33010002000365 沪ICP备2024081488号-1

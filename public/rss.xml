@@ -3,7 +3,91 @@
 <title>国内 Agent 优惠雷达</title>
 <link>https://example.github.io/agent-deals</link>
 <description>国内主流 AI Agent / Coding Plan / Token Plan 优惠活动汇总</description>
-<lastBuildDate>Sun, 13 Sep 2026 18:29:22 GMT</lastBuildDate>
+<lastBuildDate>Sun, 13 Sep 2026 18:43:25 GMT</lastBuildDate>
+<item>
+<title>魔搭 ModelScope：注册并绑定阿里云账号，立享免费算力</title>
+<link>https://example.github.io/agent-deals/product/modelscope/</link>
+<description>CPU 资源长期免费，GPU 算力限额免费；社区贡献还可得通用激励积分</description>
+<pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/modelscope/#2026-09-14</guid>
+</item>
+<item>
+<title>通义灵码：专业版限时免费（即将截止）</title>
+<link>https://example.github.io/agent-deals/product/tongyi-lingma/</link>
+<description>官网横幅提示活动临近结束，抓紧白嫖</description>
+<pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/tongyi-lingma/#2026-09-14</guid>
+</item>
+<item>
+<title>CodeBuddy：官方合作享限时折扣（全档位约 7 折）</title>
+<link>https://example.github.io/agent-deals/product/codebuddy/</link>
+<description>标准 ¥70（原 ¥99）、高级 ¥140（原 ¥199）、旗舰 ¥700（原 ¥999）</description>
+<pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/codebuddy/#2026-09-14</guid>
+</item>
+<item>
+<title>CodeBuddy：体验版限时免费</title>
+<link>https://example.github.io/agent-deals/product/codebuddy/</link>
+<description>500 积分/月 + 代码实时补全限免无限次</description>
+<pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/codebuddy/#2026-09-14</guid>
+</item>
+<item>
+<title>百度搭子 DuMate：Pro 首月 ¥9.9 / Max 首月 ¥69</title>
+<link>https://example.github.io/agent-deals/product/dumate/</link>
+<description>次月起 ¥59/¥129 每月，可随时取消</description>
+<pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/dumate/#2026-09-14</guid>
+</item>
+<item>
+<title>WorkBuddy：全档位限时折扣（约 7 折）</title>
+<link>https://example.github.io/agent-deals/product/workbuddy/</link>
+<description>标准 ¥70（原 ¥99）、高级 ¥140（原 ¥199）、旗舰 ¥700（原 ¥999）</description>
+<pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/workbuddy/#2026-09-14</guid>
+</item>
+<item>
+<title>WorkBuddy：体验版限时免费</title>
+<link>https://example.github.io/agent-deals/product/workbuddy/</link>
+<description>500 积分/月 + 代码实时补全限免无限次</description>
+<pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/workbuddy/#2026-09-14</guid>
+</item>
+<item>
+<title>Trae（TraeCode + TraeWork）：会员签到每月多得 1550 积分</title>
+<link>https://example.github.io/agent-deals/product/trae/</link>
+<description>Lite/Pro/Pro+/Ultra 会员每日签到累积</description>
+<pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/trae/#2026-09-14</guid>
+</item>
+<item>
+<title>Trae（TraeCode + TraeWork）：会员模型折扣：GLM 5.2/5.3 五折、Seed 系 2.5 折、DeepSeek-Flash 全时段五折</title>
+<link>https://example.github.io/agent-deals/product/trae/</link>
+<description>Lite 及以上会员享；DeepSeek-Pro 会员闲时五折</description>
+<pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/trae/#2026-09-14</guid>
+</item>
+<item>
+<title>MiniMax Token Plan：Ultra 按年计费立省 ¥938</title>
+<link>https://example.github.io/agent-deals/product/minimax-token-plan/</link>
+<description>年付 ¥4,690（对比月付全年 ¥5,628）</description>
+<pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/minimax-token-plan/#2026-09-14</guid>
+</item>
+<item>
+<title>MiniMax Token Plan：积分补充包（用超额度时自动抵扣）</title>
+<link>https://example.github.io/agent-deals/product/minimax-token-plan/</link>
+<description>¥30=4,489 积分；¥150=22,460 积分；¥500=74,900 积分</description>
+<pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/minimax-token-plan/#2026-09-14</guid>
+</item>
+<item>
+<title>Kimi Code（Kimi for Coding）：连续包年最高立省 ¥1,680</title>
+<link>https://example.github.io/agent-deals/product/kimi-code/</link>
+<description>四档连续包年对比月付的差价上限（Allegro 档）</description>
+<pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/kimi-code/#2026-09-14</guid>
+</item>
 <item>
 <title>GLM Coding Plan（ZCode）：编程套餐连续包季 8 折 / 连续包年 7 折</title>
 <link>https://example.github.io/agent-deals/product/glm-coding-plan/</link>
@@ -96,9 +180,9 @@
 <guid>https://example.github.io/agent-deals/product/deepseek/#2026-09-13</guid>
 </item>
 <item>
-<title>百度搭子 DuMate：新客限时：免费体验 Turbo/Ultra 高级模式</title>
+<title>百度搭子 DuMate：免费版限时体验 Turbo/Ultra 高级模式 + 每日签到领积分</title>
 <link>https://example.github.io/agent-deals/product/dumate/</link>
-<description>同时有限时每日签到领积分活动</description>
+<description>免费版用户限时开放高级模式与签到福利</description>
 <pubDate>Sun, 13 Sep 2026 00:00:00 GMT</pubDate>
 <guid>https://example.github.io/agent-deals/product/dumate/#2026-09-13</guid>
 </item>
@@ -110,23 +194,9 @@
 <guid>https://example.github.io/agent-deals/product/workbuddy/#2026-09-13</guid>
 </item>
 <item>
-<title>WorkBuddy：连续包月 7 折 / 连续包年再享 8 折</title>
-<link>https://example.github.io/agent-deals/product/workbuddy/</link>
-<description>标准版 ¥70/月、高级版 ¥140/月、旗舰版 ¥700/月；标准版连续包年 ¥672/年</description>
-<pubDate>Sun, 13 Sep 2026 00:00:00 GMT</pubDate>
-<guid>https://example.github.io/agent-deals/product/workbuddy/#2026-09-13</guid>
-</item>
-<item>
-<title>Trae（TraeCode + TraeWork）：Lite / Pro 首月特惠</title>
-<link>https://example.github.io/agent-deals/product/trae/</link>
-<description>Lite 首月 ¥9.9（原价 ¥49）；Pro 首月 ¥59（原价 ¥99）</description>
-<pubDate>Sun, 13 Sep 2026 00:00:00 GMT</pubDate>
-<guid>https://example.github.io/agent-deals/product/trae/#2026-09-13</guid>
-</item>
-<item>
 <title>Trae（TraeCode + TraeWork）：邀请好友体验 TraeWork，双方各得 500 积分</title>
 <link>https://example.github.io/agent-deals/product/trae/</link>
-<description>最高得 3500 积分 + 2 杯星巴克咖啡</description>
+<description>最高得 3500 积分 + 2 杯星巴克咖啡（此前官网活动，最新页面未展示，待核实是否仍有效）</description>
 <pubDate>Sun, 13 Sep 2026 00:00:00 GMT</pubDate>
 <guid>https://example.github.io/agent-deals/product/trae/#2026-09-13</guid>
 </item>
