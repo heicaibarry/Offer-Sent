@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import PromoWindow from "../../../components/PromoWindow";
 import data from "../../../data/products.json";
 import { CATEGORY_LABEL, PRICE_STATUS, fmtDate } from "../../../lib/util";
 
@@ -86,9 +87,13 @@ export default function ProductPage({ params }) {
               <li key={i}>
                 <div className="t">
                   {promo.title}{" "}
-                  <span className={`badge ${promo.endsAt ? "b-amber" : "b-green"}`}>
-                    {promo.endsAt ? `截止 ${fmtDate(promo.endsAt)}` : "未标截止"}
-                  </span>
+                  {promo.window ? (
+                    <PromoWindow window={promo.window} />
+                  ) : (
+                    <span className={`badge ${promo.endsAt ? "b-amber" : "b-green"}`}>
+                      {promo.endsAt ? `截止 ${fmtDate(promo.endsAt)}` : "未标截止"}
+                    </span>
+                  )}
                 </div>
                 {promo.detail ? <div className="d">{promo.detail}</div> : null}
                 <div className="d" style={{ marginTop: 4 }}>

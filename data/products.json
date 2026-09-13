@@ -12,17 +12,47 @@
       "market": "cn",
       "site": "https://bigmodel.cn",
       "pricingUrl": "https://bigmodel.cn/claude-code",
-      "priceStatus": "pending",
+      "priceStatus": "verified",
       "verifiedAt": "2026-09-14",
-      "models": ["GLM-5.3", "GLM-5.3-Flash", "GLM-5.2", "GLM-5-Turbo"],
-      "summary": "国产 Coding Plan 代表，国内版在智谱开放平台 bigmodel.cn 以人民币订阅，可在 ZCode 及 Claude Code、Codex、OpenCode、Cline 等客户端调用 GLM 系列模型。",
+      "models": ["GLM-5.3", "GLM-5.3-Flash（OX Alpha）"],
+      "summary": "国产 Coding Plan 代表，国内版在智谱开放平台 bigmodel.cn 以人民币订阅，Lite/Pro/Max 三档；一个套餐畅用 ZCode、Claude Code、Codex、OpenCode、Cursor 等 20+ 工具。",
       "plans": [
-        { "name": "Lite", "price": null, "unit": "元/月", "quota": null, "note": "档位与价格待核实（历史常态价约 ¥20/月起，常有首月折扣）" },
-        { "name": "Pro", "price": null, "unit": "元/月", "quota": null, "note": "待核实" },
-        { "name": "Max", "price": null, "unit": "元/月", "quota": null, "note": "待核实" }
+        { "name": "Lite（日常使用）", "price": 118, "unit": "元/月", "intro": 94.4, "quota": "每周 10,000 积分（每 5 小时+每周双重限额）", "note": "¥94.4 为连续包季 8 折价，连续包年 7 折约 ¥82.6/月" },
+        { "name": "Pro（最受欢迎）", "price": 538, "unit": "元/月", "intro": 430.4, "quota": "6 倍 Lite 用量额度", "note": "¥430.4 为连续包季 8 折价，连续包年 7 折约 ¥376.6/月" },
+        { "name": "Max（深度使用）", "price": 1078, "unit": "元/月", "intro": 862.4, "quota": "14 倍 Lite 用量额度", "note": "¥862.4 为连续包季 8 折价，连续包年 7 折约 ¥754.6/月" }
       ],
-      "promos": [],
-      "notes": "注意区分：z.ai 是智谱海外版（美元计价、国际账号），不在本站监控范围；国内优惠以 bigmodel.cn 为准。促销大户，公众号常发限时活动。"
+      "promos": [
+        {
+          "title": "夜间畅用：每晚 23:00 至次日 09:00 免费使用",
+          "detail": "夜间时段 GLM Coding Plan 免费畅用，白天高峰照常计额度。官网亦提及 ZCode 订阅用户享「闲时任务免费」权益与之呼应；参与套餐与具体规则以官方活动页为准。",
+          "window": "每日 23:00–次日 09:00",
+          "endsAt": null,
+          "source": "https://bigmodel.cn/claude-code",
+          "firstSeen": "2026-09-14"
+        },
+        {
+          "title": "新用户注册专享：2000 万免费 Tokens + 120 次图像视频资源包",
+          "detail": "注册 bigmodel 即领，新模型免费体验",
+          "endsAt": null,
+          "source": "https://bigmodel.cn/claude-code",
+          "firstSeen": "2026-09-14"
+        },
+        {
+          "title": "邀好友实名注册，最高得 2 亿 Tokens 资源包",
+          "detail": "邀请活动，每邀一人实名注册双方得 Tokens，累计上限 2 亿",
+          "endsAt": null,
+          "source": "https://bigmodel.cn/claude-code",
+          "firstSeen": "2026-09-14"
+        },
+        {
+          "title": "编程套餐连续包季 8 折 / 连续包年 7 折",
+          "detail": "Lite ¥94.4/月起、Pro ¥430.4/月起、Max ¥862.4/月起（季付折算月价）",
+          "endsAt": null,
+          "source": "https://bigmodel.cn/claude-code",
+          "firstSeen": "2026-09-14"
+        }
+      ],
+      "notes": "注意区分：z.ai 是智谱海外版（美元计价、国际账号），不在本站监控范围；国内优惠以 bigmodel.cn 为准。所有套餐均支持 GLM-5.3 与 GLM-5.3-Flash（OX Alpha）。另有「特惠专区」「最新活动」页面待纳入监控。促销大户，BigModel 公众号常发限时活动。"
     },
     {
       "slug": "kimi-code",

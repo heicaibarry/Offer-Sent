@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
+import PromoWindow from "./PromoWindow";
 import { CATEGORIES, CATEGORY_LABEL, PRICE_STATUS, entryPrice, freeQuota, fmtDate } from "../lib/util";
 
 export default function DealBoard({ products }) {
@@ -40,7 +41,7 @@ export default function DealBoard({ products }) {
                   <p className="promo-title">{promo.title}</p>
                   {promo.detail ? <p className="promo-detail">{promo.detail}</p> : null}
                   <div className="meta">
-                    <span>{promo.endsAt ? `截止 ${fmtDate(promo.endsAt)}` : "未标截止时间"}</span>
+                    {promo.window ? <PromoWindow window={promo.window} /> : <span>{promo.endsAt ? `截止 ${fmtDate(promo.endsAt)}` : "未标截止时间"}</span>}
                     <span>收录 {fmtDate(promo.firstSeen)}</span>
                     {promo.source ? (
                       <a href={promo.source} target="_blank" rel="noreferrer">
