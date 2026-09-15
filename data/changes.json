@@ -1,5 +1,15 @@
 [
   {
+    "time": "2026-09-15T12:46:39.041Z",
+    "source": "bigmodel-coding-plan",
+    "product": "glm-coding-plan",
+    "url": "https://bigmodel.cn/claude-code",
+    "kind": "page-update",
+    "how": "browser",
+    "pageTitle": "智谱丨BigModel 平台",
+    "excerpt": "智谱丨BigModel 平台 研究 技术报告 GLM-5.3 GLM-5.3-Flash GLM-5.2 GLM-5.1 产品 模型 GLM-5.3 GLM-5.3-Flash GLM-5.2 全部模型 Coding Plan 个人版套餐 团队版套餐 功能 Managed Agents (Beta) MCP 服务 模型微调 知识库 文档"
+  },
+  {
     "time": "2026-09-15T06:20:13.720Z",
     "source": "dumate-home",
     "product": "dumate",
