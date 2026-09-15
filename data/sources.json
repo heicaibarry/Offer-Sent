@@ -9,7 +9,7 @@
     { "id": "dumate-home", "product": "dumate", "url": "https://www.dumate.cn/", "renderer": "browser", "everyHours": 6, "enabled": true },
     { "id": "codebuddy-pricing", "product": "codebuddy", "url": "https://www.codebuddy.cn/pricing", "renderer": "browser", "everyHours": 12, "enabled": true },
     { "id": "qoder-pricing", "product": "qoder", "url": "https://qoder.com/pricing", "renderer": "browser", "everyHours": 12, "enabled": false },
-    { "id": "lingma-home", "product": "tongyi-lingma", "url": "https://tongyi.aliyun.com/lingma", "renderer": "fetch", "everyHours": 24, "enabled": true },
+    { "id": "qoder-cn-pricing", "product": "tongyi-lingma", "url": "https://qoder.com.cn/pricing", "renderer": "browser", "everyHours": 12, "enabled": true },
     { "id": "qwen-code-docs", "product": "qwen-code", "url": "https://qwenlm.github.io/qwen-code-docs/", "renderer": "fetch", "everyHours": 24, "enabled": true },
     { "id": "comate-home", "product": "comate", "url": "https://comate.baidu.com", "renderer": "fetch", "everyHours": 24, "enabled": true },
     { "id": "deepseek-pricing", "product": "deepseek", "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing", "renderer": "fetch", "everyHours": 24, "enabled": true },

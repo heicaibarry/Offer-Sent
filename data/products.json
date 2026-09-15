@@ -309,32 +309,44 @@
     },
     {
       "slug": "tongyi-lingma",
-      "name": "通义灵码",
+      "name": "Qoder CN",
       "vendor": "阿里云",
       "category": "coding",
-      "type": "IDE 插件 / AI 编程助手",
+      "type": "Agentic IDE + CLI / JetBrains 插件",
       "status": "active",
       "market": "cn",
-      "site": "https://tongyi.aliyun.com/lingma",
-      "pricingUrl": "https://tongyi.aliyun.com/lingma",
-      "priceStatus": "partial",
-      "verifiedAt": "2026-09-14",
-      "summary": "阿里云老牌 AI 编程助手，个人免费使用、企业免费开通，支持 Qwen3-Coder。",
+      "site": "https://qoder.com.cn",
+      "pricingUrl": "https://qoder.com.cn/pricing",
+      "priceStatus": "verified",
+      "verifiedAt": "2026-09-15",
+      "summary": "原名「通义灵码」（Lingma），2026-05-20 正式更名 Qoder CN。改用 Credits 计费，个人版一份订阅的 Credits 可在 IDE / JetBrains 插件 / QoderWork / CLI / Mobile 之间共享。底层支持 GLM / DeepSeek / Kimi / MiniMax 等国产模型，全链路国内部署。",
       "plans": [
-        { "name": "个人免费版", "price": 0, "unit": "元/月", "quota": null, "note": "个人免费使用" },
-        { "name": "个人专业版", "price": null, "unit": "元/月", "quota": null, "note": "限时免费中（官网提示「即将截止」），原价待核实" },
-        { "name": "企业版", "price": 0, "unit": "元", "quota": null, "note": "企业免费开通（基础）；专属版联系商务" }
+        { "name": "体验版", "price": 0, "unit": "元/月", "quota": "2 周 Pro 试用 + 300 Credits", "note": "有限体验额度" },
+        { "name": "专业版", "price": 59, "unit": "元/月", "quota": "2,000 Credits/月", "note": "9 月限时：首购加赠 2,000、续费加赠 1,000 Qwen 专属 Credits" },
+        { "name": "高级版", "price": 169, "unit": "元/月", "quota": "6,000 Credits/月", "note": "9 月限时：首购加赠 6,000、续费加赠 1,000 Qwen 专属 Credits" },
+        { "name": "旗舰版", "price": 559, "unit": "元/月", "quota": "20,000 Credits/月", "note": "2026 新增档位；续费加赠 1,000 Qwen 专属 Credits" },
+        { "name": "团队版 Teams", "price": 99, "unit": "元/席位·月", "quota": "3,000 Credits/席位·月", "note": "1 席位起，含集中计费 / 管理员控制台 / SSO" },
+        { "name": "企业标准版", "price": 149, "unit": "元/席位·月", "quota": "3,000 Credits/席位·月（可共享）", "note": "10 席位起" },
+        { "name": "企业专属版 VPC", "price": 199, "unit": "元/席位·月", "quota": "3,000 Credits/席位·月（可共享）", "note": "50 席位起，独立实例 / 专有网络 / IP 白名单" }
       ],
       "promos": [
         {
-          "title": "专业版限时免费（即将截止）",
-          "detail": "官网横幅提示活动临近结束，抓紧白嫖",
+          "title": "夜间错峰折扣：高级模型 Credits 倍率下调",
+          "detail": "每日 22:00 至次日 08:00（北京时间，含周末与节假日），Qwen3.7-Max 低至 2 折、Qwen3.7-Plus 4 折，Qwen3.8-Max 亦有折扣，最高省 80%。Pro Trial 及付费用户自动生效，无需报名。折扣只降 Credits 倍率，模型质量不变，结束时间未公布。",
+          "window": "每日 22:00–次日 08:00",
           "endsAt": null,
-          "source": "https://tongyi.aliyun.com/lingma",
-          "firstSeen": "2026-09-14"
+          "source": "https://help.aliyun.com/document_detail/3042139.html",
+          "firstSeen": "2026-09-15"
+        },
+        {
+          "title": "9 月首月 Credits 翻倍：专业版 4,000 / 高级版 12,000",
+          "detail": "个人版 9 月首次付费订阅专业版或高级版，加赠等额 Qwen 专属 Credits（专业版 2,000→4,000、高级版 6,000→12,000）；续费、升级或过期后再开通加赠 1,000。仅限个人版，团队版 / 企业版 / 会员卡不适用。加赠自到账起 30 天内有效。",
+          "endsAt": "2026-09-30T23:59:59+08:00",
+          "source": "https://docs.qoder.cn/events/bogo",
+          "firstSeen": "2026-09-15"
         }
       ],
-      "notes": "专业版恢复收费后的原价需要人工跟进核实。"
+      "notes": "原「通义灵码」已于 2026-05-20 更名 Qoder CN（存量合同期内的老订阅仍按原价执行）。slug 保留 tongyi-lingma 以维持既有链接可用。★ 上一版数据挂的「专业版限时免费」已确认于北京时间 2026-05-20 18:00:00 结束，本条已删除。待留意的服务变更：Qoder CN IDE 的 Quest 视窗将于 2026-10-15 起停止服务，需迁移到 Qoder CN 桌面端（Editor 视窗不受影响，账号 / 积分 / 套餐权益自动同步）。资源包：个人 ¥40/1,000 Credits（1 个月有效）、企业 ¥80/2,000 Credits（3 个月有效）。年付 9 折。"
     },
     {
       "slug": "qwen-code",
