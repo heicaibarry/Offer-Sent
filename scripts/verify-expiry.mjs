@@ -148,6 +148,10 @@ const out = await evaluate(
     const qoder = cards.find(c => c.querySelector('.name')?.innerText.includes('Qoder'));
     const plabel = qoder ? qoder.querySelector('.dc-plabel')?.innerText.replace(/\\s+/g,' ') : '';
     const rows = qoder ? [...qoder.querySelectorAll('.pl-t')].map(t => t.innerText) : [];
+    const wb = cards.find(c => (c.querySelector('.name')?.innerText || '').trim() === 'WorkBuddy');
+    const wbRows = wb ? [...wb.querySelectorAll('.pl-t')].map(t => t.innerText) : [];
+    const wbLabel = wb ? wb.querySelector('.dc-plabel')?.innerText.replace(/\\s+/g,' ') : '';
+    const wbBadges = wb ? [...wb.querySelectorAll('.pl-meta .badge')].map(b => b.innerText) : [];
     const heroNote = document.querySelector('.hero-note')?.innerText || '';
     return {
       shiftedNow: new Date(window.__clockShifted).toISOString(),
@@ -155,6 +159,7 @@ const out = await evaluate(
       sub, plabel, rows,
       cards: cards.length,
       cardNames: cards.map(c => c.querySelector('.name')?.innerText),
+      wbRows, wbLabel, wbBadges,
       heroNote,
     };
   })()`
@@ -164,18 +169,30 @@ console.log("打桩后的浏览器时间:", out.shiftedNow, "|", out.shiftedNowL
 console.log("区块说明:", out.sub);
 console.log("Qoder 卡:", out.plabel, "|", JSON.stringify(out.rows));
 console.log("卡片数:", out.cards, "|", out.cardNames.join(" / "));
+console.log("WorkBuddy 卡:", out.wbLabel, "\n  剩余活动:", JSON.stringify(out.wbRows), "\n  截止标记:", JSON.stringify(out.wbBadges));
 console.log("hero 提示:", out.heroNote || "(无)");
 
 const shot = await page.send("Page.captureScreenshot", { format: "png" });
 fs.writeFileSync(path.join(SHOTS, "expiry-after-shift.png"), Buffer.from(shot.data, "base64"));
 
-ok(!out.sub.includes("21 条活动进行中"), "已过期活动不再计入「活动进行中」总数", out.sub);
-ok(out.sub.includes("20 条活动进行中"), "总数从 21 降到 20", out.sub);
-ok(out.sub.includes("另有 1 条已结束"), "区块说明出现「另有 1 条已结束，已自动下架」");
+ok(!out.sub.includes("28 条活动进行中"), "已过期活动不再计入「活动进行中」总数", out.sub);
+ok(out.sub.includes("21 条活动进行中"), "总数从 28 降到 21（7 条到期）", out.sub);
+ok(out.sub.includes("另有 7 条已结束"), "区块说明出现「另有 7 条已结束，已自动下架」", out.sub);
 ok(!out.rows.some((t) => t.includes("9 月首月 Credits 翻倍")), "Qoder CN 的 9/30 活动行已从卡片消失", JSON.stringify(out.rows));
 ok(out.rows.length === 1, "Qoder CN 卡上只剩 1 条进行中活动", `${out.rows.length} 条`);
-ok(out.plabel.includes("另有 1 条已结束"), "卡片上标注了「另有 1 条已结束」", out.plabel);
+ok(out.plabel.includes("另有 1 条已结束"), "Qoder CN 卡标注「另有 1 条已结束」", out.plabel);
 ok(out.cards === 10, "Qoder CN 还有其他活动 → 卡片保留（不是整卡消失）", `${out.cards} 张`);
+
+// WorkBuddy：9/23 的 DeepSeek、9/30 的 Hy3 与邀请到期；10/10 的 Hy4 额度仍在
+ok(!out.wbRows.some((t) => t.includes("0.03x")), "WorkBuddy 的 9/23 DeepSeek 折扣行已消失", JSON.stringify(out.wbRows));
+ok(!out.wbRows.some((t) => t.includes("Hy3")), "WorkBuddy 的 9/30 Hy3 限免行已消失");
+ok(!out.wbRows.some((t) => t.includes("邀请好友")), "WorkBuddy 的 9/30 邀请活动行已消失");
+ok(out.wbRows.some((t) => t.includes("Hy4")), "WorkBuddy 的 10/10 Hy4 免费额度仍在", JSON.stringify(out.wbRows));
+ok(out.wbRows.length === 4, "WorkBuddy 卡上剩 4 条进行中活动", `${out.wbRows.length} 条`);
+ok(out.wbLabel.includes("另有 3 条已结束"), "WorkBuddy 卡标注「另有 3 条已结束」", out.wbLabel);
+// 打桩后是 10/05，距 10/10 剩 5–6 天 → endLabel 会显示相对天数而非绝对日期
+ok(out.wbBadges.some((t) => /天后截止|明天截止/.test(t)), "10/10 的 Hy4 显示倒计时（7 天内用相对天数）", out.wbBadges.join(" | "));
+
 ok(out.heroNote === "", "hero 上不再放构建期的到期数字（避免与客户端实时结果打架）", out.heroNote || "(无)");
 const bad = errors.filter((e) => !/favicon|404/.test(e));
 ok(bad.length === 0, "推送时间后无 console 报错（说明首帧没发生 hydration mismatch）", bad.join(" ; ").slice(0, 300));

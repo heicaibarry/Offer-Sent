@@ -166,6 +166,7 @@ const home = await evaluate(
     const stats = [...document.querySelectorAll('.hero .stat')].map(s => s.innerText.replace(/\\s+/g,' '));
     const tableRows = document.querySelectorAll('table tbody tr').length;
     const qoder = cards.find(c => c.querySelector('.name')?.innerText.includes('Qoder'));
+    const wb = cards.find(c => (c.querySelector('.name')?.innerText || '').trim() === 'WorkBuddy');
     return {
       cards: cards.length,
       cardNames: cards.map(c => c.querySelector('.name')?.innerText),
@@ -178,6 +179,11 @@ const home = await evaluate(
       endedNotice: body.includes('已结束'),
       qoderCard: qoder ? qoder.innerText.replace(/\\s+/g,' ').slice(0, 260) : null,
       qoderDeadline: qoder ? [...qoder.querySelectorAll('.pl-meta .badge')].map(b => b.innerText) : [],
+      headers: [...document.querySelectorAll('table thead th')].map(th => th.innerText.replace(/\\s+/g,' ').trim()),
+      wbRows: wb ? wb.querySelectorAll('.promo-list .pl').length : 0,
+      wbDeadlines: wb ? [...wb.querySelectorAll('.promo-list .pl-meta .badge')].map(b => b.innerText) : [],
+      wbHasDeepseek: wb ? wb.innerText.includes('0.03x') : false,
+      wbNoFalseLimited: wb ? !/全档位限时折扣|限时折扣价/.test(wb.innerText) : false,
       overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
     };
   })()`
@@ -195,6 +201,14 @@ ok(!home.hasYuanUnit, "没有「¥59 元/月」这种货币词重复");
 ok(home.overflow <= 1, "1440 宽无横向溢出", `overflow=${home.overflow}`);
 ok(home.qoderDeadline.some((t) => t.includes("截止")), "Qoder 9 月活动显示截止提示", home.qoderDeadline.join(" | "));
 ok(!home.endedNotice, "当前没有已到期活动 → 不显示已结束提示");
+ok(home.headers.includes("首月 / 优惠价"), "表头为「首月 / 优惠价」（¥70 是连续包月价，非首月专享）", home.headers.join(" | "));
+console.log("WorkBuddy 卡:", JSON.stringify({ rows: home.wbRows, deadlines: home.wbDeadlines }));
+ok(home.wbRows === 7, "WorkBuddy 卡内 7 条活动全部列出", `实际 ${home.wbRows}`);
+ok(home.wbHasDeepseek, "WorkBuddy 卡显示 DeepSeek 0.03x 限时折扣");
+ok(home.wbDeadlines.some((t) => t.includes("9/23")), "WorkBuddy 的 DeepSeek 活动显示 9/23 截止", home.wbDeadlines.join(" | "));
+ok(home.wbDeadlines.filter((t) => t.includes("9/30")).length === 2, "Hy3 限免与邀请活动都标 9/30 截止", home.wbDeadlines.join(" | "));
+ok(home.wbDeadlines.some((t) => t.includes("10/10")), "Hy4 免费额度标 10/10 截止", home.wbDeadlines.join(" | "));
+ok(home.wbNoFalseLimited, "WorkBuddy 卡内不再出现被误标的「全档位限时折扣」");
 
 /* ---------------- 产品详情：Qoder CN ---------------- */
 await goto(page, `${BASE}/product/tongyi-lingma/`);

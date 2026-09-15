@@ -224,7 +224,7 @@ export default function DealBoard({ products, nowMs }) {
               <tr>
                 <th>产品</th>
                 <th>最低月价</th>
-                <th>首月价</th>
+                <th>首月 / 优惠价</th>
                 <th>免费额度 / 套餐</th>
                 <th>活动</th>
                 <th>数据状态</th>
