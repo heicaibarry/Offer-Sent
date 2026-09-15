@@ -38,6 +38,12 @@ const ONLY = onlyIdx > -1 ? process.argv[onlyIdx + 1] : null;
 const UA =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36";
 
+// 正文过短说明拿到的是空页 / JS 外壳 / 反爬拦截页，不能拿它当内容基线。
+// 曾经把空串写成基线，导致该源的指纹永远是 sha1("")，之后再也不会报变更（假"无变化"）。
+const MIN_TEXT = 200;
+// 差异片段过短多半是时间戳、访问量之类的噪声，不值得记一条变更
+const MIN_EXCERPT = 20;
+
 const productName = (id) => PRODUCTS.find((p) => p.slug === id)?.name || id;
 const sha1 = (s) => crypto.createHash("sha1").update(s).digest("hex");
 const nowISO = () => new Date().toISOString();
@@ -170,7 +176,9 @@ async function main() {
         res = await fetchPlain(s.url);
       } catch (e) {
         failed++;
-        state[s.id] = { ...(st || {}), lastChecked: nowISO(), lastError: String(e.message || e).slice(0, 200) };
+        // 故意不更新 lastChecked：失败如果也记时间，就会被 everyHours 节流挡住，
+        // 一次网络抖动要等好几个小时才有下一次重试机会
+        state[s.id] = { ...(st || {}), lastError: String(e.message || e).slice(0, 200) };
         console.log(`✗ ${s.id} 抓取失败: ${e.message}`);
         await sleep(1200);
         continue;
@@ -182,6 +190,17 @@ async function main() {
     const hash = sha1(text);
     const prev = state[s.id];
 
+    if (text.length < MIN_TEXT) {
+      failed++;
+      state[s.id] = {
+        ...(prev || {}),
+        lastError: `内容过短（${text.length} 字符，疑似空页/需登录），已跳过，未写基线`,
+      };
+      console.log(`✗ ${s.id} 内容过短（${text.length} 字符），跳过，不写基线`);
+      await sleep(1200);
+      continue;
+    }
+
     if (BASELINE) {
       state[s.id] = { hash, lastChecked: nowISO(), lastChanged: prev?.lastChanged || nowISO(), how: res.how };
       saveSnap(s.id, text);
@@ -192,19 +211,28 @@ async function main() {
       console.log(`• ${s.id} 首次记录基线 (${res.how})`);
     } else if (prev.hash !== hash) {
       const excerpt = firstDiffRegion(loadSnap(s.id), text);
-      added.push({
-        time: nowISO(),
-        source: s.id,
-        product: s.product,
-        url: s.url,
-        kind: "page-update",
-        how: res.how,
-        pageTitle: pageTitle(res.html),
-        excerpt,
-      });
+      // 同源的同一处差异只记一次：轮播图、访问计数器这类反复抖动的页面不再刷屏。
+      // 无论记不记，都要更新基线与快照，否则下一轮还会拿同一处差异重复比对。
+      const duplicate = changes.some((c) => c.source === s.id && c.excerpt === excerpt);
+      if (!duplicate && excerpt.length >= MIN_EXCERPT) {
+        added.push({
+          time: nowISO(),
+          source: s.id,
+          product: s.product,
+          url: s.url,
+          kind: "page-update",
+          how: res.how,
+          pageTitle: pageTitle(res.html),
+          excerpt,
+        });
+        console.log(`⚡ ${s.id} 页面有更新！${excerpt ? `片段: ${excerpt.slice(0, 80)}…` : ""}`);
+      } else {
+        duplicate
+          ? console.log(`·  ${s.id} 页面有更新，但差异与已记录的相同，跳过重复记录`)
+          : console.log(`·  ${s.id} 页面有更新，但差异片段过短（${excerpt.length} 字符），跳过记录`);
+      }
       state[s.id] = { hash, lastChecked: nowISO(), lastChanged: nowISO(), how: res.how };
       saveSnap(s.id, text);
-      console.log(`⚡ ${s.id} 页面有更新！${excerpt ? `片段: ${excerpt.slice(0, 80)}…` : ""}`);
     } else {
       state[s.id] = { ...prev, lastChecked: nowISO(), how: res.how, lastError: undefined };
       console.log(`✓ ${s.id} 无变化`);

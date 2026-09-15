@@ -8,7 +8,6 @@
     { "id": "kimi-coding", "product": "kimi-code", "url": "https://www.kimi.com/coding", "renderer": "browser", "everyHours": 6, "enabled": true },
     { "id": "dumate-home", "product": "dumate", "url": "https://www.dumate.cn/", "renderer": "browser", "everyHours": 6, "enabled": true },
     { "id": "codebuddy-pricing", "product": "codebuddy", "url": "https://www.codebuddy.cn/pricing", "renderer": "browser", "everyHours": 12, "enabled": true },
-    { "id": "qoder-pricing", "product": "qoder", "url": "https://qoder.com/pricing", "renderer": "browser", "everyHours": 12, "enabled": false },
     { "id": "qoder-cn-pricing", "product": "tongyi-lingma", "url": "https://qoder.com.cn/pricing", "renderer": "browser", "everyHours": 12, "enabled": true },
     { "id": "qwen-code-docs", "product": "qwen-code", "url": "https://qwenlm.github.io/qwen-code-docs/", "renderer": "fetch", "everyHours": 24, "enabled": true },
     { "id": "comate-home", "product": "comate", "url": "https://comate.baidu.com", "renderer": "fetch", "everyHours": 24, "enabled": true },

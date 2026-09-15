@@ -1,12 +1,23 @@
 import data from "../data/products.json";
 import DealBoard from "../components/DealBoard";
-import { freePlanCount } from "../lib/util";
+import { freePlanCount, splitPromos } from "../lib/util";
 
 export default function Home() {
   const products = data.products;
+  // 构建时刻（静态导出的 HTML 生成时间）：作为渲染层过期判定的参照，
+  // 由这里取一次、当 prop 递下去，保证预渲染内容与客户端首次渲染一致。
+  const now = Date.now();
+
   const active = products.filter((p) => p.status === "active").length;
-  const promoCount = products.reduce((n, p) => n + (p.promos?.length || 0), 0);
-  const promoProducts = products.filter((p) => (p.promos || []).length > 0).length;
+  let promoCount = 0;
+  let endedCount = 0;
+  let promoProducts = 0;
+  for (const p of products) {
+    const { active: live, expired } = splitPromos(p.promos, now);
+    promoCount += live.length;
+    endedCount += expired.length;
+    if (live.length > 0) promoProducts += 1;
+  }
   // 之前这里把 partial 也统计成「已核实」，导致 9 家被显示成 15 家
   const verified = products.filter((p) => p.priceStatus === "verified").length;
   const withFree = products.filter((p) => freePlanCount(p) > 0).length;
@@ -27,7 +38,7 @@ export default function Home() {
             运营中 <b>{active}</b> 家
           </span>
           <span className="stat">
-            有活动 <b>{promoProducts}</b> 家 / <b>{promoCount}</b> 条
+            优惠进行中 <b>{promoProducts}</b> 家 / <b>{promoCount}</b> 条
           </span>
           <span className="stat">
             有免费档 <b>{withFree}</b> 家
@@ -41,7 +52,7 @@ export default function Home() {
         </div>
       </section>
 
-      <DealBoard products={products} />
+      <DealBoard products={products} nowMs={now} />
     </>
   );
 }

@@ -192,6 +192,9 @@ tr.dim td { opacity: 0.55; }
 .promo-list li:last-child { border-bottom: none; }
 .promo-list .t { font-weight: 600; font-size: 14px; }
 .promo-list .d { color: var(--muted); font-size: 13px; }
+/* 已结束的活动：留档但不抢视线 */
+.promo-list li.ended { opacity: 0.62; }
+.promo-list li.ended .t { font-weight: 500; }
 
 /* 时间线 */
 .timeline { position: relative; margin: 20px 0; padding-left: 22px; border-left: 2px solid var(--line); }

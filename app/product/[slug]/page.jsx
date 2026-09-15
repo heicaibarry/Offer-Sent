@@ -2,7 +2,15 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import PromoWindow from "../../../components/PromoWindow";
 import data from "../../../data/products.json";
-import { CATEGORY_LABEL, PRICE_STATUS, fmtDate } from "../../../lib/util";
+import {
+  CATEGORY_LABEL,
+  PRICE_STATUS,
+  endLabel,
+  fmtDate,
+  money,
+  splitPromos,
+  unitSuffix,
+} from "../../../lib/util";
 
 export function generateStaticParams() {
   return data.products.map((p) => ({ slug: p.slug }));
@@ -19,6 +27,10 @@ export default function ProductPage({ params }) {
 
   const ps = PRICE_STATUS[product.priceStatus] || PRICE_STATUS.pending;
   const closed = product.status === "closed";
+
+  // 构建时刻作为过期判定参照（静态导出，详见 lib/util.js 的说明）
+  const now = Date.now();
+  const { active: activePromos, expired: endedPromos } = splitPromos(product.promos, now);
 
   return (
     <>
@@ -60,15 +72,30 @@ export default function ProductPage({ params }) {
                 </tr>
               </thead>
               <tbody>
-                {product.plans.map((plan) => (
-                  <tr key={plan.name}>
-                    <td style={{ fontWeight: 600 }}>{plan.name}</td>
-                    <td>{plan.price == null ? "待核实" : plan.price === 0 ? "免费" : `¥${plan.price} ${plan.unit || ""}`}</td>
-                    <td>{plan.intro != null ? `¥${plan.intro}` : "—"}</td>
-                    <td>{plan.quota || "—"}</td>
-                    <td style={{ color: "var(--muted)" }}>{plan.note || ""}</td>
-                  </tr>
-                ))}
+                {product.plans.map((plan) => {
+                  const suffix = unitSuffix(plan.unit);
+                  return (
+                    <tr key={plan.name}>
+                      <td style={{ fontWeight: 600 }}>{plan.name}</td>
+                      <td className="nowrap">
+                        {plan.price == null
+                          ? "待核实"
+                          : plan.price === 0
+                            ? "免费"
+                            : `${money(product, plan.price, plan)}${suffix ? ` ${suffix}` : ""}`}
+                      </td>
+                      <td className="nowrap">
+                        {plan.intro != null ? (
+                          <span className="intro">{money(product, plan.intro, plan)}</span>
+                        ) : (
+                          "—"
+                        )}
+                      </td>
+                      <td>{plan.quota || "—"}</td>
+                      <td style={{ color: "var(--muted)" }}>{plan.note || ""}</td>
+                    </tr>
+                  );
+                })}
               </tbody>
             </table>
           </div>
@@ -76,23 +103,28 @@ export default function ProductPage({ params }) {
       )}
 
       <div className="panel">
-        <h2>优惠活动</h2>
-        {(product.promos || []).length === 0 ? (
+        <h2>优惠活动{activePromos.length > 0 ? `（进行中 ${activePromos.length} 条）` : ""}</h2>
+        {activePromos.length === 0 ? (
           <p style={{ color: "var(--muted)", margin: 0, fontSize: 14 }}>
-            暂无收录活动。爬虫发现官方页面变更后会自动更新并推送。
+            {endedPromos.length > 0
+              ? `当前没有进行中的活动，历史活动已到期（下方留档 ${endedPromos.length} 条）。`
+              : "暂无收录活动。爬虫发现官方页面变更后会自动更新并推送。"}
           </p>
         ) : (
           <ul className="promo-list">
-            {product.promos.map((promo, i) => (
+            {activePromos.map((promo, i) => {
+              const label = endLabel(promo, now);
+              const urgent = label.includes("天后") || label.includes("明天") || label.includes("今天");
+              return (
               <li key={i}>
                 <div className="t">
                   {promo.title}{" "}
                   {promo.window ? (
                     <PromoWindow window={promo.window} />
+                  ) : label ? (
+                    <span className={`badge ${urgent ? "b-red" : "b-amber"}`}>{label}</span>
                   ) : (
-                    <span className={`badge ${promo.endsAt ? "b-amber" : "b-green"}`}>
-                      {promo.endsAt ? `截止 ${fmtDate(promo.endsAt)}` : "未标截止"}
-                    </span>
+                    <span className="badge b-green">未标截止</span>
                   )}
                 </div>
                 {promo.detail ? <div className="d">{promo.detail}</div> : null}
@@ -108,10 +140,30 @@ export default function ProductPage({ params }) {
                   ) : null}
                 </div>
               </li>
-            ))}
+              );
+            })}
           </ul>
         )}
       </div>
+
+      {endedPromos.length > 0 ? (
+        <div className="panel">
+          <h2>已结束的活动（{endedPromos.length}）</h2>
+          <p className="section-sub" style={{ margin: "0 0 6px" }}>
+            已到截止时间自动下架，仅在本页留档；时间线里也能看到收录记录。
+          </p>
+          <ul className="promo-list">
+            {endedPromos.map((promo, i) => (
+              <li key={i} className="ended">
+                <div className="t">
+                  {promo.title} <span className="badge b-gray">已结束 {fmtDate(promo.endsAt)}</span>
+                </div>
+                {promo.detail ? <div className="d">{promo.detail}</div> : null}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
 
       <div className="panel">
         <h2>信息与备注</h2>

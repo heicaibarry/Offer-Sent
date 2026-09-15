@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import PromoWindow from "./PromoWindow";
 import {
@@ -8,19 +8,32 @@ import {
   CATEGORIES,
   CATEGORY_LABEL,
   PRICE_STATUS,
-  entryPrice,
+  daysLeft,
+  endLabel,
   fmtDate,
   freePlanCount,
   freeQuota,
   groupDeals,
   introPrice,
   minPlanPrice,
+  money,
   promoValue,
+  splitPromos,
 } from "../lib/util";
 
-export default function DealBoard({ products }) {
+export default function DealBoard({ products, nowMs }) {
   const [cat, setCat] = useState("all");
   const [q, setQ] = useState("");
+
+  // —— 过期判定用的参照时刻 ——
+  // 首屏沿用服务端（构建时）递下来的时间戳，输出与静态 HTML 完全一致，不会 hydration mismatch；
+  // 挂载后再切换到浏览器真实时间并每分钟复核：构建之后才到期的活动，无需等下一次构建就会自动下架。
+  const [now, setNow] = useState(nowMs);
+  useEffect(() => {
+    setNow(Date.now());
+    const id = setInterval(() => setNow(Date.now()), 60 * 1000);
+    return () => clearInterval(id);
+  }, []);
 
   const filtered = useMemo(() => {
     const kw = q.trim().toLowerCase();
@@ -31,9 +44,20 @@ export default function DealBoard({ products }) {
     });
   }, [products, cat, q]);
 
-  const promoCount = products.reduce((n, p) => n + (p.promos?.length || 0), 0);
+  // 只统计进行中的活动：已到 endsAt 的不计入数字，也不再出现在卡片里
+  const { promoCount, endedCount } = useMemo(() => {
+    let a = 0;
+    let e = 0;
+    for (const p of products) {
+      const s = splitPromos(p.promos, now);
+      a += s.active.length;
+      e += s.expired.length;
+    }
+    return { promoCount: a, endedCount: e };
+  }, [products, now]);
+
   // 按产品聚合，再把产品分入三档（活动本身不折叠，逐条渲染）
-  const buckets = useMemo(() => groupDeals(products), [products]);
+  const buckets = useMemo(() => groupDeals(products, now), [products, now]);
   const cardCount = buckets.save.length + buckets.free.length + buckets.perk.length;
 
   // 表格按「免费档在前 → 价格升序」排列，便于横向比价
@@ -58,7 +82,9 @@ export default function DealBoard({ products }) {
         <div className="section-head">
           <h2 className="section-title">进行中的优惠活动</h2>
           <p className="section-sub">
-            {cardCount} 家 · 共 {promoCount} 条活动 · 每家的活动全部列出，由定时爬虫核对官网页面
+            {cardCount} 家 · {promoCount} 条活动进行中
+            {endedCount > 0 ? `（另有 ${endedCount} 条已结束，已自动下架）` : ""}
+            {" · "}每家的活动全部列出，由定时爬虫核对官网页面
           </p>
         </div>
 
@@ -76,7 +102,7 @@ export default function DealBoard({ products }) {
                   <span>{BUCKETS[key].sub}</span>
                 </div>
                 <div className="deal-grid">
-                  {buckets[key].map(({ product: p, promos, value, valueFrom }) => {
+                  {buckets[key].map(({ product: p, promos, endedCount: cardEnded, value, valueFrom }) => {
                     const ps = PRICE_STATUS[p.priceStatus] || PRICE_STATUS.pending;
                     const mp = minPlanPrice(p);
                     const nf = freePlanCount(p);
@@ -105,13 +131,16 @@ export default function DealBoard({ products }) {
 
                         <div className="dc-base">
                           {nf > 0 ? <span className="free">有免费档</span> : null}
-                          {mp != null && mp > 0 ? <span>最低 ¥{mp}/月</span> : null}
-                          {intro != null && mp > 0 ? <span>首月 ¥{intro}</span> : null}
+                          {mp != null && mp > 0 ? <span>最低 {money(p, mp)}/月</span> : null}
+                          {intro != null && mp > 0 ? <span>首月 {money(p, intro)}</span> : null}
                           {mp == null ? <span>价格待核实</span> : null}
                         </div>
 
                         <div className="dc-plabel">
                           活动 {promos.length} 条 · 全部列出
+                          {cardEnded > 0 ? (
+                            <span className="dc-ended">另有 {cardEnded} 条已结束</span>
+                          ) : null}
                         </div>
 
                         {/* 每条活动独立成行，完整可见：不折叠、不截断、不加展开按钮 */}
@@ -119,6 +148,7 @@ export default function DealBoard({ products }) {
                           {promos.map((promo, i) => {
                             const v = promoValue(promo);
                             const redundant = v && promo.title?.includes(v.text);
+                            const dl = daysLeft(promo, now);
                             return (
                               <li className="pl" key={`${p.slug}-${i}`}>
                                 <div className="pl-head">
@@ -133,8 +163,10 @@ export default function DealBoard({ products }) {
                                 <div className="pl-meta">
                                   {promo.window ? (
                                     <PromoWindow window={promo.window} />
-                                  ) : promo.endsAt ? (
-                                    <span>截止 {fmtDate(promo.endsAt)}</span>
+                                  ) : dl != null ? (
+                                    <span className={`badge ${dl <= 7 ? "b-red" : "b-gray"}`}>
+                                      {endLabel(promo, now)}
+                                    </span>
                                   ) : null}
                                   <span>收录 {fmtDate(promo.firstSeen)}</span>
                                   {promo.source ? (
@@ -204,6 +236,7 @@ export default function DealBoard({ products }) {
                 const closed = p.status === "closed";
                 const mp = minPlanPrice(p);
                 const intro = introPrice(p);
+                const liveCount = splitPromos(p.promos, now).active.length;
                 return (
                   <tr key={p.slug} className={closed ? "dim" : ""}>
                     <td className="cell-prod">
@@ -230,18 +263,22 @@ export default function DealBoard({ products }) {
                         <span className="free-txt">免费档</span>
                       ) : (
                         <>
-                          <b className="num">¥{mp}</b>
+                          <b className="num">{money(p, mp)}</b>
                           <span className="unit">/月起</span>
                         </>
                       )}
                     </td>
                     <td className="nowrap">
-                      {intro != null ? <span className="intro">¥{intro}</span> : <span className="dash">—</span>}
+                      {intro != null ? (
+                        <span className="intro">{money(p, intro)}</span>
+                      ) : (
+                        <span className="dash">—</span>
+                      )}
                     </td>
                     <td className="cell-quota">{freeQuota(p)}</td>
                     <td className="nowrap">
-                      {(p.promos || []).length > 0 ? (
-                        <span className="badge b-red">{p.promos.length} 条</span>
+                      {liveCount > 0 ? (
+                        <span className="badge b-red">{liveCount} 条</span>
                       ) : (
                         <span className="dash">—</span>
                       )}
