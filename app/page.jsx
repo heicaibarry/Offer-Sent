@@ -1,11 +1,15 @@
 import data from "../data/products.json";
 import DealBoard from "../components/DealBoard";
+import { freePlanCount } from "../lib/util";
 
 export default function Home() {
   const products = data.products;
   const active = products.filter((p) => p.status === "active").length;
   const promoCount = products.reduce((n, p) => n + (p.promos?.length || 0), 0);
-  const verified = products.filter((p) => p.priceStatus === "verified" || p.priceStatus === "partial").length;
+  const promoProducts = products.filter((p) => (p.promos || []).length > 0).length;
+  // 之前这里把 partial 也统计成「已核实」，导致 9 家被显示成 15 家
+  const verified = products.filter((p) => p.priceStatus === "verified").length;
+  const withFree = products.filter((p) => freePlanCount(p) > 0).length;
 
   return (
     <>
@@ -23,7 +27,10 @@ export default function Home() {
             运营中 <b>{active}</b> 家
           </span>
           <span className="stat">
-            进行中活动 <b>{promoCount}</b> 条
+            有活动 <b>{promoProducts}</b> 家 / <b>{promoCount}</b> 条
+          </span>
+          <span className="stat">
+            有免费档 <b>{withFree}</b> 家
           </span>
           <span className="stat">
             价格已核实 <b>{verified}</b> 家

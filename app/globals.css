@@ -63,6 +63,9 @@ a:hover { text-decoration: underline; }
 .section { margin: 26px 0; }
 .section-title { font-size: 18px; font-weight: 700; margin: 0 0 12px; }
 .section-sub { color: var(--muted); font-size: 13px; margin: -8px 0 12px; }
+.section-head { margin-bottom: 14px; }
+.section-head .section-title { margin-bottom: 4px; }
+.section-head .section-sub { margin: 0; }
 
 /* 筛选 */
 .toolbar { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 14px; }
@@ -80,17 +83,64 @@ a:hover { text-decoration: underline; }
 }
 .search:focus { border-color: var(--brand); }
 
-/* 优惠卡片 */
-.deal-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 14px; }
-.deal-card {
-  background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--brand);
-  border-radius: 12px; padding: 14px 16px;
+/* 优惠卡片：按力度分档 + 一产品一卡（活动全部平铺可见） */
+.bucket { margin-bottom: 24px; }
+.bucket-head { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
+.bucket-head h3 { margin: 0; font-size: 16px; display: flex; align-items: center; gap: 8px; }
+.bucket-head .count {
+  font-size: 12px; font-weight: 400; color: var(--muted);
+  background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 2px 9px;
 }
-.deal-card .head { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
-.deal-card .prod { font-weight: 700; }
-.deal-card .promo-title { font-size: 14px; margin: 4px 0; }
-.deal-card .promo-detail { color: var(--muted); font-size: 13px; margin: 2px 0 8px; }
-.deal-card .meta { font-size: 12px; color: var(--muted); display: flex; gap: 10px; flex-wrap: wrap; }
+.bucket-head > span { color: var(--muted); font-size: 13px; }
+
+.deal-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); gap: 14px; align-items: start; }
+.deal-card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  padding: 15px 16px; border-top: 3px solid var(--line);
+}
+.deal-card.v-save { border-top-color: var(--red); }
+.deal-card.v-free { border-top-color: var(--green); }
+
+.dc-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+.dc-title .name { display: block; font-weight: 700; font-size: 15px; }
+.dc-title .vendor { display: block; font-size: 12px; color: var(--muted); font-weight: 400; }
+
+/* 卡头大字：这张卡里最省的那条活动 */
+.dc-big { margin: 9px 0 2px; font-size: 27px; line-height: 1.1; font-weight: 700; }
+.dc-big.save { color: var(--red); }
+.dc-big.free { color: var(--green); }
+.dc-cap { font-size: 12px; color: var(--muted); margin-bottom: 7px; }
+
+.dc-base {
+  display: flex; gap: 12px; flex-wrap: wrap; font-size: 12px; color: var(--muted);
+  padding-bottom: 8px; border-bottom: 1px solid var(--line);
+}
+.dc-base .free { color: var(--green); font-weight: 600; }
+
+.dc-plabel {
+  font-size: 11px; font-weight: 600; color: var(--muted); letter-spacing: 0.04em; margin: 9px 0 0;
+}
+
+/* 活动列表：每条一行，完整可见（字号小但内容不省） */
+.promo-list { list-style: none; margin: 2px 0 0; padding: 0; }
+.promo-list .pl {
+  padding: 7px 0 7px 9px; border-bottom: 1px dashed var(--line);
+  border-left: 2px solid #eef1f7; margin-left: -2px;
+}
+.promo-list .pl:last-child { border-bottom: none; padding-bottom: 2px; }
+.pl-head { display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; }
+.pl-badge {
+  flex: 0 0 auto; font-size: 10.5px; font-weight: 700; line-height: 1.5;
+  border-radius: 4px; padding: 0 5px; white-space: nowrap;
+  background: var(--red-soft); color: var(--red);
+}
+.pl-badge.free { background: var(--green-soft); color: var(--green); }
+.pl-badge.ghost { visibility: hidden; }
+.pl-t { font-size: 12.5px; font-weight: 600; line-height: 1.45; }
+.pl-d { font-size: 11.5px; color: var(--muted); line-height: 1.55; margin-top: 1px; }
+.pl-meta { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 3px; font-size: 10.5px; color: #93a0b4; align-items: center; }
+.pl-meta .badge { font-size: 10.5px; padding: 2px 6px; }
+.dc-more { display: inline-block; margin-top: 10px; font-size: 12.5px; }
 
 /* 徽章 */
 .badge {
@@ -110,15 +160,20 @@ th {
   text-align: left; font-size: 12px; color: var(--muted); font-weight: 600;
   padding: 10px 14px; border-bottom: 1px solid var(--line); white-space: nowrap;
 }
-td { padding: 12px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+td { padding: 12px 14px; border-bottom: 1px solid var(--line); vertical-align: middle; }
 tr:last-child td { border-bottom: none; }
 tr:hover td { background: #fafbfe; }
 tr.dim td { opacity: 0.55; }
+.nowrap { white-space: nowrap; }
 .cell-prod { min-width: 200px; }
-.cell-prod .name { font-weight: 600; }
+.cell-prod .name { font-weight: 600; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
 .cell-prod .sub { font-size: 12px; color: var(--muted); }
-.price-now { font-weight: 600; }
-.price-promo { font-size: 12px; color: var(--red); }
+.cell-quota { font-size: 12.5px; color: var(--muted); max-width: 300px; }
+.num { font-size: 16px; }
+.unit { font-size: 11px; color: var(--muted); margin-left: 2px; }
+.intro { color: var(--red); font-weight: 600; }
+.free-txt { color: var(--green); font-weight: 600; }
+.dash { color: #b3bccc; }
 
 /* 产品详情 */
 .detail-head { margin: 26px 0 16px; }
@@ -157,4 +212,9 @@ tr.dim td { opacity: 0.55; }
 @media (max-width: 640px) {
   .hero { padding: 20px 16px; }
   td, th { padding: 10px; }
+  /* 单列；卡头大字不缩水，活动行保持完整 */
+  .deal-grid { grid-template-columns: 1fr; }
+  .deal-card { padding: 14px; }
+  .dc-big { font-size: 27px; }
+  .hero .stats { gap: 8px; }
 }
