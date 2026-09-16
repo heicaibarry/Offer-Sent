@@ -3,17 +3,18 @@
     "hash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
     "lastChecked": "2026-09-15T12:46:44.479Z",
     "lastChanged": "2026-09-13T16:35:31.802Z",
-    "how": "browser"
+    "how": "browser",
+    "lastError": "内容过短（0 字符，疑似空页/需登录），已跳过，未写基线"
   },
   "workbuddy-pricing": {
     "hash": "240f328e5d1d6080606e2b10a6705153a10dcf56",
-    "lastChecked": "2026-09-15T12:46:55.467Z",
+    "lastChecked": "2026-09-16T06:18:04.874Z",
     "lastChanged": "2026-09-13T16:35:42.649Z",
     "how": "browser"
   },
   "minimax-token-plan": {
     "hash": "50752d810286cbfa8091dac9ffeba054d74d8c50",
-    "lastChecked": "2026-09-15T12:47:12.587Z",
+    "lastChecked": "2026-09-16T06:18:16.858Z",
     "lastChanged": "2026-09-13T16:35:57.270Z",
     "how": "browser"
   },
@@ -25,20 +26,20 @@
   },
   "kimi-coding": {
     "hash": "bdc5e788b73953d13ff68131ff357087d274dd4d",
-    "lastChecked": "2026-09-15T12:47:24.527Z",
+    "lastChecked": "2026-09-16T06:18:58.026Z",
     "lastChanged": "2026-09-13T16:36:15.066Z",
     "how": "browser"
   },
   "dumate-home": {
-    "hash": "0a5c5782a3e72e68dd69a07602ef5e2983c72c74",
-    "lastChecked": "2026-09-15T12:47:37.420Z",
-    "lastChanged": "2026-09-15T06:20:13.721Z",
+    "hash": "bd55d15e35800b681b4e71ca805ae444c90651c5",
+    "lastChecked": "2026-09-16T06:19:08.728Z",
+    "lastChanged": "2026-09-16T06:19:08.728Z",
     "how": "browser"
   },
   "codebuddy-pricing": {
-    "hash": "9d7afbc57e63a0ceb76e3559b513a639e72758b3",
-    "lastChecked": "2026-09-15T06:20:21.994Z",
-    "lastChanged": "2026-09-14T06:37:24.197Z",
+    "hash": "54e689add4e0e0b6bf2b85054b917c4fd349f70c",
+    "lastChecked": "2026-09-16T06:19:19.442Z",
+    "lastChanged": "2026-09-16T06:19:19.442Z",
     "how": "browser"
   },
   "lingma-home": {
@@ -111,13 +112,13 @@
   },
   "bigmodel-coding-plan": {
     "hash": "fb997a293420a1c40c20cc98769c343de3b078d4",
-    "lastChecked": "2026-09-15T12:46:39.041Z",
+    "lastChecked": "2026-09-16T06:17:50.253Z",
     "lastChanged": "2026-09-15T12:46:39.041Z",
     "how": "browser"
   },
   "qoder-cn-pricing": {
     "hash": "49a1aae082b0f528dd3a847e5f5e880c93bd75e4",
-    "lastChecked": "2026-09-15T17:44:14.345Z",
+    "lastChecked": "2026-09-16T06:19:28.892Z",
     "lastChanged": "2026-09-15T17:44:14.345Z",
     "how": "browser"
   }

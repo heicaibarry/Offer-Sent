@@ -1,5 +1,15 @@
 [
   {
+    "time": "2026-09-16T06:19:08.728Z",
+    "source": "dumate-home",
+    "product": "dumate",
+    "url": "https://www.dumate.cn/",
+    "kind": "page-update",
+    "how": "browser",
+    "pageTitle": "DuMate",
+    "excerpt": "DuMate 个人版 企业版 定价 生态与合作 开发与使用 免费下载 macOS (M系列芯片) Windows (win10及以上) 扫码下载 DuMate App 企业版咨询 真干活，用搭子 百度搭子DuMate，强大的AI助手。你说需求，它来执行——跨应用、跨文件，复杂任务一句话搞定。 免费下载桌面版 免费下载 正在用搭子干活 全球"
+  },
+  {
     "time": "2026-09-15T12:46:39.041Z",
     "source": "bigmodel-coding-plan",
     "product": "glm-coding-plan",
