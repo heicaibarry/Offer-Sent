@@ -52,17 +52,19 @@
     "hash": "a3b2573683f1135c4f0e64d96f04bdb3099b0958",
     "lastChecked": "2026-09-15T12:47:44.762Z",
     "lastChanged": "2026-09-12T18:15:17.557Z",
-    "how": "fetch"
+    "how": "fetch",
+    "lastError": "内容过短（40 字符，疑似空页/需登录），已跳过，未写基线"
   },
   "comate-home": {
     "hash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
     "lastChecked": "2026-09-15T12:47:47.573Z",
     "lastChanged": "2026-09-12T18:15:20.883Z",
-    "how": "fetch"
+    "how": "fetch",
+    "lastError": "内容过短（0 字符，疑似空页/需登录），已跳过，未写基线"
   },
   "deepseek-pricing": {
     "hash": "8c0b91dfc8a041193e54c9ed2353c9e487f04dcc",
-    "lastChecked": "2026-09-15T12:47:51.080Z",
+    "lastChecked": "2026-09-16T17:40:48.365Z",
     "lastChanged": "2026-09-12T18:15:24.106Z",
     "how": "fetch"
   },
@@ -70,7 +72,8 @@
     "hash": "b4889c981d67b2f768bbf540dee08364e95c74b9",
     "lastChecked": "2026-09-15T12:47:54.818Z",
     "lastChanged": "2026-09-12T18:15:27.182Z",
-    "how": "fetch"
+    "how": "fetch",
+    "lastError": "内容过短（43 字符，疑似空页/需登录），已跳过，未写基线"
   },
   "manus-pricing": {
     "hash": "e72a9f7ee3b42622dd0310218ad185a21c8afd7b",
@@ -100,7 +103,7 @@
   },
   "siliconflow-pricing": {
     "hash": "265d6f43033fe6b5b9beb9bfcfc106d6284c3707",
-    "lastChecked": "2026-09-15T12:48:02.328Z",
+    "lastChecked": "2026-09-16T17:40:57.806Z",
     "lastChanged": "2026-09-12T18:16:09.742Z",
     "how": "browser"
   },
@@ -108,7 +111,8 @@
     "hash": "8117a9d3af64f088fd27afd4eaf0346a39d11ac5",
     "lastChecked": "2026-09-15T12:48:08.462Z",
     "lastChanged": "2026-09-12T18:16:12.294Z",
-    "how": "fetch"
+    "how": "fetch",
+    "lastError": "内容过短（10 字符，疑似空页/需登录），已跳过，未写基线"
   },
   "bigmodel-coding-plan": {
     "hash": "fb997a293420a1c40c20cc98769c343de3b078d4",
