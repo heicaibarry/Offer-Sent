@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-15",
+  "updatedAt": "2026-09-17",
   "policy": "只监控国内计费版本（人民币/国内支付）。中国团队但仅提供海外计费的产品标记为 market=intl，收录展示但不算国内优惠，不做监控。",
   "products": [
     {
@@ -50,9 +50,66 @@
           "endsAt": null,
           "source": "https://bigmodel.cn/claude-code",
           "firstSeen": "2026-09-14"
+        },
+        {
+          "title": "接入智谱 AutoClaw 得 150% 限时额度加成 + 每月登录领积分",
+          "detail": "用 Coding Plan 接入 AutoClaw 享 150% 额度加成（个人版 / 团队版均支持）；每月登录还可按档位领积分：Lite 5,000 · Pro 10,000 · Max 26,000。",
+          "endsAt": null,
+          "source": "https://autoglm.zhipuai.cn/autoclaw/",
+          "firstSeen": "2026-09-17"
         }
       ],
       "notes": "注意区分：z.ai 是智谱海外版（美元计价、国际账号），不在本站监控范围；国内优惠以 bigmodel.cn 为准。所有套餐均支持 GLM-5.3 与 GLM-5.3-Flash（OX Alpha）。另有「特惠专区」「最新活动」页面待纳入监控。促销大户，BigModel 公众号常发限时活动。"
+    },
+    {
+      "slug": "autoclaw",
+      "name": "智谱 AutoClaw（澳龙）",
+      "vendor": "智谱 BigModel（国内版）",
+      "category": "office",
+      "type": "桌面 Agent（办公/浏览器/IM 自动化）",
+      "status": "active",
+      "market": "cn",
+      "site": "https://autoglm.zhipuai.cn/autoclaw/",
+      "pricingUrl": "https://autoglm.zhipuai.cn/autoclaw/",
+      "priceStatus": "partial",
+      "verifiedAt": "2026-09-17",
+      "models": ["GLM-5.3-Flash", "GLM 系列", "DeepSeek"],
+      "summary": "智谱的本地 Agent 桌面客户端（AutoGLM 浏览器自动化引擎 + Pony-Alpha-2 Agent 模型），把 AI 助手、办公自动化、浏览器自动化和 IM 协作放同一个应用；50+ 预置技能，可接入飞书 / 企业微信 / 微信 / Lark。",
+      "plans": [
+        { "name": "免费版", "price": 0, "unit": "元/月", "quota": "每日免费积分额度", "note": "基础功能免费，注册即送积分；GLM-4.7-Flash / FlashX 等免费模型可用" },
+        { "name": "积分包", "price": 29, "unit": "元", "quota": "5,000 Credits 起", "note": "另有 ¥109 / 23,000、¥499 / 120,000、¥999 / 240,000 档，以 App 内实际展示为准" }
+      ],
+      "promos": [
+        {
+          "title": "新用户注册登录领 1 亿 GLM-5.3-Flash tokens（价值 ¥60）",
+          "detail": "新用户注册并登录 AutoClaw 即领 1 亿 GLM-5.3-Flash tokens，官方标注价值 60 元。",
+          "endsAt": null,
+          "source": "https://autoglm.zhipuai.cn/autoclaw/",
+          "firstSeen": "2026-09-17"
+        },
+        {
+          "title": "接入 AutoClaw 得 150% 限时额度加成（Coding Plan 专属）",
+          "detail": "在 AutoClaw 中使用智谱 Coding Plan 可享 150% 额度加成，个人版 / 团队版均支持。",
+          "endsAt": null,
+          "source": "https://autoglm.zhipuai.cn/autoclaw/",
+          "firstSeen": "2026-09-17"
+        },
+        {
+          "title": "每月登录领大额积分：Lite 5,000 · Pro 10,000 · Max 26,000",
+          "detail": "按持有的 Coding Plan 档位，每月登录 AutoClaw 领取对应积分。",
+          "endsAt": null,
+          "source": "https://autoglm.zhipuai.cn/autoclaw/",
+          "firstSeen": "2026-09-17"
+        },
+        {
+          "title": "邀请好友：新用户最高领 4,800 积分，邀请人每位得 1,000",
+          "detail": "新用户填邀请码注册最高领 4,800 积分；好友完成注册并跑通任务，邀请人得 1,000 积分/位，活动期内上限 15 位（15,000 积分）。好友购买月套餐或充值包，双方再各得 8%（¥100 以下）或 12%（¥100 及以上）积分奖励，上不封顶。",
+          "endsAt": null,
+          "source": "https://autoglm.zhipuai.cn/misc/autoclaw-invite",
+          "firstSeen": "2026-09-17"
+        }
+      ],
+      "notes": "注意区分：autoclaw.z.ai 是智谱海外版（Z.ai，美元计价、英文界面），不在本站监控范围；国内以 autoglm.zhipuai.cn 为准。AutoClaw 是本地安装的桌面应用，长流程自动化任务需保持本机开机。"
     },
     {
       "slug": "kimi-code",
@@ -459,20 +516,31 @@
     },
     {
       "slug": "codearts-snap",
-      "name": "华为云 CodeArts Snap",
+      "name": "华为云码道 CodeArts 代码智能体",
       "vendor": "华为云",
       "category": "coding",
-      "type": "IDE 插件 / 企业研发平台",
+      "type": "智能编码 IDE + 插件（IDE / JetBrains / VS Code / 桌面端 / 网页端）",
       "status": "active",
       "market": "cn",
-      "site": "https://www.huaweicloud.com/product/codeartside.html",
-      "pricingUrl": "https://www.huaweicloud.com/product/codeartside.html",
-      "priceStatus": "pending",
-      "verifiedAt": "2026-09-13",
-      "summary": "华为云 AI 编程助手，企业向，常有华为云新用户代金券活动。",
-      "plans": [],
-      "promos": [],
-      "notes": ""
+      "site": "https://codearts.huaweicloud.com/",
+      "pricingUrl": "https://activity.huaweicloud.com/codearts_agent.html",
+      "priceStatus": "verified",
+      "verifiedAt": "2026-09-17",
+      "models": ["GLM-5.3-Flash", "DeepSeek-V4-Flash", "DeepSeek-V4-Pro", "GLM-5.2", "OpenPangu-2.0-Flash"],
+      "summary": "华为云智能编码产品（原 CodeArts Snap 升级）。深度融合 IDE 与代码大模型，支持项目级代码生成、代码续写、研发知识问答与单测生成；「码力续航计划」每日免费赠送 1000 万 Tokens。",
+      "plans": [
+        { "name": "体验版", "price": 0, "unit": "元/月", "quota": "500 万 Token/月会话模型用量", "note": "免费开通，默认 1 个月，到期自动续期 1 个月且次数不限；支持 Agent 问答 / MCP / Rules / Skills" }
+      ],
+      "promos": [
+        {
+          "title": "码力续航计划：每日免费送 1000 万 Tokens，GLM-5.3-Flash 等福利模型免费用",
+          "detail": "登录后客户端自动领取，当日 24:00 清零、不累计不结转；仅限码道内使用，先到先得，第一期总池价值 100 万元发完即止。福利模型：glm-5.3-flash、deepseek-v4-flash-0731、deepseek-v4-pro-0813。",
+          "endsAt": null,
+          "source": "https://support.huaweicloud.com/offers-codeartsagent/codeartsagent_offers_0001.html",
+          "firstSeen": "2026-09-17"
+        }
+      ],
+      "notes": "官方活动页标注「结束时间：另行通知」——活动起于 2026-08-19 22:00（码道 IDE / CodeArts 插件）、2026-09-15 00:00（桌面端 / 网页端），故未设截止日，以官方通知为准。福利 Tokens 不可转让、不可兑换现金，仅限码道平台内消费，不能导出到第三方工具。额度用尽后仍可使用内置或自定义模型。"
     },
     {
       "slug": "code-raccoon",

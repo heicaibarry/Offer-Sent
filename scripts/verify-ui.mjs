@@ -184,6 +184,29 @@ const home = await evaluate(
       wbDeadlines: wb ? [...wb.querySelectorAll('.promo-list .pl-meta .badge')].map(b => b.innerText) : [],
       wbHasDeepseek: wb ? wb.innerText.includes('0.03x') : false,
       wbNoFalseLimited: wb ? !/全档位限时折扣|限时折扣价/.test(wb.innerText) : false,
+      // 注意：headless 下 innerText 会因布局未稳定而取不全 → 一律用 textContent
+      ac: (() => {
+        const c = cards.find(x => (x.querySelector('.name')?.textContent || '').includes('AutoClaw'));
+        if (!c) return null;
+        const t = c.textContent || '';
+        return {
+          rows: c.querySelectorAll('.promo-list .pl').length,
+          text: t.replace(/\\s+/g, ' ').slice(0, 300),
+          hasYiTokens: /1\\s*亿/.test(t),
+          has150: /150%/.test(t),
+        };
+      })(),
+      hw: (() => {
+        const c = cards.find(x => (x.querySelector('.name')?.textContent || '').includes('码道'));
+        if (!c) return null;
+        const t = c.textContent || '';
+        return {
+          rows: c.querySelectorAll('.promo-list .pl').length,
+          text: t.replace(/\\s+/g, ' ').slice(0, 300),
+          has1000w: /1000\\s*万|1,000\\s*万/.test(t),
+          hasGlmFlash: /GLM-5\\.3-Flash/i.test(t),
+        };
+      })(),
       overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
     };
   })()`
@@ -193,8 +216,8 @@ console.log("\n首页数据:", JSON.stringify({ cards: home.cards, tableRows: ho
 console.log("卡片:", home.cardNames.join(" | "));
 console.log("KPI:", home.stats.join(" / "));
 console.log("Qoder 卡:", home.qoderCard);
-ok(home.tableRows === 23, "对比表 23 家产品（海外 Qoder 已移除）", `实际 ${home.tableRows}`);
-ok(home.cards === 10, "优惠卡 10 张（有进行中活动的产品数）", `实际 ${home.cards}`);
+ok(home.tableRows === 24, "对比表 24 家产品（+AutoClaw，海外 Qoder 已移除）", `实际 ${home.tableRows}`);
+ok(home.cards === 12, "优惠卡 12 张（有进行中活动的产品数）", `实际 ${home.cards}`);
 ok(!home.hasRawSlug, "页面没有露出内部 slug");
 ok(!home.hasDollar, "页面没有美元符号（海外产品已摘除）");
 ok(!home.hasYuanUnit, "没有「¥59 元/月」这种货币词重复");
@@ -205,10 +228,22 @@ ok(home.headers.includes("首月 / 优惠价"), "表头为「首月 / 优惠价�
 console.log("WorkBuddy 卡:", JSON.stringify({ rows: home.wbRows, deadlines: home.wbDeadlines }));
 ok(home.wbRows === 7, "WorkBuddy 卡内 7 条活动全部列出", `实际 ${home.wbRows}`);
 ok(home.wbHasDeepseek, "WorkBuddy 卡显示 DeepSeek 0.03x 限时折扣");
-ok(home.wbDeadlines.some((t) => t.includes("9/23")), "WorkBuddy 的 DeepSeek 活动显示 9/23 截止", home.wbDeadlines.join(" | "));
+// 剩 ≤7 天时 endLabel 显示「N 天后截止」而非绝对日期 → 两种形态都接受
+ok(home.wbDeadlines.some((t) => /9\/23|天后截止|明天截止/.test(t)), "WorkBuddy 的 DeepSeek 活动显示截止标记（9/23 或倒计时）", home.wbDeadlines.join(" | "));
 ok(home.wbDeadlines.filter((t) => t.includes("9/30")).length === 2, "Hy3 限免与邀请活动都标 9/30 截止", home.wbDeadlines.join(" | "));
 ok(home.wbDeadlines.some((t) => t.includes("10/10")), "Hy4 免费额度标 10/10 截止", home.wbDeadlines.join(" | "));
 ok(home.wbNoFalseLimited, "WorkBuddy 卡内不再出现被误标的「全档位限时折扣」");
+
+/* ---- 新增：智谱 AutoClaw + 华为云码道 ---- */
+ok(!!home.ac, "AutoClaw 卡片已出现");
+ok(home.ac?.hasYiTokens, "AutoClaw 卡显示「1 亿 tokens」赠送", home.ac?.text?.slice(0, 120));
+ok(home.ac?.has150, "AutoClaw 卡显示 150% 额度加成", home.ac?.text?.slice(0, 160));
+ok(home.ac?.rows === 4, "AutoClaw 卡内 4 条活动全部列出", `实际 ${home.ac?.rows}`);
+ok(!!home.hw, "华为云码道卡片已出现");
+ok(home.hw?.has1000w, "华为云码道显示「1000 万 Tokens」", home.hw?.text?.slice(0, 160));
+ok(home.hw?.hasGlmFlash, "华为云码道标注 GLM-5.3-Flash 福利模型", home.hw?.text?.slice(0, 160));
+ok(home.hw?.rows === 1, "华为云码道卡内 1 条活动", `实际 ${home.hw?.rows}`);
+ok(/码道/.test(home.sub) || home.cardNames.some(n => n?.includes('码道')), "产品名已从旧名 CodeArts Snap 更新为「码道」");
 
 /* ---------------- 产品详情：Qoder CN ---------------- */
 await goto(page, `${BASE}/product/tongyi-lingma/`);

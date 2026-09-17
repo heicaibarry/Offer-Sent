@@ -2,6 +2,8 @@
   "comment": "监控源配置。renderer: fetch=直接 HTTP 抓取（静态页）；browser=需无头浏览器渲染（SPA 定价页，未安装 playwright 时自动降级为 fetch）。everyHours: 最小抓取间隔，控制对官方站点的请求频率。只监控国内计费版本；market=intl 的产品已禁用监控。",
   "sources": [
     { "id": "bigmodel-coding-plan", "product": "glm-coding-plan", "url": "https://bigmodel.cn/claude-code", "renderer": "browser", "everyHours": 6, "enabled": true },
+    { "id": "autoclaw-home", "product": "autoclaw", "url": "https://autoglm.zhipuai.cn/autoclaw/", "renderer": "browser", "everyHours": 12, "enabled": true },
+    { "id": "huawei-codearts-offers", "product": "codearts-snap", "url": "https://support.huaweicloud.com/offers-codeartsagent/codeartsagent_offers_0001.html", "renderer": "fetch", "everyHours": 24, "enabled": true },
     { "id": "trae-pricing", "product": "trae", "url": "https://www.trae.cn/pricing", "renderer": "browser", "everyHours": 6, "enabled": true },
     { "id": "workbuddy-pricing", "product": "workbuddy", "url": "https://www.workbuddy.cn/pricing", "renderer": "browser", "everyHours": 6, "enabled": true },
     { "id": "minimax-token-plan", "product": "minimax-token-plan", "url": "https://platform.minimaxi.com/subscribe/token-plan", "renderer": "browser", "everyHours": 6, "enabled": true },

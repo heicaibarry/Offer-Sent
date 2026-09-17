@@ -175,13 +175,14 @@ console.log("hero 提示:", out.heroNote || "(无)");
 const shot = await page.send("Page.captureScreenshot", { format: "png" });
 fs.writeFileSync(path.join(SHOTS, "expiry-after-shift.png"), Buffer.from(shot.data, "base64"));
 
-ok(!out.sub.includes("28 条活动进行中"), "已过期活动不再计入「活动进行中」总数", out.sub);
-ok(out.sub.includes("21 条活动进行中"), "总数从 28 降到 21（7 条到期）", out.sub);
+ok(!out.sub.includes("34 条活动进行中"), "已过期活动不再计入「活动进行中」总数", out.sub);
+ok(out.sub.includes("27 条活动进行中"), "总数从 34 降到 27（7 条到期）", out.sub);
 ok(out.sub.includes("另有 7 条已结束"), "区块说明出现「另有 7 条已结束，已自动下架」", out.sub);
 ok(!out.rows.some((t) => t.includes("9 月首月 Credits 翻倍")), "Qoder CN 的 9/30 活动行已从卡片消失", JSON.stringify(out.rows));
 ok(out.rows.length === 1, "Qoder CN 卡上只剩 1 条进行中活动", `${out.rows.length} 条`);
 ok(out.plabel.includes("另有 1 条已结束"), "Qoder CN 卡标注「另有 1 条已结束」", out.plabel);
-ok(out.cards === 10, "Qoder CN 还有其他活动 → 卡片保留（不是整卡消失）", `${out.cards} 张`);
+ok(out.cards === 12, "到期活动所属产品仍有其他活动 → 卡片保留（不是整卡消失）", `${out.cards} 张`);
+ok(!out.cardNames.some((n) => n?.includes("AutoClaw")) === false, "无 endsAt 的 AutoClaw 常驻活动不受时间推移影响", out.cardNames.join(" / "));
 
 // WorkBuddy：9/23 的 DeepSeek、9/30 的 Hy3 与邀请到期；10/10 的 Hy4 额度仍在
 ok(!out.wbRows.some((t) => t.includes("0.03x")), "WorkBuddy 的 9/23 DeepSeek 折扣行已消失", JSON.stringify(out.wbRows));
