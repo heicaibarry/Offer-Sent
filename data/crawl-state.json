@@ -7,14 +7,14 @@
     "lastError": "内容过短（0 字符，疑似空页/需登录），已跳过，未写基线"
   },
   "workbuddy-pricing": {
-    "hash": "240f328e5d1d6080606e2b10a6705153a10dcf56",
-    "lastChecked": "2026-09-16T12:42:07.821Z",
-    "lastChanged": "2026-09-13T16:35:42.649Z",
+    "hash": "cecfa2a26f7633476ed86a4234146fd3a0a3249e",
+    "lastChecked": "2026-09-17T06:19:32.935Z",
+    "lastChanged": "2026-09-17T06:19:32.935Z",
     "how": "browser"
   },
   "minimax-token-plan": {
     "hash": "50752d810286cbfa8091dac9ffeba054d74d8c50",
-    "lastChecked": "2026-09-16T12:42:22.444Z",
+    "lastChecked": "2026-09-17T06:19:47.783Z",
     "lastChanged": "2026-09-13T16:35:57.270Z",
     "how": "browser"
   },
@@ -25,20 +25,20 @@
     "how": "browser"
   },
   "kimi-coding": {
-    "hash": "5ec590de3488ea595380a56b22dc6b80ddd6432f",
-    "lastChecked": "2026-09-16T12:43:03.983Z",
-    "lastChanged": "2026-09-16T12:43:03.983Z",
+    "hash": "9c13e719ebf05b816be2b2976f3a4ae5879f799b",
+    "lastChecked": "2026-09-17T06:19:58.785Z",
+    "lastChanged": "2026-09-17T06:19:58.785Z",
     "how": "browser"
   },
   "dumate-home": {
     "hash": "3dcac9ecad2c0b73825cad20e3bf48f3ceb8be08",
-    "lastChecked": "2026-09-16T12:43:17.598Z",
+    "lastChecked": "2026-09-17T06:20:14.032Z",
     "lastChanged": "2026-09-16T12:43:17.598Z",
     "how": "browser"
   },
   "codebuddy-pricing": {
     "hash": "54e689add4e0e0b6bf2b85054b917c4fd349f70c",
-    "lastChecked": "2026-09-16T06:19:19.442Z",
+    "lastChecked": "2026-09-17T06:20:23.103Z",
     "lastChanged": "2026-09-16T06:19:19.442Z",
     "how": "browser"
   },
@@ -116,14 +116,41 @@
   },
   "bigmodel-coding-plan": {
     "hash": "fb997a293420a1c40c20cc98769c343de3b078d4",
-    "lastChecked": "2026-09-16T12:41:53.577Z",
+    "lastChecked": "2026-09-17T06:18:52.947Z",
     "lastChanged": "2026-09-15T12:46:39.041Z",
     "how": "browser"
   },
   "qoder-cn-pricing": {
     "hash": "49a1aae082b0f528dd3a847e5f5e880c93bd75e4",
-    "lastChecked": "2026-09-16T06:19:28.892Z",
+    "lastChecked": "2026-09-17T06:20:32.837Z",
     "lastChanged": "2026-09-15T17:44:14.345Z",
     "how": "browser"
+  },
+  "autoclaw-home": {
+    "lastError": "内容过短（0 字符，疑似空页/需登录），已跳过，未写基线"
+  },
+  "huawei-codearts-offers": {
+    "hash": "71b41627f95cd7425cd586452f9b9744131276ea",
+    "lastChecked": "2026-09-17T06:19:00.754Z",
+    "lastChanged": "2026-09-17T06:19:00.754Z",
+    "how": "fetch"
+  },
+  "trae-events-fission": {
+    "lastError": "内容过短（0 字符，疑似空页/需登录），已跳过，未写基线"
+  },
+  "trae-work-offer": {
+    "lastError": "内容过短（0 字符，疑似空页/需登录），已跳过，未写基线"
+  },
+  "trae-student": {
+    "lastError": "内容过短（0 字符，疑似空页/需登录），已跳过，未写基线"
+  },
+  "trae-work-gift": {
+    "lastError": "内容过短（0 字符，疑似空页/需登录），已跳过，未写基线"
+  },
+  "huawei-bbs-community": {
+    "hash": "0707de80b1ace857c0e2763f93836bb0389b2e75",
+    "lastChecked": "2026-09-17T06:19:22.517Z",
+    "lastChanged": "2026-09-17T06:19:22.517Z",
+    "how": "fetch"
   }
 }
