@@ -215,11 +215,25 @@
           "firstSeen": "2026-09-14"
         },
         {
-          "title": "邀请好友体验 TraeWork，双方各得 500 积分",
-          "detail": "最高得 3500 积分 + 2 杯星巴克咖啡（此前官网活动，最新页面未展示，待核实是否仍有效）",
+          "title": "邀好友体验 TraeCode，双方各得 500 积分",
+          "detail": "新用户登录 TraeCode 桌面端双方各得 500；邀满 3 人 / 5 人各再加赠 500，5 人封顶（官方活动页原文，已核实仍在）",
           "endsAt": null,
-          "source": "https://www.trae.cn/pricing",
+          "source": "https://www.trae.cn/events/code-fission",
           "firstSeen": "2026-09-13"
+        },
+        {
+          "title": "TraeWork 新用户注册送 4,500 积分",
+          "detail": "注册即到账（价值约百元）；另有每日签到、邀好友、每月首次登录 500 积分、专属模型补贴、40 万字实操指南",
+          "endsAt": null,
+          "source": "https://www.trae.cn/events/offline-ads",
+          "firstSeen": "2026-09-17"
+        },
+        {
+          "title": "大学生专属：注册 4,000 + 认证 2,000 积分",
+          "detail": "认证学生身份后合计 6,500 积分；另有邀好友、每月 500 积分、每日签到",
+          "endsAt": null,
+          "source": "https://www.trae.cn/events/student-verification",
+          "firstSeen": "2026-09-17"
         }
       ],
       "notes": "首月特惠已从 Lite ¥9.9 / Pro ¥59 调整为 Lite ¥29.9 / Pro ¥69（2026-09-14 页面口径）。国内运营主体为北京引力弹弓科技有限公司（字节系）。"

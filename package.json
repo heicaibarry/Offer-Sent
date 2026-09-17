@@ -9,6 +9,7 @@
     "build": "next build",
     "crawl": "node scripts/crawl.mjs",
     "crawl:baseline": "node scripts/crawl.mjs --baseline",
+    "discover": "node scripts/discover.mjs",
     "verify:ui": "node scripts/verify-ui.mjs",
     "verify:expiry": "node scripts/verify-expiry.mjs"
   },

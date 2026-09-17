@@ -207,6 +207,19 @@ const home = await evaluate(
           hasGlmFlash: /GLM-5\\.3-Flash/i.test(t),
         };
       })(),
+      tr: (() => {
+        const c = cards.find(x => (x.querySelector('.name')?.textContent || '').includes('Trae'));
+        if (!c) return null;
+        const t = c.textContent || '';
+        return {
+          rows: c.querySelectorAll('.promo-list .pl').length,
+          text: t.replace(/\\s+/g, ' ').slice(0, 340),
+          hasStudent: /大学生/.test(t),
+          has4500: /4,500|4500/.test(t),
+          hasTraeCode: /TraeCode/.test(t),
+          noStale: !/待核实/.test(t),
+        };
+      })(),
       overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
     };
   })()`
@@ -243,6 +256,11 @@ ok(!!home.hw, "华为云码道卡片已出现");
 ok(home.hw?.has1000w, "华为云码道显示「1000 万 Tokens」", home.hw?.text?.slice(0, 160));
 ok(home.hw?.hasGlmFlash, "华为云码道标注 GLM-5.3-Flash 福利模型", home.hw?.text?.slice(0, 160));
 ok(home.hw?.rows === 1, "华为云码道卡内 1 条活动", `实际 ${home.hw?.rows}`);
+ok(home.tr?.rows === 5, "Trae 卡内 5 条活动全部列出", `实际 ${home.tr?.rows}`);
+ok(home.tr?.hasStudent, "Trae 含「大学生专属」活动（sitemap 发现器挖到的新活动）", home.tr?.text?.slice(0, 200));
+ok(home.tr?.has4500, "Trae 含「4,500 积分」新用户活动", home.tr?.text?.slice(0, 200));
+ok(home.tr?.hasTraeCode, "邀新活动已修正为 TraeCode（原误写 TraeWork）");
+ok(home.tr?.noStale, "Trae 卡内不再出现「待核实」字样");
 ok(/码道/.test(home.sub) || home.cardNames.some(n => n?.includes('码道')), "产品名已从旧名 CodeArts Snap 更新为「码道」");
 
 /* ---------------- 产品详情：Qoder CN ---------------- */

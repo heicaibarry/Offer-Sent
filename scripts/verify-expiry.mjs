@@ -176,7 +176,21 @@ const shot = await page.send("Page.captureScreenshot", { format: "png" });
 fs.writeFileSync(path.join(SHOTS, "expiry-after-shift.png"), Buffer.from(shot.data, "base64"));
 
 ok(!out.sub.includes("34 条活动进行中"), "已过期活动不再计入「活动进行中」总数", out.sub);
-ok(out.sub.includes("27 条活动进行中"), "总数从 34 降到 27（7 条到期）", out.sub);
+// 动态算期望值：打桩后「进行中 + 已结束」必须等于构建时刻的进行中条数，
+// 这样以后增删活动不用再手改断言里的数字。
+const PRODUCTS = JSON.parse(fs.readFileSync(path.join(process.cwd(), "data/products.json"), "utf8")).products;
+const nowMs = Date.now();
+const LIVE_AT_BUILD = PRODUCTS.reduce(
+  (n, p) => n + (p.promos || []).filter((x) => !x.endsAt || Date.parse(x.endsAt) >= nowMs).length,
+  0
+);
+const subN = Number((out.sub.match(/(\d+) 条活动进行中/) || [])[1] || 0);
+const subM = Number((out.sub.match(/另有 (\d+) 条已结束/) || [])[1] || 0);
+ok(
+  subN + subM === LIVE_AT_BUILD && subM > 0,
+  `进行中 ${subN} + 已结束 ${subM} = 构建时刻的 ${LIVE_AT_BUILD} 条（确有到期下架）`,
+  out.sub
+);
 ok(out.sub.includes("另有 7 条已结束"), "区块说明出现「另有 7 条已结束，已自动下架」", out.sub);
 ok(!out.rows.some((t) => t.includes("9 月首月 Credits 翻倍")), "Qoder CN 的 9/30 活动行已从卡片消失", JSON.stringify(out.rows));
 ok(out.rows.length === 1, "Qoder CN 卡上只剩 1 条进行中活动", `${out.rows.length} 条`);

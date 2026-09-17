@@ -2,6 +2,7 @@ node_modules/
 .next/
 out/
 data/snapshots/
+data/discovered.json
 .verify-shots/
 .tmp-*
 *.log
