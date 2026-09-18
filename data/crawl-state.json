@@ -8,13 +8,13 @@
   },
   "workbuddy-pricing": {
     "hash": "cecfa2a26f7633476ed86a4234146fd3a0a3249e",
-    "lastChecked": "2026-09-17T12:41:04.849Z",
+    "lastChecked": "2026-09-18T06:10:11.107Z",
     "lastChanged": "2026-09-17T06:19:32.935Z",
     "how": "browser"
   },
   "minimax-token-plan": {
     "hash": "50752d810286cbfa8091dac9ffeba054d74d8c50",
-    "lastChecked": "2026-09-17T12:41:18.167Z",
+    "lastChecked": "2026-09-18T06:10:23.615Z",
     "lastChanged": "2026-09-13T16:35:57.270Z",
     "how": "browser"
   },
@@ -26,19 +26,19 @@
   },
   "kimi-coding": {
     "hash": "789eb5bc9d66a348f58e02c6a24ff07c1361bf2e",
-    "lastChecked": "2026-09-17T12:41:29.097Z",
+    "lastChecked": "2026-09-18T06:10:34.660Z",
     "lastChanged": "2026-09-17T12:41:29.097Z",
     "how": "browser"
   },
   "dumate-home": {
     "hash": "cd479359925d8ff1afc1c4b92e781f9da3797c23",
-    "lastChecked": "2026-09-17T12:41:42.763Z",
+    "lastChecked": "2026-09-18T06:10:46.167Z",
     "lastChanged": "2026-09-17T12:41:42.763Z",
     "how": "browser"
   },
   "codebuddy-pricing": {
     "hash": "54e689add4e0e0b6bf2b85054b917c4fd349f70c",
-    "lastChecked": "2026-09-17T06:20:23.103Z",
+    "lastChecked": "2026-09-18T06:10:56.070Z",
     "lastChanged": "2026-09-16T06:19:19.442Z",
     "how": "browser"
   },
@@ -116,13 +116,13 @@
   },
   "bigmodel-coding-plan": {
     "hash": "fb997a293420a1c40c20cc98769c343de3b078d4",
-    "lastChecked": "2026-09-17T12:40:29.130Z",
+    "lastChecked": "2026-09-18T06:09:34.590Z",
     "lastChanged": "2026-09-15T12:46:39.041Z",
     "how": "browser"
   },
   "qoder-cn-pricing": {
     "hash": "49a1aae082b0f528dd3a847e5f5e880c93bd75e4",
-    "lastChecked": "2026-09-17T06:20:32.837Z",
+    "lastChecked": "2026-09-18T06:11:06.240Z",
     "lastChanged": "2026-09-15T17:44:14.345Z",
     "how": "browser"
   },
@@ -149,7 +149,7 @@
   },
   "huawei-bbs-community": {
     "hash": "0707de80b1ace857c0e2763f93836bb0389b2e75",
-    "lastChecked": "2026-09-17T06:19:22.517Z",
+    "lastChecked": "2026-09-18T06:10:01.960Z",
     "lastChanged": "2026-09-17T06:19:22.517Z",
     "how": "fetch"
   }
