@@ -7,15 +7,15 @@
     "lastError": "内容过短（0 字符，疑似空页/需登录），已跳过，未写基线"
   },
   "workbuddy-pricing": {
-    "hash": "cecfa2a26f7633476ed86a4234146fd3a0a3249e",
-    "lastChecked": "2026-09-18T06:10:11.107Z",
-    "lastChanged": "2026-09-17T06:19:32.935Z",
+    "hash": "31407992a3a334373d5c4ecc8fdf2c2badb8c60b",
+    "lastChecked": "2026-09-18T12:19:15.768Z",
+    "lastChanged": "2026-09-18T12:19:15.768Z",
     "how": "browser"
   },
   "minimax-token-plan": {
-    "hash": "50752d810286cbfa8091dac9ffeba054d74d8c50",
-    "lastChecked": "2026-09-18T06:10:23.615Z",
-    "lastChanged": "2026-09-13T16:35:57.270Z",
+    "hash": "fd1c3a92652466a3902191e8b322ec142e6e120f",
+    "lastChecked": "2026-09-18T12:19:29.763Z",
+    "lastChanged": "2026-09-18T12:19:29.763Z",
     "how": "browser"
   },
   "zai-subscribe": {
@@ -26,14 +26,14 @@
   },
   "kimi-coding": {
     "hash": "789eb5bc9d66a348f58e02c6a24ff07c1361bf2e",
-    "lastChecked": "2026-09-18T06:10:34.660Z",
+    "lastChecked": "2026-09-18T12:19:40.889Z",
     "lastChanged": "2026-09-17T12:41:29.097Z",
     "how": "browser"
   },
   "dumate-home": {
-    "hash": "cd479359925d8ff1afc1c4b92e781f9da3797c23",
-    "lastChecked": "2026-09-18T06:10:46.167Z",
-    "lastChanged": "2026-09-17T12:41:42.763Z",
+    "hash": "bd55d15e35800b681b4e71ca805ae444c90651c5",
+    "lastChecked": "2026-09-18T12:19:52.013Z",
+    "lastChanged": "2026-09-18T12:19:52.013Z",
     "how": "browser"
   },
   "codebuddy-pricing": {
@@ -116,7 +116,7 @@
   },
   "bigmodel-coding-plan": {
     "hash": "fb997a293420a1c40c20cc98769c343de3b078d4",
-    "lastChecked": "2026-09-18T06:09:34.590Z",
+    "lastChecked": "2026-09-18T12:18:39.788Z",
     "lastChanged": "2026-09-15T12:46:39.041Z",
     "how": "browser"
   },
@@ -130,9 +130,9 @@
     "lastError": "内容过短（0 字符，疑似空页/需登录），已跳过，未写基线"
   },
   "huawei-codearts-offers": {
-    "hash": "71b41627f95cd7425cd586452f9b9744131276ea",
-    "lastChecked": "2026-09-17T06:19:00.754Z",
-    "lastChanged": "2026-09-17T06:19:00.754Z",
+    "hash": "d17f634e8784b3629223379069139dbd859d4ba2",
+    "lastChecked": "2026-09-18T12:18:46.031Z",
+    "lastChanged": "2026-09-18T12:18:46.031Z",
     "how": "fetch"
   },
   "trae-events-fission": {
