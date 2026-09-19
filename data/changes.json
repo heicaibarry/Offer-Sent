@@ -1,5 +1,25 @@
 [
   {
+    "time": "2026-09-19T06:11:13.072Z",
+    "source": "deepseek-pricing",
+    "product": "deepseek",
+    "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing",
+    "kind": "page-update",
+    "how": "fetch",
+    "pageTitle": "模型 & 价格 | DeepSeek API Docs",
+    "excerpt": "模型 & 价格 | DeepSeek API Docs 跳到主要内容 DeepSeek API 文档 中文（中国） English 中文（中国） DeepSeek Platform 快速开始 首次调用 API 模型 & 价格 Token 用量计算 限速与隔离 错误码 接入 Agent 工具 API 指南 图像理解 思考模式 多轮对话 对话"
+  },
+  {
+    "time": "2026-09-19T06:11:23.682Z",
+    "source": "siliconflow-pricing",
+    "product": "siliconflow",
+    "url": "https://siliconflow.cn/pricing",
+    "kind": "page-update",
+    "how": "browser",
+    "pageTitle": "大模型 API 价格方案 - 硅基流动 SiliconFlow",
+    "excerpt": "大模型 API 价格方案 - 硅基流动 SiliconFlow 产品 模型 价格 文档 生态合作 关于 登录 登录 产品 模型 价格 文档 生态合作 关于 PRICING · 模型价格中心 模型 价格总览 面向生产选型的模型价格页：一屏对比主流厂商与模型的输入、输出、缓存命中成本，帮助你快速判断性价比。 搜索 实时价格同步 仅展示可用模型"
+  },
+  {
     "time": "2026-09-18T12:18:46.030Z",
     "source": "huawei-codearts-offers",
     "product": "codearts-snap",

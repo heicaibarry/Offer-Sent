@@ -8,13 +8,13 @@
   },
   "workbuddy-pricing": {
     "hash": "31407992a3a334373d5c4ecc8fdf2c2badb8c60b",
-    "lastChecked": "2026-09-18T12:19:15.768Z",
+    "lastChecked": "2026-09-19T06:09:58.385Z",
     "lastChanged": "2026-09-18T12:19:15.768Z",
     "how": "browser"
   },
   "minimax-token-plan": {
     "hash": "fd1c3a92652466a3902191e8b322ec142e6e120f",
-    "lastChecked": "2026-09-18T12:19:29.763Z",
+    "lastChecked": "2026-09-19T06:10:12.395Z",
     "lastChanged": "2026-09-18T12:19:29.763Z",
     "how": "browser"
   },
@@ -26,20 +26,20 @@
   },
   "kimi-coding": {
     "hash": "789eb5bc9d66a348f58e02c6a24ff07c1361bf2e",
-    "lastChecked": "2026-09-18T12:19:40.889Z",
+    "lastChecked": "2026-09-19T06:10:23.513Z",
     "lastChanged": "2026-09-17T12:41:29.097Z",
     "how": "browser"
   },
   "dumate-home": {
-    "hash": "bd55d15e35800b681b4e71ca805ae444c90651c5",
-    "lastChecked": "2026-09-18T12:19:52.013Z",
-    "lastChanged": "2026-09-18T12:19:52.013Z",
+    "hash": "cdbd2373d49ed19a0b735f03120803aea26a6c93",
+    "lastChecked": "2026-09-19T06:10:43.511Z",
+    "lastChanged": "2026-09-19T06:10:43.511Z",
     "how": "browser"
   },
   "codebuddy-pricing": {
-    "hash": "54e689add4e0e0b6bf2b85054b917c4fd349f70c",
-    "lastChecked": "2026-09-18T06:10:56.070Z",
-    "lastChanged": "2026-09-16T06:19:19.442Z",
+    "hash": "550774feaf05aad0929ce82df0419a68ce126518",
+    "lastChecked": "2026-09-19T06:10:53.285Z",
+    "lastChanged": "2026-09-19T06:10:53.285Z",
     "how": "browser"
   },
   "lingma-home": {
@@ -63,9 +63,9 @@
     "lastError": "内容过短（0 字符，疑似空页/需登录），已跳过，未写基线"
   },
   "deepseek-pricing": {
-    "hash": "8c0b91dfc8a041193e54c9ed2353c9e487f04dcc",
-    "lastChecked": "2026-09-17T17:41:41.800Z",
-    "lastChanged": "2026-09-12T18:15:24.106Z",
+    "hash": "9326690aba366ba787cacf7c784f5bf90016fb0b",
+    "lastChecked": "2026-09-19T06:11:13.072Z",
+    "lastChanged": "2026-09-19T06:11:13.072Z",
     "how": "fetch"
   },
   "coze-home": {
@@ -102,9 +102,9 @@
     "how": "fetch"
   },
   "siliconflow-pricing": {
-    "hash": "265d6f43033fe6b5b9beb9bfcfc106d6284c3707",
-    "lastChecked": "2026-09-17T17:41:52.506Z",
-    "lastChanged": "2026-09-12T18:16:09.742Z",
+    "hash": "93ca17f67a6a1d5f30f94d2db8927cfbae4ea05f",
+    "lastChecked": "2026-09-19T06:11:23.682Z",
+    "lastChanged": "2026-09-19T06:11:23.682Z",
     "how": "browser"
   },
   "modelscope-home": {
@@ -116,13 +116,13 @@
   },
   "bigmodel-coding-plan": {
     "hash": "fb997a293420a1c40c20cc98769c343de3b078d4",
-    "lastChecked": "2026-09-18T12:18:39.788Z",
+    "lastChecked": "2026-09-19T06:09:19.757Z",
     "lastChanged": "2026-09-15T12:46:39.041Z",
     "how": "browser"
   },
   "qoder-cn-pricing": {
     "hash": "49a1aae082b0f528dd3a847e5f5e880c93bd75e4",
-    "lastChecked": "2026-09-18T06:11:06.240Z",
+    "lastChecked": "2026-09-19T06:11:05.064Z",
     "lastChanged": "2026-09-15T17:44:14.345Z",
     "how": "browser"
   },
@@ -149,7 +149,7 @@
   },
   "huawei-bbs-community": {
     "hash": "0707de80b1ace857c0e2763f93836bb0389b2e75",
-    "lastChecked": "2026-09-18T06:10:01.960Z",
+    "lastChecked": "2026-09-19T06:09:46.836Z",
     "lastChanged": "2026-09-17T06:19:22.517Z",
     "how": "fetch"
   }
