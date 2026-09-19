@@ -8,13 +8,13 @@
   },
   "workbuddy-pricing": {
     "hash": "31407992a3a334373d5c4ecc8fdf2c2badb8c60b",
-    "lastChecked": "2026-09-19T06:09:58.385Z",
+    "lastChecked": "2026-09-19T16:38:42.098Z",
     "lastChanged": "2026-09-18T12:19:15.768Z",
     "how": "browser"
   },
   "minimax-token-plan": {
     "hash": "fd1c3a92652466a3902191e8b322ec142e6e120f",
-    "lastChecked": "2026-09-19T06:10:12.395Z",
+    "lastChecked": "2026-09-19T16:38:56.825Z",
     "lastChanged": "2026-09-18T12:19:29.763Z",
     "how": "browser"
   },
@@ -26,14 +26,14 @@
   },
   "kimi-coding": {
     "hash": "789eb5bc9d66a348f58e02c6a24ff07c1361bf2e",
-    "lastChecked": "2026-09-19T06:10:23.513Z",
+    "lastChecked": "2026-09-19T16:39:07.174Z",
     "lastChanged": "2026-09-17T12:41:29.097Z",
     "how": "browser"
   },
   "dumate-home": {
-    "hash": "cdbd2373d49ed19a0b735f03120803aea26a6c93",
-    "lastChecked": "2026-09-19T06:10:43.511Z",
-    "lastChanged": "2026-09-19T06:10:43.511Z",
+    "hash": "cd479359925d8ff1afc1c4b92e781f9da3797c23",
+    "lastChecked": "2026-09-19T16:39:19.439Z",
+    "lastChanged": "2026-09-19T16:39:19.439Z",
     "how": "browser"
   },
   "codebuddy-pricing": {
@@ -116,7 +116,7 @@
   },
   "bigmodel-coding-plan": {
     "hash": "fb997a293420a1c40c20cc98769c343de3b078d4",
-    "lastChecked": "2026-09-19T06:09:19.757Z",
+    "lastChecked": "2026-09-19T16:38:04.255Z",
     "lastChanged": "2026-09-15T12:46:39.041Z",
     "how": "browser"
   },
@@ -131,7 +131,7 @@
   },
   "huawei-codearts-offers": {
     "hash": "d17f634e8784b3629223379069139dbd859d4ba2",
-    "lastChecked": "2026-09-18T12:18:46.031Z",
+    "lastChecked": "2026-09-19T16:38:12.817Z",
     "lastChanged": "2026-09-18T12:18:46.031Z",
     "how": "fetch"
   },
