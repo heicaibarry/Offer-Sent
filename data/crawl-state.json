@@ -112,7 +112,7 @@
     "lastChecked": "2026-09-15T12:48:08.462Z",
     "lastChanged": "2026-09-12T18:16:12.294Z",
     "how": "fetch",
-    "lastError": "内容过短（10 字符，疑似空页/需登录），已跳过，未写基线"
+    "lastError": "内容过短（20 字符，疑似空页/需登录），已跳过，未写基线"
   },
   "bigmodel-coding-plan": {
     "hash": "fb997a293420a1c40c20cc98769c343de3b078d4",
