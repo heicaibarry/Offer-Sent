@@ -8,13 +8,13 @@
   },
   "workbuddy-pricing": {
     "hash": "31407992a3a334373d5c4ecc8fdf2c2badb8c60b",
-    "lastChecked": "2026-09-21T06:40:48.375Z",
+    "lastChecked": "2026-09-21T14:25:01.529Z",
     "lastChanged": "2026-09-18T12:19:15.768Z",
     "how": "browser"
   },
   "minimax-token-plan": {
     "hash": "50ba2b041fa8d47724cb6adb3446acacce39e212",
-    "lastChecked": "2026-09-21T06:41:02.113Z",
+    "lastChecked": "2026-09-21T14:25:50.405Z",
     "lastChanged": "2026-09-21T06:41:02.113Z",
     "how": "browser"
   },
@@ -26,14 +26,14 @@
   },
   "kimi-coding": {
     "hash": "789eb5bc9d66a348f58e02c6a24ff07c1361bf2e",
-    "lastChecked": "2026-09-21T06:41:13.640Z",
+    "lastChecked": "2026-09-21T14:26:05.821Z",
     "lastChanged": "2026-09-17T12:41:29.097Z",
     "how": "browser"
   },
   "dumate-home": {
-    "hash": "bd55d15e35800b681b4e71ca805ae444c90651c5",
-    "lastChecked": "2026-09-21T06:41:26.654Z",
-    "lastChanged": "2026-09-21T06:41:26.654Z",
+    "hash": "3dcac9ecad2c0b73825cad20e3bf48f3ceb8be08",
+    "lastChecked": "2026-09-21T14:26:21.801Z",
+    "lastChanged": "2026-09-21T14:26:21.801Z",
     "how": "browser"
   },
   "codebuddy-pricing": {
@@ -115,9 +115,9 @@
     "lastError": "内容过短（20 字符，疑似空页/需登录），已跳过，未写基线"
   },
   "bigmodel-coding-plan": {
-    "hash": "fb997a293420a1c40c20cc98769c343de3b078d4",
-    "lastChecked": "2026-09-21T06:39:50.466Z",
-    "lastChanged": "2026-09-15T12:46:39.041Z",
+    "hash": "0db3905f65a1762a15cc27e92edeaf83f526c5f0",
+    "lastChecked": "2026-09-21T14:24:31.248Z",
+    "lastChanged": "2026-09-21T14:24:31.248Z",
     "how": "browser"
   },
   "qoder-cn-pricing": {
