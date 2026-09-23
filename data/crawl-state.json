@@ -8,13 +8,13 @@
   },
   "workbuddy-pricing": {
     "hash": "31407992a3a334373d5c4ecc8fdf2c2badb8c60b",
-    "lastChecked": "2026-09-23T06:13:12.175Z",
+    "lastChecked": "2026-09-23T12:51:13.686Z",
     "lastChanged": "2026-09-18T12:19:15.768Z",
     "how": "browser"
   },
   "minimax-token-plan": {
     "hash": "50ba2b041fa8d47724cb6adb3446acacce39e212",
-    "lastChecked": "2026-09-23T06:13:26.336Z",
+    "lastChecked": "2026-09-23T12:51:39.707Z",
     "lastChanged": "2026-09-21T06:41:02.113Z",
     "how": "browser"
   },
@@ -26,13 +26,13 @@
   },
   "kimi-coding": {
     "hash": "789eb5bc9d66a348f58e02c6a24ff07c1361bf2e",
-    "lastChecked": "2026-09-23T06:13:39.331Z",
+    "lastChecked": "2026-09-23T12:51:50.653Z",
     "lastChanged": "2026-09-17T12:41:29.097Z",
     "how": "browser"
   },
   "dumate-home": {
     "hash": "3dcac9ecad2c0b73825cad20e3bf48f3ceb8be08",
-    "lastChecked": "2026-09-23T06:13:54.861Z",
+    "lastChecked": "2026-09-23T12:52:07.107Z",
     "lastChanged": "2026-09-23T06:13:54.861Z",
     "how": "browser"
   },
@@ -64,7 +64,7 @@
   },
   "deepseek-pricing": {
     "hash": "9326690aba366ba787cacf7c784f5bf90016fb0b",
-    "lastChecked": "2026-09-22T12:46:18.367Z",
+    "lastChecked": "2026-09-23T12:52:18.313Z",
     "lastChanged": "2026-09-19T06:11:13.072Z",
     "how": "fetch"
   },
@@ -103,7 +103,7 @@
   },
   "siliconflow-pricing": {
     "hash": "93ca17f67a6a1d5f30f94d2db8927cfbae4ea05f",
-    "lastChecked": "2026-09-22T12:46:30.979Z",
+    "lastChecked": "2026-09-23T12:52:31.651Z",
     "lastChanged": "2026-09-19T06:11:23.682Z",
     "how": "browser"
   },
@@ -116,7 +116,7 @@
   },
   "bigmodel-coding-plan": {
     "hash": "a4f115041b7d73b69de2766a1bfb25a96251e945",
-    "lastChecked": "2026-09-23T06:12:20.785Z",
+    "lastChecked": "2026-09-23T12:50:40.613Z",
     "lastChanged": "2026-09-22T12:43:57.119Z",
     "how": "browser"
   },
@@ -133,9 +133,9 @@
     "how": "browser"
   },
   "huawei-codearts-offers": {
-    "hash": "d17f634e8784b3629223379069139dbd859d4ba2",
-    "lastChecked": "2026-09-22T06:29:52.686Z",
-    "lastChanged": "2026-09-18T12:18:46.031Z",
+    "hash": "7eccef4a69cee4b63be29713a10a91164e609e1b",
+    "lastChecked": "2026-09-23T12:50:43.055Z",
+    "lastChanged": "2026-09-23T12:50:43.055Z",
     "how": "fetch"
   },
   "trae-events-fission": {
@@ -156,7 +156,8 @@
     "hash": "e1f2aebd9558fe1a6a3606af49b27e7358e891d7",
     "lastChecked": "2026-09-22T12:45:02.981Z",
     "lastChanged": "2026-09-22T12:45:02.981Z",
-    "how": "browser"
+    "how": "browser",
+    "lastError": "内容过短（0 字符，疑似空页/需登录），已跳过，未写基线"
   },
   "trae-work-gift": {
     "lastError": "内容过短（0 字符，疑似空页/需登录），已跳过，未写基线"
