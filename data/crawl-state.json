@@ -63,9 +63,9 @@
     "lastError": "内容过短（0 字符，疑似空页/需登录），已跳过，未写基线"
   },
   "deepseek-pricing": {
-    "hash": "9326690aba366ba787cacf7c784f5bf90016fb0b",
-    "lastChecked": "2026-09-23T12:52:18.313Z",
-    "lastChanged": "2026-09-19T06:11:13.072Z",
+    "hash": "2b92554280d0173a2f13a899aa705fd09f5f158d",
+    "lastChecked": "2026-09-24T17:54:41.386Z",
+    "lastChanged": "2026-09-24T17:54:41.386Z",
     "how": "fetch"
   },
   "coze-home": {
@@ -103,7 +103,7 @@
   },
   "siliconflow-pricing": {
     "hash": "93ca17f67a6a1d5f30f94d2db8927cfbae4ea05f",
-    "lastChecked": "2026-09-23T12:52:31.651Z",
+    "lastChecked": "2026-09-24T17:54:53.726Z",
     "lastChanged": "2026-09-19T06:11:23.682Z",
     "how": "browser"
   },
@@ -134,7 +134,7 @@
   },
   "huawei-codearts-offers": {
     "hash": "7eccef4a69cee4b63be29713a10a91164e609e1b",
-    "lastChecked": "2026-09-23T12:50:43.055Z",
+    "lastChecked": "2026-09-24T17:54:11.597Z",
     "lastChanged": "2026-09-23T12:50:43.055Z",
     "how": "fetch"
   },

@@ -1,5 +1,15 @@
 [
   {
+    "time": "2026-09-24T17:54:41.386Z",
+    "source": "deepseek-pricing",
+    "product": "deepseek",
+    "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing",
+    "kind": "page-update",
+    "how": "fetch",
+    "pageTitle": "模型 & 价格 | DeepSeek API Docs",
+    "excerpt": "模型 & 价格 | DeepSeek API Docs 跳到主要内容 DeepSeek API 文档 更多资源 实用集成 API 服务状态 常见问题 中文（中国） English 中文（中国） 开放平台 EN 快速开始 API 指南 API 文档 新闻 更新日志 首次调用 API 模型 & 价格 Token 用量计算 限速与隔离 错误码"
+  },
+  {
     "time": "2026-09-22T12:44:11.771Z",
     "source": "trae-pricing",
     "product": "trae",
