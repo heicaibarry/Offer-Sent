@@ -61,7 +61,7 @@
   },
   "deepseek-pricing": {
     "hash": "2b92554280d0173a2f13a899aa705fd09f5f158d",
-    "lastChecked": "2026-09-24T17:54:41.386Z",
+    "lastChecked": "2026-09-25T18:00:46.312Z",
     "lastChanged": "2026-09-24T17:54:41.386Z",
     "how": "fetch"
   },
@@ -99,7 +99,7 @@
   },
   "siliconflow-pricing": {
     "hash": "93ca17f67a6a1d5f30f94d2db8927cfbae4ea05f",
-    "lastChecked": "2026-09-24T17:54:53.726Z",
+    "lastChecked": "2026-09-25T18:00:59.529Z",
     "lastChanged": "2026-09-19T06:11:23.682Z",
     "how": "browser"
   },
