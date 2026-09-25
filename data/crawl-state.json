@@ -1,10 +1,9 @@
 {
   "trae-pricing": {
-    "hash": "018bde1a45d87ad9357011d6d26dff86ca9004cc",
-    "lastChecked": "2026-09-22T12:44:11.771Z",
-    "lastChanged": "2026-09-22T12:44:11.771Z",
-    "how": "browser",
-    "lastError": "内容过短（0 字符，疑似空页/需登录），已跳过，未写基线"
+    "hash": "d51daf858b7541e14c1ccdb06cd9f986148b0a8a",
+    "lastChecked": "2026-09-25T12:10:30.037Z",
+    "lastChanged": "2026-09-25T12:10:30.037Z",
+    "how": "browser"
   },
   "workbuddy-pricing": {
     "hash": "fcb4eb25e75f2c76c01d6b9227b4a44b09c29fee",
@@ -136,27 +135,24 @@
   },
   "trae-events-fission": {
     "hash": "8459e76aa115aec951d07842758e3c59cea91596",
-    "lastChecked": "2026-09-22T12:44:23.021Z",
+    "lastChecked": "2026-09-25T12:10:39.724Z",
     "lastChanged": "2026-09-22T12:44:23.021Z",
-    "how": "browser",
-    "lastError": "内容过短（0 字符，疑似空页/需登录），已跳过，未写基线"
+    "how": "browser"
   },
   "trae-work-offer": {
     "hash": "8a779cdb48cf615030c7299a8319ed3c62b26632",
-    "lastChecked": "2026-09-22T12:44:33.604Z",
+    "lastChecked": "2026-09-25T12:10:48.798Z",
     "lastChanged": "2026-09-22T12:44:33.604Z",
-    "how": "browser",
-    "lastError": "内容过短（0 字符，疑似空页/需登录），已跳过，未写基线"
+    "how": "browser"
   },
   "trae-student": {
-    "hash": "e1f2aebd9558fe1a6a3606af49b27e7358e891d7",
-    "lastChecked": "2026-09-22T12:45:02.981Z",
-    "lastChanged": "2026-09-22T12:45:02.981Z",
-    "how": "browser",
-    "lastError": "内容过短（0 字符，疑似空页/需登录），已跳过，未写基线"
+    "hash": "6cf599e7410b1159d78995df9cbf915613b7a897",
+    "lastChecked": "2026-09-25T12:10:56.533Z",
+    "lastChanged": "2026-09-25T12:10:56.533Z",
+    "how": "browser"
   },
   "trae-work-gift": {
-    "lastError": "内容过短（0 字符，疑似空页/需登录），已跳过，未写基线"
+    "lastError": "内容过短（194 字符，疑似空页/需登录），已跳过，未写基线"
   },
   "huawei-bbs-community": {
     "hash": "0707de80b1ace857c0e2763f93836bb0389b2e75",
