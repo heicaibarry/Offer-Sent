@@ -4,7 +4,7 @@
  * 用法：
  *   node scripts/crawl.mjs              # 正常运行（受 everyHours 间隔控制）
  *   node scripts/crawl.mjs --baseline   # 只刷新基线指纹，不记录变更、不推送
- *   node scripts/crawl.mjs --only trae-pricing   # 只跑指定源
+ *   node scripts/crawl.mjs --only trae-pricing,trae-student   # 只跑指定源（逗号分隔多个）
  *
  * 推送渠道（可选，配了才推）：
  *   WECHAT_WEBHOOK   企业微信群机器人 webhook 地址
@@ -34,7 +34,14 @@ const changes = JSON.parse(fs.readFileSync(CHANGES_FILE, "utf8"));
 
 const BASELINE = process.argv.includes("--baseline");
 const onlyIdx = process.argv.indexOf("--only");
-const ONLY = onlyIdx > -1 ? process.argv[onlyIdx + 1] : null;
+// 支持逗号分隔多源：--only trae-pricing,trae-student（本地补抓反爬源时用）
+const ONLY_LIST =
+  onlyIdx > -1
+    ? process.argv[onlyIdx + 1]
+        .split(",")
+        .map((s) => s.trim())
+        .filter(Boolean)
+    : null;
 
 const UA =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36";
@@ -247,7 +254,7 @@ async function main() {
 
   for (const s of SOURCES) {
     if (s.enabled === false) continue;
-    if (ONLY && s.id !== ONLY) continue;
+    if (ONLY_LIST && !ONLY_LIST.includes(s.id)) continue;
 
     const st = state[s.id];
     if (!BASELINE && st?.lastChecked) {
