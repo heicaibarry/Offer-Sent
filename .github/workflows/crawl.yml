@@ -51,6 +51,8 @@ jobs:
             echo "PUSHED=false" >> "$GITHUB_ENV"
           else
             git commit -m "chore(data): 定时核对更新"
+            # 运行期间别的提交（人工 push / 另一个 job）进了 main 就先变基再推
+            git pull --rebase origin main
             git push
             echo "PUSHED=true" >> "$GITHUB_ENV"
           fi
@@ -95,5 +97,6 @@ jobs:
             echo "无新候选，跳过提交"
           else
             git commit -m "chore(discover): 每周活动页扫描"
+            git pull --rebase origin main
             git push
           fi
