@@ -8,13 +8,13 @@
   },
   "workbuddy-pricing": {
     "hash": "fcb4eb25e75f2c76c01d6b9227b4a44b09c29fee",
-    "lastChecked": "2026-09-24T12:49:35.098Z",
+    "lastChecked": "2026-09-25T06:18:03.625Z",
     "lastChanged": "2026-09-24T06:23:24.317Z",
     "how": "browser"
   },
   "minimax-token-plan": {
     "hash": "50ba2b041fa8d47724cb6adb3446acacce39e212",
-    "lastChecked": "2026-09-24T12:49:48.524Z",
+    "lastChecked": "2026-09-25T06:18:46.864Z",
     "lastChanged": "2026-09-21T06:41:02.113Z",
     "how": "browser"
   },
@@ -26,20 +26,20 @@
   },
   "kimi-coding": {
     "hash": "789eb5bc9d66a348f58e02c6a24ff07c1361bf2e",
-    "lastChecked": "2026-09-24T12:50:00.908Z",
+    "lastChecked": "2026-09-25T06:18:57.149Z",
     "lastChanged": "2026-09-17T12:41:29.097Z",
     "how": "browser"
   },
   "dumate-home": {
-    "hash": "3dcac9ecad2c0b73825cad20e3bf48f3ceb8be08",
-    "lastChecked": "2026-09-24T12:50:16.810Z",
-    "lastChanged": "2026-09-23T06:13:54.861Z",
+    "hash": "21f749b29433f664075ff2eb330ff74ab5e7b223",
+    "lastChecked": "2026-09-25T06:19:17.955Z",
+    "lastChanged": "2026-09-25T06:19:17.955Z",
     "how": "browser"
   },
   "codebuddy-pricing": {
-    "hash": "c0f55314902886cb2f819421d657b12c47bfb990",
-    "lastChecked": "2026-09-24T06:24:11.744Z",
-    "lastChanged": "2026-09-24T06:24:11.744Z",
+    "hash": "321c7edc519243dc17c2be2837fcf723cb90b823",
+    "lastChecked": "2026-09-25T06:19:28.571Z",
+    "lastChanged": "2026-09-25T06:19:28.571Z",
     "how": "browser"
   },
   "lingma-home": {
@@ -116,20 +116,20 @@
   },
   "bigmodel-coding-plan": {
     "hash": "a4f115041b7d73b69de2766a1bfb25a96251e945",
-    "lastChecked": "2026-09-24T12:49:06.228Z",
+    "lastChecked": "2026-09-25T06:17:07.828Z",
     "lastChanged": "2026-09-22T12:43:57.119Z",
     "how": "browser"
   },
   "qoder-cn-pricing": {
     "hash": "4101961de387e1412b2cdee21d56547f040552b1",
-    "lastChecked": "2026-09-24T06:24:23.442Z",
+    "lastChecked": "2026-09-25T06:19:38.647Z",
     "lastChanged": "2026-09-23T06:14:13.962Z",
     "how": "browser"
   },
   "autoclaw-home": {
-    "hash": "b6eb0c32e888b3ad1cb802cb859d3f6f54166547",
-    "lastChecked": "2026-09-24T06:22:49.420Z",
-    "lastChanged": "2026-09-24T06:22:49.420Z",
+    "hash": "584a4b656e046404bf2850c1f12490a3553d8c2a",
+    "lastChecked": "2026-09-25T06:17:32.950Z",
+    "lastChanged": "2026-09-25T06:17:32.950Z",
     "how": "browser"
   },
   "huawei-codearts-offers": {
@@ -164,7 +164,7 @@
   },
   "huawei-bbs-community": {
     "hash": "0707de80b1ace857c0e2763f93836bb0389b2e75",
-    "lastChecked": "2026-09-24T06:23:14.167Z",
+    "lastChecked": "2026-09-25T06:17:54.211Z",
     "lastChanged": "2026-09-17T06:19:22.517Z",
     "how": "fetch"
   }
