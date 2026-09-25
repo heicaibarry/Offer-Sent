@@ -20,6 +20,21 @@ import crypto from "node:crypto";
 import { fileURLToPath } from "node:url";
 import { hasLLM, llmExtract, filterNewPromos, readProducts } from "./lib-extract.mjs";
 
+// CRAWL_PROXY_URL：可选的 HTTP 代理（http://user:pass@host:port）。
+// Trae 等站点对海外数据中心 IP 做地理/指纹拦截，配一个国内代理即可在 Actions 上抓通；
+// 代理只作用于官方站抓取（fetch + browser 渲染），不影响推送通道。
+const PROXY_URL = process.env.CRAWL_PROXY_URL || "";
+let proxyDispatcher;
+if (PROXY_URL) {
+  try {
+    const { ProxyAgent } = await import("undici");
+    proxyDispatcher = new ProxyAgent(PROXY_URL);
+    console.log(`已启用抓取代理: ${PROXY_URL.replace(/\/\/[^@]*@/, "//***@")}`);
+  } catch (e) {
+    console.log(`代理初始化失败（忽略，直连抓取）: ${e.message}`);
+  }
+}
+
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DATA = path.join(ROOT, "data");
 const SNAP_DIR = path.join(DATA, "snapshots");
@@ -101,9 +116,9 @@ const loadSnap = (id) => (fs.existsSync(snapPath(id)) ? fs.readFileSync(snapPath
 async function renderBrowser(url) {
   try {
     const { chromium } = await import("playwright");
-    const browser = await chromium.launch({
-      args: ["--no-sandbox", "--disable-blink-features=AutomationControlled", "--lang=zh-CN"],
-    });
+    const launchArgs = ["--no-sandbox", "--disable-blink-features=AutomationControlled", "--lang=zh-CN"];
+    if (PROXY_URL) launchArgs.push(`--proxy-server=${PROXY_URL}`);
+    const browser = await chromium.launch({ args: launchArgs });
     const page = await browser.newPage({
       userAgent: UA,
       viewport: { width: 1366, height: 900 },
@@ -137,6 +152,7 @@ async function fetchPlain(url) {
     headers: { "user-agent": UA, "accept-language": "zh-CN,zh;q=0.9" },
     redirect: "follow",
     signal: AbortSignal.timeout(30000),
+    dispatcher: proxyDispatcher, // undefined 时为直连
   });
   return { html: await res.text(), how: "fetch" };
 }
@@ -215,7 +231,23 @@ async function notify(list) {
       console.log(`pushplus 推送失败: ${e.message}`);
     }
   }
-  if (!webhook && !token) console.log("(未配置推送渠道，跳过提醒；可设置 WECHAT_WEBHOOK / PUSHPLUS_TOKEN)");
+  const tgToken = process.env.TELEGRAM_BOT_TOKEN;
+  const tgChat = process.env.TELEGRAM_CHAT_ID;
+  if (tgToken && tgChat) {
+    try {
+      const r = await fetch(`https://api.telegram.org/bot${tgToken}/sendMessage`, {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ chat_id: tgChat, text: content.slice(0, 3500), disable_web_page_preview: true }),
+        signal: AbortSignal.timeout(30000),
+      });
+      console.log(`已推送 Telegram (${r.status})`);
+    } catch (e) {
+      console.log(`Telegram 推送失败: ${e.message}`);
+    }
+  }
+  if (!webhook && !token && !(tgToken && tgChat))
+    console.log("(未配置推送渠道，跳过提醒；可设置 WECHAT_WEBHOOK / PUSHPLUS_TOKEN / TELEGRAM_BOT_TOKEN + TELEGRAM_CHAT_ID)");
 }
 
 // 过期活动数据清理：endsAt 已过期超过 PRUNE_DAYS 天的条目从 products.json 里删除。
