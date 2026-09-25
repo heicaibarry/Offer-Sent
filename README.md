@@ -5,12 +5,15 @@
 
 **本地电脑不需要开任何窗口，也不需要开机**：抓取、提醒、部署全部在 GitHub Actions 云端完成。
 
-云端自动化包含四件事：
+云端自动化包含五件事：
 
 1. **一天三查**（北京时间 09:30 / 15:30 / 21:30）核对 26 个官方页面，内容变化推送微信提醒并提交数据；爬虫提交后主动触发部署（GITHUB_TOKEN 的 push 不会自动触发其他 workflow，必须显式 dispatch）
-2. **过期自动清理**：到期活动前端实时隐藏（「另有 N 条已结束」），过期超过 30 天由爬虫从 `products.json` 物理删除（`PRUNE_DAYS` 可调，-1 关闭）
-3. **每周一 12:00 自动扫活动页**：跑 `scripts/discover.mjs` 扫各官方站 sitemap，疑似活动页候选写入 `data/discovered.json`，人工确认后再补进监控源和数据
-4. **自动部署**：数据一变就重新构建发布 GitHub Pages
+2. **全自动收录活动**：页面有变化时调 GLM API 从官方页正文提取新活动，标题去重、过期过滤后直接写入 `products.json` —— 无需人工补录。每周一的活动页扫描（`discover.mjs --auto`）还会验证高分新页面，确有活动就自动接入监控。需在仓库 Secrets 配置 `GLM_API_KEY`（open.bigmodel.cn 的 key，模型可用 `vars.LLM_MODEL` 覆盖，默认 glm-4.5-flash）；未配置时退化为只提醒不收录
+3. **过期自动清理**：到期活动前端实时隐藏（「另有 N 条已结束」），过期超过 30 天由爬虫从 `products.json` 物理删除（`PRUNE_DAYS` 可调，-1 关闭）
+4. **每周一 12:00 自动扫活动页**：跑 `scripts/discover.mjs` 扫各官方站 sitemap，候选写入 `data/discovered.json`
+5. **自动部署**：数据一变就重新构建发布 GitHub Pages
+
+反爬说明：Trae 系页面对数据中心 IP（含 GitHub Actions、Jina Reader）返回空壳，爬虫已加浏览器反检测伪装 + 渲染代理兜底，若仍被拦该源会记 lastError 并在下次重试，不影响其他源。
 
 ## 已覆盖产品（24 家）
 
@@ -65,8 +68,8 @@ npx playwright install chromium
 
 ## 数据维护流程
 
-- 爬虫只能发现"官方页面变了"，具体哪条优惠新增/截止需要人工看一眼来源链接后在
-  `data/products.json` 里补一条 `promos`（含 `firstSeen`、`source`），提交后自动上线
+- **全自动（默认）**：配置 `GLM_API_KEY` 后，监控页有变化 → LLM 从官方页正文提取新活动（标题去重、过期过滤、每页限 5 条、单轮限 10 条）→ 自动写入 `products.json` 并上线。自动收录的条目带 `auto: "llm"` 标记，`changes.json` 里有 `auto-promo` / `auto-source` 记录可审计
+- 自动提取难免有看走眼的时候：审阅 `data/changes.json` 的 `auto-promo` 记录，不对的直接改 `products.json` 删掉即可
 - `priceStatus: pending` 的产品是定价页动态渲染、价格还没核实的，需要人工进官网核对一次后改为 `verified` 并填数字
 - 每次人工核对后记得更新该产品的 `verifiedAt`
 

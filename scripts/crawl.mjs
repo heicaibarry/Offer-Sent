@@ -18,6 +18,7 @@ import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
 import { fileURLToPath } from "node:url";
+import { hasLLM, llmExtract, filterNewPromos, readProducts } from "./lib-extract.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DATA = path.join(ROOT, "data");
@@ -43,6 +44,11 @@ const UA =
 const MIN_TEXT = 200;
 // 差异片段过短多半是时间戳、访问量之类的噪声，不值得记一条变更
 const MIN_EXCERPT = 20;
+// 正文拿不到时的第三通道：r.jina.ai 渲染代理（对部分反爬站有效；READER_ENABLED=0 关闭）
+const READER_ENABLED = process.env.READER_ENABLED !== "0";
+const READER_BASE = (process.env.READER_BASE || "https://r.jina.ai/").replace(/\/?$/, "/");
+// 单轮自动收录的总上限，防止某次大面积改版把 LLM 输出全量灌进数据
+const MAX_AUTO_PER_RUN = Number(process.env.MAX_AUTO_PER_RUN || 10);
 
 const productName = (id) => PRODUCTS.find((p) => p.slug === id)?.name || id;
 const sha1 = (s) => crypto.createHash("sha1").update(s).digest("hex");
@@ -88,8 +94,22 @@ const loadSnap = (id) => (fs.existsSync(snapPath(id)) ? fs.readFileSync(snapPath
 async function renderBrowser(url) {
   try {
     const { chromium } = await import("playwright");
-    const browser = await chromium.launch({ args: ["--no-sandbox"] });
-    const page = await browser.newPage({ userAgent: UA, viewport: { width: 1366, height: 900 } });
+    const browser = await chromium.launch({
+      args: ["--no-sandbox", "--disable-blink-features=AutomationControlled", "--lang=zh-CN"],
+    });
+    const page = await browser.newPage({
+      userAgent: UA,
+      viewport: { width: 1366, height: 900 },
+      locale: "zh-CN",
+      timezoneId: "Asia/Shanghai",
+    });
+    // 反爬站（如 Trae 的 WAF）会探测自动化特征，这里抹掉最常见的几个
+    await page.addInitScript(() => {
+      Object.defineProperty(navigator, "webdriver", { get: () => undefined });
+      window.chrome = window.chrome || { runtime: {} };
+      Object.defineProperty(navigator, "languages", { get: () => ["zh-CN", "zh", "en"] });
+      Object.defineProperty(navigator, "plugins", { get: () => [1, 2, 3, 4, 5] });
+    });
     await page.goto(url, { waitUntil: "networkidle", timeout: 45000 }).catch(() => {});
     await page.waitForTimeout(2000);
     let html = await page.content();
@@ -112,6 +132,37 @@ async function fetchPlain(url) {
     signal: AbortSignal.timeout(30000),
   });
   return { html: await res.text(), how: "fetch" };
+}
+
+// 渲染代理兜底：Jina Reader 会用自己的基础设施抓取并转成 Markdown，
+// 对「本机/Actions IP 被反爬拦截但 Jina 的出口没被拦」的站点有效。
+async function fetchViaReader(url) {
+  const res = await fetch(READER_BASE + url, {
+    headers: { "user-agent": UA, accept: "text/plain" },
+    redirect: "follow",
+    signal: AbortSignal.timeout(60000),
+  });
+  if (!res.ok) throw new Error(`reader HTTP ${res.status}`);
+  const html = await res.text();
+  return { html, how: "reader" };
+}
+
+// 拿到的正文太短（空壳/被拦）时依次换通道重试，成功就替换 res
+async function upgradeIfEmpty(res, url) {
+  let cur = res;
+  for (let i = 0; i < 2; i++) {
+    if (extractText(cur.html).length >= MIN_TEXT) return cur;
+    if (!READER_ENABLED) return cur;
+    try {
+      console.log(`  ↪ ${url} 正文过短，改走 ${READER_BASE} 渲染代理`);
+      const alt = await fetchViaReader(url);
+      if (extractText(alt.html).length > extractText(cur.html).length) cur = alt;
+    } catch (e) {
+      console.log(`  ↪ 渲染代理也不可用: ${e.message}`);
+      return cur;
+    }
+  }
+  return cur;
 }
 
 async function notify(list) {
@@ -192,6 +243,7 @@ async function main() {
   let added = [];
   let checked = 0;
   let failed = 0;
+  const toExtract = []; // 本轮有变化的页面，供 LLM 自动收录
 
   for (const s of SOURCES) {
     if (s.enabled === false) continue;
@@ -221,6 +273,8 @@ async function main() {
         continue;
       }
     }
+    // 空壳/被反爬拦截时依次换通道：browser → fetch → 渲染代理
+    res = await upgradeIfEmpty(res, s.url);
     checked++;
 
     const text = extractText(res.html).slice(0, 40000);
@@ -262,6 +316,7 @@ async function main() {
           pageTitle: pageTitle(res.html),
           excerpt,
         });
+        toExtract.push({ id: s.id, product: s.product, url: s.url, text });
         console.log(`⚡ ${s.id} 页面有更新！${excerpt ? `片段: ${excerpt.slice(0, 80)}…` : ""}`);
       } else {
         duplicate
@@ -277,6 +332,62 @@ async function main() {
 
     // 对官方站点保持礼貌的请求间隔
     await sleep(1500 + Math.random() * 1500);
+  }
+
+  // ===== 全自动收录：页面有变化 → LLM 提取新活动 → 直接写进 products.json =====
+  if (toExtract.length && !BASELINE) {
+    if (!hasLLM()) {
+      console.log("\n(未配置 GLM_API_KEY，跳过自动收录；配置后新活动会自动写入 products.json)");
+    } else {
+      console.log(`\n===== 自动收录：${toExtract.length} 个页面有变化，LLM 提取中 =====`);
+      const meta = readProducts(DATA);
+      const todayISO = nowISO().slice(0, 10);
+      let autoAdded = 0;
+      for (const t of toExtract) {
+        if (autoAdded >= MAX_AUTO_PER_RUN) {
+          console.log(`· 已达单轮自动收录上限 ${MAX_AUTO_PER_RUN} 条，剩余页面跳过`);
+          break;
+        }
+        const product = meta.products.find((p) => p.slug === t.product);
+        if (!product) continue;
+        const existingTitles = (product.promos || []).map((x) => x.title);
+        try {
+          const found = await llmExtract({
+            productName: product.name,
+            url: t.url,
+            pageText: t.text,
+            existingTitles,
+            todayISO,
+          });
+          const fresh = filterNewPromos(found, existingTitles, { max: 5 });
+          if (fresh.length) {
+            product.promos = [...(product.promos || []), ...fresh];
+            autoAdded += fresh.length;
+            changes.unshift({
+              time: nowISO(),
+              source: t.id,
+              product: t.product,
+              url: t.url,
+              kind: "auto-promo",
+              how: "llm",
+              pageTitle: `自动收录 ${fresh.length} 条新活动`,
+              excerpt: fresh.map((f) => f.title).join(" / ").slice(0, 160),
+            });
+            console.log(`🤖 ${t.id} 自动收录 ${fresh.length} 条：${fresh.map((f) => f.title).join(" / ")}`);
+          } else {
+            console.log(`✓ ${t.id} 未发现可收录的新活动（提取 ${found.length} 条，均重复/过期/无效）`);
+          }
+        } catch (e) {
+          console.log(`✗ ${t.id} 自动提取失败: ${e.message}`);
+        }
+        await sleep(800);
+      }
+      if (autoAdded) {
+        meta.updatedAt = todayISO;
+        fs.writeFileSync(path.join(DATA, "products.json"), JSON.stringify(meta, null, 2) + "\n");
+        console.log(`\n🤖 本轮自动收录 ${autoAdded} 条新活动，已写入 products.json`);
+      }
+    }
   }
 
   if (added.length) {
