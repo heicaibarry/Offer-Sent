@@ -154,19 +154,23 @@ async function fetchViaReader(url) {
   return { html, how: "reader" };
 }
 
-// 拿到的正文太短（空壳/被拦）时依次换通道重试，成功就替换 res
-async function upgradeIfEmpty(res, url) {
+// 拿到的正文太短（空壳/被拦）时依次换通道重试，成功就替换 res。
+// browser 渲染源没试过 fetch（本机/住宅 IP 场景下 fetch 往往就能过），先补 fetch 再试渲染代理。
+async function upgradeIfEmpty(res, url, fetchTried) {
   let cur = res;
-  for (let i = 0; i < 2; i++) {
-    if (extractText(cur.html).length >= MIN_TEXT) return cur;
-    if (!READER_ENABLED) return cur;
+  if (!fetchTried) {
     try {
-      console.log(`  ↪ ${url} 正文过短，改走 ${READER_BASE} 渲染代理`);
+      const alt = await fetchPlain(url);
+      if (extractText(alt.html).length > extractText(cur.html).length) cur = alt;
+    } catch {}
+    if (extractText(cur.html).length >= MIN_TEXT) return cur;
+  }
+  if (READER_ENABLED) {
+    try {
       const alt = await fetchViaReader(url);
       if (extractText(alt.html).length > extractText(cur.html).length) cur = alt;
     } catch (e) {
       console.log(`  ↪ 渲染代理也不可用: ${e.message}`);
-      return cur;
     }
   }
   return cur;
@@ -281,7 +285,7 @@ async function main() {
       }
     }
     // 空壳/被反爬拦截时依次换通道：browser → fetch → 渲染代理
-    res = await upgradeIfEmpty(res, s.url);
+    res = await upgradeIfEmpty(res, s.url, s.renderer !== "browser");
     checked++;
 
     const text = extractText(res.html).slice(0, 40000);
