@@ -92,7 +92,12 @@ async function renderBrowser(url) {
     const page = await browser.newPage({ userAgent: UA, viewport: { width: 1366, height: 900 } });
     await page.goto(url, { waitUntil: "networkidle", timeout: 45000 }).catch(() => {});
     await page.waitForTimeout(2000);
-    const html = await page.content();
+    let html = await page.content();
+    // 反爬挑战 / 懒加载有时先给空壳：多等几秒再取一次，仍拿不到才算失败
+    if (extractText(html).length < MIN_TEXT) {
+      await page.waitForTimeout(6000);
+      html = await page.content();
+    }
     await browser.close();
     return { html, how: "browser" };
   } catch {
@@ -151,7 +156,39 @@ async function notify(list) {
   if (!webhook && !token) console.log("(未配置推送渠道，跳过提醒；可设置 WECHAT_WEBHOOK / PUSHPLUS_TOKEN)");
 }
 
+// 过期活动数据清理：endsAt 已过期超过 PRUNE_DAYS 天的条目从 products.json 里删除。
+// 前端本来就会按 endsAt 实时隐藏到期活动，这里做的是数据层面的最终回收。
+// PRUNE_DAYS 可用环境变量覆盖（设为 -1 关闭清理）；无法解析的截止时间一律保留。
+const PRUNE_DAYS = Number(process.env.PRUNE_DAYS ?? 30);
+
+function pruneExpired() {
+  if (!Number.isFinite(PRUNE_DAYS) || PRUNE_DAYS < 0) return 0;
+  const cutoff = Date.now() - PRUNE_DAYS * 864e5;
+  let removed = 0;
+  for (const p of PRODUCTS) {
+    if (!Array.isArray(p.promos) || !p.promos.length) continue;
+    const keep = p.promos.filter((x) => {
+      if (!x.endsAt) return true;
+      const t = Date.parse(x.endsAt);
+      if (!Number.isFinite(t)) return true;
+      return t >= cutoff;
+    });
+    removed += p.promos.length - keep.length;
+    p.promos = keep;
+  }
+  return removed;
+}
+
 async function main() {
+  const pruned = pruneExpired();
+  if (pruned) {
+    const meta = JSON.parse(fs.readFileSync(path.join(DATA, "products.json"), "utf8"));
+    meta.products = PRODUCTS;
+    meta.updatedAt = nowISO().slice(0, 10);
+    fs.writeFileSync(path.join(DATA, "products.json"), JSON.stringify(meta, null, 2) + "\n");
+    console.log(`🧹 已清理 ${pruned} 条过期活动（过期超过 ${PRUNE_DAYS} 天）`);
+  }
+
   let added = [];
   let checked = 0;
   let failed = 0;

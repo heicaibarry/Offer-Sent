@@ -5,6 +5,13 @@
 
 **本地电脑不需要开任何窗口，也不需要开机**：抓取、提醒、部署全部在 GitHub Actions 云端完成。
 
+云端自动化包含四件事：
+
+1. **一天三查**（北京时间 09:30 / 15:30 / 21:30）核对 26 个官方页面，内容变化推送微信提醒并提交数据；爬虫提交后主动触发部署（GITHUB_TOKEN 的 push 不会自动触发其他 workflow，必须显式 dispatch）
+2. **过期自动清理**：到期活动前端实时隐藏（「另有 N 条已结束」），过期超过 30 天由爬虫从 `products.json` 物理删除（`PRUNE_DAYS` 可调，-1 关闭）
+3. **每周一 12:00 自动扫活动页**：跑 `scripts/discover.mjs` 扫各官方站 sitemap，疑似活动页候选写入 `data/discovered.json`，人工确认后再补进监控源和数据
+4. **自动部署**：数据一变就重新构建发布 GitHub Pages
+
 ## 已覆盖产品（24 家）
 
 - **编程类**：GLM Coding Plan（ZCode）、Kimi Code、MiniMax Token Plan、Trae、CodeBuddy、Qoder、通义灵码、Qwen Code、文心快码、Fitten Code、CodeArts Snap、代码小浣熊
@@ -19,10 +26,12 @@ data/products.json     产品/套餐/活动数据（价格状态: verified 已�
 data/sources.json      监控源配置（URL、抓取方式、间隔）
 data/changes.json      爬虫发现的官方页面变更记录
 data/crawl-state.json  各源的内容指纹与上次核对时间
-scripts/crawl.mjs      抓取 + diff + 微信推送
+data/discovered.json   每周 sitemap 扫描出的疑似活动页候选（需人工确认，未自动接入监控）
+scripts/crawl.mjs      抓取 + diff + 过期清理 + 微信推送
+scripts/discover.mjs   官方站 sitemap 活动页发现器（每周一自动跑，npm run discover 手动跑）
 scripts/gen-rss.mjs    构建前生成 RSS
 app/                   Next.js 静态站（首页对比表 / 产品详情 / 时间线）
-.github/workflows/     crawl.yml 定时核对 · deploy.yml 自动部署
+.github/workflows/     crawl.yml 定时核对+每周发现 · deploy.yml 自动部署
 ```
 
 ## 本地开发
