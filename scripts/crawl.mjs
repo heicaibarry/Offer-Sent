@@ -246,8 +246,25 @@ async function notify(list) {
       console.log(`Telegram 推送失败: ${e.message}`);
     }
   }
-  if (!webhook && !token && !(tgToken && tgChat))
-    console.log("(未配置推送渠道，跳过提醒；可设置 WECHAT_WEBHOOK / PUSHPLUS_TOKEN / TELEGRAM_BOT_TOKEN + TELEGRAM_CHAT_ID)");
+  const scKey = process.env.SERVERCHAN_SENDKEY;
+  if (scKey) {
+    try {
+      const r = await fetch(`https://sctapi.ftqq.com/${scKey}.send`, {
+        method: "POST",
+        headers: { "content-type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
+          title: `Agent优惠雷达：${list.length} 处官方页面更新`,
+          desp: content.replace(/\*\*/g, "**").slice(0, 3000),
+        }).toString(),
+        signal: AbortSignal.timeout(30000),
+      });
+      console.log(`已推送 Server酱 (${r.status})`);
+    } catch (e) {
+      console.log(`Server酱 推送失败: ${e.message}`);
+    }
+  }
+  if (!webhook && !token && !(tgToken && tgChat) && !scKey)
+    console.log("(未配置推送渠道，跳过提醒；可设置 WECHAT_WEBHOOK / PUSHPLUS_TOKEN / SERVERCHAN_SENDKEY / TELEGRAM_BOT_TOKEN + TELEGRAM_CHAT_ID)");
 }
 
 // 过期活动数据清理：endsAt 已过期超过 PRUNE_DAYS 天的条目从 products.json 里删除。

@@ -13,7 +13,7 @@
 4. **每周一 12:00 自动扫活动页**：跑 `scripts/discover.mjs` 扫各官方站 sitemap，候选写入 `data/discovered.json`
 5. **自动部署**：数据一变就重新构建发布 GitHub Pages
 
-反爬说明：Trae 系页面对数据中心 IP（含 GitHub Actions、Jina Reader）返回空壳，云端已加浏览器反检测伪装 + 渲染代理兜底，仍被拦的源会记 lastError 并在下次重试，不影响其他源。Trae 的 5 个源由**本机补抓**兜底：`trae-本地补抓.bat` + Windows 计划任务「AgentDeals-Trae本地补抓」（每 6 小时，电脑开着才会跑），用家庭宽带 IP 抓取后直接提交推送，删除计划任务即可停用。
+反爬说明：Trae 系页面对数据中心 IP 做地理/指纹拦截（GitHub Actions、Jina Reader 全被拦，仅国内住宅 IP 可访问）。云端已加浏览器反检测伪装 + 可选抓取代理（Secrets 配 `CRAWL_PROXY_URL` 指向任一国内 HTTP 代理即可抓通 Trae）。仓库里的 `trae-本地补抓.bat` 是备用的本机补抓工具（需自行注册计划任务），按需使用。
 
 ## 已覆盖产品（24 家）
 
@@ -60,8 +60,9 @@ npx playwright install chromium
 1. 推到 GitHub 仓库，默认分支 `main`
 2. 仓库 **Settings → Pages → Source 选 GitHub Actions**
 3. （可选）**Settings → Secrets and variables → Actions** 添加：
-   - `WECHAT_WEBHOOK`：企业微信群机器人 webhook（拉个只有自己的群即可获得）
-   - `PUSHPLUS_TOKEN`：或用 [pushplus](https://www.pushplus.plus/) 推到微信
+   - `SERVERCHAN_SENDKEY`：[Server酱](https://sct.ftqq.com/) SendKey（微信扫码登录后首页可见，免费版每天 5 条），推到微信
+   - `WECHAT_WEBHOOK` / `PUSHPLUS_TOKEN` / `TELEGRAM_BOT_TOKEN` + `TELEGRAM_CHAT_ID`：其他可选推送渠道
+   - `CRAWL_PROXY_URL`：国内 HTTP 代理（可选），配置后 Trae 等被地理拦截的源可在云端抓通
    - `SITE_URL`（Variables）：站点最终地址，用于 RSS 链接
 4. 手动跑一次 **crawl** workflow 建立基线；之后每天北京时间 09:30 / 15:30 / 21:30 自动核对
 5. 发现变更 → 企业微信收到提醒 → 数据自动提交 → 站点自动重新部署
