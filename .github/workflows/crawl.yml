@@ -14,6 +14,10 @@ jobs:
     # 周一 04:00 UTC 的调度留给 discover job，其余调度照常核对
     if: github.event.schedule != '0 4 * * 1'
     runs-on: ubuntu-latest
+    # 两个 job 都会往 main 提交数据，串行执行避免 push 撞车（手动触发时它们并行）
+    concurrency:
+      group: data-commits
+      cancel-in-progress: false
     permissions:
       contents: write
       actions: write
@@ -67,6 +71,9 @@ jobs:
     # 人工确认后再补进 sources.json / products.json —— 这是发现新活动的半自动通道
     if: github.event.schedule == '0 4 * * 1' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
+    concurrency:
+      group: data-commits
+      cancel-in-progress: false
     permissions:
       contents: write
     steps:
