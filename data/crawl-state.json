@@ -49,18 +49,16 @@
     "how": "fetch"
   },
   "qwen-code-docs": {
-    "hash": "a3b2573683f1135c4f0e64d96f04bdb3099b0958",
-    "lastChecked": "2026-09-15T12:47:44.762Z",
-    "lastChanged": "2026-09-12T18:15:17.557Z",
-    "how": "fetch",
-    "lastError": "内容过短（40 字符，疑似空页/需登录），已跳过，未写基线"
+    "hash": "a8252af0c71c4f742702ad2c1a9a46e60ca33ad2",
+    "lastChecked": "2026-09-25T10:44:11.964Z",
+    "lastChanged": "2026-09-25T10:44:11.964Z",
+    "how": "browser"
   },
   "comate-home": {
-    "hash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
-    "lastChecked": "2026-09-15T12:47:47.573Z",
-    "lastChanged": "2026-09-12T18:15:20.883Z",
-    "how": "fetch",
-    "lastError": "内容过短（0 字符，疑似空页/需登录），已跳过，未写基线"
+    "hash": "8561a98589c3508f0801c4ea08b4fbf766f87af9",
+    "lastChecked": "2026-09-25T10:44:34.509Z",
+    "lastChanged": "2026-09-25T10:44:34.509Z",
+    "how": "browser"
   },
   "deepseek-pricing": {
     "hash": "2b92554280d0173a2f13a899aa705fd09f5f158d",
@@ -69,11 +67,10 @@
     "how": "fetch"
   },
   "coze-home": {
-    "hash": "b4889c981d67b2f768bbf540dee08364e95c74b9",
-    "lastChecked": "2026-09-15T12:47:54.818Z",
-    "lastChanged": "2026-09-12T18:15:27.182Z",
-    "how": "fetch",
-    "lastError": "内容过短（43 字符，疑似空页/需登录），已跳过，未写基线"
+    "hash": "505cd14b4cd24ed68097cd16cb9024c2f23ed192",
+    "lastChecked": "2026-09-25T10:44:47.698Z",
+    "lastChanged": "2026-09-25T10:44:47.698Z",
+    "how": "browser"
   },
   "manus-pricing": {
     "hash": "e72a9f7ee3b42622dd0310218ad185a21c8afd7b",
@@ -108,11 +105,10 @@
     "how": "browser"
   },
   "modelscope-home": {
-    "hash": "8117a9d3af64f088fd27afd4eaf0346a39d11ac5",
-    "lastChecked": "2026-09-15T12:48:08.462Z",
-    "lastChanged": "2026-09-12T18:16:12.294Z",
-    "how": "fetch",
-    "lastError": "内容过短（20 字符，疑似空页/需登录），已跳过，未写基线"
+    "hash": "8481e4d88a8ec8f0728b56aa7629f0d5b9636e91",
+    "lastChecked": "2026-09-25T10:45:37.910Z",
+    "lastChanged": "2026-09-25T10:45:37.910Z",
+    "how": "browser"
   },
   "bigmodel-coding-plan": {
     "hash": "a4f115041b7d73b69de2766a1bfb25a96251e945",
