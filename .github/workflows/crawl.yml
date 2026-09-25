@@ -43,6 +43,10 @@ jobs:
           # 配置后开启「全自动收录」：页面变化 → LLM 提取新活动 → 自动写 products.json
           GLM_API_KEY: ${{ secrets.GLM_API_KEY }}
           LLM_MODEL: ${{ vars.LLM_MODEL || 'glm-4.5-flash' }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          SERVERCHAN_SENDKEY: ${{ secrets.SERVERCHAN_SENDKEY }}
+          CRAWL_PROXY_URL: ${{ secrets.CRAWL_PROXY_URL }}
         run: node scripts/crawl.mjs
 
       - name: 提交数据变更
