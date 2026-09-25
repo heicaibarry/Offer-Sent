@@ -113,7 +113,8 @@
     "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
     "lastChecked": "2026-01-01T00:00:00.000Z",
     "lastChanged": "2026-09-22T12:43:57.119Z",
-    "how": "browser"
+    "how": "browser",
+    "lastError": "内容过短（0 字符，疑似空页/需登录），已跳过，未写基线"
   },
   "qoder-cn-pricing": {
     "hash": "4101961de387e1412b2cdee21d56547f040552b1",
