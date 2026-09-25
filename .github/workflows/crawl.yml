@@ -1,17 +1,22 @@
-# 定时核对各官方定价页；发现变更 → 推送提醒 + 提交数据 → 触发站点重新部署
-# cron 为 UTC 时间，对应北京时间 09:30 / 15:30 / 21:30，一天三查
+# 定时核对各官方定价页；发现变更 → 推送提醒 + 提交数据 → 主动触发站点重新部署
+# cron 为 UTC 时间：30 1,7,13 * * * 对应北京时间 09:30 / 15:30 / 21:30，一天三查；
+#                 0 4 * * 1 对应北京时间周一 12:00，额外跑一次官方站「疑似活动页」扫描
 name: crawl
 
 on:
   schedule:
     - cron: "30 1,7,13 * * *"
+    - cron: "0 4 * * 1"
   workflow_dispatch:
 
 jobs:
   crawl:
+    # 周一 04:00 UTC 的调度留给 discover job，其余调度照常核对
+    if: github.event.schedule != '0 4 * * 1'
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      actions: write
     steps:
       - uses: actions/checkout@v4
 
@@ -38,5 +43,50 @@ jobs:
           git config user.name "crawl-bot"
           git config user.email "actions@users.noreply.github.com"
           git add data/
-          git diff --cached --quiet || git commit -m "chore(data): 定时核对更新"
-          git push
+          if git diff --cached --quiet; then
+            echo "PUSHED=false" >> "$GITHUB_ENV"
+          else
+            git commit -m "chore(data): 定时核对更新"
+            git push
+            echo "PUSHED=true" >> "$GITHUB_ENV"
+          fi
+
+      # 爬虫用的是默认 GITHUB_TOKEN，GitHub 规定这种 push 不触发其他 workflow，
+      # 之前站点因此一直停在最后一次人工 push。这里显式用 workflow_dispatch API 拉起部署。
+      - name: 触发站点重新部署
+        if: env.PUSHED == 'true'
+        run: |
+          curl -s -o /dev/null -w "deploy dispatch HTTP %{http_code}\n" -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/deploy.yml/dispatches" \
+            -d '{"ref":"main"}'
+
+  discover:
+    # 每周一扫一遍各官方站 sitemap，把「路径像活动页」的候选写进 data/discovered.json，
+    # 人工确认后再补进 sources.json / products.json —— 这是发现新活动的半自动通道
+    if: github.event.schedule == '0 4 * * 1' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: 扫描疑似活动页
+        run: node scripts/discover.mjs --top 30
+
+      - name: 提交候选清单
+        run: |
+          git config user.name "crawl-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/discovered.json
+          if git diff --cached --quiet; then
+            echo "无新候选，跳过提交"
+          else
+            git commit -m "chore(discover): 每周活动页扫描"
+            git push
+          fi
