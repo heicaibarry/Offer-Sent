@@ -8,7 +8,7 @@
     { "id": "trae-events-fission", "product": "trae", "url": "https://www.trae.cn/events/code-fission", "renderer": "browser", "everyHours": 12, "enabled": true },
     { "id": "trae-work-offer", "product": "trae", "url": "https://www.trae.cn/events/offline-ads", "renderer": "browser", "everyHours": 12, "enabled": true },
     { "id": "trae-student", "product": "trae", "url": "https://www.trae.cn/events/student-verification", "renderer": "browser", "everyHours": 24, "enabled": true },
-    { "id": "trae-work-gift", "product": "trae", "url": "https://www.trae.cn/trae-work-gift", "renderer": "browser", "everyHours": 24, "enabled": true },
+    { "id": "trae-work-gift", "product": "trae", "url": "https://www.trae.cn/trae-work-gift", "renderer": "browser", "everyHours": 24, "minText": 120, "enabled": true },
     { "id": "huawei-bbs-community", "product": "codearts-snap", "url": "https://bbs.huaweicloud.com/", "renderer": "fetch", "everyHours": 12, "enabled": true },
     { "id": "workbuddy-pricing", "product": "workbuddy", "url": "https://www.workbuddy.cn/pricing", "renderer": "browser", "everyHours": 6, "enabled": true },
     { "id": "minimax-token-plan", "product": "minimax-token-plan", "url": "https://platform.minimaxi.com/subscribe/token-plan", "renderer": "browser", "everyHours": 6, "enabled": true },

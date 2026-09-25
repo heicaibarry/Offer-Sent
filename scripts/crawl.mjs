@@ -156,14 +156,14 @@ async function fetchViaReader(url) {
 
 // 拿到的正文太短（空壳/被拦）时依次换通道重试，成功就替换 res。
 // browser 渲染源没试过 fetch（本机/住宅 IP 场景下 fetch 往往就能过），先补 fetch 再试渲染代理。
-async function upgradeIfEmpty(res, url, fetchTried) {
+async function upgradeIfEmpty(res, url, fetchTried, minText) {
   let cur = res;
   if (!fetchTried) {
     try {
       const alt = await fetchPlain(url);
       if (extractText(alt.html).length > extractText(cur.html).length) cur = alt;
     } catch {}
-    if (extractText(cur.html).length >= MIN_TEXT) return cur;
+    if (extractText(cur.html).length >= minText) return cur;
   }
   if (READER_ENABLED) {
     try {
@@ -285,14 +285,15 @@ async function main() {
       }
     }
     // 空壳/被反爬拦截时依次换通道：browser → fetch → 渲染代理
-    res = await upgradeIfEmpty(res, s.url, s.renderer !== "browser");
+    const minText = s.minText || MIN_TEXT; // 个别薄页面（如 trae-work-gift）正文天然很短，可在源上覆盖阈值
+    res = await upgradeIfEmpty(res, s.url, s.renderer !== "browser", minText);
     checked++;
 
     const text = extractText(res.html).slice(0, 40000);
     const hash = sha1(text);
     const prev = state[s.id];
 
-    if (text.length < MIN_TEXT) {
+    if (text.length < minText) {
       failed++;
       state[s.id] = {
         ...(prev || {}),
