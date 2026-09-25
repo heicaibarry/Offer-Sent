@@ -152,7 +152,10 @@
     "how": "browser"
   },
   "trae-work-gift": {
-    "lastError": "内容过短（197 字符，疑似空页/需登录），已跳过，未写基线"
+    "hash": "dd7f84b025cc3a05a692f5b40cbcfc4e875093b0",
+    "lastChecked": "2026-09-25T12:16:13.038Z",
+    "lastChanged": "2026-09-25T12:16:13.039Z",
+    "how": "fetch"
   },
   "huawei-bbs-community": {
     "hash": "0707de80b1ace857c0e2763f93836bb0389b2e75",
