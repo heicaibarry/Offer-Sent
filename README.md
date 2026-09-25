@@ -13,7 +13,7 @@
 4. **每周一 12:00 自动扫活动页**：跑 `scripts/discover.mjs` 扫各官方站 sitemap，候选写入 `data/discovered.json`
 5. **自动部署**：数据一变就重新构建发布 GitHub Pages
 
-反爬说明：Trae 系页面对数据中心 IP（含 GitHub Actions、Jina Reader）返回空壳，爬虫已加浏览器反检测伪装 + 渲染代理兜底，若仍被拦该源会记 lastError 并在下次重试，不影响其他源。
+反爬说明：Trae 系页面对数据中心 IP（含 GitHub Actions、Jina Reader）返回空壳，云端已加浏览器反检测伪装 + 渲染代理兜底，仍被拦的源会记 lastError 并在下次重试，不影响其他源。Trae 的 5 个源由**本机补抓**兜底：`trae-本地补抓.bat` + Windows 计划任务「AgentDeals-Trae本地补抓」（每 6 小时，电脑开着才会跑），用家庭宽带 IP 抓取后直接提交推送，删除计划任务即可停用。
 
 ## 已覆盖产品（24 家）
 
