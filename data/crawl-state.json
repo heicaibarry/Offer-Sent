@@ -8,13 +8,13 @@
   },
   "workbuddy-pricing": {
     "hash": "fcb4eb25e75f2c76c01d6b9227b4a44b09c29fee",
-    "lastChecked": "2026-09-26T06:18:21.124Z",
+    "lastChecked": "2026-09-26T12:20:52.636Z",
     "lastChanged": "2026-09-24T06:23:24.317Z",
     "how": "browser"
   },
   "minimax-token-plan": {
     "hash": "50ba2b041fa8d47724cb6adb3446acacce39e212",
-    "lastChecked": "2026-09-26T06:18:44.136Z",
+    "lastChecked": "2026-09-26T12:21:08.965Z",
     "lastChanged": "2026-09-21T06:41:02.113Z",
     "how": "browser"
   },
@@ -26,15 +26,15 @@
   },
   "kimi-coding": {
     "hash": "789eb5bc9d66a348f58e02c6a24ff07c1361bf2e",
-    "lastChecked": "2026-09-26T06:18:58.099Z",
+    "lastChecked": "2026-09-26T12:21:31.843Z",
     "lastChanged": "2026-09-25T16:37:39.423Z",
     "how": "browser"
   },
   "dumate-home": {
     "hash": "25b25e132d17dbbd027a940334105a588908f218",
-    "lastChecked": "2026-09-26T06:19:48.575Z",
+    "lastChecked": "2026-09-26T12:21:47.476Z",
     "lastChanged": "2026-09-25T12:31:08.901Z",
-    "how": "browser"
+    "how": "fetch"
   },
   "codebuddy-pricing": {
     "hash": "c0f55314902886cb2f819421d657b12c47bfb990",
@@ -49,14 +49,14 @@
     "how": "fetch"
   },
   "qwen-code-docs": {
-    "hash": "a8252af0c71c4f742702ad2c1a9a46e60ca33ad2",
-    "lastChecked": "2026-09-25T10:44:11.964Z",
-    "lastChanged": "2026-09-25T10:44:11.964Z",
+    "hash": "342be0145c50850db4ae0f9c2569c4e3e14bfe80",
+    "lastChecked": "2026-09-26T12:21:56.435Z",
+    "lastChanged": "2026-09-26T12:21:56.435Z",
     "how": "browser"
   },
   "comate-home": {
     "hash": "8561a98589c3508f0801c4ea08b4fbf766f87af9",
-    "lastChecked": "2026-09-25T10:44:34.509Z",
+    "lastChecked": "2026-09-26T12:22:23.456Z",
     "lastChanged": "2026-09-25T10:44:34.509Z",
     "how": "browser"
   },
@@ -67,9 +67,9 @@
     "how": "fetch"
   },
   "coze-home": {
-    "hash": "505cd14b4cd24ed68097cd16cb9024c2f23ed192",
-    "lastChecked": "2026-09-25T10:44:47.698Z",
-    "lastChanged": "2026-09-25T10:44:47.698Z",
+    "hash": "3105c36fc58e52cf5c80e8dfa9c9928c43a770d1",
+    "lastChecked": "2026-09-26T12:22:35.860Z",
+    "lastChanged": "2026-09-26T12:22:35.860Z",
     "how": "browser"
   },
   "manus-pricing": {
@@ -105,14 +105,14 @@
     "how": "browser"
   },
   "modelscope-home": {
-    "hash": "8481e4d88a8ec8f0728b56aa7629f0d5b9636e91",
-    "lastChecked": "2026-09-25T10:45:37.910Z",
-    "lastChanged": "2026-09-25T10:45:37.910Z",
+    "hash": "82a2445217a4eefb4b33ca22d08ce7edb41aa0b3",
+    "lastChecked": "2026-09-26T12:22:54.549Z",
+    "lastChanged": "2026-09-26T12:22:54.549Z",
     "how": "browser"
   },
   "bigmodel-coding-plan": {
     "hash": "a4f115041b7d73b69de2766a1bfb25a96251e945",
-    "lastChecked": "2026-09-26T06:17:04.829Z",
+    "lastChecked": "2026-09-26T12:19:46.645Z",
     "lastChanged": "2026-09-25T16:51:20.443Z",
     "how": "browser"
   },
@@ -152,13 +152,15 @@
     "hash": "6cf599e7410b1159d78995df9cbf915613b7a897",
     "lastChecked": "2026-09-25T12:10:56.533Z",
     "lastChanged": "2026-09-25T12:10:56.533Z",
-    "how": "browser"
+    "how": "browser",
+    "lastError": "内容过短（13 字符，疑似空页/需登录），已跳过，未写基线"
   },
   "trae-work-gift": {
     "hash": "dd7f84b025cc3a05a692f5b40cbcfc4e875093b0",
     "lastChecked": "2026-09-25T12:16:13.038Z",
     "lastChanged": "2026-09-25T12:16:13.039Z",
-    "how": "fetch"
+    "how": "fetch",
+    "lastError": "内容过短（13 字符，疑似空页/需登录），已跳过，未写基线"
   },
   "huawei-bbs-community": {
     "hash": "0707de80b1ace857c0e2763f93836bb0389b2e75",

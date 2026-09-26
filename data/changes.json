@@ -1,5 +1,35 @@
 [
   {
+    "time": "2026-09-26T12:21:56.434Z",
+    "source": "qwen-code-docs",
+    "product": "qwen-code",
+    "url": "https://qwenlm.github.io/qwen-code-docs/",
+    "kind": "page-update",
+    "how": "browser",
+    "pageTitle": "Qwen",
+    "excerpt": "Qwen Qwen 更多 简体中文 下载 使用 Qwen 用 Qwen Code 编程 Qwen Code 是一款开源的终端 AI 智能体，专为 Qwen 系列模型优化。它能帮助你理解大型代码库、自动化繁琐工作，加速交付。 Linux / macOS Windows >_ curl -fsSL https://qwen-code-asse"
+  },
+  {
+    "time": "2026-09-26T12:22:35.860Z",
+    "source": "coze-home",
+    "product": "coze-space",
+    "url": "https://www.coze.cn",
+    "kind": "page-update",
+    "how": "browser",
+    "pageTitle": "扣子 Coze - 字节跳动旗下职场AI伙伴扣子与一站式AI开发平台扣子编程 PPT数据分析小程序开发APP开发网页开发平面设计教学备课报告写作自媒体播客视频智能体工作流",
+    "excerpt": "扣子 Coze - 字节跳动旗下职场AI伙伴扣子与一站式AI开发平台扣子编程 PPT数据分析小程序开发APP开发网页开发平面设计教学备课报告写作自媒体播客视频智能体工作流 团队版 企业版 定价 下载扣子 下载扣子 工作交给扣子 创造不必等待 告诉扣子你想完成什么。Agent 会带着资料和工具接手，把想法一步步做出来。 下载桌面端 功能最全"
+  },
+  {
+    "time": "2026-09-26T12:22:54.548Z",
+    "source": "modelscope-home",
+    "product": "modelscope",
+    "url": "https://modelscope.cn",
+    "kind": "page-update",
+    "how": "browser",
+    "pageTitle": "首页 · 魔搭社区",
+    "excerpt": "首页 · 魔搭社区 首页 模型库 数据集 创空间 开发者实践 文档 社区 智能工坊 实验场 AIGC 专区 热门搜索 Qwen-Image-2.1 Qwen3.8 minimax H3 Qwen krea2 indextts2 DeepSeek Qwen3.8-27B laya jev 登录 / 注册 共享 · 共创 · 共进，构建持续创"
+  },
+  {
     "time": "2026-09-25T16:57:01.535Z",
     "source": "huawei-bbs-community",
     "product": "codearts-snap",
