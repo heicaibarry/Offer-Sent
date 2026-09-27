@@ -8,13 +8,13 @@
   },
   "workbuddy-pricing": {
     "hash": "fcb4eb25e75f2c76c01d6b9227b4a44b09c29fee",
-    "lastChecked": "2026-09-27T06:47:10.438Z",
+    "lastChecked": "2026-09-27T13:12:35.694Z",
     "lastChanged": "2026-09-24T06:23:24.317Z",
     "how": "browser"
   },
   "minimax-token-plan": {
     "hash": "50ba2b041fa8d47724cb6adb3446acacce39e212",
-    "lastChecked": "2026-09-27T06:48:03.781Z",
+    "lastChecked": "2026-09-27T13:13:03.762Z",
     "lastChanged": "2026-09-21T06:41:02.113Z",
     "how": "browser"
   },
@@ -26,13 +26,13 @@
   },
   "kimi-coding": {
     "hash": "789eb5bc9d66a348f58e02c6a24ff07c1361bf2e",
-    "lastChecked": "2026-09-27T06:48:15.669Z",
+    "lastChecked": "2026-09-27T13:13:16.932Z",
     "lastChanged": "2026-09-25T16:37:39.423Z",
     "how": "browser"
   },
   "dumate-home": {
     "hash": "25b25e132d17dbbd027a940334105a588908f218",
-    "lastChecked": "2026-09-27T06:48:34.695Z",
+    "lastChecked": "2026-09-27T13:13:38.252Z",
     "lastChanged": "2026-09-25T12:31:08.901Z",
     "how": "fetch"
   },
@@ -49,14 +49,14 @@
     "how": "fetch"
   },
   "qwen-code-docs": {
-    "hash": "342be0145c50850db4ae0f9c2569c4e3e14bfe80",
-    "lastChecked": "2026-09-26T12:21:56.435Z",
-    "lastChanged": "2026-09-26T12:21:56.435Z",
+    "hash": "adc35b3346dd29594f8cd9809f80441e203d3321",
+    "lastChecked": "2026-09-27T13:13:46.407Z",
+    "lastChanged": "2026-09-27T13:13:46.407Z",
     "how": "browser"
   },
   "comate-home": {
     "hash": "8561a98589c3508f0801c4ea08b4fbf766f87af9",
-    "lastChecked": "2026-09-26T12:22:23.456Z",
+    "lastChecked": "2026-09-27T13:14:08.081Z",
     "lastChanged": "2026-09-25T10:44:34.509Z",
     "how": "browser"
   },
@@ -67,9 +67,9 @@
     "how": "fetch"
   },
   "coze-home": {
-    "hash": "3105c36fc58e52cf5c80e8dfa9c9928c43a770d1",
-    "lastChecked": "2026-09-26T12:22:35.860Z",
-    "lastChanged": "2026-09-26T12:22:35.860Z",
+    "hash": "de0d655645196c00631cbe01753d43cf2506008d",
+    "lastChecked": "2026-09-27T13:14:26.279Z",
+    "lastChanged": "2026-09-27T13:14:26.279Z",
     "how": "browser"
   },
   "manus-pricing": {
@@ -105,14 +105,14 @@
     "how": "browser"
   },
   "modelscope-home": {
-    "hash": "82a2445217a4eefb4b33ca22d08ce7edb41aa0b3",
-    "lastChecked": "2026-09-26T12:22:54.549Z",
-    "lastChanged": "2026-09-26T12:22:54.549Z",
+    "hash": "1c0e00d4030251503f38b78f4bdb939cfeecb9b4",
+    "lastChecked": "2026-09-27T13:14:44.150Z",
+    "lastChanged": "2026-09-27T13:14:44.150Z",
     "how": "browser"
   },
   "bigmodel-coding-plan": {
     "hash": "a4f115041b7d73b69de2766a1bfb25a96251e945",
-    "lastChecked": "2026-09-27T06:45:33.744Z",
+    "lastChecked": "2026-09-27T13:11:31.998Z",
     "lastChanged": "2026-09-25T16:51:20.443Z",
     "how": "browser"
   },
