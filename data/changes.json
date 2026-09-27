@@ -1,13 +1,83 @@
 [
   {
-    "time": "2026-09-26T12:21:56.434Z",
+    "time": "2026-09-27T03:23:14.217Z",
+    "source": "codebuddy-pricing",
+    "product": "codebuddy",
+    "url": "https://www.codebuddy.cn/pricing",
+    "kind": "auto-promo",
+    "how": "llm",
+    "pageTitle": "补录收录 1 条新活动",
+    "excerpt": "Hy4 preview 邀您免费体验"
+  },
+  {
+    "time": "2026-09-27T03:18:33.339Z",
+    "source": "trae-work-gift",
+    "product": "trae",
+    "url": "https://www.trae.cn/trae-work-gift",
+    "kind": "auto-promo",
+    "how": "llm",
+    "pageTitle": "补录收录 1 条新活动",
+    "excerpt": "TraeWork 桌面端专属加码礼"
+  },
+  {
+    "time": "2026-09-27T03:17:39.873Z",
+    "source": "trae-student",
+    "product": "trae",
+    "url": "https://www.trae.cn/events/student-verification",
+    "kind": "auto-promo",
+    "how": "llm",
+    "pageTitle": "补录收录 3 条新活动",
+    "excerpt": "月度登录奖励 / 每日签到奖励 / 模型补贴"
+  },
+  {
+    "time": "2026-09-27T03:10:11.963Z",
+    "source": "modelscope-home",
+    "product": "modelscope",
+    "url": "https://modelscope.cn",
+    "kind": "page-update",
+    "how": "browser",
+    "pageTitle": "首页 · 魔搭社区",
+    "excerpt": "首页 · 魔搭社区 首页 模型库 数据集 创空间 开发者实践 社区 智能工坊 实验场 AIGC 专区 热门搜索 Qwen-Image-2.1 minimax H3 Qwen3.8 Qwen krea2 indextts2 Qwen3.8-27B DeepSeek laya api 登录 / 注册 共享 · 共创 · 共进，构建持续创新的"
+  },
+  {
+    "time": "2026-09-27T03:09:53.262Z",
+    "source": "coze-home",
+    "product": "coze-space",
+    "url": "https://www.coze.cn",
+    "kind": "page-update",
+    "how": "browser",
+    "pageTitle": "扣子 Coze - 字节跳动旗下职场AI伙伴扣子与一站式AI开发平台扣子编程 PPT数据分析小程序开发APP开发网页开发平面设计教学备课报告写作自媒体播客视频智能体工作流",
+    "excerpt": "扣子 Coze - 字节跳动旗下职场AI伙伴扣子与一站式AI开发平台扣子编程 PPT数据分析小程序开发APP开发网页开发平面设计教学备课报告写作自媒体播客视频智能体工作流 团队版 企业版 定价 下载扣子 下载扣子 工作交给扣子 创造不必等待 告诉扣子你想完成什么。Agent 会带着资料和工具接手，把想法一步步做出来。 下载桌面端 功能最全 下载"
+  },
+  {
+    "time": "2026-09-27T03:09:01.183Z",
     "source": "qwen-code-docs",
     "product": "qwen-code",
     "url": "https://qwenlm.github.io/qwen-code-docs/",
     "kind": "page-update",
     "how": "browser",
     "pageTitle": "Qwen",
-    "excerpt": "Qwen Qwen 更多 简体中文 下载 使用 Qwen 用 Qwen Code 编程 Qwen Code 是一款开源的终端 AI 智能体，专为 Qwen 系列模型优化。它能帮助你理解大型代码库、自动化繁琐工作，加速交付。 Linux / macOS Windows >_ curl -fsSL https://qwen-code-asse"
+    "excerpt": "Qwen Qwen 更多 简体中文 下载 使用 Qwen 用 Qwen Code 编程 Qwen Code 是一款开源的终端 AI 智能体，专为 Qwen 系列模型优化。它能帮助你理解大型代码库、自动化繁琐工作，加速交付。 Linux / macOS Windows >_ curl -fsSL https://qwen-code-assets.os"
+  },
+  {
+    "time": "2026-09-27T03:08:22.072Z",
+    "source": "kimi-coding",
+    "product": "kimi-code",
+    "url": "https://www.kimi.com/coding",
+    "kind": "page-update",
+    "how": "browser",
+    "pageTitle": "Kimi Code - 搭载 Kimi K3 的 AI 编程 Agent 与 CLI 工具",
+    "excerpt": "I 工具 Kimi Code 会员权益 文档 控制台 登录 K3 正式上线！最高 1M 上下文 立即体验 Kimi Code Kimi Code 现已覆盖桌面端、CLI 与 IDE 插件，轻松兼容各类开发流程， 更快更稳响应请求，高效地完成编程任务 下载 Windows 版 安装 CLI 开始使用 阅读文档 一次订阅，全端畅写 桌面端 Terminal IDE 新建会话 搜索 会话 landing"
+  },
+  {
+    "time": "2026-09-26T12:22:54.548Z",
+    "source": "modelscope-home",
+    "product": "modelscope",
+    "url": "https://modelscope.cn",
+    "kind": "page-update",
+    "how": "browser",
+    "pageTitle": "首页 · 魔搭社区",
+    "excerpt": "首页 · 魔搭社区 首页 模型库 数据集 创空间 开发者实践 文档 社区 智能工坊 实验场 AIGC 专区 热门搜索 Qwen-Image-2.1 Qwen3.8 minimax H3 Qwen krea2 indextts2 DeepSeek Qwen3.8-27B laya jev 登录 / 注册 共享 · 共创 · 共进，构建持续创"
   },
   {
     "time": "2026-09-26T12:22:35.860Z",
@@ -20,14 +90,14 @@
     "excerpt": "扣子 Coze - 字节跳动旗下职场AI伙伴扣子与一站式AI开发平台扣子编程 PPT数据分析小程序开发APP开发网页开发平面设计教学备课报告写作自媒体播客视频智能体工作流 团队版 企业版 定价 下载扣子 下载扣子 工作交给扣子 创造不必等待 告诉扣子你想完成什么。Agent 会带着资料和工具接手，把想法一步步做出来。 下载桌面端 功能最全"
   },
   {
-    "time": "2026-09-26T12:22:54.548Z",
-    "source": "modelscope-home",
-    "product": "modelscope",
-    "url": "https://modelscope.cn",
+    "time": "2026-09-26T12:21:56.434Z",
+    "source": "qwen-code-docs",
+    "product": "qwen-code",
+    "url": "https://qwenlm.github.io/qwen-code-docs/",
     "kind": "page-update",
     "how": "browser",
-    "pageTitle": "首页 · 魔搭社区",
-    "excerpt": "首页 · 魔搭社区 首页 模型库 数据集 创空间 开发者实践 文档 社区 智能工坊 实验场 AIGC 专区 热门搜索 Qwen-Image-2.1 Qwen3.8 minimax H3 Qwen krea2 indextts2 DeepSeek Qwen3.8-27B laya jev 登录 / 注册 共享 · 共创 · 共进，构建持续创"
+    "pageTitle": "Qwen",
+    "excerpt": "Qwen Qwen 更多 简体中文 下载 使用 Qwen 用 Qwen Code 编程 Qwen Code 是一款开源的终端 AI 智能体，专为 Qwen 系列模型优化。它能帮助你理解大型代码库、自动化繁琐工作，加速交付。 Linux / macOS Windows >_ curl -fsSL https://qwen-code-asse"
   },
   {
     "time": "2026-09-25T16:57:01.535Z",
@@ -60,16 +130,6 @@
     "excerpt": "CLI 工具 Kimi Code 会员权益 文档 控制台 登录 新会员体系已上线，Code 场景取消周限额，总额度有所调整。作为日常生产力工具，建议选择更高等级套餐。 查看套餐 Kimi Code Kimi Code 现已覆盖桌面端、CLI 与 IDE 插件，轻松兼容各类开发流程， 更快更稳响应请求，高效地完成编程任务 下载 Windows 版 安装 CLI 开始使用 阅读文档 一次订阅，全端畅"
   },
   {
-    "time": "2026-09-25T12:10:30.036Z",
-    "source": "trae-pricing",
-    "product": "trae",
-    "url": "https://www.trae.cn/pricing",
-    "kind": "page-update",
-    "how": "browser",
-    "pageTitle": "定价 | TRAE - The Real AI Engineer",
-    "excerpt": "| TRAE - The Real AI Engineer 邀请好友体验 TraeCode，双方各得 500 积分，最高得 3500 积分 立即参与 → TraeCode Hot TraeWork 企业版 定价 文档 更新日志 社区 知识库 登录 下载中心 个人方案与定价 企业版选型与咨询， 前往火山引擎 ↗ 免费 Free ¥ 0 每月 500 积分 所有功能均可免费使用 支持 2 个云端任务同"
-  },
-  {
     "time": "2026-09-25T12:10:56.532Z",
     "source": "trae-student",
     "product": "trae",
@@ -80,24 +140,24 @@
     "excerpt": "TRAE 大学生专属福利 | TRAE - The Real AI Engineer 下载 TraeCode [ TRAE 大学生专属计划] TRAE 学生见面礼 ， 助你畅享 AI 编程 +86 获取验证码 我已阅读并同意 服务条款 和 隐私协议 认证学生身份，领取 2000 积分 [大学生新用户好礼] 6500 积分 大学生专属积分福"
   },
   {
-    "time": "2026-09-25T10:44:11.964Z",
-    "source": "qwen-code-docs",
-    "product": "qwen-code",
-    "url": "https://qwenlm.github.io/qwen-code-docs/",
+    "time": "2026-09-25T12:10:30.036Z",
+    "source": "trae-pricing",
+    "product": "trae",
+    "url": "https://www.trae.cn/pricing",
     "kind": "page-update",
     "how": "browser",
-    "pageTitle": "Qwen",
-    "excerpt": "Qwen Qwen More EN Download Try Qwen Code with Qwen Code Qwen Code is an open-source AI agent for the terminal, optimized for Qwen series models. It helps you understand l"
+    "pageTitle": "定价 | TRAE - The Real AI Engineer",
+    "excerpt": "| TRAE - The Real AI Engineer 邀请好友体验 TraeCode，双方各得 500 积分，最高得 3500 积分 立即参与 → TraeCode Hot TraeWork 企业版 定价 文档 更新日志 社区 知识库 登录 下载中心 个人方案与定价 企业版选型与咨询， 前往火山引擎 ↗ 免费 Free ¥ 0 每月 500 积分 所有功能均可免费使用 支持 2 个云端任务同"
   },
   {
-    "time": "2026-09-25T10:44:34.509Z",
-    "source": "comate-home",
-    "product": "comate",
-    "url": "https://comate.baidu.com",
+    "time": "2026-09-25T10:45:37.910Z",
+    "source": "modelscope-home",
+    "product": "modelscope",
+    "url": "https://modelscope.cn",
     "kind": "page-update",
     "how": "browser",
-    "pageTitle": "文心快码(Baidu Comate)·你的专属AI研发搭档",
-    "excerpt": "文心快码(Baidu Comate)·你的专属AI研发搭档 首页 价格 资讯 文档 在线问答 企业版 首页 价格 资讯 文档 在线问答 企业版 With Comate, To Create 下载客户端 下载插件 VS Code JetBrains Visual Studio Xcode 企业试用 ↗ Auto 项目开发 数据分析 文件生成"
+    "pageTitle": "Home Page · ModelScope",
+    "excerpt": "Home Page · ModelScope Home Models Datasets Studios Spotlight Community Skills MCP Civision Top Searches Qwen-Image-2.1 Qwen3.8 minimax H3 Qwen laya deepseek jev krea2 in"
   },
   {
     "time": "2026-09-25T10:44:47.698Z",
@@ -110,14 +170,24 @@
     "excerpt": "扣子 Coze - 字节跳动旗下职场AI伙伴扣子与一站式AI开发平台扣子编程 PPT数据分析小程序开发APP开发网页开发平面设计教学备课报告写作自媒体播客视频智能体工作流 团队版 企业版 定价 打开网页版 下载扣子 下载扣子 工作交给扣子 创造不必等待 告诉扣子你想完成什么。Agent 会带着资料和工具接手，把想法一步步做出来。 下载桌面"
   },
   {
-    "time": "2026-09-25T10:45:37.910Z",
-    "source": "modelscope-home",
-    "product": "modelscope",
-    "url": "https://modelscope.cn",
+    "time": "2026-09-25T10:44:34.509Z",
+    "source": "comate-home",
+    "product": "comate",
+    "url": "https://comate.baidu.com",
     "kind": "page-update",
     "how": "browser",
-    "pageTitle": "Home Page · ModelScope",
-    "excerpt": "Home Page · ModelScope Home Models Datasets Studios Spotlight Community Skills MCP Civision Top Searches Qwen-Image-2.1 Qwen3.8 minimax H3 Qwen laya deepseek jev krea2 in"
+    "pageTitle": "文心快码(Baidu Comate)·你的专属AI研发搭档",
+    "excerpt": "文心快码(Baidu Comate)·你的专属AI研发搭档 首页 价格 资讯 文档 在线问答 企业版 首页 价格 资讯 文档 在线问答 企业版 With Comate, To Create 下载客户端 下载插件 VS Code JetBrains Visual Studio Xcode 企业试用 ↗ Auto 项目开发 数据分析 文件生成"
+  },
+  {
+    "time": "2026-09-25T10:44:11.964Z",
+    "source": "qwen-code-docs",
+    "product": "qwen-code",
+    "url": "https://qwenlm.github.io/qwen-code-docs/",
+    "kind": "page-update",
+    "how": "browser",
+    "pageTitle": "Qwen",
+    "excerpt": "Qwen Qwen More EN Download Try Qwen Code with Qwen Code Qwen Code is an open-source AI agent for the terminal, optimized for Qwen series models. It helps you understand l"
   },
   {
     "time": "2026-09-24T17:54:41.386Z",
@@ -160,16 +230,6 @@
     "excerpt": "智谱AutoClaw官网-智谱autoclaw（澳龙）安装下载-GLM-5.3-Flash已上线 智谱 AutoClaw 博客 团购方案 养虾社群 Lark WeCom 更多介绍 模型介绍 更新日志 获取APP 下载体验 × 扫码下载移动端 iOS 版本 Android 版本 × 请选择银河麒麟系统架构 可在终端执行 uname -m 查"
   },
   {
-    "time": "2026-09-19T06:11:13.072Z",
-    "source": "deepseek-pricing",
-    "product": "deepseek",
-    "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing",
-    "kind": "page-update",
-    "how": "fetch",
-    "pageTitle": "模型 & 价格 | DeepSeek API Docs",
-    "excerpt": "模型 & 价格 | DeepSeek API Docs 跳到主要内容 DeepSeek API 文档 中文（中国） English 中文（中国） DeepSeek Platform 快速开始 首次调用 API 模型 & 价格 Token 用量计算 限速与隔离 错误码 接入 Agent 工具 API 指南 图像理解 思考模式 多轮对话 对话"
-  },
-  {
     "time": "2026-09-19T06:11:23.682Z",
     "source": "siliconflow-pricing",
     "product": "siliconflow",
@@ -178,6 +238,16 @@
     "how": "browser",
     "pageTitle": "大模型 API 价格方案 - 硅基流动 SiliconFlow",
     "excerpt": "大模型 API 价格方案 - 硅基流动 SiliconFlow 产品 模型 价格 文档 生态合作 关于 登录 登录 产品 模型 价格 文档 生态合作 关于 PRICING · 模型价格中心 模型 价格总览 面向生产选型的模型价格页：一屏对比主流厂商与模型的输入、输出、缓存命中成本，帮助你快速判断性价比。 搜索 实时价格同步 仅展示可用模型"
+  },
+  {
+    "time": "2026-09-19T06:11:13.072Z",
+    "source": "deepseek-pricing",
+    "product": "deepseek",
+    "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing",
+    "kind": "page-update",
+    "how": "fetch",
+    "pageTitle": "模型 & 价格 | DeepSeek API Docs",
+    "excerpt": "模型 & 价格 | DeepSeek API Docs 跳到主要内容 DeepSeek API 文档 中文（中国） English 中文（中国） DeepSeek Platform 快速开始 首次调用 API 模型 & 价格 Token 用量计算 限速与隔离 错误码 接入 Agent 工具 API 指南 图像理解 思考模式 多轮对话 对话"
   },
   {
     "time": "2026-09-18T12:18:46.030Z",
@@ -250,16 +320,6 @@
     "excerpt": "DuMate 个人版 企业版 定价 文档 免费下载 macOS (M系列芯片) Windows (win10及以上) 扫码下载 DuMate App 企业版咨询 真干活，用搭子 百度搭子DuMate，强大的AI助手。你说需求，它来执行——跨应用、跨文件，复杂任务一句话搞定。 免费下载桌面版 免费下载 正在用搭子干活 全球权威榜单登顶 效果"
   },
   {
-    "time": "2026-09-14T06:37:16.294Z",
-    "source": "dumate-home",
-    "product": "dumate",
-    "url": "https://www.dumate.cn/",
-    "kind": "page-update",
-    "how": "browser",
-    "pageTitle": "DuMate",
-    "excerpt": "DuMate 个人版 企业版 定价 文档 免费下载 macOS (M系列芯片) Windows (win10及以上) 扫码下载 DuMate App 企业版咨询 真干活，用搭子 百度搭子DuMate，强大的AI助手。你说需求，它来执行——跨应用、跨文件，复杂任务一句话搞定。 免费下载桌面版 免费下载 正在用搭子干活 全球权威榜单登顶 效果"
-  },
-  {
     "time": "2026-09-14T06:37:24.197Z",
     "source": "codebuddy-pricing",
     "product": "codebuddy",
@@ -270,57 +330,7 @@
     "excerpt": "免费腾讯云代码助手_腾讯云代码助手价格 - 腾讯云代码助手 C o d e B u d d y IDE AI 原生 IDE 插件 VS Code / JetBrains 插件 CLI 命令行工具 NPC AI 智能体角色 Agents Beta AI 智能体平台 Security AI 代码安全审计 W o r k B u d d y 公"
   },
   {
-    "time": "2026-09-13T16:35:31.801Z",
-    "source": "trae-pricing",
-    "product": "trae",
-    "url": "https://www.trae.cn/pricing",
-    "kind": "page-update",
-    "how": "browser",
-    "pageTitle": "",
-    "excerpt": ""
-  },
-  {
-    "time": "2026-09-13T16:35:42.649Z",
-    "source": "workbuddy-pricing",
-    "product": "workbuddy",
-    "url": "https://www.workbuddy.cn/pricing",
-    "kind": "page-update",
-    "how": "browser",
-    "pageTitle": "WorkBuddy 定价 - AI Agent 办公新范式",
-    "excerpt": "WorkBuddy 定价 - AI Agent 办公新范式 首 页 定 价 文 档 产品与使用 产品介绍 实践案例 常见问题 合作 硬件专区 洞察 WorkBuddy 白皮书 OPC 运营生态白皮书 阅读全文 智能硬件接入白皮书 阅读全文 方案与接入 AI 时代一人公司的商业与技术重构 阅读全文 让每一台硬件都拥有AI 灵魂 阅读全文 活"
-  },
-  {
-    "time": "2026-09-13T16:35:57.270Z",
-    "source": "minimax-token-plan",
-    "product": "minimax-token-plan",
-    "url": "https://platform.minimaxi.com/subscribe/token-plan",
-    "kind": "page-update",
-    "how": "browser",
-    "pageTitle": "Token Plan - MiniMax API 平台",
-    "excerpt": "Token Plan - MiniMax API 平台 文档 定价 控制台 登录 API 价格 订阅套餐 Token Plan 面向个人开发者、Coding 用户、日常办公场景，全模态共享用量额度，单价最低，适合长期高频的文本 / 代码场景。 OFFICIAL MiniMax Code 在官方 Agent 应用 MiniMax Code"
-  },
-  {
-    "time": "2026-09-13T16:36:03.080Z",
-    "source": "zai-subscribe",
-    "product": "glm-coding-plan",
-    "url": "https://z.ai/subscribe",
-    "kind": "page-update",
-    "how": "browser",
-    "pageTitle": "GLM Coding Plan — AI Coding Powered by GLM-5.3, GLM-5.3-Flash, GLM-5.2 & GLM-5-Turbo for Agents & IDEs",
-    "excerpt": "GLM Coding Plan — AI Coding Powered by GLM-5.3, GLM-5.3-Flash, GLM-5.2 & GLM-5-Turbo for Agents & IDEs Chat API Coding Plan Pricing Contact Docs English Login Open menu G"
-  },
-  {
-    "time": "2026-09-13T16:36:15.066Z",
-    "source": "kimi-coding",
-    "product": "kimi-code",
-    "url": "https://www.kimi.com/coding",
-    "kind": "page-update",
-    "how": "browser",
-    "pageTitle": "Kimi Code - 搭载 Kimi K3 的 AI 编程 Agent 与 CLI 工具",
-    "excerpt": "Kimi Code - 搭载 Kimi K3 的 AI 编程 Agent 与 CLI 工具 Kimi Code 会员权益 文档 控制台 注册/登录 K3 正式上线！最高 1M 上下文 立即体验 Kimi Code 面向代码开发的权益，轻松兼容各类开发流程， 更快更稳响应请求，高效完成编程任务 安装 Kimi Code irm https:"
-  },
-  {
-    "time": "2026-09-13T16:36:26.801Z",
+    "time": "2026-09-14T06:37:16.294Z",
     "source": "dumate-home",
     "product": "dumate",
     "url": "https://www.dumate.cn/",
@@ -338,5 +348,65 @@
     "how": "browser",
     "pageTitle": "免费腾讯云代码助手_腾讯云代码助手价格 - 腾讯云代码助手",
     "excerpt": "免费腾讯云代码助手_腾讯云代码助手价格 - 腾讯云代码助手 C o d e B u d d y IDE AI 原生 IDE 插件 VS Code / JetBrains 插件 CLI 命令行工具 NPC AI 智能体角色 Agents Beta AI 智能体平台 Security AI 代码安全审计 W o r k B u d d y 公"
+  },
+  {
+    "time": "2026-09-13T16:36:26.801Z",
+    "source": "dumate-home",
+    "product": "dumate",
+    "url": "https://www.dumate.cn/",
+    "kind": "page-update",
+    "how": "browser",
+    "pageTitle": "DuMate",
+    "excerpt": "DuMate 个人版 企业版 定价 文档 免费下载 macOS (M系列芯片) Windows (win10及以上) 扫码下载 DuMate App 企业版咨询 真干活，用搭子 百度搭子DuMate，强大的AI助手。你说需求，它来执行——跨应用、跨文件，复杂任务一句话搞定。 免费下载桌面版 免费下载 正在用搭子干活 全球权威榜单登顶 效果"
+  },
+  {
+    "time": "2026-09-13T16:36:15.066Z",
+    "source": "kimi-coding",
+    "product": "kimi-code",
+    "url": "https://www.kimi.com/coding",
+    "kind": "page-update",
+    "how": "browser",
+    "pageTitle": "Kimi Code - 搭载 Kimi K3 的 AI 编程 Agent 与 CLI 工具",
+    "excerpt": "Kimi Code - 搭载 Kimi K3 的 AI 编程 Agent 与 CLI 工具 Kimi Code 会员权益 文档 控制台 注册/登录 K3 正式上线！最高 1M 上下文 立即体验 Kimi Code 面向代码开发的权益，轻松兼容各类开发流程， 更快更稳响应请求，高效完成编程任务 安装 Kimi Code irm https:"
+  },
+  {
+    "time": "2026-09-13T16:36:03.080Z",
+    "source": "zai-subscribe",
+    "product": "glm-coding-plan",
+    "url": "https://z.ai/subscribe",
+    "kind": "page-update",
+    "how": "browser",
+    "pageTitle": "GLM Coding Plan — AI Coding Powered by GLM-5.3, GLM-5.3-Flash, GLM-5.2 & GLM-5-Turbo for Agents & IDEs",
+    "excerpt": "GLM Coding Plan — AI Coding Powered by GLM-5.3, GLM-5.3-Flash, GLM-5.2 & GLM-5-Turbo for Agents & IDEs Chat API Coding Plan Pricing Contact Docs English Login Open menu G"
+  },
+  {
+    "time": "2026-09-13T16:35:57.270Z",
+    "source": "minimax-token-plan",
+    "product": "minimax-token-plan",
+    "url": "https://platform.minimaxi.com/subscribe/token-plan",
+    "kind": "page-update",
+    "how": "browser",
+    "pageTitle": "Token Plan - MiniMax API 平台",
+    "excerpt": "Token Plan - MiniMax API 平台 文档 定价 控制台 登录 API 价格 订阅套餐 Token Plan 面向个人开发者、Coding 用户、日常办公场景，全模态共享用量额度，单价最低，适合长期高频的文本 / 代码场景。 OFFICIAL MiniMax Code 在官方 Agent 应用 MiniMax Code"
+  },
+  {
+    "time": "2026-09-13T16:35:42.649Z",
+    "source": "workbuddy-pricing",
+    "product": "workbuddy",
+    "url": "https://www.workbuddy.cn/pricing",
+    "kind": "page-update",
+    "how": "browser",
+    "pageTitle": "WorkBuddy 定价 - AI Agent 办公新范式",
+    "excerpt": "WorkBuddy 定价 - AI Agent 办公新范式 首 页 定 价 文 档 产品与使用 产品介绍 实践案例 常见问题 合作 硬件专区 洞察 WorkBuddy 白皮书 OPC 运营生态白皮书 阅读全文 智能硬件接入白皮书 阅读全文 方案与接入 AI 时代一人公司的商业与技术重构 阅读全文 让每一台硬件都拥有AI 灵魂 阅读全文 活"
+  },
+  {
+    "time": "2026-09-13T16:35:31.801Z",
+    "source": "trae-pricing",
+    "product": "trae",
+    "url": "https://www.trae.cn/pricing",
+    "kind": "page-update",
+    "how": "browser",
+    "pageTitle": "",
+    "excerpt": ""
   }
 ]

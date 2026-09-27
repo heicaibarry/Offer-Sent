@@ -57,6 +57,22 @@ const ONLY_LIST =
         .map((s) => s.trim())
         .filter(Boolean)
     : null;
+// --backfill=id1,id2：跳过指纹 diff，直接抓这些源跑 LLM 提取并收录新活动。
+// 用途：给刚上线的自动收录「补课」——把开启提取之前漏掉的历史页面变化补录进数据。
+const backfillEqArg = process.argv.find((a) => a.startsWith("--backfill="));
+const backfillIdx = process.argv.indexOf("--backfill");
+const BACKFILL_LIST = backfillEqArg
+  ? backfillEqArg
+      .slice("--backfill=".length)
+      .split(",")
+      .map((s) => s.trim())
+      .filter(Boolean)
+  : backfillIdx > -1
+    ? (process.argv[backfillIdx + 1] || "")
+        .split(",")
+        .map((s) => s.trim())
+        .filter(Boolean)
+    : null;
 
 const UA =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36";
@@ -290,6 +306,77 @@ function pruneExpired() {
   return removed;
 }
 
+// 补录模式：跳过指纹 diff，直接抓指定源 → LLM 提取 → 合并进 products.json。
+// 新收录以 auto-promo 条目推进 added，由调用方统一写 changes 并推送提醒。
+async function runBackfill(added, budget) {
+  const targets = SOURCES.filter((s) => BACKFILL_LIST.includes(s.id) && s.enabled !== false);
+  console.log(`===== 补录提取：${targets.length} 个源 =====`);
+  const meta = JSON.parse(fs.readFileSync(path.join(DATA, "products.json"), "utf8"));
+  const todayISO = nowISO().slice(0, 10);
+  let total = 0;
+  for (const s of targets) {
+    if (total >= budget) {
+      console.log("· 已达单轮收录上限，停止补录");
+      break;
+    }
+    const product = meta.products.find((p) => p.slug === s.product);
+    if (!product) continue;
+    let res = null;
+    if (s.renderer === "browser") res = await renderBrowser(s.url);
+    if (!res) {
+      try {
+        res = await fetchPlain(s.url);
+      } catch (e) {
+        console.log(`✗ ${s.id} 抓取失败: ${e.message}`);
+        continue;
+      }
+    }
+    res = await upgradeIfEmpty(res, s.url, s.renderer !== "browser");
+    const text = extractText(res.html).slice(0, 40000);
+    if (text.length < (s.minText || MIN_TEXT)) {
+      console.log(`✗ ${s.id} 正文过短（${text.length} 字符），跳过`);
+      continue;
+    }
+    const existingTitles = (product.promos || []).map((x) => x.title);
+    try {
+      const found = await llmExtract({
+        productName: product.name,
+        url: s.url,
+        pageText: text,
+        existingTitles,
+        todayISO,
+      });
+      const fresh = filterNewPromos(found, existingTitles, { max: 5 });
+      if (fresh.length) {
+        product.promos = [...(product.promos || []), ...fresh];
+        total += fresh.length;
+        added.push({
+          time: nowISO(),
+          source: s.id,
+          product: s.product,
+          url: s.url,
+          kind: "auto-promo",
+          how: "llm",
+          pageTitle: `补录收录 ${fresh.length} 条新活动`,
+          excerpt: fresh.map((f) => f.title).join(" / ").slice(0, 160),
+        });
+        console.log(`🤖 ${s.id} 补录 ${fresh.length} 条：${fresh.map((f) => f.title).join(" / ")}`);
+      } else {
+        console.log(`✓ ${s.id} 无新增（提取 ${found.length} 条，均重复/过期/无效）`);
+      }
+    } catch (e) {
+      console.log(`✗ ${s.id} 提取失败: ${e.message}`);
+    }
+    await sleep(800);
+  }
+  if (total) {
+    meta.updatedAt = todayISO;
+    fs.writeFileSync(path.join(DATA, "products.json"), JSON.stringify(meta, null, 2) + "\n");
+    console.log(`\n🤖 补录完成：新增 ${total} 条，已写入 products.json`);
+  }
+  return total;
+}
+
 async function main() {
   const pruned = pruneExpired();
   if (pruned) {
@@ -305,6 +392,11 @@ async function main() {
   let failed = 0;
   const toExtract = []; // 本轮有变化的页面，供 LLM 自动收录
 
+  if (BACKFILL_LIST) {
+    // 补录模式：抓指定源并提取收录，不更新指纹状态，不走常规核对
+    const total = await runBackfill(added, Number(process.env.MAX_AUTO_PER_RUN || 10));
+    console.log(`\n完成：补录模式，新增 ${total} 条`);
+  } else
   for (const s of SOURCES) {
     if (s.enabled === false) continue;
     if (ONLY_LIST && !ONLY_LIST.includes(s.id)) continue;
