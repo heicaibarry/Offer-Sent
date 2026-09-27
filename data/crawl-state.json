@@ -8,13 +8,13 @@
   },
   "workbuddy-pricing": {
     "hash": "fcb4eb25e75f2c76c01d6b9227b4a44b09c29fee",
-    "lastChecked": "2026-09-26T12:20:52.636Z",
+    "lastChecked": "2026-09-27T06:47:10.438Z",
     "lastChanged": "2026-09-24T06:23:24.317Z",
     "how": "browser"
   },
   "minimax-token-plan": {
     "hash": "50ba2b041fa8d47724cb6adb3446acacce39e212",
-    "lastChecked": "2026-09-26T12:21:08.965Z",
+    "lastChecked": "2026-09-27T06:48:03.781Z",
     "lastChanged": "2026-09-21T06:41:02.113Z",
     "how": "browser"
   },
@@ -26,19 +26,19 @@
   },
   "kimi-coding": {
     "hash": "789eb5bc9d66a348f58e02c6a24ff07c1361bf2e",
-    "lastChecked": "2026-09-26T12:21:31.843Z",
+    "lastChecked": "2026-09-27T06:48:15.669Z",
     "lastChanged": "2026-09-25T16:37:39.423Z",
     "how": "browser"
   },
   "dumate-home": {
     "hash": "25b25e132d17dbbd027a940334105a588908f218",
-    "lastChecked": "2026-09-26T12:21:47.476Z",
+    "lastChecked": "2026-09-27T06:48:34.695Z",
     "lastChanged": "2026-09-25T12:31:08.901Z",
     "how": "fetch"
   },
   "codebuddy-pricing": {
     "hash": "c0f55314902886cb2f819421d657b12c47bfb990",
-    "lastChecked": "2026-09-26T06:20:00.215Z",
+    "lastChecked": "2026-09-27T06:48:45.167Z",
     "lastChanged": "2026-09-26T06:20:00.215Z",
     "how": "browser"
   },
@@ -62,7 +62,7 @@
   },
   "deepseek-pricing": {
     "hash": "2b92554280d0173a2f13a899aa705fd09f5f158d",
-    "lastChecked": "2026-09-25T18:00:46.312Z",
+    "lastChecked": "2026-09-27T06:48:58.728Z",
     "lastChanged": "2026-09-24T17:54:41.386Z",
     "how": "fetch"
   },
@@ -100,7 +100,7 @@
   },
   "siliconflow-pricing": {
     "hash": "93ca17f67a6a1d5f30f94d2db8927cfbae4ea05f",
-    "lastChecked": "2026-09-25T18:00:59.529Z",
+    "lastChecked": "2026-09-27T06:49:09.760Z",
     "lastChanged": "2026-09-19T06:11:23.682Z",
     "how": "browser"
   },
@@ -112,20 +112,20 @@
   },
   "bigmodel-coding-plan": {
     "hash": "a4f115041b7d73b69de2766a1bfb25a96251e945",
-    "lastChecked": "2026-09-26T12:19:46.645Z",
+    "lastChecked": "2026-09-27T06:45:33.744Z",
     "lastChanged": "2026-09-25T16:51:20.443Z",
     "how": "browser"
   },
   "qoder-cn-pricing": {
     "hash": "4101961de387e1412b2cdee21d56547f040552b1",
-    "lastChecked": "2026-09-26T06:20:11.364Z",
+    "lastChecked": "2026-09-27T06:48:56.161Z",
     "lastChanged": "2026-09-23T06:14:13.962Z",
     "how": "browser"
   },
   "autoclaw-home": {
-    "hash": "7cec3452ec2bf02503187c3ad715defd02f9de0f",
-    "lastChecked": "2026-09-26T06:17:34.387Z",
-    "lastChanged": "2026-09-26T06:17:34.387Z",
+    "hash": "48a72ceb4432dc55b6ad9500c46f9c2aced5b610",
+    "lastChecked": "2026-09-27T06:46:02.514Z",
+    "lastChanged": "2026-09-27T06:46:02.514Z",
     "how": "browser"
   },
   "huawei-codearts-offers": {
@@ -164,7 +164,7 @@
   },
   "huawei-bbs-community": {
     "hash": "0707de80b1ace857c0e2763f93836bb0389b2e75",
-    "lastChecked": "2026-09-26T06:18:09.864Z",
+    "lastChecked": "2026-09-27T06:46:57.344Z",
     "lastChanged": "2026-09-25T16:57:01.535Z",
     "how": "fetch"
   }
