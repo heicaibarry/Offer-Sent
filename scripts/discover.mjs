@@ -281,7 +281,7 @@ if (AUTO && !NO_PROBE) {
   if (!process.env.GLM_API_KEY) {
     console.log("\n(未配置 GLM_API_KEY，跳过 --auto 自动收录)");
   } else {
-    const { llmExtract, filterNewPromos, readProducts } = await import("./lib-extract.mjs");
+    const { llmExtract, filterNewPromos, pickRemovals, readProducts } = await import("./lib-extract.mjs");
     const MAX_NEW_SOURCES = 3;
     const MAX_NEW_PROMOS = 5;
     const strong = candidates.filter(
@@ -300,16 +300,23 @@ if (AUTO && !NO_PROBE) {
       const product = productsMeta.products.find((p) => p.slug === c.product);
       if (!product) continue;
       try {
-        const found = await llmExtract({
+        const { promos: found, removals } = await llmExtract({
           productName: product.name,
           url: c.url,
           pageText: pageTexts.get(c.url),
           existingTitles: (product.promos || []).map((x) => x.title),
           todayISO,
         });
+        const existingPromos = product.promos || [];
+        const gone = pickRemovals(removals, existingPromos, c.url, { max: 3 });
+        if (gone.length) {
+          const goneTitles = gone.map((g) => g.title);
+          product.promos = existingPromos.filter((x) => !gone.includes(x));
+          console.log(`🧹 [${c.product}] 页面标注已结束，自动移除 ${gone.length} 条：${goneTitles.join(" / ")}`);
+        }
         const fresh = filterNewPromos(found, (product.promos || []).map((x) => x.title), { max: MAX_NEW_PROMOS });
         if (!fresh.length) {
-          console.log(`✓ [${c.product}] ${c.url} 无可收录的新活动（提取 ${found.length} 条，均重复/过期/无效）`);
+          console.log(gone.length ? `🤖 [${c.product}] ${c.url} 仅移除失效活动，无新收录` : `✓ [${c.product}] ${c.url} 无可收录的新活动（提取 ${found.length} 条，均重复/过期/无效）`);
           continue;
         }
         // 生成唯一 source id

@@ -18,7 +18,7 @@ import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
 import { fileURLToPath } from "node:url";
-import { hasLLM, llmExtract, filterNewPromos, readProducts } from "./lib-extract.mjs";
+import { hasLLM, llmExtract, filterNewPromos, pickRemovals, readProducts } from "./lib-extract.mjs";
 
 // CRAWL_PROXY_URL：可选的 HTTP 代理（http://user:pass@host:port）。
 // Trae 等站点对海外数据中心 IP 做地理/指纹拦截，配一个国内代理即可在 Actions 上抓通；
@@ -283,10 +283,10 @@ async function notify(list) {
     console.log("(未配置推送渠道，跳过提醒；可设置 WECHAT_WEBHOOK / PUSHPLUS_TOKEN / SERVERCHAN_SENDKEY / TELEGRAM_BOT_TOKEN + TELEGRAM_CHAT_ID)");
 }
 
-// 过期活动数据清理：endsAt 已过期超过 PRUNE_DAYS 天的条目从 products.json 里删除。
-// 前端本来就会按 endsAt 实时隐藏到期活动，这里做的是数据层面的最终回收。
-// PRUNE_DAYS 可用环境变量覆盖（设为 -1 关闭清理）；无法解析的截止时间一律保留。
-const PRUNE_DAYS = Number(process.env.PRUNE_DAYS ?? 30);
+// 过期活动数据清理：endsAt 已过期的条目从 products.json 里删除（默认过期 2 天后，
+// 给时区/边界留缓冲；前端在过期当天就已实时隐藏）。PRUNE_DAYS 可用环境变量覆盖
+// （设为 -1 关闭清理）；无法解析的截止时间一律保留。
+const PRUNE_DAYS = Number(process.env.PRUNE_DAYS ?? 2);
 
 function pruneExpired() {
   if (!Number.isFinite(PRUNE_DAYS) || PRUNE_DAYS < 0) return 0;
@@ -339,7 +339,7 @@ async function runBackfill(added, budget) {
     }
     const existingTitles = (product.promos || []).map((x) => x.title);
     try {
-      const found = await llmExtract({
+      const { promos: found, removals } = await llmExtract({
         productName: product.name,
         url: s.url,
         pageText: text,
@@ -347,6 +347,22 @@ async function runBackfill(added, budget) {
         todayISO,
       });
       const fresh = filterNewPromos(found, existingTitles, { max: 5 });
+      const gone = pickRemovals(removals, product.promos, s.url, { max: 3 });
+      if (gone.length) {
+        const goneTitles = gone.map((g) => g.title);
+        product.promos = product.promos.filter((x) => !gone.includes(x));
+        added.push({
+          time: nowISO(),
+          source: s.id,
+          product: s.product,
+          url: s.url,
+          kind: "auto-prune",
+          how: "llm",
+          pageTitle: `补录移除 ${gone.length} 条失效活动`,
+          excerpt: goneTitles.join(" / ").slice(0, 160),
+        });
+        console.log(`🧹 ${s.id} 补录移除 ${gone.length} 条失效活动：${goneTitles.join(" / ")}`);
+      }
       if (fresh.length) {
         product.promos = [...(product.promos || []), ...fresh];
         total += fresh.length;
@@ -496,6 +512,7 @@ async function main() {
       const meta = readProducts(DATA);
       const todayISO = nowISO().slice(0, 10);
       let autoAdded = 0;
+      let autoRemoved = 0;
       for (const t of toExtract) {
         if (autoAdded >= MAX_AUTO_PER_RUN) {
           console.log(`· 已达单轮自动收录上限 ${MAX_AUTO_PER_RUN} 条，剩余页面跳过`);
@@ -505,7 +522,7 @@ async function main() {
         if (!product) continue;
         const existingTitles = (product.promos || []).map((x) => x.title);
         try {
-          const found = await llmExtract({
+          const { promos: found, removals } = await llmExtract({
             productName: product.name,
             url: t.url,
             pageText: t.text,
@@ -513,6 +530,24 @@ async function main() {
             todayISO,
           });
           const fresh = filterNewPromos(found, existingTitles, { max: 5 });
+          // 页面明确标注「已结束」的已有活动 → 自动移除（数据层失效清理）
+          const gone = pickRemovals(removals, product.promos, t.url, { max: 3 });
+          if (gone.length) {
+            const goneTitles = gone.map((g) => g.title);
+            product.promos = product.promos.filter((x) => !gone.includes(x));
+            autoRemoved += gone.length;
+            changes.unshift({
+              time: nowISO(),
+              source: t.id,
+              product: t.product,
+              url: t.url,
+              kind: "auto-prune",
+              how: "llm",
+              pageTitle: `自动移除 ${gone.length} 条失效活动`,
+              excerpt: goneTitles.join(" / ").slice(0, 160),
+            });
+            console.log(`🧹 ${t.id} 自动移除 ${gone.length} 条失效活动：${goneTitles.join(" / ")}`);
+          }
           if (fresh.length) {
             product.promos = [...(product.promos || []), ...fresh];
             autoAdded += fresh.length;
@@ -535,10 +570,10 @@ async function main() {
         }
         await sleep(800);
       }
-      if (autoAdded) {
+      if (autoAdded || autoRemoved) {
         meta.updatedAt = todayISO;
         fs.writeFileSync(path.join(DATA, "products.json"), JSON.stringify(meta, null, 2) + "\n");
-        console.log(`\n🤖 本轮自动收录 ${autoAdded} 条新活动，已写入 products.json`);
+        console.log(`\n🤖 本轮自动收录 ${autoAdded} 条、移除失效 ${autoRemoved} 条，products.json 已更新`);
       }
     }
   }

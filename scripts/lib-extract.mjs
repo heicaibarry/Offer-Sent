@@ -56,24 +56,30 @@ export function isDuplicateTitle(title, existingTitles) {
 /** 组装提取用的 Prompt */
 function buildPrompt(productName, url, pageText, existingTitles) {
   return [
-    `你是优惠活动数据录入员。下面是「${productName}」官方页面（${url}）的正文。`,
-    "请提取页面中正在进行、未过期的优惠/活动信息，严格输出 JSON 数组，每个元素形如：",
+    `你是优惠活动数据录入员。下面是「${productName}」官方页面（${url}）的正文。请完成两件事：`,
+    "",
+    "一、提取页面中正在进行、未过期的优惠/活动信息，严格输出 JSON 数组，每个元素形如：",
     '{"title":"一句话活动名","detail":"活动内容/力度/参与方式，60字内","window":"时间或适用范围，没有则留空","endsAt":"截止日期 YYYY-MM-DD，页面没写就是 null"}',
+    "二、对照下方「已有活动」清单：如果页面上某个已有活动被明确标注了「已结束」「已过期」「活动已下线」等结束标记，额外输出一个元素：",
+    '{"remove":"该活动在已有活动清单里的标题"}',
     "要求：",
     "- 定价表、功能介绍、文档内容不算活动，不要收；",
     "- 邀请返利、裂变奖励、新用户礼、注册送额度、签到赠送、限时折扣、节日活动等运营活动都是要收录的目标，即使长期有效也要收；",
     "- 只收录页面上明确存在的活动，禁止编造、禁止推测；",
-    "- 页面没有上述任何活动时返回 []；",
+    "- remove 只允许在页面出现明确的结束标记时使用，页面没提结束就不要输出；",
+    "- 页面没有任何活动、也没有任何结束标记时返回 []；",
     "- 只输出纯 JSON 数组，不要 markdown 代码块，不要解释。",
-    `已有活动（这些不要再收录）：${existingTitles.length ? existingTitles.join("；") : "无"}`,
+    `已有活动（提取时不要重复收录；若页面标注了结束，用 remove 输出）：${existingTitles.length ? existingTitles.join("；") : "无"}`,
     "=== 页面正文 ===",
     pageText.slice(0, 12000),
   ].join("\n");
 }
 
 /**
- * 调 LLM 提取活动。返回归一化后的 promo 数组（可能为空），API/解析失败会抛错。
- * promos 元素：{ title, detail, window, endsAt, source, firstSeen, auto }
+ * 调 LLM 提取活动。返回 { promos, removals }：
+ *   - promos:   归一化后的新活动数组（title/detail/window/endsAt/source/firstSeen/auto）
+ *   - removals: 页面明确标注已结束的已有活动标题数组
+ * API/解析失败会抛错。
  */
 export async function llmExtract({ productName, url, pageText, existingTitles, todayISO }) {
   const res = await fetch(`${LLM_BASE}/chat/completions`, {
@@ -98,8 +104,8 @@ export async function llmExtract({ productName, url, pageText, existingTitles, t
   const e = out.lastIndexOf("]");
   if (s === -1 || e <= s) return [];
   const arr = JSON.parse(out.slice(s, e + 1));
-  if (!Array.isArray(arr)) return [];
-  return arr
+  if (!Array.isArray(arr)) return { promos: [], removals: [] };
+  const promos = arr
     .filter((x) => x && typeof x.title === "string" && x.title.trim())
     .map((x) => ({
       title: String(x.title).trim().slice(0, 80),
@@ -110,6 +116,11 @@ export async function llmExtract({ productName, url, pageText, existingTitles, t
       firstSeen: todayISO,
       auto: "llm",
     }));
+  const removals = arr
+    .filter((x) => x && typeof x.remove === "string" && x.remove.trim())
+    .map((x) => String(x.remove).trim())
+    .slice(0, 5);
+  return { promos, removals };
 }
 
 /**
@@ -129,6 +140,23 @@ export function filterNewPromos(promos, existingTitles, { max = 5 } = {}) {
     }
     out.push(p);
     seen.push(p.title);
+  }
+  return out;
+}
+
+/**
+ * 失效移除：把 LLM 报告的「页面已标注结束」标题模糊匹配回现有活动。
+ * 只匹配 source 等于当前页面的活动（别的页面收录的活动不由本页判断），限量 max。
+ * 返回应删除的 promo 数组（直接从 promos 数组里剔除即可）。
+ */
+export function pickRemovals(removalTitles, existingPromos, pageUrl, { max = 3 } = {}) {
+  const out = [];
+  for (const t of removalTitles || []) {
+    if (out.length >= max) break;
+    const hit = (existingPromos || []).find(
+      (x) => x.source === pageUrl && isDuplicateTitle(t, [x.title]) && !out.includes(x)
+    );
+    if (hit) out.push(hit);
   }
   return out;
 }
