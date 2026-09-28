@@ -7,14 +7,14 @@
     "lastError": "内容过短（13 字符，疑似空页/需登录），已跳过，未写基线"
   },
   "workbuddy-pricing": {
-    "hash": "fcb4eb25e75f2c76c01d6b9227b4a44b09c29fee",
-    "lastChecked": "2026-09-28T07:12:04.394Z",
-    "lastChanged": "2026-09-24T06:23:24.317Z",
+    "hash": "0be0d7772784d15b29b52866cd440609ba375714",
+    "lastChecked": "2026-09-28T15:43:31.765Z",
+    "lastChanged": "2026-09-28T15:43:31.765Z",
     "how": "browser"
   },
   "minimax-token-plan": {
     "hash": "50ba2b041fa8d47724cb6adb3446acacce39e212",
-    "lastChecked": "2026-09-28T07:12:22.556Z",
+    "lastChecked": "2026-09-28T15:43:49.412Z",
     "lastChanged": "2026-09-21T06:41:02.113Z",
     "how": "browser"
   },
@@ -26,13 +26,13 @@
   },
   "kimi-coding": {
     "hash": "789eb5bc9d66a348f58e02c6a24ff07c1361bf2e",
-    "lastChecked": "2026-09-28T07:12:34.011Z",
+    "lastChecked": "2026-09-28T15:44:02.635Z",
     "lastChanged": "2026-09-25T16:37:39.423Z",
     "how": "browser"
   },
   "dumate-home": {
     "hash": "25b25e132d17dbbd027a940334105a588908f218",
-    "lastChecked": "2026-09-28T07:12:49.365Z",
+    "lastChecked": "2026-09-28T15:44:26.007Z",
     "lastChanged": "2026-09-25T12:31:08.901Z",
     "how": "fetch"
   },
@@ -50,13 +50,13 @@
   },
   "qwen-code-docs": {
     "hash": "adc35b3346dd29594f8cd9809f80441e203d3321",
-    "lastChecked": "2026-09-27T13:13:46.407Z",
+    "lastChecked": "2026-09-28T15:44:35.216Z",
     "lastChanged": "2026-09-27T13:13:46.407Z",
     "how": "browser"
   },
   "comate-home": {
     "hash": "8561a98589c3508f0801c4ea08b4fbf766f87af9",
-    "lastChecked": "2026-09-27T13:14:08.081Z",
+    "lastChecked": "2026-09-28T15:44:56.060Z",
     "lastChanged": "2026-09-25T10:44:34.509Z",
     "how": "browser"
   },
@@ -67,9 +67,9 @@
     "how": "fetch"
   },
   "coze-home": {
-    "hash": "de0d655645196c00631cbe01753d43cf2506008d",
-    "lastChecked": "2026-09-27T13:14:26.279Z",
-    "lastChanged": "2026-09-27T13:14:26.279Z",
+    "hash": "d1f7441bb55b363a78913215da24340512a21e08",
+    "lastChecked": "2026-09-28T15:45:13.703Z",
+    "lastChanged": "2026-09-28T15:45:13.703Z",
     "how": "browser"
   },
   "manus-pricing": {
@@ -105,14 +105,14 @@
     "how": "browser"
   },
   "modelscope-home": {
-    "hash": "1c0e00d4030251503f38b78f4bdb939cfeecb9b4",
-    "lastChecked": "2026-09-27T13:14:44.150Z",
-    "lastChanged": "2026-09-27T13:14:44.150Z",
+    "hash": "f9f83d03707ee539bf61d2f7045b772b14e2fd4b",
+    "lastChecked": "2026-09-28T15:45:34.678Z",
+    "lastChanged": "2026-09-28T15:45:34.678Z",
     "how": "browser"
   },
   "bigmodel-coding-plan": {
     "hash": "a4f115041b7d73b69de2766a1bfb25a96251e945",
-    "lastChecked": "2026-09-28T07:10:28.910Z",
+    "lastChecked": "2026-09-28T15:42:28.114Z",
     "lastChanged": "2026-09-25T16:51:20.443Z",
     "how": "browser"
   },

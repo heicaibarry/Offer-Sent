@@ -1,5 +1,25 @@
 [
   {
+    "time": "2026-09-28T15:43:31.765Z",
+    "source": "workbuddy-pricing",
+    "product": "workbuddy",
+    "url": "https://www.workbuddy.cn/pricing",
+    "kind": "page-update",
+    "how": "browser",
+    "pageTitle": "WorkBuddy 定价 - AI Agent 办公新范式",
+    "excerpt": "WorkBuddy 定价 - AI Agent 办公新范式 首 页 定 价 文 档 产品与使用 产品介绍 实践案例 常见问题 合作 硬件专区 洞察 WorkBuddy 白皮书 OPC 运营生态白皮书 阅读全文 智能硬件接入白皮书 阅读全文 方案与接入 AI 时代一人公司的商业与技术重构 阅读全文 让每一台硬件都拥有AI 灵魂 阅读全文 合"
+  },
+  {
+    "time": "2026-09-28T15:45:34.678Z",
+    "source": "modelscope-home",
+    "product": "modelscope",
+    "url": "https://modelscope.cn",
+    "kind": "page-update",
+    "how": "browser",
+    "pageTitle": "首页 · 魔搭社区",
+    "excerpt": "首页 · 魔搭社区 首页 模型库 数据集 创空间 开发者实践 文档 社区 智能工坊 实验场 AIGC 专区 热门搜索 Qwen-Image-2.1 minimax H3 Qwen3.8 qwen krea2 IndexTTS2 Qwen3.8-27B DeepSeek Api tts 登录 / 注册 共享 · 共创 · 共进，构建持续创新"
+  },
+  {
     "time": "2026-09-27T13:14:44.150Z",
     "source": "modelscope-home",
     "product": "modelscope",
