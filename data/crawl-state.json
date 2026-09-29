@@ -7,15 +7,15 @@
     "lastError": "内容过短（13 字符，疑似空页/需登录），已跳过，未写基线"
   },
   "workbuddy-pricing": {
-    "hash": "0be0d7772784d15b29b52866cd440609ba375714",
-    "lastChecked": "2026-09-29T07:09:21.141Z",
-    "lastChanged": "2026-09-28T15:43:31.765Z",
+    "hash": "79a681b6e6e5724f97d23c8fc566fe5f39d8e123",
+    "lastChecked": "2026-09-29T14:12:56.300Z",
+    "lastChanged": "2026-09-29T14:12:56.300Z",
     "how": "browser"
   },
   "minimax-token-plan": {
-    "hash": "50ba2b041fa8d47724cb6adb3446acacce39e212",
-    "lastChecked": "2026-09-29T07:09:49.492Z",
-    "lastChanged": "2026-09-21T06:41:02.113Z",
+    "hash": "c96c7c080ffd71d3729c479406e5102f861a3ec9",
+    "lastChecked": "2026-09-29T14:13:48.396Z",
+    "lastChanged": "2026-09-29T14:13:48.396Z",
     "how": "browser"
   },
   "zai-subscribe": {
@@ -26,13 +26,13 @@
   },
   "kimi-coding": {
     "hash": "2708a38d20c21d8b25ac6291b32779bf3a89796b",
-    "lastChecked": "2026-09-29T07:10:01.274Z",
+    "lastChecked": "2026-09-29T14:14:01.090Z",
     "lastChanged": "2026-09-29T07:10:01.274Z",
     "how": "browser"
   },
   "dumate-home": {
     "hash": "25b25e132d17dbbd027a940334105a588908f218",
-    "lastChecked": "2026-09-29T07:10:18.900Z",
+    "lastChecked": "2026-09-29T14:14:13.838Z",
     "lastChanged": "2026-09-25T12:31:08.901Z",
     "how": "fetch"
   },
@@ -62,7 +62,7 @@
   },
   "deepseek-pricing": {
     "hash": "2b92554280d0173a2f13a899aa705fd09f5f158d",
-    "lastChecked": "2026-09-28T07:13:13.774Z",
+    "lastChecked": "2026-09-29T14:14:17.210Z",
     "lastChanged": "2026-09-24T17:54:41.386Z",
     "how": "fetch"
   },
@@ -99,9 +99,9 @@
     "how": "fetch"
   },
   "siliconflow-pricing": {
-    "hash": "93ca17f67a6a1d5f30f94d2db8927cfbae4ea05f",
-    "lastChecked": "2026-09-28T07:13:25.644Z",
-    "lastChanged": "2026-09-19T06:11:23.682Z",
+    "hash": "8b506fade7275f9d2a5044ddd349b48c77ec4b64",
+    "lastChecked": "2026-09-29T14:14:28.795Z",
+    "lastChanged": "2026-09-29T14:14:28.795Z",
     "how": "browser"
   },
   "modelscope-home": {
@@ -112,7 +112,7 @@
   },
   "bigmodel-coding-plan": {
     "hash": "a4f115041b7d73b69de2766a1bfb25a96251e945",
-    "lastChecked": "2026-09-29T07:07:41.406Z",
+    "lastChecked": "2026-09-29T14:11:50.522Z",
     "lastChanged": "2026-09-25T16:51:20.443Z",
     "how": "browser"
   },

@@ -1,5 +1,15 @@
 [
   {
+    "time": "2026-09-29T14:13:48.396Z",
+    "source": "minimax-token-plan",
+    "product": "minimax-token-plan",
+    "url": "https://platform.minimaxi.com/subscribe/token-plan",
+    "kind": "page-update",
+    "how": "browser",
+    "pageTitle": "Token Plan - MiniMax API 平台",
+    "excerpt": "Token Plan - MiniMax API 平台 文档 定价 控制台 登录 API 价格 订阅套餐 M Plan 即将推出 M Plan 承接并拓展 Token Plan 的订阅能力， 套餐订阅价格与文本使用额度保持不变，部分档位可以使用MiniMax H3 。并且Token Plan 将停止新购，已订阅且开启自动续费的用户的现有套"
+  },
+  {
     "time": "2026-09-28T15:43:31.765Z",
     "source": "workbuddy-pricing",
     "product": "workbuddy",
