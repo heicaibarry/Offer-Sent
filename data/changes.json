@@ -1,5 +1,15 @@
 [
   {
+    "time": "2026-09-30T07:02:46.167Z",
+    "source": "modelscope-home",
+    "product": "modelscope",
+    "url": "https://modelscope.cn",
+    "kind": "page-update",
+    "how": "browser",
+    "pageTitle": "首页 · 魔搭社区",
+    "excerpt": "首页 · 魔搭社区 首页 模型库 数据集 创空间 开发者实践 文档 社区 智能工坊 实验场 AIGC 专区 热门搜索 Qwen-Image-2.1 minimax H3 Qwen3.8 Qwen Qwen3.8-27B krea2 deepseek IndexTTS2 api jev 登录 / 注册 共享 · 共创 · 共进，构建持续创新"
+  },
+  {
     "time": "2026-09-29T14:13:48.396Z",
     "source": "minimax-token-plan",
     "product": "minimax-token-plan",
