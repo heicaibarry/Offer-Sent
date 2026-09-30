@@ -8,14 +8,14 @@
   },
   "workbuddy-pricing": {
     "hash": "79a681b6e6e5724f97d23c8fc566fe5f39d8e123",
-    "lastChecked": "2026-09-30T06:59:46.976Z",
+    "lastChecked": "2026-09-30T14:02:03.873Z",
     "lastChanged": "2026-09-29T14:12:56.300Z",
     "how": "browser"
   },
   "minimax-token-plan": {
-    "hash": "c96c7c080ffd71d3729c479406e5102f861a3ec9",
-    "lastChecked": "2026-09-30T07:00:40.678Z",
-    "lastChanged": "2026-09-29T14:13:48.396Z",
+    "hash": "0a35da4880cc8616ee13d17f1473a70db33aeced",
+    "lastChecked": "2026-09-30T14:02:21.753Z",
+    "lastChanged": "2026-09-30T14:02:21.753Z",
     "how": "browser"
   },
   "zai-subscribe": {
@@ -26,13 +26,13 @@
   },
   "kimi-coding": {
     "hash": "2708a38d20c21d8b25ac6291b32779bf3a89796b",
-    "lastChecked": "2026-09-30T07:00:53.979Z",
+    "lastChecked": "2026-09-30T14:02:33.907Z",
     "lastChanged": "2026-09-29T07:10:01.274Z",
     "how": "browser"
   },
   "dumate-home": {
     "hash": "25b25e132d17dbbd027a940334105a588908f218",
-    "lastChecked": "2026-09-30T07:01:16.780Z",
+    "lastChecked": "2026-09-30T14:02:51.383Z",
     "lastChanged": "2026-09-25T12:31:08.901Z",
     "how": "fetch"
   },
@@ -112,7 +112,7 @@
   },
   "bigmodel-coding-plan": {
     "hash": "a4f115041b7d73b69de2766a1bfb25a96251e945",
-    "lastChecked": "2026-09-30T06:58:07.473Z",
+    "lastChecked": "2026-09-30T14:00:59.689Z",
     "lastChanged": "2026-09-25T16:51:20.443Z",
     "how": "browser"
   },
@@ -130,7 +130,7 @@
   },
   "huawei-codearts-offers": {
     "hash": "7eccef4a69cee4b63be29713a10a91164e609e1b",
-    "lastChecked": "2026-09-29T07:08:15.197Z",
+    "lastChecked": "2026-09-30T14:01:01.975Z",
     "lastChanged": "2026-09-25T16:51:22.812Z",
     "how": "fetch"
   },

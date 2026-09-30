@@ -1,5 +1,15 @@
 [
   {
+    "time": "2026-09-30T14:02:21.753Z",
+    "source": "minimax-token-plan",
+    "product": "minimax-token-plan",
+    "url": "https://platform.minimaxi.com/subscribe/token-plan",
+    "kind": "page-update",
+    "how": "browser",
+    "pageTitle": "M Plan - MiniMax API 平台",
+    "excerpt": "M Plan - MiniMax API 平台 模型 语言模型 MiniMax M3 MiniMax M2.7 MiniMax M2.5 视频生成 MiniMax H3 语音&音乐 MiniMax Speech 2.8 MiniMax Music 3.0 产品 MiniMax Code MiniMax Design 语音 星野 API 订"
+  },
+  {
     "time": "2026-09-30T07:02:46.167Z",
     "source": "modelscope-home",
     "product": "modelscope",
