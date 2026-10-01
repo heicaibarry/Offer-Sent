@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-27",
+  "updatedAt": "2026-10-01",
   "policy": "只监控国内计费版本（人民币/国内支付）。中国团队但仅提供海外计费的产品标记为 market=intl，收录展示但不算国内优惠，不做监控。",
   "products": [
     {
@@ -944,7 +944,8 @@
       "summary": "通用任务执行 Agent，订阅积分制。中国团队出海产品，美元计费。",
       "plans": [],
       "promos": [],
-      "notes": "海外计费（美元），暂不算国内优惠、不做监控；若推出国内计费版将纳入监控。"
+      "notes": "海外计费（美元），暂不算国内优惠、不做监控；若推出国内计费版将纳入监控。",
+      "scope": "watch"
     },
     {
       "slug": "skywork",
@@ -961,7 +962,8 @@
       "summary": "昆仑万维旗下 Agent，文档/PPT/表格产出见长。skywork.ai 为海外计费版，国内对应产品为天工（tiangong.cn）。",
       "plans": [],
       "promos": [],
-      "notes": "海外计费（美元），暂不做监控；国内版天工如需监控可单独加条目。"
+      "notes": "海外计费（美元），暂不做监控；国内版天工如需监控可单独加条目。",
+      "scope": "watch"
     },
     {
       "slug": "flowith",
@@ -978,7 +980,8 @@
       "summary": "多线程画布式 AI Agent。海外计费。",
       "plans": [],
       "promos": [],
-      "notes": "海外计费（美元），暂不做监控。"
+      "notes": "海外计费（美元），暂不做监控。",
+      "scope": "watch"
     },
     {
       "slug": "lovart",
@@ -995,7 +998,8 @@
       "summary": "AI 设计 Agent，海报/品牌全流程。海外计费。",
       "plans": [],
       "promos": [],
-      "notes": "海外计费（美元），暂不做监控。"
+      "notes": "海外计费（美元），暂不做监控。",
+      "scope": "watch"
     },
     {
       "slug": "youware",
@@ -1012,7 +1016,8 @@
       "summary": "自然语言生成网站/应用的建站 Agent。海外计费。",
       "plans": [],
       "promos": [],
-      "notes": "海外计费（美元），暂不做监控。"
+      "notes": "海外计费（美元），暂不做监控。",
+      "scope": "watch"
     },
     {
       "slug": "siliconflow",
@@ -1055,6 +1060,374 @@
         }
       ],
       "notes": ""
+    },
+    {
+      "slug": "xiaomi-mimo",
+      "name": "Xiaomi MiMo Token Plan",
+      "vendor": "小米",
+      "category": "coding",
+      "type": "Coding Plan 订阅（Credits 计费）",
+      "status": "active",
+      "market": "cn",
+      "site": "https://platform.xiaomimimo.com",
+      "pricingUrl": "https://platform.xiaomimimo.com",
+      "priceStatus": "verified",
+      "verifiedAt": "2026-10-01",
+      "models": [
+        "MiMo-V2.6-Pro",
+        "MiMo-V2.6-Flash",
+        "MiMo-V2.5 系列",
+        "MiMo TTS 系列"
+      ],
+      "summary": "小米自研 MiMo 大模型的订阅套餐，以 Credit 统一计费，取消了行业常见的 5 小时 / 周限额，可集中消耗；支持 OpenClaw、Codex、MiMo Claw 等主流编程框架。",
+      "plans": [
+        {
+          "name": "Lite（轻量体验）",
+          "price": 39,
+          "unit": "元/月",
+          "quota": "492 亿 Credits/年（套餐年总量）",
+          "note": "年付 ¥411.84（88 折，立减 ¥56.16）"
+        },
+        {
+          "name": "Standard（日常办公）",
+          "price": 99,
+          "unit": "元/月",
+          "quota": "1,320 亿 Credits/年（2.7× Lite）",
+          "note": "年付 ¥1,045.44（立减 ¥142.56）"
+        },
+        {
+          "name": "Pro（专业开发）",
+          "price": 329,
+          "unit": "元/月",
+          "quota": "4,560 亿 Credits/年（9.3× Lite）",
+          "note": "年付 ¥3,474.24（立减 ¥473.76）"
+        },
+        {
+          "name": "Max（高强度开发）",
+          "price": 659,
+          "unit": "元/月",
+          "quota": "9,840 亿 Credits/年（20× Lite）",
+          "note": "年付 ¥6,959.04（立减 ¥948.96）"
+        }
+      ],
+      "promos": [
+        {
+          "title": "连续包年 88 折，最高立省 ¥948.96",
+          "detail": "Max 年付折算 ¥579.92/月（立减 ¥948.96）、Pro ¥289.52/月（立减 ¥473.76）、Standard ¥87.12/月（立减 ¥142.56）、Lite ¥34.32/月（立减 ¥56.16）。",
+          "endsAt": null,
+          "source": "https://platform.xiaomimimo.com",
+          "firstSeen": "2026-10-01"
+        },
+        {
+          "title": "夜间 0.8 倍 Credits 消耗（00:00–08:00）",
+          "detail": "非高峰时段（00:00–08:00，UTC+8）按 0.8 倍系数消耗 Credits，等于同等额度可用量增加约 25%。",
+          "window": "每日 00:00–08:00",
+          "endsAt": null,
+          "source": "https://platform.xiaomimimo.com",
+          "firstSeen": "2026-10-01"
+        },
+        {
+          "title": "TTS 系列模型限时免费",
+          "detail": "语音合成（TTS）系列模型限时免费使用。",
+          "endsAt": null,
+          "source": "https://platform.xiaomimimo.com",
+          "firstSeen": "2026-10-01"
+        },
+        {
+          "title": "邀请好友：首单返 10%，年费会员比例翻倍",
+          "detail": "邀请好友首单返 10%；邀请人为 Max / Standard 年费会员时所有比例再翻倍；注册双方各得 ¥10。",
+          "endsAt": null,
+          "source": "https://platform.xiaomimimo.com",
+          "firstSeen": "2026-10-01"
+        },
+        {
+          "title": "MiMo Claw 加购 ¥233.80/年",
+          "detail": "可加购 MiMo Claw（专属龙虾 · 金山办公 · 多任务并行），¥233.80/年。",
+          "endsAt": null,
+          "source": "https://platform.xiaomimimo.com",
+          "firstSeen": "2026-10-01"
+        }
+      ],
+      "notes": "额度以 Credits 计费，年付档标注为「套餐年总量」。团队版已上新（同价按席位）。官网为 platform.xiaomimimo.com，实际成交价以官网支付页为准。"
+    },
+    {
+      "slug": "bailian-token-plan",
+      "name": "百炼 Token Plan",
+      "vendor": "阿里云",
+      "category": "coding",
+      "type": "Token Plan 订阅（Credits 计费）",
+      "status": "active",
+      "market": "cn",
+      "site": "https://www.aliyun.com/product/bailian",
+      "pricingUrl": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "priceStatus": "verified",
+      "verifiedAt": "2026-10-01",
+      "models": [
+        "Qwen3.8-Max",
+        "Qwen3.8-Flash",
+        "Qwen3.7-Plus",
+        "Qwen3-Coder-Next"
+      ],
+      "summary": "阿里云百炼的订阅式 AI 编程用量包，以 Credits 统一抵扣模型调用与内置工具；适配 Claude Code、Cursor、Qwen Code、Qoder CN、OpenClaw 等主流工具，并提供个人版与团队版。",
+      "plans": [
+        {
+          "name": "Lite（个人版）",
+          "price": 39,
+          "unit": "元/月",
+          "quota": "11,500 Credits/月",
+          "note": "原价 ¥60/月，限时 ¥39/月"
+        },
+        {
+          "name": "Essential（个人版）",
+          "price": 79,
+          "unit": "元/月",
+          "quota": "25,500 Credits/月",
+          "note": "原价 ¥120/月"
+        },
+        {
+          "name": "Standard（个人版）",
+          "price": 139,
+          "unit": "元/月",
+          "quota": "45,000 Credits/月",
+          "note": "原价 ¥180/月；附赠 Harness 权益"
+        },
+        {
+          "name": "Pro（个人版）",
+          "price": 499,
+          "unit": "元/月",
+          "quota": "180,000 Credits/月",
+          "note": "原价 ¥600/月；附赠 Harness 权益"
+        },
+        {
+          "name": "标准坐席（团队版）",
+          "price": 150,
+          "unit": "元/坐席·月",
+          "quota": "25,000 Credits/坐席·月",
+          "note": "原价 ¥198/坐席·月"
+        },
+        {
+          "name": "高级坐席（团队版）",
+          "price": 550,
+          "unit": "元/坐席·月",
+          "quota": "100,000 Credits/坐席·月",
+          "note": "原价 ¥698/坐席·月"
+        },
+        {
+          "name": "尊享坐席（团队版）",
+          "price": 1398,
+          "unit": "元/坐席·月",
+          "quota": "250,000 Credits/坐席·月",
+          "note": "无折扣"
+        }
+      ],
+      "promos": [
+        {
+          "title": "个人版限时特惠：Lite ¥39 / Standard ¥139 / Pro ¥499",
+          "detail": "Lite 原价 ¥60→¥39、Essential ¥120→¥79、Standard ¥180→¥139、Pro ¥600→¥499（限时价）。",
+          "endsAt": null,
+          "source": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+          "firstSeen": "2026-10-01"
+        },
+        {
+          "title": "团队版坐席限时价：标准 ¥150 / 高级 ¥550",
+          "detail": "标准坐席 ¥198→¥150、高级坐席 ¥698→¥550；尊享坐席 ¥1,398/坐席·月不变。限时优惠适用于新购、续费、自动续费、加购与升级坐席。",
+          "endsAt": null,
+          "source": "https://help.aliyun.com/zh/model-studio/token-plan-team-overview",
+          "firstSeen": "2026-10-01"
+        },
+        {
+          "title": "夜间 22:00–08:00 部分模型 Credits 5 折",
+          "detail": "22:00–08:00（UTC+8）调用指定 Qwen 系列模型享 Credits 消耗 5 折（限时）。",
+          "window": "每日 22:00–次日 08:00",
+          "endsAt": null,
+          "source": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+          "firstSeen": "2026-10-01"
+        },
+        {
+          "title": "Standard / Pro 新增 12 类 Harness 权益，超量后付费 88 折",
+          "detail": "Standard 与 Pro 套餐新增 12 类 Harness 权益（AgentStudio 工具每月免费额度与后付费折扣，不占用 Credits）；额度超量后按后付费 88 折结算。",
+          "endsAt": null,
+          "source": "https://www.aliyun.com/product/bailian",
+          "firstSeen": "2026-10-01"
+        },
+        {
+          "title": "Wan3.0 后付费限时 7 折",
+          "detail": "Wan3.0 原生 30 秒视频生成模型，即日起至 10 月 31 日享受后付费限时 7 折优惠。",
+          "endsAt": "2026-10-31",
+          "timeHint": "即日起至 10 月 31 日",
+          "source": "https://www.aliyun.com/product/bailian",
+          "firstSeen": "2026-10-01"
+        },
+        {
+          "title": "新用户开通即享专属免费额度（最高千万 Tokens）",
+          "detail": "开通百炼服务的新用户享专属免费额度；「AI 共学共实践计划」活动入口标注开通即送千万 Tokens。",
+          "endsAt": null,
+          "source": "https://www.aliyun.com/product/bailian",
+          "firstSeen": "2026-10-01"
+        }
+      ],
+      "notes": "目前仅支持华北2（北京）地域。额度单位为 Credits。⚠️ 官方中英文文档对额度周期的口径不一致（中文帮助文档写「每月限额」，英文文档写 7-day quota），此处按中文文档录入，实际以控制台订阅页为准。"
+    },
+    {
+      "slug": "volcengine-ark",
+      "name": "方舟 Agent Plan（火山引擎）",
+      "vendor": "字节跳动（火山引擎）",
+      "category": "coding",
+      "type": "Agent / Coding Plan 订阅（燃料值计费）",
+      "status": "active",
+      "market": "cn",
+      "site": "https://www.volcengine.com/product/ark",
+      "pricingUrl": "https://www.volcengine.com/docs/82379/2525063",
+      "priceStatus": "verified",
+      "verifiedAt": "2026-10-01",
+      "models": [
+        "豆包 Doubao-Seed 系列",
+        "Kimi K3",
+        "GLM-5.2",
+        "MiniMax-M3",
+        "DeepSeek"
+      ],
+      "summary": "火山引擎方舟的订阅套餐，分 Coding Plan 与 Agent Plan 两条线，以「Agent 燃料值」计费；适配 Claude Code、Cursor、TRAE、OpenClaw 及自家方舟 CLI，覆盖多模态与联网搜索 Harness。",
+      "plans": [
+        {
+          "name": "Coding Plan Lite",
+          "price": 9.9,
+          "unit": "元/月",
+          "quota": "满足轻量化开发需求",
+          "note": "刊例价 ¥40/月，限时 2.5 折新客首单礼"
+        },
+        {
+          "name": "Coding Plan Pro",
+          "price": 49.9,
+          "unit": "元/月",
+          "quota": "5 倍 Lite 用量",
+          "note": "刊例价 ¥200/月，限时 2.5 折"
+        },
+        {
+          "name": "Agent Plan Small",
+          "price": 9.9,
+          "unit": "元/月",
+          "quota": "每月 20,000 Agent 燃料值",
+          "note": "刊例价 ¥40/月"
+        },
+        {
+          "name": "Agent Plan Medium",
+          "price": 49.9,
+          "unit": "元/月",
+          "quota": "5× Small 用量，支持 Kimi K3",
+          "note": "刊例价 ¥200/月"
+        },
+        {
+          "name": "Agent Plan Large",
+          "price": 500,
+          "unit": "元/月",
+          "quota": "12.5× Small 用量",
+          "note": "支持 Seedance 2.0 与 Kimi K3"
+        },
+        {
+          "name": "Agent Plan Max",
+          "price": 1000,
+          "unit": "元/月",
+          "quota": "25× Small 用量",
+          "note": "顶配旗舰额度"
+        }
+      ],
+      "promos": [
+        {
+          "title": "Agent Plan Small / Medium 首两月 2.5 折：¥9.9 起",
+          "detail": "Small 原价 ¥40 → ¥9.9/月、Medium 原价 ¥200 → ¥49.9/月；每个账号最多享受两个月，第三个月起恢复原价。新购、续费、升配共享同一优惠资格，名额有限先到先得。",
+          "endsAt": "2026-11-08",
+          "timeHint": "2026年6月8日至2026年11月8日",
+          "source": "https://www.volcengine.com/docs/82379/2525063",
+          "firstSeen": "2026-10-01"
+        },
+        {
+          "title": "注册即领 2,500 万 Tokens",
+          "detail": "官网活动：注册即可领取 2500 万 Tokens，用于体验行业热门 AI 产品。",
+          "endsAt": null,
+          "source": "https://www.volcengine.com/product/ark",
+          "firstSeen": "2026-10-01"
+        },
+        {
+          "title": "协作奖励计划二期：免费每日领单模型最高 500 万 Tokens",
+          "detail": "开发者专享福利，免费每日领取单模型最高 500 万 Tokens。",
+          "endsAt": null,
+          "source": "https://www.volcengine.com/product/ark",
+          "firstSeen": "2026-10-01"
+        },
+        {
+          "title": "新用户免费额度：豆包 Seed 系列每模型 50 万 Tokens",
+          "detail": "Doubao-Seed-2.1-pro / 2.1-turbo / Evolving 各 50 万 tokens；图像生成 50–200 张；语音合成 5,000 字符；语音识别 20 小时；联网资源 2 万次/月。",
+          "endsAt": null,
+          "source": "https://www.volcengine.com/product/ark",
+          "firstSeen": "2026-10-01"
+        }
+      ],
+      "notes": "方舟同时提供 Coding Plan（面向编程）与 Agent Plan（面向通用 Agent），两者档位价不同但首购折扣一致。方舟 CLI 已上线，支持 Claude Code / Cursor / TRAE 接入。官网另有「爆品抢购」页列出同一批首购价，以支付页为准。"
+    },
+    {
+      "slug": "xingchen-coding",
+      "name": "讯飞星辰 Coding Plan",
+      "vendor": "科大讯飞",
+      "category": "coding",
+      "type": "Coding Plan 订阅（请求次数计费）",
+      "status": "active",
+      "market": "cn",
+      "site": "https://maas.xfyun.cn",
+      "pricingUrl": "https://xfyun.cn/doc/spark/CodingPlan.html",
+      "priceStatus": "verified",
+      "verifiedAt": "2026-10-01",
+      "models": [
+        "Spark X2 Agent",
+        "Spark X2",
+        "GLM-5.2",
+        "DeepSeek-V4-Pro",
+        "Kimi-K2.7-Code",
+        "MiniMax-M2.5",
+        "Qwen3.6"
+      ],
+      "summary": "讯飞星辰 MaaS 平台的按月 / 按季 AI 编码订阅，整合星火与 GLM、Kimi、MiniMax、DeepSeek、Qwen 等第三方模型，按请求次数做 5 小时 + 周 + 订阅月三重流控，兼容 OpenClaw、Cursor、Claude Code 等工具。",
+      "plans": [
+        {
+          "name": "高效版（按月）",
+          "price": 199,
+          "unit": "元/月",
+          "quota": "5 小时约 6,000 次 / 周约 45,000 次 / 订阅月约 90,000 次",
+          "note": "按季 ¥538（日常折扣 9 折）"
+        },
+        {
+          "name": "速通版（按月）",
+          "price": 999,
+          "unit": "元/月",
+          "quota": "每订阅月最多约 30,000 次（高峰优先响应）",
+          "note": "限时首月优惠 ¥699/月；按季 ¥2,997，限时 ¥2,697/季"
+        }
+      ],
+      "promos": [
+        {
+          "title": "速通版限时首月优惠 ¥699（原价 ¥999/月）",
+          "detail": "速通版按月订购限时首月 ¥699/月；按季订购 ¥2,997/季，限时 ¥2,697/季。适用于高峰排队、响应超时报错等场景。",
+          "endsAt": null,
+          "source": "https://xfyun.cn/doc/spark/CodingPlan.html",
+          "firstSeen": "2026-10-01"
+        },
+        {
+          "title": "波谷系数 0.8：夜间 / 周末 / 节假日额度多送约 25%",
+          "detail": "高峰时段（工作日 08:00–22:00）系数 1.0；波谷时段（22:00–次日 08:00、周末全天、法定节假日全天）系数 0.8，折算后同等额度可用次数增加约 25%（例：5 小时 6,000 次 → 折合 7,500 次）。",
+          "window": "每日 22:00–次日 08:00 + 周末/节假日全天",
+          "endsAt": null,
+          "source": "https://xfyun.cn/doc/spark/CodingPlan.html",
+          "firstSeen": "2026-10-01"
+        },
+        {
+          "title": "按季订购折扣：高效版 9 折",
+          "detail": "高效版按季 ¥538（日常折扣 9 折）；速通版按季 ¥2,997。",
+          "endsAt": null,
+          "source": "https://xfyun.cn/doc/spark/CodingPlan.html",
+          "firstSeen": "2026-10-01"
+        }
+      ],
+      "notes": "⚠️ 官网文档明确标注：无忧版（¥19/月）与专业版（¥39/月）**已下线**，当前在售仅高效版 ¥199/月与速通版 ¥999/月。第三方汇总站仍在流传 ¥19 / ¥39 的旧价，勿采信。模型按抵扣系数计费（GLM-5.2 系数 5、DeepSeek-V4-Pro 系数 5、Spark X2 系数 2 等）。好友邀请活动已于 2026-07-02 下线。"
     }
   ]
 }

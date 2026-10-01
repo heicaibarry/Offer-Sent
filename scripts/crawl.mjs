@@ -88,8 +88,37 @@ const READER_BASE = (process.env.READER_BASE || "https://r.jina.ai/").replace(/\
 // 单轮自动收录的总上限，防止某次大面积改版把 LLM 输出全量灌进数据
 const MAX_AUTO_PER_RUN = Number(process.env.MAX_AUTO_PER_RUN || 10);
 
+// ===== 抓取健康度自检 =====
+// 背景：SPA 定价页在 playwright 不可用时降级成 fetch，只能拿到空壳/骨架，
+// 此后指纹恒定、再也不会报「有变化」——表面「核对成功」，实际已经瞎了。
+// 判据：连续 STUCK_ALERT 轮指纹不变，且正文短于 DEGRADED_MAX_CHARS
+// （正常定价页通常几千字，200~800 字基本就是骨架页），判定为疑似降级。
+const STUCK_ALERT = Number(process.env.STUCK_ALERT || 6);
+const DEGRADED_MAX_CHARS = Number(process.env.DEGRADED_MAX_CHARS || 800);
+
 const productName = (id) => PRODUCTS.find((p) => p.slug === id)?.name || id;
 const sha1 = (s) => crypto.createHash("sha1").update(s).digest("hex");
+
+/* ------------------------------------------------------------------ *
+ * 活动区块指纹（与整页指纹解耦）
+ *
+ * 为什么需要单独一份：页面变更「记不记一条 changes」是有节流的 ——
+ * 「差异与已记录的一致」和「差异片段过短」两种情况都会被跳过（防轮播图、
+ * 访问计数器刷屏）。但这两道节流会连带把「活动区真的换了」一起挡掉，
+ * 结果就是：页面变了、活动变了，却永远不触发 LLM 收录。
+ * 实测 9-28~9-30 的 workbuddy / modelscope / minimax 就是这么被吞掉的。
+ *
+ * 解耦方式：只看「像优惠」的句子算一份独立指纹，它变了就必须提取，
+ * 与整页那段噪声差异记不记录无关。
+ * ------------------------------------------------------------------ */
+const DEAL_LINE = /[¥￥]|\d\s*折|限时|免费|赠送|首月|立省|优惠|活动|领取|签到|返现|加赠|翻倍|额度/;
+function dealFingerprint(fullText) {
+  const sentences = String(fullText)
+    .split(/[。；;！!？?\n]/)
+    .map((s) => s.trim())
+    .filter((s) => s.length >= 4 && DEAL_LINE.test(s));
+  return sha1(sentences.join("|").slice(0, 30000));
+}
 const nowISO = () => new Date().toISOString();
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -209,16 +238,22 @@ async function upgradeIfEmpty(res, url, fetchTried, minText) {
 }
 
 async function notify(list) {
-  const lines = list
+  const health = list.filter((c) => c.kind === "health");
+  const updates = list.filter((c) => c.kind !== "health");
+  const lines = updates
     .slice(0, 10)
     .map(
       (c) =>
         `**${productName(c.product)}** 官网页面有更新\n${c.pageTitle ? `> ${c.pageTitle}\n` : ""}${c.url}`
     );
+  const healthLines = health
+    .slice(0, 5)
+    .map((c) => `⚠️ **${productName(c.product)}** ${c.pageTitle}\n${c.excerpt}`);
   const content =
-    `🔔 Agent优惠雷达：发现 ${list.length} 处官方页面更新\n\n` +
-    lines.join("\n\n") +
-    `\n\n请打开网站核对具体优惠变化。`;
+    `🔔 Agent优惠雷达：发现 ${updates.length} 处页面更新` +
+    `${health.length ? ` / ${health.length} 个抓取告警` : ""}\n\n` +
+    (healthLines.length ? `【抓取健康告警】\n${healthLines.join("\n")}\n\n` : "") +
+    (lines.length ? lines.join("\n\n") + `\n\n请打开网站核对具体优惠变化。` : "");
 
   const webhook = process.env.WECHAT_WEBHOOK;
   const token = process.env.PUSHPLUS_TOKEN;
@@ -406,6 +441,9 @@ async function main() {
   let added = [];
   let checked = 0;
   let failed = 0;
+  let autoAdded = 0;   // 本轮 LLM 自动收录的条数
+  let autoRemoved = 0; // 本轮自动移除的失效条数
+  const degraded = []; // 疑似抓取降级的源
   const toExtract = []; // 本轮有变化的页面，供 LLM 自动收录
 
   if (BACKFILL_LIST) {
@@ -446,8 +484,11 @@ async function main() {
     res = await upgradeIfEmpty(res, s.url, s.renderer !== "browser", minText);
     checked++;
 
-    const text = extractText(res.html).slice(0, 40000);
+    const fullText = extractText(res.html);
+    const text = fullText.slice(0, 40000);
     const hash = sha1(text);
+    // 活动指纹用未截断的全文：正文超 4 万字时活动区可能落在截断线之外
+    const dealHash = dealFingerprint(fullText);
     const prev = state[s.id];
 
     if (text.length < minText) {
@@ -462,41 +503,62 @@ async function main() {
     }
 
     if (BASELINE) {
-      state[s.id] = { hash, lastChecked: nowISO(), lastChanged: prev?.lastChanged || nowISO(), how: res.how };
+      state[s.id] = { hash, chars: fullText.length, dealHash, stuck: 0, lastChecked: nowISO(), lastChanged: prev?.lastChanged || nowISO(), how: res.how };
       saveSnap(s.id, text);
-      console.log(`• ${s.id} 基线已刷新 (${res.how})`);
+      console.log(`• ${s.id} 基线已刷新 (${res.how}, ${fullText.length} 字符)`);
     } else if (!prev?.hash) {
-      state[s.id] = { hash, lastChecked: nowISO(), lastChanged: nowISO(), how: res.how };
+      state[s.id] = { hash, chars: fullText.length, dealHash, stuck: 0, lastChecked: nowISO(), lastChanged: nowISO(), how: res.how };
       saveSnap(s.id, text);
-      console.log(`• ${s.id} 首次记录基线 (${res.how})`);
+      console.log(`• ${s.id} 首次记录基线 (${res.how}, ${fullText.length} 字符)`);
     } else if (prev.hash !== hash) {
       const excerpt = firstDiffRegion(loadSnap(s.id), text);
       // 同源的同一处差异只记一次：轮播图、访问计数器这类反复抖动的页面不再刷屏。
       // 无论记不记，都要更新基线与快照，否则下一轮还会拿同一处差异重复比对。
       const duplicate = changes.some((c) => c.source === s.id && c.excerpt === excerpt);
-      if (!duplicate && excerpt.length >= MIN_EXCERPT) {
-        added.push({
-          time: nowISO(),
-          source: s.id,
-          product: s.product,
-          url: s.url,
-          kind: "page-update",
-          how: res.how,
-          pageTitle: pageTitle(res.html),
-          excerpt,
-        });
+      const record = !duplicate && excerpt.length >= MIN_EXCERPT;
+      // 关键解耦：要不要「记一条变更」和要不要「跑 LLM 收录」分开判断。
+      // 只要活动指纹变了，哪怕整页差异因为重复/过短没被记下来，也照样提取。
+      const dealChanged = Boolean(prev.dealHash) && prev.dealHash !== dealHash;
+      if (record || dealChanged) {
+        if (record) {
+          added.push({
+            time: nowISO(),
+            source: s.id,
+            product: s.product,
+            url: s.url,
+            kind: "page-update",
+            how: res.how,
+            pageTitle: pageTitle(res.html),
+            excerpt,
+          });
+          console.log(`⚡ ${s.id} 页面有更新！${excerpt ? `片段: ${excerpt.slice(0, 80)}…` : ""}`);
+        } else {
+          console.log(`⚡ ${s.id} 活动区有更新（整页差异重复/过短，只触发收录不单独记变更）`);
+        }
         toExtract.push({ id: s.id, product: s.product, url: s.url, text });
-        console.log(`⚡ ${s.id} 页面有更新！${excerpt ? `片段: ${excerpt.slice(0, 80)}…` : ""}`);
       } else {
         duplicate
           ? console.log(`·  ${s.id} 页面有更新，但差异与已记录的相同，跳过重复记录`)
           : console.log(`·  ${s.id} 页面有更新，但差异片段过短（${excerpt.length} 字符），跳过记录`);
       }
-      state[s.id] = { hash, lastChecked: nowISO(), lastChanged: nowISO(), how: res.how };
+      state[s.id] = { hash, chars: fullText.length, dealHash, stuck: 0, lastChecked: nowISO(), lastChanged: nowISO(), how: res.how };
       saveSnap(s.id, text);
     } else {
-      state[s.id] = { ...prev, lastChecked: nowISO(), how: res.how, lastError: undefined };
-      console.log(`✓ ${s.id} 无变化`);
+      // 连续多少轮指纹一模一样？SPA 降级成 fetch 时就是这种「永远不变」的形态
+      const stuck = (prev.stuck || 0) + 1;
+      // 正文截断部分之外的尾部活动区仍可能有变（hash 只覆盖前 4 万字）
+      const dealChanged = Boolean(prev.dealHash) && prev.dealHash !== dealHash;
+      if (dealChanged) {
+        toExtract.push({ id: s.id, product: s.product, url: s.url, text });
+        console.log(`⚡ ${s.id} 活动区有更新（页面主体指纹未变）`);
+      }
+      state[s.id] = { ...prev, chars: fullText.length, dealHash, stuck, lastChecked: nowISO(), how: res.how, lastError: undefined };
+      if (stuck === STUCK_ALERT && fullText.length <= DEGRADED_MAX_CHARS) {
+        degraded.push({ id: s.id, product: s.product, chars: fullText.length, how: res.how });
+        console.log(`⚠️  ${s.id} 连续 ${stuck} 轮无变化且正文仅 ${fullText.length} 字符，疑似抓取降级`);
+      } else {
+        console.log(`✓ ${s.id} 无变化${stuck > 1 ? `（连续 ${stuck} 轮）` : ""}`);
+      }
     }
 
     // 对官方站点保持礼貌的请求间隔
@@ -511,8 +573,6 @@ async function main() {
       console.log(`\n===== 自动收录：${toExtract.length} 个页面有变化，LLM 提取中 =====`);
       const meta = readProducts(DATA);
       const todayISO = nowISO().slice(0, 10);
-      let autoAdded = 0;
-      let autoRemoved = 0;
       for (const t of toExtract) {
         if (autoAdded >= MAX_AUTO_PER_RUN) {
           console.log(`· 已达单轮自动收录上限 ${MAX_AUTO_PER_RUN} 条，剩余页面跳过`);
@@ -578,6 +638,40 @@ async function main() {
     }
   }
 
+  // ===== 抓取健康告警 =====
+  // 疑似降级的源单独成条并推送，避免「看起来每天在跑、其实早就瞎了」这种静默失效
+  for (const d of degraded) {
+    added.push({
+      time: nowISO(),
+      source: d.id,
+      product: d.product,
+      url: "",
+      kind: "health",
+      how: d.how,
+      pageTitle: `抓取疑似降级：连续 ${STUCK_ALERT} 轮无变化`,
+      excerpt: `正文仅 ${d.chars} 字符（疑似已降级为 fetch，拿不到渲染后的活动区）；请检查该源 renderer 或 CRAWL_PROXY_URL 代理配置`,
+    });
+  }
+
+  // ===== 每轮健康报告：把云端黑盒变成可审计的数据 =====
+  // 以前「GLM_API_KEY 到底配了没 / LLM 到底收录了几条」只能去翻 Actions 日志，
+  // 本地完全看不到；现在每轮往 changes.json 写一条 crawl-report，打开数据即可核对。
+  if (!BASELINE && !BACKFILL_LIST) {
+    changes.unshift({
+      time: nowISO(),
+      source: "-",
+      product: "-",
+      url: "",
+      kind: "crawl-report",
+      how: "-",
+      pageTitle: `核对 ${checked} 源 · 失败 ${failed} · LLM ${hasLLM() ? "已配置" : "未配置"}`,
+      excerpt:
+        `页面变更 ${added.filter((a) => a.kind === "page-update").length} 处 · ` +
+        `触发提取 ${toExtract.length} 页 · 自动收录 ${autoAdded} 条 · 移除 ${autoRemoved} 条 · ` +
+        `降级告警 ${degraded.length} 个（${degraded.map((d) => d.id).join(",") || "无"}）`,
+    });
+  }
+
   if (added.length) {
     changes.unshift(...added);
     changes.length = Math.min(changes.length, 300);
@@ -585,7 +679,7 @@ async function main() {
   fs.writeFileSync(CHANGES_FILE, JSON.stringify(changes, null, 2) + "\n");
   fs.writeFileSync(STATE_FILE, JSON.stringify(state, null, 2) + "\n");
 
-  console.log(`\n完成：核对 ${checked} 个源，失败 ${failed}，新增变更 ${added.length}`);
+  console.log(`\n完成：核对 ${checked} 个源，失败 ${failed}，新增变更 ${added.length}，疑似降级 ${degraded.length}`);
   if (added.length && !BASELINE) await notify(added);
 }
 

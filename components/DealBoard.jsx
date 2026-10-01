@@ -8,6 +8,7 @@ import {
   CATEGORIES,
   CATEGORY_LABEL,
   PRICE_STATUS,
+  TIME_LABEL,
   daysLeft,
   endLabel,
   fmtDate,
@@ -19,11 +20,15 @@ import {
   money,
   promoValue,
   splitPromos,
+  timeState,
 } from "../lib/util";
 
 export default function DealBoard({ products, nowMs }) {
   const [cat, setCat] = useState("all");
   const [q, setQ] = useState("");
+  // 排序视角：默认按价格比价，也可切到「即将截止」——雷达站最该有的视角，
+  // 否则用户根本没机会知道哪个活动马上就要结束
+  const [sortMode, setSortMode] = useState("price");
 
   // —— 过期判定用的参照时刻 ——
   // 首屏沿用服务端（构建时）递下来的时间戳，输出与静态 HTML 完全一致，不会 hydration mismatch；
@@ -60,21 +65,46 @@ export default function DealBoard({ products, nowMs }) {
   const buckets = useMemo(() => groupDeals(products, now), [products, now]);
   const cardCount = buckets.save.length + buckets.free.length + buckets.perk.length;
 
-  // 表格按「免费档在前 → 价格升序」排列，便于横向比价
+  // 产品名下「最近的截止日」还有几天（没有进行中活动 / 活动都不带截止日 → null）
+  const soonestDays = (p) => {
+    const live = splitPromos(p.promos, now).active;
+    let best = null;
+    for (const pr of live) {
+      const d = daysLeft(pr, now);
+      if (d != null && (best == null || d < best)) best = d;
+    }
+    return best;
+  };
+
+  // 表格排序：默认「免费档在前 → 价格升序」便于横向比价；也可切成「即将截止」
   const sorted = useMemo(() => {
-    const rank = (p) => {
+    // 仅收录的产品（海外计费、不参与监控）永远排最后，不干扰国内比价
+    const scopeRank = (p) => (p.scope === "watch" ? 1 : 0);
+    const priceRank = (p) => {
       const mp = minPlanPrice(p);
       if (mp === 0) return 0;
       if (mp != null) return 1;
       return 2;
     };
     return [...filtered].sort((a, b) => {
-      const ra = rank(a);
-      const rb = rank(b);
+      const sa = scopeRank(a);
+      const sb = scopeRank(b);
+      if (sa !== sb) return sa - sb;
+      if (sortMode === "deadline") {
+        const da = soonestDays(a);
+        const db = soonestDays(b);
+        // 有截止日的排前面且越近越前；没有截止时间的一律沉底（不是「长期」，是「不知道」）
+        if (da == null && db == null) return 0;
+        if (da == null) return 1;
+        if (db == null) return -1;
+        return da - db;
+      }
+      const ra = priceRank(a);
+      const rb = priceRank(b);
       if (ra !== rb) return ra - rb;
       return (minPlanPrice(a) ?? 0) - (minPlanPrice(b) ?? 0);
     });
-  }, [filtered]);
+  }, [filtered, sortMode, now]);
 
   return (
     <>
@@ -149,6 +179,8 @@ export default function DealBoard({ products, nowMs }) {
                             const v = promoValue(promo);
                             const redundant = v && promo.title?.includes(v.text);
                             const dl = daysLeft(promo, now);
+                            const ts = timeState(promo);
+                            const tl = TIME_LABEL[ts];
                             return (
                               <li className="pl" key={`${p.slug}-${i}`}>
                                 <div className="pl-head">
@@ -161,13 +193,19 @@ export default function DealBoard({ products, nowMs }) {
                                 </div>
                                 {promo.detail ? <div className="pl-d">{promo.detail}</div> : null}
                                 <div className="pl-meta">
-                                  {promo.window ? (
-                                    <PromoWindow window={promo.window} />
-                                  ) : dl != null ? (
+                                  {/* 截止日和时间窗口是两件事：以前有 window 就把截止日挡掉了，
+                                      而两条都没有时什么都不显示 —— 等于默认「长期有效」。
+                                      现在两者都显示，拿不到日期就明确标出来，别让用户自己猜。 */}
+                                  {dl != null ? (
                                     <span className={`badge ${dl <= 7 ? "b-red" : "b-gray"}`}>
                                       {endLabel(promo, now)}
                                     </span>
-                                  ) : null}
+                                  ) : (
+                                    <span className="badge b-gray" title={tl.title}>
+                                      {tl.text}
+                                    </span>
+                                  )}
+                                  {promo.window ? <PromoWindow window={promo.window} /> : null}
                                   <span>收录 {fmtDate(promo.firstSeen)}</span>
                                   {promo.source ? (
                                     <a href={promo.source} target="_blank" rel="noreferrer">
@@ -210,6 +248,20 @@ export default function DealBoard({ products, nowMs }) {
               </button>
             ))}
           </div>
+          <div className="tabs sort-tabs" title="切换排序视角">
+            <button
+              className={`tab ${sortMode === "price" ? "active" : ""}`}
+              onClick={() => setSortMode("price")}
+            >
+              按价格
+            </button>
+            <button
+              className={`tab ${sortMode === "deadline" ? "active" : ""}`}
+              onClick={() => setSortMode("deadline")}
+            >
+              按截止
+            </button>
+          </div>
           <input
             className="search"
             placeholder="搜索产品 / 厂商…"
@@ -237,6 +289,7 @@ export default function DealBoard({ products, nowMs }) {
                 const mp = minPlanPrice(p);
                 const intro = introPrice(p);
                 const liveCount = splitPromos(p.promos, now).active.length;
+                const sd = soonestDays(p);
                 return (
                   <tr key={p.slug} className={closed ? "dim" : ""}>
                     <td className="cell-prod">
@@ -250,6 +303,11 @@ export default function DealBoard({ products, nowMs }) {
                           </span>
                         )}
                         {p.market === "intl" ? <span className="badge b-amber">海外计费</span> : null}
+                        {p.scope === "watch" ? (
+                          <span className="badge b-gray" title="仅收录展示，不监控其价格与活动">
+                            仅收录
+                          </span>
+                        ) : null}
                       </div>
                       <div className="sub">
                         {p.vendor} · {p.type}
@@ -278,7 +336,17 @@ export default function DealBoard({ products, nowMs }) {
                     <td className="cell-quota">{freeQuota(p)}</td>
                     <td className="nowrap">
                       {liveCount > 0 ? (
-                        <span className="badge b-red">{liveCount} 条</span>
+                        <>
+                          <span className="badge b-red">{liveCount} 条</span>
+                          {sd != null ? (
+                            <div
+                              className="sub"
+                              style={sd <= 7 ? { color: "#d9480f", fontWeight: 600 } : undefined}
+                            >
+                              最近 {sd} 天后截止
+                            </div>
+                          ) : null}
+                        </>
                       ) : (
                         <span className="dash">—</span>
                       )}

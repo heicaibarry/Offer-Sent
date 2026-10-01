@@ -3,7 +3,378 @@
 <title>国内 Agent 优惠雷达</title>
 <link>https://example.github.io/agent-deals</link>
 <description>国内主流 AI Agent / Coding Plan / Token Plan 优惠活动汇总</description>
-<lastBuildDate>Thu, 17 Sep 2026 03:02:35 GMT</lastBuildDate>
+<lastBuildDate>Thu, 01 Oct 2026 03:56:53 GMT</lastBuildDate>
+<item>
+<title>讯飞星辰 Coding Plan：按季订购折扣：高效版 9 折</title>
+<link>https://example.github.io/agent-deals/product/xingchen-coding/</link>
+<description>高效版按季 ¥538（日常折扣 9 折）；速通版按季 ¥2,997。</description>
+<pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/xingchen-coding/#2026-10-01</guid>
+</item>
+<item>
+<title>讯飞星辰 Coding Plan：波谷系数 0.8：夜间 / 周末 / 节假日额度多送约 25%</title>
+<link>https://example.github.io/agent-deals/product/xingchen-coding/</link>
+<description>高峰时段（工作日 08:00–22:00）系数 1.0；波谷时段（22:00–次日 08:00、周末全天、法定节假日全天）系数 0.8，折算后同等额度可用次数增加约 25%（例：5 小时 6,000 次 → 折合 7,500 次）。</description>
+<pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/xingchen-coding/#2026-10-01</guid>
+</item>
+<item>
+<title>讯飞星辰 Coding Plan：速通版限时首月优惠 ¥699（原价 ¥999/月）</title>
+<link>https://example.github.io/agent-deals/product/xingchen-coding/</link>
+<description>速通版按月订购限时首月 ¥699/月；按季订购 ¥2,997/季，限时 ¥2,697/季。适用于高峰排队、响应超时报错等场景。</description>
+<pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/xingchen-coding/#2026-10-01</guid>
+</item>
+<item>
+<title>方舟 Agent Plan（火山引擎）：新用户免费额度：豆包 Seed 系列每模型 50 万 Tokens</title>
+<link>https://example.github.io/agent-deals/product/volcengine-ark/</link>
+<description>Doubao-Seed-2.1-pro / 2.1-turbo / Evolving 各 50 万 tokens；图像生成 50–200 张；语音合成 5,000 字符；语音识别 20 小时；联网资源 2 万次/月。</description>
+<pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/volcengine-ark/#2026-10-01</guid>
+</item>
+<item>
+<title>方舟 Agent Plan（火山引擎）：协作奖励计划二期：免费每日领单模型最高 500 万 Tokens</title>
+<link>https://example.github.io/agent-deals/product/volcengine-ark/</link>
+<description>开发者专享福利，免费每日领取单模型最高 500 万 Tokens。</description>
+<pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/volcengine-ark/#2026-10-01</guid>
+</item>
+<item>
+<title>方舟 Agent Plan（火山引擎）：注册即领 2,500 万 Tokens</title>
+<link>https://example.github.io/agent-deals/product/volcengine-ark/</link>
+<description>官网活动：注册即可领取 2500 万 Tokens，用于体验行业热门 AI 产品。</description>
+<pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/volcengine-ark/#2026-10-01</guid>
+</item>
+<item>
+<title>方舟 Agent Plan（火山引擎）：Agent Plan Small / Medium 首两月 2.5 折：¥9.9 起</title>
+<link>https://example.github.io/agent-deals/product/volcengine-ark/</link>
+<description>Small 原价 ¥40 → ¥9.9/月、Medium 原价 ¥200 → ¥49.9/月；每个账号最多享受两个月，第三个月起恢复原价。新购、续费、升配共享同一优惠资格，名额有限先到先得。</description>
+<pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/volcengine-ark/#2026-10-01</guid>
+</item>
+<item>
+<title>百炼 Token Plan：新用户开通即享专属免费额度（最高千万 Tokens）</title>
+<link>https://example.github.io/agent-deals/product/bailian-token-plan/</link>
+<description>开通百炼服务的新用户享专属免费额度；「AI 共学共实践计划」活动入口标注开通即送千万 Tokens。</description>
+<pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/bailian-token-plan/#2026-10-01</guid>
+</item>
+<item>
+<title>百炼 Token Plan：Wan3.0 后付费限时 7 折</title>
+<link>https://example.github.io/agent-deals/product/bailian-token-plan/</link>
+<description>Wan3.0 原生 30 秒视频生成模型，即日起至 10 月 31 日享受后付费限时 7 折优惠。</description>
+<pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/bailian-token-plan/#2026-10-01</guid>
+</item>
+<item>
+<title>百炼 Token Plan：Standard / Pro 新增 12 类 Harness 权益，超量后付费 88 折</title>
+<link>https://example.github.io/agent-deals/product/bailian-token-plan/</link>
+<description>Standard 与 Pro 套餐新增 12 类 Harness 权益（AgentStudio 工具每月免费额度与后付费折扣，不占用 Credits）；额度超量后按后付费 88 折结算。</description>
+<pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/bailian-token-plan/#2026-10-01</guid>
+</item>
+<item>
+<title>百炼 Token Plan：夜间 22:00–08:00 部分模型 Credits 5 折</title>
+<link>https://example.github.io/agent-deals/product/bailian-token-plan/</link>
+<description>22:00–08:00（UTC+8）调用指定 Qwen 系列模型享 Credits 消耗 5 折（限时）。</description>
+<pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/bailian-token-plan/#2026-10-01</guid>
+</item>
+<item>
+<title>百炼 Token Plan：团队版坐席限时价：标准 ¥150 / 高级 ¥550</title>
+<link>https://example.github.io/agent-deals/product/bailian-token-plan/</link>
+<description>标准坐席 ¥198→¥150、高级坐席 ¥698→¥550；尊享坐席 ¥1,398/坐席·月不变。限时优惠适用于新购、续费、自动续费、加购与升级坐席。</description>
+<pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/bailian-token-plan/#2026-10-01</guid>
+</item>
+<item>
+<title>百炼 Token Plan：个人版限时特惠：Lite ¥39 / Standard ¥139 / Pro ¥499</title>
+<link>https://example.github.io/agent-deals/product/bailian-token-plan/</link>
+<description>Lite 原价 ¥60→¥39、Essential ¥120→¥79、Standard ¥180→¥139、Pro ¥600→¥499（限时价）。</description>
+<pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/bailian-token-plan/#2026-10-01</guid>
+</item>
+<item>
+<title>Xiaomi MiMo Token Plan：MiMo Claw 加购 ¥233.80/年</title>
+<link>https://example.github.io/agent-deals/product/xiaomi-mimo/</link>
+<description>可加购 MiMo Claw（专属龙虾 · 金山办公 · 多任务并行），¥233.80/年。</description>
+<pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/xiaomi-mimo/#2026-10-01</guid>
+</item>
+<item>
+<title>Xiaomi MiMo Token Plan：邀请好友：首单返 10%，年费会员比例翻倍</title>
+<link>https://example.github.io/agent-deals/product/xiaomi-mimo/</link>
+<description>邀请好友首单返 10%；邀请人为 Max / Standard 年费会员时所有比例再翻倍；注册双方各得 ¥10。</description>
+<pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/xiaomi-mimo/#2026-10-01</guid>
+</item>
+<item>
+<title>Xiaomi MiMo Token Plan：TTS 系列模型限时免费</title>
+<link>https://example.github.io/agent-deals/product/xiaomi-mimo/</link>
+<description>语音合成（TTS）系列模型限时免费使用。</description>
+<pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/xiaomi-mimo/#2026-10-01</guid>
+</item>
+<item>
+<title>Xiaomi MiMo Token Plan：夜间 0.8 倍 Credits 消耗（00:00–08:00）</title>
+<link>https://example.github.io/agent-deals/product/xiaomi-mimo/</link>
+<description>非高峰时段（00:00–08:00，UTC+8）按 0.8 倍系数消耗 Credits，等于同等额度可用量增加约 25%。</description>
+<pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/xiaomi-mimo/#2026-10-01</guid>
+</item>
+<item>
+<title>Xiaomi MiMo Token Plan：连续包年 88 折，最高立省 ¥948.96</title>
+<link>https://example.github.io/agent-deals/product/xiaomi-mimo/</link>
+<description>Max 年付折算 ¥579.92/月（立减 ¥948.96）、Pro ¥289.52/月（立减 ¥473.76）、Standard ¥87.12/月（立减 ¥142.56）、Lite ¥34.32/月（立减 ¥56.16）。</description>
+<pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/xiaomi-mimo/#2026-10-01</guid>
+</item>
+<item>
+<title>[页面变更] MiniMax Token Plan</title>
+<link>https://platform.minimaxi.com/subscribe/token-plan</link>
+<description>M Plan - MiniMax API 平台 模型 语言模型 MiniMax M3 MiniMax M2.7 MiniMax M2.5 视频生成 MiniMax H3 语音&amp;音乐 MiniMax Speech 2.8 MiniMax Music 3.0 产品 MiniMax Code MiniMax Design 语音 星野 API 订</description>
+<pubDate>Wed, 30 Sep 2026 14:02:21 GMT</pubDate>
+<guid>https://platform.minimaxi.com/subscribe/token-plan#2026-09-30T14:02:21.753Z</guid>
+</item>
+<item>
+<title>[页面变更] 魔搭 ModelScope</title>
+<link>https://modelscope.cn</link>
+<description>首页 · 魔搭社区 首页 模型库 数据集 创空间 开发者实践 文档 社区 智能工坊 实验场 AIGC 专区 热门搜索 Qwen-Image-2.1 minimax H3 Qwen3.8 Qwen Qwen3.8-27B krea2 deepseek IndexTTS2 api jev 登录 / 注册 共享 · 共创 · 共进，构建持续创新</description>
+<pubDate>Wed, 30 Sep 2026 07:02:46 GMT</pubDate>
+<guid>https://modelscope.cn#2026-09-30T07:02:46.167Z</guid>
+</item>
+<item>
+<title>[页面变更] MiniMax Token Plan</title>
+<link>https://platform.minimaxi.com/subscribe/token-plan</link>
+<description>Token Plan - MiniMax API 平台 文档 定价 控制台 登录 API 价格 订阅套餐 M Plan 即将推出 M Plan 承接并拓展 Token Plan 的订阅能力， 套餐订阅价格与文本使用额度保持不变，部分档位可以使用MiniMax H3 。并且Token Plan 将停止新购，已订阅且开启自动续费的用户的现有套</description>
+<pubDate>Tue, 29 Sep 2026 14:13:48 GMT</pubDate>
+<guid>https://platform.minimaxi.com/subscribe/token-plan#2026-09-29T14:13:48.396Z</guid>
+</item>
+<item>
+<title>[页面变更] 魔搭 ModelScope</title>
+<link>https://modelscope.cn</link>
+<description>首页 · 魔搭社区 首页 模型库 数据集 创空间 开发者实践 文档 社区 智能工坊 实验场 AIGC 专区 热门搜索 Qwen-Image-2.1 minimax H3 Qwen3.8 qwen krea2 IndexTTS2 Qwen3.8-27B DeepSeek Api tts 登录 / 注册 共享 · 共创 · 共进，构建持续创新</description>
+<pubDate>Mon, 28 Sep 2026 15:45:34 GMT</pubDate>
+<guid>https://modelscope.cn#2026-09-28T15:45:34.678Z</guid>
+</item>
+<item>
+<title>[页面变更] WorkBuddy</title>
+<link>https://www.workbuddy.cn/pricing</link>
+<description>WorkBuddy 定价 - AI Agent 办公新范式 首 页 定 价 文 档 产品与使用 产品介绍 实践案例 常见问题 合作 硬件专区 洞察 WorkBuddy 白皮书 OPC 运营生态白皮书 阅读全文 智能硬件接入白皮书 阅读全文 方案与接入 AI 时代一人公司的商业与技术重构 阅读全文 让每一台硬件都拥有AI 灵魂 阅读全文 合</description>
+<pubDate>Mon, 28 Sep 2026 15:43:31 GMT</pubDate>
+<guid>https://www.workbuddy.cn/pricing#2026-09-28T15:43:31.765Z</guid>
+</item>
+<item>
+<title>[页面变更] 魔搭 ModelScope</title>
+<link>https://modelscope.cn</link>
+<description>首页 · 魔搭社区 首页 模型库 数据集 创空间 开发者实践 文档 社区 智能工坊 实验场 AIGC 专区 热门搜索 Qwen-Image-2.1 minimax H3 Qwen3.8 krea2 qwen indextts2 Qwen3.8-27B DeepSeek Api TTS 登录 / 注册 共享 · 共创 · 共进，构建持续创新</description>
+<pubDate>Sun, 27 Sep 2026 13:14:44 GMT</pubDate>
+<guid>https://modelscope.cn#2026-09-27T13:14:44.150Z</guid>
+</item>
+<item>
+<title>[页面变更] CodeBuddy</title>
+<link>https://www.codebuddy.cn/pricing</link>
+<description>Hy4 preview 邀您免费体验</description>
+<pubDate>Sun, 27 Sep 2026 03:23:14 GMT</pubDate>
+<guid>https://www.codebuddy.cn/pricing#2026-09-27T03:23:14.217Z</guid>
+</item>
+<item>
+<title>[页面变更] Trae（TraeCode + TraeWork）</title>
+<link>https://www.trae.cn/trae-work-gift</link>
+<description>TraeWork 桌面端专属加码礼</description>
+<pubDate>Sun, 27 Sep 2026 03:18:33 GMT</pubDate>
+<guid>https://www.trae.cn/trae-work-gift#2026-09-27T03:18:33.339Z</guid>
+</item>
+<item>
+<title>[页面变更] Trae（TraeCode + TraeWork）</title>
+<link>https://www.trae.cn/events/student-verification</link>
+<description>月度登录奖励 / 每日签到奖励 / 模型补贴</description>
+<pubDate>Sun, 27 Sep 2026 03:17:39 GMT</pubDate>
+<guid>https://www.trae.cn/events/student-verification#2026-09-27T03:17:39.873Z</guid>
+</item>
+<item>
+<title>[页面变更] 魔搭 ModelScope</title>
+<link>https://modelscope.cn</link>
+<description>首页 · 魔搭社区 首页 模型库 数据集 创空间 开发者实践 社区 智能工坊 实验场 AIGC 专区 热门搜索 Qwen-Image-2.1 minimax H3 Qwen3.8 Qwen krea2 indextts2 Qwen3.8-27B DeepSeek laya api 登录 / 注册 共享 · 共创 · 共进，构建持续创新的</description>
+<pubDate>Sun, 27 Sep 2026 03:10:11 GMT</pubDate>
+<guid>https://modelscope.cn#2026-09-27T03:10:11.963Z</guid>
+</item>
+<item>
+<title>[页面变更] 扣子空间（Coze Space）</title>
+<link>https://www.coze.cn</link>
+<description>扣子 Coze - 字节跳动旗下职场AI伙伴扣子与一站式AI开发平台扣子编程 PPT数据分析小程序开发APP开发网页开发平面设计教学备课报告写作自媒体播客视频智能体工作流 团队版 企业版 定价 下载扣子 下载扣子 工作交给扣子 创造不必等待 告诉扣子你想完成什么。Agent 会带着资料和工具接手，把想法一步步做出来。 下载桌面端 功能最全 下载</description>
+<pubDate>Sun, 27 Sep 2026 03:09:53 GMT</pubDate>
+<guid>https://www.coze.cn#2026-09-27T03:09:53.262Z</guid>
+</item>
+<item>
+<title>[页面变更] Qwen Code</title>
+<link>https://qwenlm.github.io/qwen-code-docs/</link>
+<description>Qwen Qwen 更多 简体中文 下载 使用 Qwen 用 Qwen Code 编程 Qwen Code 是一款开源的终端 AI 智能体，专为 Qwen 系列模型优化。它能帮助你理解大型代码库、自动化繁琐工作，加速交付。 Linux / macOS Windows &gt;_ curl -fsSL https://qwen-code-assets.os</description>
+<pubDate>Sun, 27 Sep 2026 03:09:01 GMT</pubDate>
+<guid>https://qwenlm.github.io/qwen-code-docs/#2026-09-27T03:09:01.183Z</guid>
+</item>
+<item>
+<title>[页面变更] Kimi Code（Kimi for Coding）</title>
+<link>https://www.kimi.com/coding</link>
+<description>I 工具 Kimi Code 会员权益 文档 控制台 登录 K3 正式上线！最高 1M 上下文 立即体验 Kimi Code Kimi Code 现已覆盖桌面端、CLI 与 IDE 插件，轻松兼容各类开发流程， 更快更稳响应请求，高效地完成编程任务 下载 Windows 版 安装 CLI 开始使用 阅读文档 一次订阅，全端畅写 桌面端 Terminal IDE 新建会话 搜索 会话 landing</description>
+<pubDate>Sun, 27 Sep 2026 03:08:22 GMT</pubDate>
+<guid>https://www.kimi.com/coding#2026-09-27T03:08:22.072Z</guid>
+</item>
+<item>
+<title>CodeBuddy：Hy4 preview 邀您免费体验</title>
+<link>https://example.github.io/agent-deals/product/codebuddy/</link>
+<description>Agent 与复杂任务执行能力全面跃升，限免两周</description>
+<pubDate>Sun, 27 Sep 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/codebuddy/#2026-09-27</guid>
+</item>
+<item>
+<title>Trae（TraeCode + TraeWork）：TraeWork 桌面端专属加码礼</title>
+<link>https://example.github.io/agent-deals/product/trae/</link>
+<description>100%有礼，限时定邀，解锁专业办公生产力，限客户端领取</description>
+<pubDate>Sun, 27 Sep 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/trae/#2026-09-27</guid>
+</item>
+<item>
+<title>Trae（TraeCode + TraeWork）：模型补贴</title>
+<link>https://example.github.io/agent-deals/product/trae/</link>
+<description>相同任务，更少积分消耗</description>
+<pubDate>Sun, 27 Sep 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/trae/#2026-09-27</guid>
+</item>
+<item>
+<title>Trae（TraeCode + TraeWork）：每日签到奖励</title>
+<link>https://example.github.io/agent-deals/product/trae/</link>
+<description>签到活动，积分持续累积</description>
+<pubDate>Sun, 27 Sep 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/trae/#2026-09-27</guid>
+</item>
+<item>
+<title>Trae（TraeCode + TraeWork）：月度登录奖励</title>
+<link>https://example.github.io/agent-deals/product/trae/</link>
+<description>每月首次登录得500积分</description>
+<pubDate>Sun, 27 Sep 2026 00:00:00 GMT</pubDate>
+<guid>https://example.github.io/agent-deals/product/trae/#2026-09-27</guid>
+</item>
+<item>
+<title>[页面变更] 魔搭 ModelScope</title>
+<link>https://modelscope.cn</link>
+<description>首页 · 魔搭社区 首页 模型库 数据集 创空间 开发者实践 文档 社区 智能工坊 实验场 AIGC 专区 热门搜索 Qwen-Image-2.1 Qwen3.8 minimax H3 Qwen krea2 indextts2 DeepSeek Qwen3.8-27B laya jev 登录 / 注册 共享 · 共创 · 共进，构建持续创</description>
+<pubDate>Sat, 26 Sep 2026 12:22:54 GMT</pubDate>
+<guid>https://modelscope.cn#2026-09-26T12:22:54.548Z</guid>
+</item>
+<item>
+<title>[页面变更] 扣子空间（Coze Space）</title>
+<link>https://www.coze.cn</link>
+<description>扣子 Coze - 字节跳动旗下职场AI伙伴扣子与一站式AI开发平台扣子编程 PPT数据分析小程序开发APP开发网页开发平面设计教学备课报告写作自媒体播客视频智能体工作流 团队版 企业版 定价 下载扣子 下载扣子 工作交给扣子 创造不必等待 告诉扣子你想完成什么。Agent 会带着资料和工具接手，把想法一步步做出来。 下载桌面端 功能最全</description>
+<pubDate>Sat, 26 Sep 2026 12:22:35 GMT</pubDate>
+<guid>https://www.coze.cn#2026-09-26T12:22:35.860Z</guid>
+</item>
+<item>
+<title>[页面变更] Qwen Code</title>
+<link>https://qwenlm.github.io/qwen-code-docs/</link>
+<description>Qwen Qwen 更多 简体中文 下载 使用 Qwen 用 Qwen Code 编程 Qwen Code 是一款开源的终端 AI 智能体，专为 Qwen 系列模型优化。它能帮助你理解大型代码库、自动化繁琐工作，加速交付。 Linux / macOS Windows &gt;_ curl -fsSL https://qwen-code-asse</description>
+<pubDate>Sat, 26 Sep 2026 12:21:56 GMT</pubDate>
+<guid>https://qwenlm.github.io/qwen-code-docs/#2026-09-26T12:21:56.434Z</guid>
+</item>
+<item>
+<title>[页面变更] 华为云码道 CodeArts 代码智能体</title>
+<link>https://bbs.huaweicloud.com/</link>
+<description>华为云社区_大数据社区_AI社区_云计算社区_开发者中心-华为云 码道千万Token天天送 码道千万Token天天送 前沿模型送福利，登录码道免费领 前沿模型送福利，登录码道免费领 立即参与 10亿Tokens免费领 10亿Tokens免费领 做任务赚积分，兑换开发者专属权益 做任务赚积分，兑换开发者专属权益 免费领取 开发者AI训练营</description>
+<pubDate>Fri, 25 Sep 2026 16:57:01 GMT</pubDate>
+<guid>https://bbs.huaweicloud.com/#2026-09-25T16:57:01.535Z</guid>
+</item>
+<item>
+<title>[页面变更] Trae（TraeCode + TraeWork）</title>
+<link>https://www.trae.cn/events/code-fission</link>
+<description>TraeCode 邀请好友 | TRAE - The Real AI Engineer 登录以邀请 邀好友体验 TraeCode 最高得 3500 积分 我在用 TraeCode AI 编程工具，搞定各类任务，通过我的分享链接注册并登录桌面端，新用户一次性获得 5,000 积分！ 登录以邀请 登录后参与活动，邀请好友即可获得积分 新用户登</description>
+<pubDate>Fri, 25 Sep 2026 12:57:38 GMT</pubDate>
+<guid>https://www.trae.cn/events/code-fission#2026-09-25T12:57:38.849Z</guid>
+</item>
+<item>
+<title>[页面变更] Kimi Code（Kimi for Coding）</title>
+<link>https://www.kimi.com/coding</link>
+<description>CLI 工具 Kimi Code 会员权益 文档 控制台 登录 新会员体系已上线，Code 场景取消周限额，总额度有所调整。作为日常生产力工具，建议选择更高等级套餐。 查看套餐 Kimi Code Kimi Code 现已覆盖桌面端、CLI 与 IDE 插件，轻松兼容各类开发流程， 更快更稳响应请求，高效地完成编程任务 下载 Windows 版 安装 CLI 开始使用 阅读文档 一次订阅，全端畅</description>
+<pubDate>Fri, 25 Sep 2026 12:56:52 GMT</pubDate>
+<guid>https://www.kimi.com/coding#2026-09-25T12:56:52.990Z</guid>
+</item>
+<item>
+<title>[页面变更] Trae（TraeCode + TraeWork）</title>
+<link>https://www.trae.cn/events/student-verification</link>
+<description>TRAE 大学生专属福利 | TRAE - The Real AI Engineer 下载 TraeCode [ TRAE 大学生专属计划] TRAE 学生见面礼 ， 助你畅享 AI 编程 +86 获取验证码 我已阅读并同意 服务条款 和 隐私协议 认证学生身份，领取 2000 积分 [大学生新用户好礼] 6500 积分 大学生专属积分福</description>
+<pubDate>Fri, 25 Sep 2026 12:10:56 GMT</pubDate>
+<guid>https://www.trae.cn/events/student-verification#2026-09-25T12:10:56.532Z</guid>
+</item>
+<item>
+<title>[页面变更] Trae（TraeCode + TraeWork）</title>
+<link>https://www.trae.cn/pricing</link>
+<description>| TRAE - The Real AI Engineer 邀请好友体验 TraeCode，双方各得 500 积分，最高得 3500 积分 立即参与 → TraeCode Hot TraeWork 企业版 定价 文档 更新日志 社区 知识库 登录 下载中心 个人方案与定价 企业版选型与咨询， 前往火山引擎 ↗ 免费 Free ¥ 0 每月 500 积分 所有功能均可免费使用 支持 2 个云端任务同</description>
+<pubDate>Fri, 25 Sep 2026 12:10:30 GMT</pubDate>
+<guid>https://www.trae.cn/pricing#2026-09-25T12:10:30.036Z</guid>
+</item>
+<item>
+<title>[页面变更] 魔搭 ModelScope</title>
+<link>https://modelscope.cn</link>
+<description>Home Page · ModelScope Home Models Datasets Studios Spotlight Community Skills MCP Civision Top Searches Qwen-Image-2.1 Qwen3.8 minimax H3 Qwen laya deepseek jev krea2 in</description>
+<pubDate>Fri, 25 Sep 2026 10:45:37 GMT</pubDate>
+<guid>https://modelscope.cn#2026-09-25T10:45:37.910Z</guid>
+</item>
+<item>
+<title>[页面变更] 扣子空间（Coze Space）</title>
+<link>https://www.coze.cn</link>
+<description>扣子 Coze - 字节跳动旗下职场AI伙伴扣子与一站式AI开发平台扣子编程 PPT数据分析小程序开发APP开发网页开发平面设计教学备课报告写作自媒体播客视频智能体工作流 团队版 企业版 定价 打开网页版 下载扣子 下载扣子 工作交给扣子 创造不必等待 告诉扣子你想完成什么。Agent 会带着资料和工具接手，把想法一步步做出来。 下载桌面</description>
+<pubDate>Fri, 25 Sep 2026 10:44:47 GMT</pubDate>
+<guid>https://www.coze.cn#2026-09-25T10:44:47.698Z</guid>
+</item>
+<item>
+<title>[页面变更] 文心快码 Baidu Comate</title>
+<link>https://comate.baidu.com</link>
+<description>文心快码(Baidu Comate)·你的专属AI研发搭档 首页 价格 资讯 文档 在线问答 企业版 首页 价格 资讯 文档 在线问答 企业版 With Comate, To Create 下载客户端 下载插件 VS Code JetBrains Visual Studio Xcode 企业试用 ↗ Auto 项目开发 数据分析 文件生成</description>
+<pubDate>Fri, 25 Sep 2026 10:44:34 GMT</pubDate>
+<guid>https://comate.baidu.com#2026-09-25T10:44:34.509Z</guid>
+</item>
+<item>
+<title>[页面变更] Qwen Code</title>
+<link>https://qwenlm.github.io/qwen-code-docs/</link>
+<description>Qwen Qwen More EN Download Try Qwen Code with Qwen Code Qwen Code is an open-source AI agent for the terminal, optimized for Qwen series models. It helps you understand l</description>
+<pubDate>Fri, 25 Sep 2026 10:44:11 GMT</pubDate>
+<guid>https://qwenlm.github.io/qwen-code-docs/#2026-09-25T10:44:11.964Z</guid>
+</item>
+<item>
+<title>[页面变更] DeepSeek</title>
+<link>https://api-docs.deepseek.com/zh-cn/quick_start/pricing</link>
+<description>模型 &amp; 价格 | DeepSeek API Docs 跳到主要内容 DeepSeek API 文档 更多资源 实用集成 API 服务状态 常见问题 中文（中国） English 中文（中国） 开放平台 EN 快速开始 API 指南 API 文档 新闻 更新日志 首次调用 API 模型 &amp; 价格 Token 用量计算 限速与隔离 错误码</description>
+<pubDate>Thu, 24 Sep 2026 17:54:41 GMT</pubDate>
+<guid>https://api-docs.deepseek.com/zh-cn/quick_start/pricing#2026-09-24T17:54:41.386Z</guid>
+</item>
+<item>
+<title>[页面变更] Trae（TraeCode + TraeWork）</title>
+<link>https://www.trae.cn/pricing</link>
+<description>定价 | TRAE - The Real AI Engineer 邀请好友体验 TraeCode，双方各得 500 积分，最高得 3500 积分 立即参与 → TraeCode Hot TraeWork 企业版 定价 文档 更新日志 社区 知识库 登录 下载中心 个人方案与定价 企业版选型与咨询， 前往火山引擎 ↗ 免费 Free ¥ 0</description>
+<pubDate>Tue, 22 Sep 2026 12:44:11 GMT</pubDate>
+<guid>https://www.trae.cn/pricing#2026-09-22T12:44:11.771Z</guid>
+</item>
+<item>
+<title>[页面变更] Qoder CN</title>
+<link>https://qoder.com.cn/pricing</link>
+<description>研发编程助手 产品 企业版 价格 能力市场 资源 活动 登录 下载 9 月限时：专业版 / 高级版首月 Credits 翻倍，续费也加赠 → Qoder CN 价格方案 选择最适合你编码、构建与协作方式的 Qoder CN 订阅计划。 可先从小规模开始，随着工作流的成长随时升级。 个人订阅 企业订阅 会员卡 使用会员卡 本卡可兑换 1 个</description>
+<pubDate>Tue, 22 Sep 2026 06:31:29 GMT</pubDate>
+<guid>https://qoder.com.cn/pricing#2026-09-22T06:31:29.983Z</guid>
+</item>
+<item>
+<title>[页面变更] 智谱 AutoClaw（澳龙）</title>
+<link>https://autoglm.zhipuai.cn/autoclaw/</link>
+<description>智谱AutoClaw官网-智谱autoclaw（澳龙）安装下载-GLM-5.3-Flash已上线 智谱 AutoClaw 博客 团购方案 养虾社群 Lark WeCom 更多介绍 模型介绍 更新日志 获取APP 下载体验 × 扫码下载移动端 iOS 版本 Android 版本 × 请选择银河麒麟系统架构 可在终端执行 uname -m 查</description>
+<pubDate>Mon, 21 Sep 2026 06:40:16 GMT</pubDate>
+<guid>https://autoglm.zhipuai.cn/autoclaw/#2026-09-21T06:40:16.044Z</guid>
+</item>
+<item>
+<title>[页面变更] 硅基流动 SiliconFlow</title>
+<link>https://siliconflow.cn/pricing</link>
+<description>大模型 API 价格方案 - 硅基流动 SiliconFlow 产品 模型 价格 文档 生态合作 关于 登录 登录 产品 模型 价格 文档 生态合作 关于 PRICING · 模型价格中心 模型 价格总览 面向生产选型的模型价格页：一屏对比主流厂商与模型的输入、输出、缓存命中成本，帮助你快速判断性价比。 搜索 实时价格同步 仅展示可用模型</description>
+<pubDate>Sat, 19 Sep 2026 06:11:23 GMT</pubDate>
+<guid>https://siliconflow.cn/pricing#2026-09-19T06:11:23.682Z</guid>
+</item>
 <item>
 <title>华为云码道 CodeArts 代码智能体：码力续航计划：每日免费送 1000 万 Tokens，GLM-5.3-Flash 等福利模型免费用</title>
 <link>https://example.github.io/agent-deals/product/codearts-snap/</link>
@@ -61,34 +432,6 @@
 <guid>https://example.github.io/agent-deals/product/glm-coding-plan/#2026-09-17</guid>
 </item>
 <item>
-<title>[页面变更] 百度搭子 DuMate</title>
-<link>https://www.dumate.cn/</link>
-<description>DuMate 个人版 企业版 定价 生态与合作 开发与使用 免费下载 macOS (M系列芯片) Windows (win10及以上) 扫码下载 DuMate App 企业版咨询 真干活，用搭子 百度搭子DuMate，强大的AI助手。你说需求，它来执行——跨应用、跨文件，复杂任务一句话搞定。 免费下载桌面版 免费下载 正在用搭子干活 全球</description>
-<pubDate>Wed, 16 Sep 2026 06:19:08 GMT</pubDate>
-<guid>https://www.dumate.cn/#2026-09-16T06:19:08.728Z</guid>
-</item>
-<item>
-<title>[页面变更] GLM Coding Plan（ZCode）</title>
-<link>https://bigmodel.cn/claude-code</link>
-<description>智谱丨BigModel 平台 研究 技术报告 GLM-5.3 GLM-5.3-Flash GLM-5.2 GLM-5.1 产品 模型 GLM-5.3 GLM-5.3-Flash GLM-5.2 全部模型 Coding Plan 个人版套餐 团队版套餐 功能 Managed Agents (Beta) MCP 服务 模型微调 知识库 文档</description>
-<pubDate>Tue, 15 Sep 2026 12:46:39 GMT</pubDate>
-<guid>https://bigmodel.cn/claude-code#2026-09-15T12:46:39.041Z</guid>
-</item>
-<item>
-<title>[页面变更] 百度搭子 DuMate</title>
-<link>https://www.dumate.cn/</link>
-<description>DuMate 个人版 企业版 定价 文档 免费下载 macOS (M系列芯片) Windows (win10及以上) 扫码下载 DuMate App 企业版咨询 真干活，用搭子 百度搭子DuMate，强大的AI助手。你说需求，它来执行——跨应用、跨文件，复杂任务一句话搞定。 免费下载桌面版 免费下载 正在用搭子干活 全球权威榜单登顶 效果</description>
-<pubDate>Tue, 15 Sep 2026 06:20:13 GMT</pubDate>
-<guid>https://www.dumate.cn/#2026-09-15T06:20:13.720Z</guid>
-</item>
-<item>
-<title>Qoder CN：9 月首月 Credits 翻倍：专业版 4,000 / 高级版 12,000</title>
-<link>https://example.github.io/agent-deals/product/tongyi-lingma/</link>
-<description>个人版 9 月首次付费订阅专业版或高级版，加赠等额 Qwen 专属 Credits（专业版 2,000→4,000、高级版 6,000→12,000）；续费、升级或过期后再开通加赠 1,000。仅限个人版，团队版 / 企业版 / 会员卡不适用。加赠自到账起 30 天内有效。</description>
-<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
-<guid>https://example.github.io/agent-deals/product/tongyi-lingma/#2026-09-15</guid>
-</item>
-<item>
 <title>Qoder CN：夜间错峰折扣：高级模型 Credits 倍率下调</title>
 <link>https://example.github.io/agent-deals/product/tongyi-lingma/</link>
 <description>每日 22:00 至次日 08:00（北京时间，含周末与节假日），Qwen3.7-Max 低至 2 折、Qwen3.7-Plus 4 折，Qwen3.8-Max 亦有折扣，最高省 80%。Pro Trial 及付费用户自动生效，无需报名。折扣只降 Credits 倍率，模型质量不变，结束时间未公布。</description>
@@ -96,74 +439,11 @@
 <guid>https://example.github.io/agent-deals/product/tongyi-lingma/#2026-09-15</guid>
 </item>
 <item>
-<title>CodeBuddy：邀请好友：好友注册即得 2,000 积分，邀请人得 50–150 积分</title>
-<link>https://example.github.io/agent-deals/product/codebuddy/</link>
-<description>好友首次使用即得 50 积分、7 日内累计使用 3 天再得 100 积分；好友 30 天内首次付费升级，双方各得 500 积分。</description>
-<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
-<guid>https://example.github.io/agent-deals/product/codebuddy/#2026-09-15</guid>
-</item>
-<item>
-<title>CodeBuddy：混元 Hy3 模型限时免费（0.00x，不扣积分）</title>
-<link>https://example.github.io/agent-deals/product/codebuddy/</link>
-<description>7/6 起的混元 Hy3 限免覆盖 CodeBuddy 全系与 WorkBuddy 全端，已多轮续期。每日有免费额度、繁忙时排队；生图/生视频会自动切到其他模型并按正常规则扣积分。</description>
-<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
-<guid>https://example.github.io/agent-deals/product/codebuddy/#2026-09-15</guid>
-</item>
-<item>
-<title>CodeBuddy：DeepSeek V4.1 Flash 独家合作限时折扣：积分消耗倍率 0.03x</title>
-<link>https://example.github.io/agent-deals/product/codebuddy/</link>
-<description>定价页首屏横幅「Deepseek-v4.1-flash 独家联合首发 9.10-9.23 官方合作享限时折扣」。同账号体系下的积分倍率优惠，会员通用；9/23 之后的倍率官方未公布。</description>
-<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
-<guid>https://example.github.io/agent-deals/product/codebuddy/#2026-09-15</guid>
-</item>
-<item>
-<title>WorkBuddy：邀请好友：好友注册即得 2,000 积分，邀请人得 50–150 积分</title>
-<link>https://example.github.io/agent-deals/product/workbuddy/</link>
-<description>好友首次使用即得 50 积分、7 日内累计使用 3 天再得 100 积分；好友 30 天内首次付费升级，双方各得 500 积分。</description>
-<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
-<guid>https://example.github.io/agent-deals/product/workbuddy/#2026-09-15</guid>
-</item>
-<item>
 <title>WorkBuddy：混元 Hy4 preview：新用户首开起 14 天免费额度</title>
 <link>https://example.github.io/agent-deals/product/workbuddy/</link>
 <description>首轮限免已于 9/10 23:59 结束，9/11–10/10 调整：新用户（含此前未体验过的老用户）在 10/10 23:59 前首次开启对话，自当日起 14 天内享每日免费额度；已体验过的老用户仅夜间闲时（23:00–次日 08:00）免费，其余时间照常消耗积分。</description>
 <pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
 <guid>https://example.github.io/agent-deals/product/workbuddy/#2026-09-15</guid>
-</item>
-<item>
-<title>WorkBuddy：混元 Hy3 模型限时免费（0.00x，不扣积分）</title>
-<link>https://example.github.io/agent-deals/product/workbuddy/</link>
-<description>模型选择器标「限时免费 0.00x」，7/6 上线后已多轮续期。每日有免费额度、繁忙时排队；生图/生视频会自动切到其他模型并按正常规则扣积分。</description>
-<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
-<guid>https://example.github.io/agent-deals/product/workbuddy/#2026-09-15</guid>
-</item>
-<item>
-<title>WorkBuddy：DeepSeek V4.1 Flash 独家合作限时折扣：积分消耗倍率 0.03x</title>
-<link>https://example.github.io/agent-deals/product/workbuddy/</link>
-<description>DeepSeek 官方联合首发，客户端模型选择器标「独家优惠 0.03x」（同期 GLM-5.3 为 0.79x、GLM-5.3-Flash 为 0.06x），会员通用。属平台积分倍率、非 API 单价；9/23 之后的倍率官方未公布。</description>
-<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
-<guid>https://example.github.io/agent-deals/product/workbuddy/#2026-09-15</guid>
-</item>
-<item>
-<title>[页面变更] 百度搭子 DuMate</title>
-<link>https://www.dumate.cn/</link>
-<description>DuMate 个人版 企业版 定价 文档 免费下载 macOS (M系列芯片) Windows (win10及以上) 扫码下载 DuMate App 企业版咨询 真干活，用搭子 百度搭子DuMate，强大的AI助手。你说需求，它来执行——跨应用、跨文件，复杂任务一句话搞定。 免费下载桌面版 免费下载 正在用搭子干活 全球权威榜单登顶 效果</description>
-<pubDate>Mon, 14 Sep 2026 14:19:18 GMT</pubDate>
-<guid>https://www.dumate.cn/#2026-09-14T14:19:18.361Z</guid>
-</item>
-<item>
-<title>[页面变更] CodeBuddy</title>
-<link>https://www.codebuddy.cn/pricing</link>
-<description>免费腾讯云代码助手_腾讯云代码助手价格 - 腾讯云代码助手 C o d e B u d d y IDE AI 原生 IDE 插件 VS Code / JetBrains 插件 CLI 命令行工具 NPC AI 智能体角色 Agents Beta AI 智能体平台 Security AI 代码安全审计 W o r k B u d d y 公</description>
-<pubDate>Mon, 14 Sep 2026 06:37:24 GMT</pubDate>
-<guid>https://www.codebuddy.cn/pricing#2026-09-14T06:37:24.197Z</guid>
-</item>
-<item>
-<title>[页面变更] 百度搭子 DuMate</title>
-<link>https://www.dumate.cn/</link>
-<description>DuMate 个人版 企业版 定价 文档 免费下载 macOS (M系列芯片) Windows (win10及以上) 扫码下载 DuMate App 企业版咨询 真干活，用搭子 百度搭子DuMate，强大的AI助手。你说需求，它来执行——跨应用、跨文件，复杂任务一句话搞定。 免费下载桌面版 免费下载 正在用搭子干活 全球权威榜单登顶 效果</description>
-<pubDate>Mon, 14 Sep 2026 06:37:16 GMT</pubDate>
-<guid>https://www.dumate.cn/#2026-09-14T06:37:16.294Z</guid>
 </item>
 <item>
 <title>魔搭 ModelScope：注册并绑定阿里云账号，立享免费算力</title>
@@ -269,55 +549,6 @@
 <description>夜间时段 GLM Coding Plan 免费畅用，白天高峰照常计额度。官网亦提及 ZCode 订阅用户享「闲时任务免费」权益与之呼应；参与套餐与具体规则以官方活动页为准。</description>
 <pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
 <guid>https://example.github.io/agent-deals/product/glm-coding-plan/#2026-09-14</guid>
-</item>
-<item>
-<title>[页面变更] CodeBuddy</title>
-<link>https://www.codebuddy.cn/pricing</link>
-<description>免费腾讯云代码助手_腾讯云代码助手价格 - 腾讯云代码助手 C o d e B u d d y IDE AI 原生 IDE 插件 VS Code / JetBrains 插件 CLI 命令行工具 NPC AI 智能体角色 Agents Beta AI 智能体平台 Security AI 代码安全审计 W o r k B u d d y 公</description>
-<pubDate>Sun, 13 Sep 2026 16:36:36 GMT</pubDate>
-<guid>https://www.codebuddy.cn/pricing#2026-09-13T16:36:36.707Z</guid>
-</item>
-<item>
-<title>[页面变更] 百度搭子 DuMate</title>
-<link>https://www.dumate.cn/</link>
-<description>DuMate 个人版 企业版 定价 文档 免费下载 macOS (M系列芯片) Windows (win10及以上) 扫码下载 DuMate App 企业版咨询 真干活，用搭子 百度搭子DuMate，强大的AI助手。你说需求，它来执行——跨应用、跨文件，复杂任务一句话搞定。 免费下载桌面版 免费下载 正在用搭子干活 全球权威榜单登顶 效果</description>
-<pubDate>Sun, 13 Sep 2026 16:36:26 GMT</pubDate>
-<guid>https://www.dumate.cn/#2026-09-13T16:36:26.801Z</guid>
-</item>
-<item>
-<title>[页面变更] Kimi Code（Kimi for Coding）</title>
-<link>https://www.kimi.com/coding</link>
-<description>Kimi Code - 搭载 Kimi K3 的 AI 编程 Agent 与 CLI 工具 Kimi Code 会员权益 文档 控制台 注册/登录 K3 正式上线！最高 1M 上下文 立即体验 Kimi Code 面向代码开发的权益，轻松兼容各类开发流程， 更快更稳响应请求，高效完成编程任务 安装 Kimi Code irm https:</description>
-<pubDate>Sun, 13 Sep 2026 16:36:15 GMT</pubDate>
-<guid>https://www.kimi.com/coding#2026-09-13T16:36:15.066Z</guid>
-</item>
-<item>
-<title>[页面变更] GLM Coding Plan（ZCode）</title>
-<link>https://z.ai/subscribe</link>
-<description>GLM Coding Plan — AI Coding Powered by GLM-5.3, GLM-5.3-Flash, GLM-5.2 &amp; GLM-5-Turbo for Agents &amp; IDEs Chat API Coding Plan Pricing Contact Docs English Login Open menu G</description>
-<pubDate>Sun, 13 Sep 2026 16:36:03 GMT</pubDate>
-<guid>https://z.ai/subscribe#2026-09-13T16:36:03.080Z</guid>
-</item>
-<item>
-<title>[页面变更] MiniMax Token Plan</title>
-<link>https://platform.minimaxi.com/subscribe/token-plan</link>
-<description>Token Plan - MiniMax API 平台 文档 定价 控制台 登录 API 价格 订阅套餐 Token Plan 面向个人开发者、Coding 用户、日常办公场景，全模态共享用量额度，单价最低，适合长期高频的文本 / 代码场景。 OFFICIAL MiniMax Code 在官方 Agent 应用 MiniMax Code</description>
-<pubDate>Sun, 13 Sep 2026 16:35:57 GMT</pubDate>
-<guid>https://platform.minimaxi.com/subscribe/token-plan#2026-09-13T16:35:57.270Z</guid>
-</item>
-<item>
-<title>[页面变更] WorkBuddy</title>
-<link>https://www.workbuddy.cn/pricing</link>
-<description>WorkBuddy 定价 - AI Agent 办公新范式 首 页 定 价 文 档 产品与使用 产品介绍 实践案例 常见问题 合作 硬件专区 洞察 WorkBuddy 白皮书 OPC 运营生态白皮书 阅读全文 智能硬件接入白皮书 阅读全文 方案与接入 AI 时代一人公司的商业与技术重构 阅读全文 让每一台硬件都拥有AI 灵魂 阅读全文 活</description>
-<pubDate>Sun, 13 Sep 2026 16:35:42 GMT</pubDate>
-<guid>https://www.workbuddy.cn/pricing#2026-09-13T16:35:42.649Z</guid>
-</item>
-<item>
-<title>[页面变更] Trae（TraeCode + TraeWork）</title>
-<link>https://www.trae.cn/pricing</link>
-<description>官方页面内容有更新，待人工核对</description>
-<pubDate>Sun, 13 Sep 2026 16:35:31 GMT</pubDate>
-<guid>https://www.trae.cn/pricing#2026-09-13T16:35:31.801Z</guid>
 </item>
 <item>
 <title>DeepSeek：错峰时段半价（常态）</title>
