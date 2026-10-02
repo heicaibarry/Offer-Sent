@@ -1,5 +1,25 @@
 [
   {
+    "time": "2026-10-02T14:03:38.970Z",
+    "source": "modelscope-home",
+    "product": "modelscope",
+    "url": "https://modelscope.cn",
+    "kind": "page-update",
+    "how": "browser",
+    "pageTitle": "首页 · 魔搭社区",
+    "excerpt": "首页 · 魔搭社区 首页 模型库 数据集 创空间 开发者实践 文档 社区 智能工坊 实验场 AIGC 专区 热门搜索 Qwen-Image-2.1 minimax h3 Qwen3.8 krea2 Qwen IndexTTS2 Qwen3.8-27B deepseek api MiniMax-H3 登录 / 注册 共享 · 共创 · 共进"
+  },
+  {
+    "time": "2026-10-02T14:05:49.014Z",
+    "source": "-",
+    "product": "-",
+    "url": "",
+    "kind": "crawl-report",
+    "how": "-",
+    "pageTitle": "核对 17 源 · 失败 6 · LLM 已配置",
+    "excerpt": "页面变更 1 处 · 触发提取 2 页 · 自动收录 0 条 · 移除 0 条 · 降级告警 0 个（无）"
+  },
+  {
     "time": "2026-10-02T07:14:30.212Z",
     "source": "-",
     "product": "-",
