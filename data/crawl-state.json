@@ -65,38 +65,38 @@
   },
   "qwen-code-docs": {
     "hash": "adc35b3346dd29594f8cd9809f80441e203d3321",
-    "lastChecked": "2026-10-03T17:31:47.902Z",
+    "lastChecked": "2026-10-04T17:45:02.323Z",
     "lastChanged": "2026-09-27T13:13:46.407Z",
     "how": "browser",
     "chars": 1116,
     "dealHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
-    "stuck": 2
+    "stuck": 3
   },
   "comate-home": {
     "hash": "c9e949e045edaf927e1f6124940f33fb7e5e9215",
     "chars": 2753,
     "dealHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
-    "stuck": 1,
-    "lastChecked": "2026-10-03T17:32:13.811Z",
+    "stuck": 2,
+    "lastChecked": "2026-10-04T17:45:22.520Z",
     "lastChanged": "2026-10-02T14:02:03.505Z",
     "how": "browser"
   },
   "deepseek-pricing": {
     "hash": "2b92554280d0173a2f13a899aa705fd09f5f158d",
-    "lastChecked": "2026-10-03T17:32:16.690Z",
+    "lastChecked": "2026-10-04T17:45:25.976Z",
     "lastChanged": "2026-09-24T17:54:41.386Z",
     "how": "fetch",
     "chars": 1481,
     "dealHash": "9f24772531fb580b6f4eccfeed91212561fb0af8",
-    "stuck": 2
+    "stuck": 3
   },
   "coze-home": {
-    "hash": "723fa0aec44dec63748675f420f91be8584886f6",
+    "hash": "505cd14b4cd24ed68097cd16cb9024c2f23ed192",
     "chars": 2611,
     "dealHash": "169a89d174c975086c8387687fbfdfb933d6afda",
     "stuck": 0,
-    "lastChecked": "2026-10-03T17:32:31.034Z",
-    "lastChanged": "2026-10-03T17:32:31.034Z",
+    "lastChecked": "2026-10-04T17:45:40.206Z",
+    "lastChanged": "2026-10-04T17:45:40.206Z",
     "how": "browser"
   },
   "manus-pricing": {
@@ -127,20 +127,20 @@
   },
   "siliconflow-pricing": {
     "hash": "2fa5f583e2a469729d97a4e898051a25203768a2",
-    "lastChecked": "2026-10-03T17:32:41.560Z",
+    "lastChecked": "2026-10-04T17:45:50.995Z",
     "lastChanged": "2026-10-01T07:27:03.383Z",
     "how": "browser",
     "chars": 4299,
     "dealHash": "96460f302bd2305dd953e627b4d8b95875e33bce",
-    "stuck": 2
+    "stuck": 3
   },
   "modelscope-home": {
-    "hash": "ef9d98e3dd919bea59608a9256a22f9cb5b42750",
-    "chars": 5558,
+    "hash": "b8b8dfcbd59bb737983162c493b2039d1bc22311",
+    "chars": 5571,
     "dealHash": "7e88885e17b4f456add471a61ab40f3a6bc8dd79",
     "stuck": 0,
-    "lastChecked": "2026-10-03T17:33:00.512Z",
-    "lastChanged": "2026-10-03T17:33:00.512Z",
+    "lastChecked": "2026-10-04T17:46:06.797Z",
+    "lastChanged": "2026-10-04T17:46:06.797Z",
     "how": "browser"
   },
   "bigmodel-coding-plan": {
