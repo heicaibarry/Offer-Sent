@@ -8,21 +8,21 @@
   },
   "workbuddy-pricing": {
     "hash": "79a681b6e6e5724f97d23c8fc566fe5f39d8e123",
-    "lastChecked": "2026-10-05T07:20:16.994Z",
+    "lastChecked": "2026-10-05T16:17:22.859Z",
     "lastChanged": "2026-09-29T14:12:56.300Z",
     "how": "browser",
     "chars": 2397,
     "dealHash": "17032be203d6a5b7f6fa984a85126f1f80d3c7bf",
-    "stuck": 8
+    "stuck": 9
   },
   "minimax-token-plan": {
     "hash": "0a35da4880cc8616ee13d17f1473a70db33aeced",
-    "lastChecked": "2026-10-05T07:20:34.519Z",
+    "lastChecked": "2026-10-05T16:17:41.223Z",
     "lastChanged": "2026-09-30T14:02:21.753Z",
     "how": "browser",
     "chars": 3137,
     "dealHash": "8ee42f717fd94984a64146b5bc7a39bd42070678",
-    "stuck": 8
+    "stuck": 9
   },
   "zai-subscribe": {
     "hash": "8c9146986e4c266048005c32064572617933e776",
@@ -32,19 +32,19 @@
   },
   "kimi-coding": {
     "hash": "2708a38d20c21d8b25ac6291b32779bf3a89796b",
-    "lastChecked": "2026-10-05T07:20:47.095Z",
+    "lastChecked": "2026-10-05T16:17:53.937Z",
     "lastChanged": "2026-09-29T07:10:01.274Z",
     "how": "browser",
     "chars": 1199,
     "dealHash": "cbd3a7b7fae3d79c86157a89e547c7dbea0e2980",
-    "stuck": 8
+    "stuck": 9
   },
   "dumate-home": {
     "hash": "bd53e340a1b1c27171fc2e848a7e968265bcfe66",
     "chars": 2012,
     "dealHash": "4850ed53bc92696d93cc5f5ba0e0d147b96395cd",
-    "stuck": 5,
-    "lastChecked": "2026-10-05T07:21:02.409Z",
+    "stuck": 6,
+    "lastChecked": "2026-10-05T16:18:13.259Z",
     "lastChanged": "2026-10-02T14:01:25.039Z",
     "how": "fetch"
   },
@@ -144,13 +144,13 @@
     "how": "browser"
   },
   "bigmodel-coding-plan": {
-    "hash": "a4f115041b7d73b69de2766a1bfb25a96251e945",
-    "lastChecked": "2026-10-05T07:18:40.240Z",
-    "lastChanged": "2026-09-25T16:51:20.443Z",
-    "how": "browser",
-    "chars": 3826,
-    "dealHash": "b3b3e89e4596519840da01c2c3449d2ad12d101a",
-    "stuck": 7
+    "hash": "97e01a9a22bf1c0beeb691f8ddccd0a599ebbc72",
+    "chars": 3801,
+    "dealHash": "2112ad84b393db5315bd742eb8adb61fb78eb759",
+    "stuck": 0,
+    "lastChecked": "2026-10-05T16:16:17.429Z",
+    "lastChanged": "2026-10-05T16:16:17.430Z",
+    "how": "browser"
   },
   "qoder-cn-pricing": {
     "hash": "4101961de387e1412b2cdee21d56547f040552b1",
