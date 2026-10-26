@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-19T09:39:50.727Z",
+  "generatedAt": "2026-10-26T09:48:41.345Z",
   "domains": 21,
-  "scannedUrls": 7858,
+  "scannedUrls": 7862,
   "probeEnabled": true,
   "note": "候选清单，需人工确认后再写进 sources.json。known=true 表示已在监控中。spa=true 表示 fetch 拿不到正文，需 browser 渲染。",
   "candidates": [
