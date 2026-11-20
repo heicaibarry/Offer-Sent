@@ -32,8 +32,11 @@ jobs:
         run: npm install
 
       # SPA 定价页需要无头浏览器；安装失败不影响后续（自动降级为 HTTP 抓取）
+      # ⚠️ 必须带 --no-save：否则 npm 会把 playwright 升到 latest 并改写 package.json /
+      # package-lock.json，在工作区留下未暂存改动，下一步 git pull --rebase 会直接拒绝执行
+      # （报 cannot pull with rebase: You have unstaged changes，exit 128）
       - name: 安装无头浏览器（可选）
-        run: npm i -D playwright && npx playwright install --with-deps chromium
+        run: npm i -D --no-save playwright && npx playwright install --with-deps chromium
         continue-on-error: true
 
       - name: 核对官方页面
@@ -51,18 +54,23 @@ jobs:
 
       - name: 提交数据变更
         run: |
+          set -eo pipefail
           git config user.name "crawl-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/
+          # 用 -A 收全部改动：crawl 只写 data/，但依赖安装等步骤可能顺带改动
+          # package-lock.json 等文件，漏掉就会留下未暂存改动，rebase 直接失败
+          git add -A
           if git diff --cached --quiet; then
+            echo "无数据变更，跳过提交"
             echo "PUSHED=false" >> "$GITHUB_ENV"
-          else
-            git commit -m "chore(data): 定时核对更新"
-            # 运行期间别的提交（人工 push / 另一个 job）进了 main 就先变基再推
-            git pull --rebase origin main
-            git push
-            echo "PUSHED=true" >> "$GITHUB_ENV"
+            exit 0
           fi
+          git status --short
+          git commit -m "chore(data): 定时核对更新"
+          # --autostash：即使仍残留未暂存改动，也让 rebase 自己 stash/恢复，不再 exit 128
+          git pull --rebase --autostash origin main
+          git push origin HEAD:main
+          echo "PUSHED=true" >> "$GITHUB_ENV"
 
       # 爬虫用的是默认 GITHUB_TOKEN，GitHub 规定这种 push 不触发其他 workflow，
       # 之前站点因此一直停在最后一次人工 push。这里显式用 workflow_dispatch API 拉起部署。
@@ -107,6 +115,6 @@ jobs:
             echo "无新候选，跳过提交"
           else
             git commit -m "chore(discover): 每周活动页扫描"
-            git pull --rebase origin main
-            git push
+            git pull --rebase --autostash origin main
+            git push origin HEAD:main
           fi
