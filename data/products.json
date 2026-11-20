@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-03",
+  "updatedAt": "2026-11-20",
   "policy": "只监控国内计费版本（人民币/国内支付）。中国团队但仅提供海外计费的产品标记为 market=intl，收录展示但不算国内优惠，不做监控。",
   "products": [
     {
@@ -209,6 +209,17 @@
           "endsAt": null,
           "source": "https://www.kimi.com/coding",
           "firstSeen": "2026-09-14"
+        },
+        {
+          "title": "K2.8 Preview 限时5折",
+          "detail": "使用 K2.8 Preview 模型，额度消耗限时 5 折",
+          "window": "",
+          "endsAt": null,
+          "endsUnknown": true,
+          "timeHint": "限时立省 50%",
+          "source": "https://www.kimi.com/coding",
+          "firstSeen": "2026-11-20",
+          "auto": "llm"
         }
       ],
       "notes": "当前订购按钮为「预约订阅」状态。历史 K2/K3 发布期常有赠送额度活动。"
@@ -447,13 +458,6 @@
       ],
       "promos": [
         {
-          "title": "混元 Hy4 preview：新用户首开起 14 天免费额度",
-          "detail": "首轮限免已于 9/10 23:59 结束，9/11–10/10 调整：新用户（含此前未体验过的老用户）在 10/10 23:59 前首次开启对话，自当日起 14 天内享每日免费额度；已体验过的老用户仅夜间闲时（23:00–次日 08:00）免费，其余时间照常消耗积分。",
-          "endsAt": "2026-10-10T23:59:59+08:00",
-          "source": "https://www.workbuddy.cn/pricing",
-          "firstSeen": "2026-09-15"
-        },
-        {
           "title": "体验版限时免费",
           "detail": "500 积分/月 + 代码实时补全限免无限次；官网写「限时免费」但未公布截止时间。",
           "endsAt": null,
@@ -536,6 +540,44 @@
           "endsAt": null,
           "source": "https://www.dumate.cn/",
           "firstSeen": "2026-09-13"
+        },
+        {
+          "title": "免费体验",
+          "detail": "免费使用，限时每日签到领取积分",
+          "window": "",
+          "endsAt": null,
+          "endsUnknown": true,
+          "timeHint": "限时每日签到领取积分",
+          "source": "https://www.dumate.cn/",
+          "firstSeen": "2026-11-20",
+          "auto": "llm"
+        },
+        {
+          "title": "Pro首月优惠",
+          "detail": "首月¥29.9，次月起65元/月，可随时取消，25,000积分/月",
+          "window": "",
+          "endsAt": null,
+          "source": "https://www.dumate.cn/",
+          "firstSeen": "2026-11-20",
+          "auto": "llm"
+        },
+        {
+          "title": "Max首月优惠",
+          "detail": "首月¥99.9，次月起189元/月，可随时取消，100,000积分/月",
+          "window": "",
+          "endsAt": null,
+          "source": "https://www.dumate.cn/",
+          "firstSeen": "2026-11-20",
+          "auto": "llm"
+        },
+        {
+          "title": "积分购买",
+          "detail": "¥10/5,000积分，5,000积分起购，购买后1个月内有效",
+          "window": "",
+          "endsAt": null,
+          "source": "https://www.dumate.cn/",
+          "firstSeen": "2026-11-20",
+          "auto": "llm"
         }
       ],
       "notes": "企业版：cloud.baidu.com/product/dumate.html（身份/权限/配额/审计管控）。2026 百度 Create 大会重点产品，媒体称“国产版 Codex”。"
@@ -608,6 +650,16 @@
           "endsAt": null,
           "source": "https://www.codebuddy.cn/pricing",
           "firstSeen": "2026-09-27",
+          "auto": "llm"
+        },
+        {
+          "title": "积分包购买全面开放",
+          "detail": "200积分起，多档位按需选择，会员更享专属折扣",
+          "window": "",
+          "endsAt": "2026-11-30",
+          "timeHint": "10.10-11.30",
+          "source": "https://www.codebuddy.cn/pricing",
+          "firstSeen": "2026-11-20",
           "auto": "llm"
         }
       ],
@@ -998,7 +1050,17 @@
       "verifiedAt": "2026-09-14",
       "summary": "聚合各开源模型的 API 平台，按 token 计费（已抓到分档价格），注册送赠金，部分模型免费。siliconflow.cn 为国内站（.com 为海外版，不监控）。",
       "plans": [],
-      "promos": [],
+      "promos": [
+        {
+          "title": "TokenPlus 词元优选产品上新",
+          "detail": "主流模型 4.2折起，调用稳定，企业级管理更省心",
+          "window": "",
+          "endsAt": null,
+          "source": "https://siliconflow.cn/pricing",
+          "firstSeen": "2026-11-20",
+          "auto": "llm"
+        }
+      ],
       "notes": "已核实为纯 API 按量计费（输入 ¥0.4–16/百万 token 分档），无订阅套餐类优惠。"
     },
     {
@@ -1216,14 +1278,6 @@
           "firstSeen": "2026-10-01"
         },
         {
-          "title": "Wan3.0 后付费限时 7 折",
-          "detail": "Wan3.0 原生 30 秒视频生成模型，即日起至 10 月 31 日享受后付费限时 7 折优惠。",
-          "endsAt": "2026-10-31",
-          "timeHint": "即日起至 10 月 31 日",
-          "source": "https://www.aliyun.com/product/bailian",
-          "firstSeen": "2026-10-01"
-        },
-        {
           "title": "新用户开通即享专属免费额度（最高千万 Tokens）",
           "detail": "开通百炼服务的新用户享专属免费额度；「AI 共学共实践计划」活动入口标注开通即送千万 Tokens。",
           "endsAt": null,
@@ -1298,14 +1352,6 @@
         }
       ],
       "promos": [
-        {
-          "title": "Agent Plan Small / Medium 首两月 2.5 折：¥9.9 起",
-          "detail": "Small 原价 ¥40 → ¥9.9/月、Medium 原价 ¥200 → ¥49.9/月；每个账号最多享受两个月，第三个月起恢复原价。新购、续费、升配共享同一优惠资格，名额有限先到先得。",
-          "endsAt": "2026-11-08",
-          "timeHint": "2026年6月8日至2026年11月8日",
-          "source": "https://www.volcengine.com/docs/82379/2525063",
-          "firstSeen": "2026-10-01"
-        },
         {
           "title": "注册即领 2,500 万 Tokens",
           "detail": "官网活动：注册即可领取 2500 万 Tokens，用于体验行业热门 AI 产品。",
