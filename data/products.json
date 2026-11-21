@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-21",
   "policy": "只监控国内计费版本（人民币/国内支付）。中国团队但仅提供海外计费的产品标记为 market=intl，收录展示但不算国内优惠，不做监控。",
   "products": [
     {
@@ -1372,6 +1372,36 @@
           "endsAt": null,
           "source": "https://www.volcengine.com/product/ark",
           "firstSeen": "2026-10-01"
+        },
+        {
+          "title": "Agent Plan Small & Medium 套餐 2.5 折普惠活动",
+          "detail": "Agent Plan Small & Medium 套餐限时2.5折优惠，新用户专享",
+          "window": "",
+          "endsAt": null,
+          "endsUnknown": true,
+          "source": "https://www.volcengine.com/docs/82379/2525063",
+          "firstSeen": "2026-11-21",
+          "auto": "llm"
+        },
+        {
+          "title": "连续包季/包年活动",
+          "detail": "连续包季/包年享受优惠价格，长期有效",
+          "window": "",
+          "endsAt": null,
+          "timeHint": "长期有效",
+          "source": "https://www.volcengine.com/docs/82379/2525063",
+          "firstSeen": "2026-11-21",
+          "auto": "llm"
+        },
+        {
+          "title": "Agent/Coding Plan 指定模型抵扣系数限时折扣活动",
+          "detail": "指定模型抵扣系数限时折扣，优惠力度大",
+          "window": "",
+          "endsAt": null,
+          "endsUnknown": true,
+          "source": "https://www.volcengine.com/docs/82379/2525063",
+          "firstSeen": "2026-11-21",
+          "auto": "llm"
         }
       ],
       "notes": "方舟同时提供 Coding Plan（面向编程）与 Agent Plan（面向通用 Agent），两者档位价不同但首购折扣一致。方舟 CLI 已上线，支持 Claude Code / Cursor / TRAE 接入。官网另有「爆品抢购」页列出同一批首购价，以支付页为准。"

@@ -1,5 +1,25 @@
 [
   {
+    "time": "2026-11-21T20:15:47.419Z",
+    "source": "-",
+    "product": "-",
+    "url": "",
+    "kind": "crawl-report",
+    "how": "-",
+    "pageTitle": "核对 16 源 · 失败 5 · LLM 已配置",
+    "excerpt": "页面变更 0 处 · 触发提取 1 页 · 自动收录 3 条 · 移除 0 条 · 降级告警 0 个（无）"
+  },
+  {
+    "time": "2026-11-21T20:15:46.619Z",
+    "source": "volcengine-agent-plan",
+    "product": "volcengine-ark",
+    "url": "https://www.volcengine.com/docs/82379/2525063",
+    "kind": "auto-promo",
+    "how": "llm",
+    "pageTitle": "自动收录 3 条新活动",
+    "excerpt": "Agent Plan Small & Medium 套餐 2.5 折普惠活动 / 连续包季/包年活动 / Agent/Coding Plan 指定模型抵扣系数限时折扣活动"
+  },
+  {
     "time": "2026-11-21T08:31:37.072Z",
     "source": "deepseek-pricing",
     "product": "deepseek",
