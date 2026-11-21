@@ -1,5 +1,35 @@
 [
   {
+    "time": "2026-11-21T08:31:37.072Z",
+    "source": "deepseek-pricing",
+    "product": "deepseek",
+    "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing",
+    "kind": "page-update",
+    "how": "fetch",
+    "pageTitle": "Your First API Call | DeepSeek API Docs",
+    "excerpt": "Your First API Call | DeepSeek API Docs Skip to main content The full suite of DeepSeek application APIs is now available: web search, file input, URL reading, model safe"
+  },
+  {
+    "time": "2026-11-21T08:33:39.347Z",
+    "source": "modelscope-home",
+    "product": "modelscope",
+    "url": "https://modelscope.cn",
+    "kind": "page-update",
+    "how": "browser",
+    "pageTitle": "首页 · 魔搭社区",
+    "excerpt": "首页 · 魔搭社区 首页 模型库 数据集 创空间 开发者实践 文档 社区 智能工坊 实验场 AIGC 专区 热门搜索 Qwen MiniMax H3 IndexTTS2 Krea2 API deepseek MOSS Qwen3.8 tts qwen4 登录 / 注册 共享 · 共创 · 共进，构建持续创新的 AI 开源生态 加入社区 模"
+  },
+  {
+    "time": "2026-11-21T08:36:19.834Z",
+    "source": "-",
+    "product": "-",
+    "url": "",
+    "kind": "crawl-report",
+    "how": "-",
+    "pageTitle": "核对 19 源 · 失败 5 · LLM 已配置",
+    "excerpt": "页面变更 2 处 · 触发提取 4 页 · 自动收录 0 条 · 移除 0 条 · 降级告警 0 个（无）"
+  },
+  {
     "time": "2026-11-20T21:28:24.661Z",
     "source": "-",
     "product": "-",

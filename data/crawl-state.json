@@ -13,8 +13,8 @@
     "hash": "aa9f794653aa42d45465c5c2e4ca47fb80743358",
     "chars": 2937,
     "dealHash": "450ea689bedbacdadceb6e194cd3d653cdd7b7b0",
-    "stuck": 0,
-    "lastChecked": "2026-11-20T21:25:05.652Z",
+    "stuck": 1,
+    "lastChecked": "2026-11-21T08:30:09.776Z",
     "lastChanged": "2026-11-20T21:25:05.652Z",
     "how": "browser"
   },
@@ -22,8 +22,8 @@
     "hash": "0431c495be54a728b34086c1382b949ecc59494c",
     "chars": 2108,
     "dealHash": "4b374bd21ca896102bf47ef93c226f2ecfc1aa81",
-    "stuck": 1,
-    "lastChecked": "2026-11-20T21:25:19.510Z",
+    "stuck": 2,
+    "lastChecked": "2026-11-21T08:30:26.624Z",
     "lastChanged": "2026-11-20T03:13:49.121Z",
     "how": "browser"
   },
@@ -37,8 +37,8 @@
     "hash": "2891292204eff696bd20f61df1eef00ce5b3c94d",
     "chars": 1277,
     "dealHash": "1dbb2c51f92b6c75321564a2170f6f1efd71cd02",
-    "stuck": 1,
-    "lastChecked": "2026-11-20T21:25:31.958Z",
+    "stuck": 2,
+    "lastChecked": "2026-11-21T08:30:38.298Z",
     "lastChanged": "2026-11-20T03:14:00.862Z",
     "how": "browser"
   },
@@ -46,8 +46,8 @@
     "hash": "c4ef9adb9b3c3fb19c2065d04d7d3bac3762ba6e",
     "chars": 2124,
     "dealHash": "6a2937c60d09f2dbd4e994dc232415487b4ed046",
-    "stuck": 1,
-    "lastChecked": "2026-11-20T21:25:50.337Z",
+    "stuck": 2,
+    "lastChecked": "2026-11-21T08:30:54.426Z",
     "lastChanged": "2026-11-20T03:14:15.760Z",
     "how": "fetch"
   },
@@ -70,8 +70,8 @@
     "hash": "436231a3b27b67c99bbd266890cfb5b592588bfb",
     "chars": 2034,
     "dealHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
-    "stuck": 0,
-    "lastChecked": "2026-11-20T03:14:45.365Z",
+    "stuck": 1,
+    "lastChecked": "2026-11-21T08:31:04.040Z",
     "lastChanged": "2026-11-20T03:14:45.365Z",
     "how": "browser"
   },
@@ -79,27 +79,27 @@
     "hash": "c9e949e045edaf927e1f6124940f33fb7e5e9215",
     "chars": 2753,
     "dealHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
-    "stuck": 5,
-    "lastChecked": "2026-11-20T03:15:04.077Z",
+    "stuck": 6,
+    "lastChecked": "2026-11-21T08:31:24.879Z",
     "lastChanged": "2026-10-02T14:02:03.505Z",
     "how": "browser"
   },
   "deepseek-pricing": {
-    "hash": "49159910d664a4acc128b3e9c68ef5d0573bac53",
-    "chars": 3552,
-    "dealHash": "1b28b683ed55f3d3cc80be21472213aac9a6db21",
+    "hash": "f119ad9d7bd1a8829e286ace97658ccaeb1e8942",
+    "chars": 4047,
+    "dealHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
     "stuck": 0,
-    "lastChecked": "2026-11-20T03:15:10.493Z",
-    "lastChanged": "2026-11-20T03:15:10.493Z",
-    "how": "reader"
+    "lastChecked": "2026-11-21T08:31:37.073Z",
+    "lastChanged": "2026-11-21T08:31:37.073Z",
+    "how": "fetch"
   },
   "coze-home": {
-    "hash": "8e3661f310f05d3cfd695e76da0404be0ea6c9d9",
-    "chars": 2572,
+    "hash": "28b809d65565b0e714a4d6a523417d35479efb7e",
+    "chars": 2582,
     "dealHash": "169a89d174c975086c8387687fbfdfb933d6afda",
     "stuck": 0,
-    "lastChecked": "2026-11-20T03:16:00.317Z",
-    "lastChanged": "2026-11-20T03:16:00.317Z",
+    "lastChecked": "2026-11-21T08:32:26.532Z",
+    "lastChanged": "2026-11-21T08:32:26.532Z",
     "how": "browser"
   },
   "manus-pricing": {
@@ -132,26 +132,26 @@
     "hash": "9b2ea0c287060d10bbf2941cf8fb521e26623c41",
     "chars": 4467,
     "dealHash": "6dd9289b9ab421ff886e78661c0e74268e344550",
-    "stuck": 0,
-    "lastChecked": "2026-11-20T03:16:12.352Z",
+    "stuck": 1,
+    "lastChecked": "2026-11-21T08:33:19.381Z",
     "lastChanged": "2026-11-20T03:16:12.352Z",
     "how": "browser"
   },
   "modelscope-home": {
-    "hash": "ad31c23d9fbac9d476dfcf225934a7ab45e4a004",
-    "chars": 5426,
-    "dealHash": "a8aa47010680d077af64dcb8e63da47d8bfdf0d3",
+    "hash": "5a6261e911b94040e48db3bd1e8b1fa9f293994c",
+    "chars": 5444,
+    "dealHash": "17e15a886ce6fee933a959f7c8db504fc4a1317d",
     "stuck": 0,
-    "lastChecked": "2026-11-20T03:16:28.397Z",
-    "lastChanged": "2026-11-20T03:16:28.397Z",
+    "lastChecked": "2026-11-21T08:33:39.347Z",
+    "lastChanged": "2026-11-21T08:33:39.347Z",
     "how": "browser"
   },
   "bigmodel-coding-plan": {
     "hash": "573213e9ed143ac815f54a5cd045f1100beb2426",
     "chars": 3863,
     "dealHash": "abf984f360e56a9f744e0abcda87806202e5a551",
-    "stuck": 1,
-    "lastChecked": "2026-11-20T21:23:16.641Z",
+    "stuck": 2,
+    "lastChecked": "2026-11-21T08:28:41.747Z",
     "lastChanged": "2026-11-20T03:11:29.884Z",
     "how": "browser"
   },
@@ -174,12 +174,12 @@
     "how": "browser"
   },
   "huawei-codearts-offers": {
-    "hash": "ed649179aa8a28074d54a4fa9887a057086b8243",
-    "chars": 14693,
-    "dealHash": "966638fb7214e8e7f5d552ad544b0514bea625d0",
+    "hash": "10172947b82693355c790e1781d5690612f56b21",
+    "chars": 14355,
+    "dealHash": "e824863631512739733f3d530b3fc5e3db06a30f",
     "stuck": 0,
-    "lastChecked": "2026-11-20T03:11:58.886Z",
-    "lastChanged": "2026-11-20T03:11:58.886Z",
+    "lastChecked": "2026-11-21T08:28:54.966Z",
+    "lastChanged": "2026-11-21T08:28:54.966Z",
     "how": "reader"
   },
   "trae-events-fission": {
@@ -241,12 +241,12 @@
     "how": "browser"
   },
   "bailian-token-plan": {
-    "hash": "a79903324e26be004731fae3519c57f0c0829065",
-    "chars": 55738,
-    "dealHash": "9d42bd2b4f79e1ab42d8fc544c19b6a08d7de27c",
+    "hash": "4b60d83e8aaf50cc1993a8d2d3349ff697c79908",
+    "chars": 55842,
+    "dealHash": "8e4af95400386728bafa7975faa290e04e1ab778",
     "stuck": 0,
-    "lastChecked": "2026-11-20T03:16:40.794Z",
-    "lastChanged": "2026-11-20T03:16:40.794Z",
+    "lastChecked": "2026-11-21T08:33:51.917Z",
+    "lastChanged": "2026-11-21T08:33:51.917Z",
     "how": "reader"
   },
   "volcengine-agent-plan": {
@@ -262,8 +262,8 @@
     "hash": "3d25ac8038bc5203c5f0e856c18440ca33af8008",
     "chars": 16003,
     "dealHash": "2d716e78a80e1c46981b5926dcb67cb0e5835b37",
-    "stuck": 0,
-    "lastChecked": "2026-11-20T03:17:10.203Z",
+    "stuck": 1,
+    "lastChecked": "2026-11-21T08:34:01.621Z",
     "lastChanged": "2026-11-20T03:17:10.203Z",
     "how": "fetch"
   }
