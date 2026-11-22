@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-21",
+  "updatedAt": "2026-11-22",
   "policy": "只监控国内计费版本（人民币/国内支付）。中国团队但仅提供海外计费的产品标记为 market=intl，收录展示但不算国内优惠，不做监控。",
   "products": [
     {
@@ -826,6 +826,16 @@
           "endsAt": null,
           "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing",
           "firstSeen": "2026-09-13"
+        },
+        {
+          "title": "语音服务限时折扣",
+          "detail": "语音合成与识别服务5折优惠，TTS每万字符1.5元，ASR每小时0.39元",
+          "window": "",
+          "endsAt": null,
+          "endsUnknown": true,
+          "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing",
+          "firstSeen": "2026-11-22",
+          "auto": "llm"
         }
       ],
       "notes": ""

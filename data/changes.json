@@ -1,5 +1,45 @@
 [
   {
+    "time": "2026-11-22T20:27:15.671Z",
+    "source": "huawei-bbs-community",
+    "product": "codearts-snap",
+    "url": "https://bbs.huaweicloud.com/",
+    "kind": "page-update",
+    "how": "reader",
+    "pageTitle": "",
+    "excerpt": "Title: 华为云社区_大数据社区_AI社区_云计算社区_开发者中心-华为云 URL Source: https://bbs.huaweicloud.com/ Published Time: Fri, 23 Oct 2026 06:16:40 GMT Markdown Content: * 中国站 中国站 * [简体中文](https:"
+  },
+  {
+    "time": "2026-11-22T20:30:16.168Z",
+    "source": "modelscope-home",
+    "product": "modelscope",
+    "url": "https://modelscope.cn",
+    "kind": "page-update",
+    "how": "browser",
+    "pageTitle": "首页 · 魔搭社区",
+    "excerpt": "首页 · 魔搭社区 首页 模型库 数据集 创空间 开发者实践 文档 社区 智能工坊 实验场 AIGC 专区 热门搜索 Qwen MiniMax H3 api Krea2 IndexTTS2 MOSS deepseek qwen3.8 tts lora 登录 / 注册 共享 · 共创 · 共进，构建持续创新的 AI 开源生态 加入社区 模型"
+  },
+  {
+    "time": "2026-11-22T20:34:29.847Z",
+    "source": "-",
+    "product": "-",
+    "url": "",
+    "kind": "crawl-report",
+    "how": "-",
+    "pageTitle": "核对 25 源 · 失败 5 · LLM 已配置",
+    "excerpt": "页面变更 2 处 · 触发提取 5 页 · 自动收录 1 条 · 移除 0 条 · 降级告警 0 个（无）"
+  },
+  {
+    "time": "2026-11-22T20:33:41.349Z",
+    "source": "deepseek-pricing",
+    "product": "deepseek",
+    "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing",
+    "kind": "auto-promo",
+    "how": "llm",
+    "pageTitle": "自动收录 1 条新活动",
+    "excerpt": "语音服务限时折扣"
+  },
+  {
     "time": "2026-11-22T08:26:49.799Z",
     "source": "-",
     "product": "-",
