@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-22",
+  "updatedAt": "2026-11-23",
   "policy": "只监控国内计费版本（人民币/国内支付）。中国团队但仅提供海外计费的产品标记为 market=intl，收录展示但不算国内优惠，不做监控。",
   "products": [
     {
@@ -81,6 +81,15 @@
           "endsAt": null,
           "source": "https://autoglm.zhipuai.cn/autoclaw/",
           "firstSeen": "2026-09-17"
+        },
+        {
+          "title": "编程套餐连续包折扣",
+          "detail": "连续包季8折/连续包年7折",
+          "window": "订阅用户专享",
+          "endsAt": null,
+          "source": "https://bigmodel.cn/claude-code",
+          "firstSeen": "2026-11-23",
+          "auto": "llm"
         }
       ],
       "notes": "注意区分：z.ai 是智谱海外版（美元计价、国际账号），不在本站监控范围；国内优惠以 bigmodel.cn 为准。所有套餐均支持 GLM-5.3 与 GLM-5.3-Flash（OX Alpha）。另有「特惠专区」「最新活动」页面待纳入监控。促销大户，BigModel 公众号常发限时活动。"

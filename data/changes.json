@@ -1,5 +1,35 @@
 [
   {
+    "time": "2026-11-23T09:23:42.681Z",
+    "source": "kimi-coding",
+    "product": "kimi-code",
+    "url": "https://www.kimi.com/coding",
+    "kind": "page-update",
+    "how": "browser",
+    "pageTitle": "Kimi Code —— 搭载 Kimi K3.1 Pro 的 AI 编程 Agent，覆盖 CLI、VS Code 插件、桌面客户端等编程工具形态",
+    "excerpt": "Kimi Code —— 搭载 Kimi K3.1 Pro 的 AI 编程 Agent，覆盖 CLI、VS Code 插件、桌面客户端等编程工具形态 Kimi Code 会员权益 文档 控制台 登录 Kimi K3.1 Pro 正式上线！代码、3D 创作、金融研究和其他长程 Agent 能力提升尤为显著 查看详情 Kimi Code Ki"
+  },
+  {
+    "time": "2026-11-23T09:27:19.206Z",
+    "source": "-",
+    "product": "-",
+    "url": "",
+    "kind": "crawl-report",
+    "how": "-",
+    "pageTitle": "核对 16 源 · 失败 5 · LLM 已配置",
+    "excerpt": "页面变更 1 处 · 触发提取 3 页 · 自动收录 1 条 · 移除 0 条 · 降级告警 0 个（无）"
+  },
+  {
+    "time": "2026-11-23T09:25:32.903Z",
+    "source": "bigmodel-coding-plan",
+    "product": "glm-coding-plan",
+    "url": "https://bigmodel.cn/claude-code",
+    "kind": "auto-promo",
+    "how": "llm",
+    "pageTitle": "自动收录 1 条新活动",
+    "excerpt": "编程套餐连续包折扣"
+  },
+  {
     "time": "2026-11-22T20:27:15.671Z",
     "source": "huawei-bbs-community",
     "product": "codearts-snap",
