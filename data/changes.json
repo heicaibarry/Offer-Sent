@@ -1,5 +1,25 @@
 [
   {
+    "time": "2026-11-24T11:15:57.280Z",
+    "source": "bigmodel-coding-plan",
+    "product": "glm-coding-plan",
+    "url": "https://bigmodel.cn/claude-code",
+    "kind": "page-update",
+    "how": "browser",
+    "pageTitle": "智谱丨BigModel 平台",
+    "excerpt": "智谱丨BigModel 平台 研究 技术报告 GLM-5.4 GLM-5.3 GLM-5.3-Flash GLM-5.2 产品 模型 GLM-5.4 GLM-5.3 GLM-5.3-Flash 全部模型 Coding Plan 个人版套餐 团队版套餐 功能 Managed Agents (Beta) MCP 服务 模型微调 知识库 文档"
+  },
+  {
+    "time": "2026-11-24T11:18:09.626Z",
+    "source": "-",
+    "product": "-",
+    "url": "",
+    "kind": "crawl-report",
+    "how": "-",
+    "pageTitle": "核对 10 源 · 失败 5 · LLM 已配置",
+    "excerpt": "页面变更 1 处 · 触发提取 1 页 · 自动收录 0 条 · 移除 0 条 · 降级告警 0 个（无）"
+  },
+  {
     "time": "2026-11-24T01:06:26.879Z",
     "source": "huawei-bbs-community",
     "product": "codearts-snap",

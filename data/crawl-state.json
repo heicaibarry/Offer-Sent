@@ -13,8 +13,8 @@
     "hash": "aa9f794653aa42d45465c5c2e4ca47fb80743358",
     "chars": 2937,
     "dealHash": "450ea689bedbacdadceb6e194cd3d653cdd7b7b0",
-    "stuck": 6,
-    "lastChecked": "2026-11-24T01:06:39.518Z",
+    "stuck": 7,
+    "lastChecked": "2026-11-24T11:17:17.962Z",
     "lastChanged": "2026-11-20T21:25:05.652Z",
     "how": "browser"
   },
@@ -22,8 +22,8 @@
     "hash": "1483e2a46d5bf0794c253531dff9f6f4876b4e23",
     "chars": 2113,
     "dealHash": "4b374bd21ca896102bf47ef93c226f2ecfc1aa81",
-    "stuck": 1,
-    "lastChecked": "2026-11-24T01:06:53.734Z",
+    "stuck": 2,
+    "lastChecked": "2026-11-24T11:17:33.360Z",
     "lastChanged": "2026-11-23T09:23:31.075Z",
     "how": "browser"
   },
@@ -37,8 +37,8 @@
     "hash": "90fc57375182c0cae611e4d46c9dd3c00d33d88a",
     "chars": 1231,
     "dealHash": "1cf722db7352a9355d5abfe99e434e760266a5b1",
-    "stuck": 1,
-    "lastChecked": "2026-11-24T01:07:06.856Z",
+    "stuck": 2,
+    "lastChecked": "2026-11-24T11:17:50.684Z",
     "lastChanged": "2026-11-23T09:23:42.681Z",
     "how": "browser"
   },
@@ -46,8 +46,8 @@
     "hash": "c4ef9adb9b3c3fb19c2065d04d7d3bac3762ba6e",
     "chars": 2124,
     "dealHash": "6a2937c60d09f2dbd4e994dc232415487b4ed046",
-    "stuck": 7,
-    "lastChecked": "2026-11-24T01:07:18.168Z",
+    "stuck": 8,
+    "lastChecked": "2026-11-24T11:18:06.103Z",
     "lastChanged": "2026-11-20T03:14:15.760Z",
     "how": "fetch"
   },
@@ -147,12 +147,12 @@
     "how": "browser"
   },
   "bigmodel-coding-plan": {
-    "hash": "6847fd0c065e018672d8cb7e236268e8207aeaf2",
+    "hash": "86b6381c721036f66a97ca0d41e7ce8896f675f6",
     "chars": 3787,
-    "dealHash": "45749b1433a33c69404d4d137d4c71d63b9ad3a8",
+    "dealHash": "a12b20f60cf8d70cfa2bcc9663f976f2438ffa45",
     "stuck": 0,
-    "lastChecked": "2026-11-24T01:04:42.549Z",
-    "lastChanged": "2026-11-24T01:04:42.549Z",
+    "lastChecked": "2026-11-24T11:15:57.280Z",
+    "lastChanged": "2026-11-24T11:15:57.280Z",
     "how": "browser"
   },
   "qoder-cn-pricing": {
