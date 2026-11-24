@@ -1,5 +1,35 @@
 [
   {
+    "time": "2026-11-24T01:06:26.879Z",
+    "source": "huawei-bbs-community",
+    "product": "codearts-snap",
+    "url": "https://bbs.huaweicloud.com/",
+    "kind": "page-update",
+    "how": "reader",
+    "pageTitle": "",
+    "excerpt": "Title: 华为云社区_大数据社区_AI社区_云计算社区_开发者中心-华为云 URL Source: https://bbs.huaweicloud.com/ Markdown Content: 产品技术 * 【华为云•ECS】拒绝糊涂账，扣费早知道 对于个人开发者和中小企业来说，上云最关心的除了产品好用外，就是成本。为了帮助大家消除扣"
+  },
+  {
+    "time": "2026-11-24T01:09:46.882Z",
+    "source": "modelscope-home",
+    "product": "modelscope",
+    "url": "https://modelscope.cn",
+    "kind": "page-update",
+    "how": "browser",
+    "pageTitle": "首页 · 魔搭社区",
+    "excerpt": "首页 · 魔搭社区 首页 模型库 数据集 创空间 开发者实践 文档 社区 智能工坊 实验场 AIGC 专区 热门搜索 Qwen MiniMax H3 api Krea2 IndexTTS2 deepseek moss qwen3.8 lora index 登录 / 注册 共享 · 共创 · 共进，构建持续创新的 AI 开源生态 加入社区"
+  },
+  {
+    "time": "2026-11-24T01:16:01.524Z",
+    "source": "-",
+    "product": "-",
+    "url": "",
+    "kind": "crawl-report",
+    "how": "-",
+    "pageTitle": "核对 25 源 · 失败 5 · LLM 已配置",
+    "excerpt": "页面变更 2 处 · 触发提取 5 页 · 自动收录 0 条 · 移除 0 条 · 降级告警 0 个（无）"
+  },
+  {
     "time": "2026-11-23T09:23:42.681Z",
     "source": "kimi-coding",
     "product": "kimi-code",
