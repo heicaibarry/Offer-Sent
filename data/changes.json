@@ -1,5 +1,15 @@
 [
   {
+    "time": "2026-11-26T09:46:36.499Z",
+    "source": "-",
+    "product": "-",
+    "url": "",
+    "kind": "crawl-report",
+    "how": "-",
+    "pageTitle": "核对 10 源 · 失败 5 · LLM 已配置",
+    "excerpt": "页面变更 0 处 · 触发提取 0 页 · 自动收录 0 条 · 移除 0 条 · 降级告警 0 个（无）"
+  },
+  {
     "time": "2026-11-25T22:40:39.834Z",
     "source": "huawei-bbs-community",
     "product": "codearts-snap",
