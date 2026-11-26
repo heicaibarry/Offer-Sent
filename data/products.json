@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23",
+  "updatedAt": "2026-11-26",
   "policy": "只监控国内计费版本（人民币/国内支付）。中国团队但仅提供海外计费的产品标记为 market=intl，收录展示但不算国内优惠，不做监控。",
   "products": [
     {
@@ -89,6 +89,25 @@
           "endsAt": null,
           "source": "https://bigmodel.cn/claude-code",
           "firstSeen": "2026-11-23",
+          "auto": "llm"
+        },
+        {
+          "title": "邀好友，拼好模",
+          "detail": "最高20%赠金，上不封顶，邀好友购套餐",
+          "window": "",
+          "endsAt": null,
+          "source": "https://bigmodel.cn/claude-code",
+          "firstSeen": "2026-11-26",
+          "auto": "llm"
+        },
+        {
+          "title": "邀好友购套餐",
+          "detail": "一键邀请，躺赢赠金",
+          "window": "",
+          "endsAt": null,
+          "timeHint": "全平台无限期可用",
+          "source": "https://bigmodel.cn/claude-code",
+          "firstSeen": "2026-11-26",
           "auto": "llm"
         }
       ],
@@ -1103,6 +1122,35 @@
           "endsAt": null,
           "source": "https://modelscope.cn",
           "firstSeen": "2026-09-14"
+        },
+        {
+          "title": "登录就送 200 魔粒",
+          "detail": "注册完善个人信息后即可获得200魔粒奖励",
+          "window": "所有新用户",
+          "endsAt": null,
+          "timeHint": "长期有效",
+          "source": "https://modelscope.cn",
+          "firstSeen": "2026-11-26",
+          "auto": "llm"
+        },
+        {
+          "title": "云上算力免费体验",
+          "detail": "CPU资源长期免费，GPU算力限额免费",
+          "window": "所有用户",
+          "endsAt": null,
+          "timeHint": "长期免费",
+          "source": "https://modelscope.cn",
+          "firstSeen": "2026-11-26",
+          "auto": "llm"
+        },
+        {
+          "title": "社区互动赚魔粒",
+          "detail": "通过社区互动活动赚取魔粒奖励",
+          "window": "所有用户",
+          "endsAt": null,
+          "source": "https://modelscope.cn",
+          "firstSeen": "2026-11-26",
+          "auto": "llm"
         }
       ],
       "notes": ""

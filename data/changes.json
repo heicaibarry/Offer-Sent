@@ -1,5 +1,105 @@
 [
   {
+    "time": "2026-11-26T22:29:38.873Z",
+    "source": "huawei-codearts-offers",
+    "product": "codearts-snap",
+    "url": "https://support.huaweicloud.com/offers-codeartsagent/codeartsagent_offers_0001.html",
+    "kind": "page-update",
+    "how": "fetch",
+    "pageTitle": "404页面_华为云",
+    "excerpt": "404页面_华为云 检测到您已登录华为云国际站账号，为了您更好的体验，建议您访问国际站服务网站 https://www.huaweicloud.com/intl/zh-cn 不再显示此消息 中国站 中国站 简体中文 International English Bahasa Indonesia Español Português Türkç"
+  },
+  {
+    "time": "2026-11-26T22:30:37.293Z",
+    "source": "huawei-bbs-community",
+    "product": "codearts-snap",
+    "url": "https://bbs.huaweicloud.com/",
+    "kind": "page-update",
+    "how": "fetch",
+    "pageTitle": "华为云社区_大数据社区_AI社区_云计算社区_开发者中心-华为云",
+    "excerpt": "华为云社区_大数据社区_AI社区_云计算社区_开发者中心-华为云 3天学会Al Coding 3天学会Al Coding 免费领华为云证书，当推荐官再领300元云资源券 免费领华为云证书，当推荐官再领300元云资源券 立即报名 AI硬件专区全新发布 AI硬件专区全新发布 端云协同，让智能体验随身随行 立即查看 0元领云技术精髓开发者认证证"
+  },
+  {
+    "time": "2026-11-26T22:32:09.309Z",
+    "source": "deepseek-pricing",
+    "product": "deepseek",
+    "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing",
+    "kind": "page-update",
+    "how": "fetch",
+    "pageTitle": "模型 & 价格 | DeepSeek API Docs",
+    "excerpt": "模型 & 价格 | DeepSeek API Docs 跳到主要内容 DeepSeek 全家桶应用 API 已发布：联网搜索、文件输入、阅读链接、模型安全、ASR、TTS 等， 点此查看使用指南 DeepSeek API 文档 更多资源 实用集成 API 服务状态 常见问题 中文（中国） English 中文（中国） 开放平台 EN 快速"
+  },
+  {
+    "time": "2026-11-26T22:33:11.044Z",
+    "source": "siliconflow-pricing",
+    "product": "siliconflow",
+    "url": "https://siliconflow.cn/pricing",
+    "kind": "page-update",
+    "how": "browser",
+    "pageTitle": "大模型 API 价格方案 - 硅基流动 SiliconFlow",
+    "excerpt": "大模型 API 价格方案 - 硅基流动 SiliconFlow 硅基流动产品上新：TokenPlus 词元优选，一站式 Token 智能调度与管理平台。主流模型 4.2 折起，调用稳定，企业级管理更省心， 了解详情 www.tokenplus.cn 产品 模型 价格 文档 客户案例 生态合作 关于 登录 登录 产品 模型 价格 文档 客户"
+  },
+  {
+    "time": "2026-11-26T22:33:27.566Z",
+    "source": "modelscope-home",
+    "product": "modelscope",
+    "url": "https://modelscope.cn",
+    "kind": "page-update",
+    "how": "browser",
+    "pageTitle": "首页 · 魔搭社区",
+    "excerpt": "首页 · 魔搭社区 首页 模型库 数据集 创空间 开发者实践 文档 社区 智能工坊 实验场 AIGC 专区 热门搜索 Qwen minimax h3 IndexTTS2 AMD API krea2 moss deepseek lora qwen3.8 登录 / 注册 共享 · 共创 · 共进，构建持续创新的 AI 开源生态 加入社区 模型"
+  },
+  {
+    "time": "2026-11-26T22:33:42.993Z",
+    "source": "bailian-token-plan",
+    "product": "bailian-token-plan",
+    "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+    "kind": "page-update",
+    "how": "fetch",
+    "pageTitle": "Token Plan 个人版订阅与权益-大模型服务平台百炼(Model Studio)-阿里云帮助中心",
+    "excerpt": "Token Plan 个人版订阅与权益-大模型服务平台百炼(Model Studio)-阿里云帮助中心 大模型 产品 解决方案 权益 定价 AI 应用市场 伙伴 服务 了解阿里云 查看 \"\" 全部搜索结果 AI 助理 文档 备案 控制台 官方文档 Token Plan 模型 Agent 模型 API Agent API CLI 产品动态与"
+  },
+  {
+    "time": "2026-11-26T22:33:51.619Z",
+    "source": "volcengine-agent-plan",
+    "product": "volcengine-ark",
+    "url": "https://www.volcengine.com/docs/82379/2525063",
+    "kind": "page-update",
+    "how": "fetch",
+    "pageTitle": "Agent Plan Small & Medium 套餐 2.5 折普惠活动 - 火山方舟 - 火山引擎",
+    "excerpt": "Agent Plan Small & Medium 套餐 2.5 折普惠活动 - 火山方舟 - 火山引擎 文档中心 登录 注册 火山方舟 文档指南 订阅 [Agent/Coding Plan] API参考 资源 AI 套件 火山方舟 火山方舟 订阅 [Agent/Coding Plan] 请输入 Agent Plan 个人版 套餐概览 计"
+  },
+  {
+    "time": "2026-11-26T22:39:22.404Z",
+    "source": "-",
+    "product": "-",
+    "url": "",
+    "kind": "crawl-report",
+    "how": "-",
+    "pageTitle": "核对 25 源 · 失败 5 · LLM 已配置",
+    "excerpt": "页面变更 7 处 · 触发提取 9 页 · 自动收录 5 条 · 移除 0 条 · 降级告警 0 个（无）"
+  },
+  {
+    "time": "2026-11-26T22:38:14.777Z",
+    "source": "modelscope-home",
+    "product": "modelscope",
+    "url": "https://modelscope.cn",
+    "kind": "auto-promo",
+    "how": "llm",
+    "pageTitle": "自动收录 3 条新活动",
+    "excerpt": "登录就送 200 魔粒 / 云上算力免费体验 / 社区互动赚魔粒"
+  },
+  {
+    "time": "2026-11-26T22:34:22.163Z",
+    "source": "bigmodel-coding-plan",
+    "product": "glm-coding-plan",
+    "url": "https://bigmodel.cn/claude-code",
+    "kind": "auto-promo",
+    "how": "llm",
+    "pageTitle": "自动收录 2 条新活动",
+    "excerpt": "邀好友，拼好模 / 邀好友购套餐"
+  },
+  {
     "time": "2026-11-26T09:46:36.499Z",
     "source": "-",
     "product": "-",
